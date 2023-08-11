@@ -1,0 +1,29 @@
+name: Sync with Sanguine
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # This will run the job every hour
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout sanguine-contracts-core
+      uses: actions/checkout@v2
+      with:
+        repository: 'aureliusbtc/consanguine-contracts-core'
+
+    - name: Fetch latest from Sanguine
+      run: |
+        git remote add sanguine https://github.com/synapsecns/sanguine.git
+        git fetch sanguine
+        git checkout main
+        git reset --hard sanguine/main
+        git subtree split --prefix=packages/contracts-core -b temp_branch
+        git checkout main
+        git reset --hard temp_branch
+
+    - name: Push changes to sanguine-contracts-core
+      run: |
+        git push origin main
