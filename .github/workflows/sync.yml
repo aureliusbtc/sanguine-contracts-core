@@ -23,18 +23,21 @@ jobs:
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
           
-    - name: Fetch and split latest contracts-core from Sanguine
+    - name: Fetch latest from Sanguine
       run: |
         git remote add sanguine https://github.com/synapsecns/sanguine.git
         git fetch sanguine master
-        git subtree split --prefix=packages/contracts-core -b temp_branch FETCH_HEAD
 
-    - name: Integrate changes and commit
+    - name: Check folder and split if exists
       run: |
-        git checkout master
-        git reset --hard temp_branch
-        GIT_DIFF=$(git diff master..origin/master)
-        if [ -n "$GIT_DIFF" ]; then
-          git commit -m "Synchronized with Sanguine [skip ci]"
-          git push origin master
+        # Create a temporary branch to check the content without disturbing master
+        git checkout -b temp_check FETCH_HEAD
+        
+        if [ -d "packages/contracts-core" ]; then
+          git subtree split --prefix=packages/contracts-core -b temp_branch
+          git checkout master
+          git reset --hard temp_branch
+        else
+          echo "Directory packages/contracts-core does not exist in fetched content"
+          exit 1
         fi
