@@ -3,6 +3,9 @@ name: Sync with Sanguine
 on:
   schedule:
     - cron: '0 * * * *'  # This will run the job every hour
+push:
+  branches:
+    - main
 
 jobs:
   sync:
