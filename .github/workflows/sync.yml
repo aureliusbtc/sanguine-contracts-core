@@ -16,7 +16,7 @@ jobs:
     - name: Checkout sanguine-contracts-core
       uses: actions/checkout@v2
       with:
-        repository: 'aureliusbtc/consanguine-contracts-core'
+        repository: 'aureliusbtc/sanguine-contracts-core'
 
     - name: Fetch latest from Sanguine
       run: |
