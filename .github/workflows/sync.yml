@@ -23,17 +23,18 @@ jobs:
         git config --global user.email "actions@github.com"
         git config --global user.name "GitHub Actions"
           
-    - name: Fetch latest from Sanguine
-      run: |
-        git remote add sanguine https://github.com/synapsecns/sanguine.git
-        git fetch sanguine
-        git checkout master
-        git reset --hard sanguine/master
-        git subtree split --prefix=packages/contracts-core -b temp_branch
-        git checkout master
-        git reset --hard temp_branch
+  - name: Fetch and split latest contracts-core from Sanguine
+    run: |
+      git remote add sanguine https://github.com/synapsecns/sanguine.git
+      git fetch sanguine master
+      git subtree split --prefix=packages/contracts-core -b temp_branch FETCH_HEAD
 
-    - name: Push changes to sanguine-contracts-core
-      run: |
+  - name: Integrate changes and commit
+    run: |
+      git checkout master
+      git reset --hard temp_branch
+      GIT_DIFF=$(git diff master..origin/master)
+      if [ -n "$GIT_DIFF" ]; then
         git commit -m "Synchronized with Sanguine [skip ci]"
         git push origin master
+      fi
