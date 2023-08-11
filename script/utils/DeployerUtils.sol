@@ -98,6 +98,7 @@ contract DeployerUtils is Script {
 
     /// @notice Predicts the deployment address for a contract.
     function predictFactoryDeployment(string memory contractName) internal view returns (address) {
+        require(Address.isContract(address(FACTORY)), "Factory not deployed");
         return FACTORY.getDeployed(broadcasterAddress, getDeploymentSalt(contractName));
     }
 
@@ -262,7 +263,7 @@ contract DeployerUtils is Script {
         catch {
             string[] memory inputs = new string[](3);
             inputs[0] = "mkdir";
-            inputs[1] = "--p";
+            inputs[1] = "-p";
             inputs[2] = dirPath;
             vm.ffi(inputs);
         }

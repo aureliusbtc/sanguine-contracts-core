@@ -85,7 +85,9 @@ abstract contract DeployMessaging003BaseScript is DeployerUtils {
         startBroadcast(_isBroadcasted);
         globalConfig = loadGlobalDeployConfig("Messaging003");
         // Predict deployments
+        console.log("here");
         agentManager = predictFactoryDeployment(agentManagerName());
+        console.log("failed");
         statementInbox = predictFactoryDeployment(statementInboxName());
         destination = predictFactoryDeployment(DESTINATION);
         gasOracle = predictFactoryDeployment(GAS_ORACLE);
