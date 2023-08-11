@@ -3,10 +3,11 @@ name: Sync with Sanguine
 on:
   schedule:
     - cron: '0 * * * *'  # This will run the job every hour
-push:
-  branches:
-    - master
-
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**[skip ci]**'  # If commit message contains [skip ci], action won't run
 
 jobs:
   sync:
@@ -22,12 +23,13 @@ jobs:
       run: |
         git remote add sanguine https://github.com/synapsecns/sanguine.git
         git fetch sanguine
-        git checkout main
-        git reset --hard sanguine/main
+        git checkout master
+        git reset --hard sanguine/master
         git subtree split --prefix=packages/contracts-core -b temp_branch
-        git checkout main
+        git checkout master
         git reset --hard temp_branch
 
     - name: Push changes to sanguine-contracts-core
       run: |
-        git push origin main
+        git commit -m "Synchronized with Sanguine [skip ci]"
+        git push origin master
