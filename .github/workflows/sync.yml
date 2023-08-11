@@ -5,9 +5,7 @@ on:
     - cron: '0 * * * *'  # This will run the job every hour
   push:
     branches:
-      - main
-    paths-ignore:
-      - '**[skip ci]**'  # If commit message contains [skip ci], action won't run
+      - master
 
 jobs:
   sync:
