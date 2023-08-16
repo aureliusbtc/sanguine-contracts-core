@@ -1,0 +1,758 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputeIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "guardIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "notaryIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "DisputeOpened",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputeIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "slashedIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "rivalIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "fraudProver",
+          "type": "address"
+        }
+      ],
+      "name": "DisputeResolved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "newRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RootUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "enum AgentFlag",
+          "name": "flag",
+          "type": "uint8"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "StatusUpdated",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputeIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"guardIndex\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"notaryIndex\",\"type\":\"uint32\"}],\"name\":\"DisputeOpened\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputeIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"slashedIndex\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"rivalIndex\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"fraudProver\",\"type\":\"address\"}],\"name\":\"DisputeResolved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"newRoot\",\"type\":\"bytes32\"}],\"name\":\"RootUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"StatusUpdated\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"DisputeOpened(uint256,uint32,uint32)\":{\"params\":{\"disputeIndex\":\"Index of the dispute in the global list of all opened disputes\",\"guardIndex\":\"Index of the Guard in the Agent Merkle Tree\",\"notaryIndex\":\"Index of the Notary in the Agent Merkle Tree\"}},\"DisputeResolved(uint256,uint32,uint32,address)\":{\"params\":{\"disputeIndex\":\"Index of the dispute in the global list of all opened disputes\",\"fraudProver\":\"Address who provided fraud proof to resolve the Dispute\",\"rivalIndex\":\"Index of the rival agent in the Agent Merkle Tree\",\"slashedIndex\":\"Index of the slashed agent in the Agent Merkle Tree\"}},\"RootUpdated(bytes32)\":{\"params\":{\"newRoot\":\"New agent merkle root\"}},\"StatusUpdated(uint8,uint32,address)\":{\"details\":\"Only Active/Unstaking/Resting/Slashed flags could be stored in the Agent Merkle Tree. Unknown flag is the default (zero) value and is used to represent agents that never interacted with the BondingManager contract. Fraudulent flag is the value for the agent who has been proven to commit fraud, but their status hasn't been updated to Slashed in the Agent Merkle Tree. This is due to the fact that the update of the status requires a merkle proof of the old status, and happens in a separate transaction because of that.\",\"params\":{\"agent\":\"Agent address\",\"domain\":\"Domain assigned to the agent (ZERO for Guards)\",\"flag\":\"Flag defining agent status:\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"DisputeOpened(uint256,uint32,uint32)\":{\"notice\":\"Emitted whenever a Dispute is opened between two agents. This happens when a Guard submits their report for the Notary-signed statement to `StatementInbox`.\"},\"DisputeResolved(uint256,uint32,uint32,address)\":{\"notice\":\"Emitted whenever a Dispute is resolved. This happens when an Agent who was in Dispute is slashed. Note: this won't be emitted, if an Agent was slashed without being in Dispute.\"},\"RootUpdated(bytes32)\":{\"notice\":\"Emitted whenever the root of the Agent Merkle Tree is updated.\"},\"StatusUpdated(uint8,uint32,address)\":{\"notice\":\"Emitted whenever a status of the agent is updated.\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/AgentManagerEvents.sol\":\"AgentManagerEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/AgentManagerEvents.sol\":{\"keccak256\":\"0xa56624a0db82d304bfba608d1b4d58f9c3d6165d6f7bfb2f7b90d91f232b646a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://32f9e512ad758b98cb3a99611a2cac035ec9e8b0e4f031c88ea8dd46bb2a7dbe\",\"dweb:/ipfs/QmbZXsV3jcBgbsAc8FRGTkMrWDVHPk19p2GoKkxmHov9ei\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "disputeIndex",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "guardIndex",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "notaryIndex",
+              "type": "uint32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "DisputeOpened",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "disputeIndex",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "slashedIndex",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "rivalIndex",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "fraudProver",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "DisputeResolved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "newRoot",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "RootUpdated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "StatusUpdated",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/AgentManagerEvents.sol": "AgentManagerEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/AgentManagerEvents.sol": {
+        "keccak256": "0xa56624a0db82d304bfba608d1b4d58f9c3d6165d6f7bfb2f7b90d91f232b646a",
+        "urls": [
+          "bzz-raw://32f9e512ad758b98cb3a99611a2cac035ec9e8b0e4f031c88ea8dd46bb2a7dbe",
+          "dweb:/ipfs/QmbZXsV3jcBgbsAc8FRGTkMrWDVHPk19p2GoKkxmHov9ei"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/AgentManagerEvents.sol",
+    "id": 3923,
+    "exportedSymbols": {
+      "AgentFlag": [
+        10349
+      ],
+      "AgentManagerEvents": [
+        3922
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2700:14",
+    "nodes": [
+      {
+        "id": 3884,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:14",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 3886,
+        "nodeType": "ImportDirective",
+        "src": "57:49:14",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Structures.sol",
+        "file": "../libs/Structures.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 3923,
+        "sourceUnit": 10474,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 3885,
+              "name": "AgentFlag",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10349,
+              "src": "65:9:14",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 3922,
+        "nodeType": "ContractDefinition",
+        "src": "108:2623:14",
+        "nodes": [
+          {
+            "id": 3895,
+            "nodeType": "EventDefinition",
+            "src": "582:81:14",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3887,
+              "nodeType": "StructuredDocumentation",
+              "src": "151:426:14",
+              "text": " @notice Emitted whenever a Dispute is opened between two agents. This happens when a Guard submits\n their report for the Notary-signed statement to `StatementInbox`.\n @param disputeIndex  Index of the dispute in the global list of all opened disputes\n @param guardIndex    Index of the Guard in the Agent Merkle Tree\n @param notaryIndex   Index of the Notary in the Agent Merkle Tree"
+            },
+            "eventSelector": "d0672fae056abe2bf0637742527d49add67fdb68192a6c6f6bf86eac19fe0530",
+            "name": "DisputeOpened",
+            "nameLocation": "588:13:14",
+            "parameters": {
+              "id": 3894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3889,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "disputeIndex",
+                  "nameLocation": "610:12:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3895,
+                  "src": "602:20:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "602:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3891,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "guardIndex",
+                  "nameLocation": "631:10:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3895,
+                  "src": "624:17:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3890,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "624:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3893,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "notaryIndex",
+                  "nameLocation": "650:11:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3895,
+                  "src": "643:18:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3892,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "643:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "601:61:14"
+            }
+          },
+          {
+            "id": 3906,
+            "nodeType": "EventDefinition",
+            "src": "1217:105:14",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3896,
+              "nodeType": "StructuredDocumentation",
+              "src": "669:543:14",
+              "text": " @notice Emitted whenever a Dispute is resolved. This happens when an Agent who was in Dispute is slashed.\n Note: this won't be emitted, if an Agent was slashed without being in Dispute.\n @param disputeIndex  Index of the dispute in the global list of all opened disputes\n @param slashedIndex  Index of the slashed agent in the Agent Merkle Tree\n @param rivalIndex    Index of the rival agent in the Agent Merkle Tree\n @param fraudProver   Address who provided fraud proof to resolve the Dispute"
+            },
+            "eventSelector": "b4cad5624e1d1c6c622ec70516ee582fe3f6519440c5b47e5165141edc9c54cf",
+            "name": "DisputeResolved",
+            "nameLocation": "1223:15:14",
+            "parameters": {
+              "id": 3905,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3898,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "disputeIndex",
+                  "nameLocation": "1247:12:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1239:20:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3897,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3900,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "slashedIndex",
+                  "nameLocation": "1268:12:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1261:19:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3899,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1261:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3902,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "rivalIndex",
+                  "nameLocation": "1289:10:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1282:17:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3901,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1282:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3904,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "fraudProver",
+                  "nameLocation": "1309:11:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1301:19:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3903,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1301:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:83:14"
+            }
+          },
+          {
+            "id": 3911,
+            "nodeType": "EventDefinition",
+            "src": "1788:35:14",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3907,
+              "nodeType": "StructuredDocumentation",
+              "src": "1648:135:14",
+              "text": " @notice Emitted whenever the root of the Agent Merkle Tree is updated.\n @param newRoot   New agent merkle root"
+            },
+            "eventSelector": "2cbc14f49c068133583f7cb530018af451c87c1cf1327cf2a4ff4698c4730aa4",
+            "name": "RootUpdated",
+            "nameLocation": "1794:11:14",
+            "parameters": {
+              "id": 3910,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3909,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "newRoot",
+                  "nameLocation": "1814:7:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3911,
+                  "src": "1806:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3908,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1806:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1805:17:14"
+            }
+          },
+          {
+            "id": 3921,
+            "nodeType": "EventDefinition",
+            "src": "2647:82:14",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3912,
+              "nodeType": "StructuredDocumentation",
+              "src": "1829:813:14",
+              "text": " @notice Emitted whenever a status of the agent is updated.\n @dev Only Active/Unstaking/Resting/Slashed flags could be stored in the Agent Merkle Tree.\n Unknown flag is the default (zero) value and is used to represent agents that never\n interacted with the BondingManager contract.\n Fraudulent flag is the value for the agent who has been proven to commit fraud, but their\n status hasn't been updated to Slashed in the Agent Merkle Tree. This is due to the fact\n that the update of the status requires a merkle proof of the old status, and happens\n in a separate transaction because of that.\n @param flag      Flag defining agent status:\n @param domain    Domain assigned to the agent (ZERO for Guards)\n @param agent     Agent address"
+            },
+            "eventSelector": "8f9b8b0f4f062833bec85ea9a8465e4a1207b4be6eb565bbd0ae8b913588d04e",
+            "name": "StatusUpdated",
+            "nameLocation": "2653:13:14",
+            "parameters": {
+              "id": 3920,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3915,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "flag",
+                  "nameLocation": "2677:4:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3921,
+                  "src": "2667:14:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_AgentFlag_$10349",
+                    "typeString": "enum AgentFlag"
+                  },
+                  "typeName": {
+                    "id": 3914,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3913,
+                      "name": "AgentFlag",
+                      "nameLocations": [
+                        "2667:9:14"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10349,
+                      "src": "2667:9:14"
+                    },
+                    "referencedDeclaration": 10349,
+                    "src": "2667:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_AgentFlag_$10349",
+                      "typeString": "enum AgentFlag"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3917,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "2698:6:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3921,
+                  "src": "2683:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3916,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2683:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3919,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "2722:5:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3921,
+                  "src": "2706:21:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3918,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2706:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2666:62:14"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "AgentManagerEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          3922
+        ],
+        "name": "AgentManagerEvents",
+        "nameLocation": "126:18:14",
+        "scope": 3923,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 14
+}

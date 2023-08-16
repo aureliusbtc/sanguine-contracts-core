@@ -1,0 +1,190 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "AgentRootAccepted",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"}],\"name\":\"AgentRootAccepted\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the Destination contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/DestinationEvents.sol\":\"DestinationEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/DestinationEvents.sol\":{\"keccak256\":\"0xf6f88d5a7da3fee51ecb0727a738e77f760c3f99d23e714286080eeb97e31132\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3fe5c98c93ea072acd1f5412542236e5e4e6101382f452bbff9b8d8a213a56b4\",\"dweb:/ipfs/Qmc1PthuPTZyL1FWXtL9TvXNWiSLcWzim317AUucnCeqoe\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AgentRootAccepted",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/DestinationEvents.sol": "DestinationEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/DestinationEvents.sol": {
+        "keccak256": "0xf6f88d5a7da3fee51ecb0727a738e77f760c3f99d23e714286080eeb97e31132",
+        "urls": [
+          "bzz-raw://3fe5c98c93ea072acd1f5412542236e5e4e6101382f452bbff9b8d8a213a56b4",
+          "dweb:/ipfs/Qmc1PthuPTZyL1FWXtL9TvXNWiSLcWzim317AUucnCeqoe"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/DestinationEvents.sol",
+    "id": 3931,
+    "exportedSymbols": {
+      "DestinationEvents": [
+        3930
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:184:15",
+    "nodes": [
+      {
+        "id": 3924,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:15",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 3930,
+        "nodeType": "ContractDefinition",
+        "src": "128:87:15",
+        "nodes": [
+          {
+            "id": 3929,
+            "nodeType": "EventDefinition",
+            "src": "170:43:15",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "c8ba82607c756c8ae67c7e47c27ade0b0718d492495044a1f8619663f26ebaa3",
+            "name": "AgentRootAccepted",
+            "nameLocation": "176:17:15",
+            "parameters": {
+              "id": 3928,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3927,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "202:9:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3929,
+                  "src": "194:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3926,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "193:19:15"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "DestinationEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 3925,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:71:15",
+          "text": "@notice A collection of events emitted by the Destination contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          3930
+        ],
+        "name": "DestinationEvents",
+        "nameLocation": "146:17:15",
+        "scope": 3931,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 15
+}

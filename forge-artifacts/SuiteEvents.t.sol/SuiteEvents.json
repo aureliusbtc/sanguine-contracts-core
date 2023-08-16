@@ -1,0 +1,240 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "msgValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "version",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "content",
+          "type": "bytes"
+        }
+      ],
+      "name": "BaseMessageReceived",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"msgValue\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"version\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"content\",\"type\":\"bytes\"}],\"name\":\"BaseMessageReceived\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/utils/events/SuiteEvents.t.sol\":\"SuiteEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"test/harnesses/events/BaseClientHarnessEvents.t.sol\":{\"keccak256\":\"0xbbe298578bcd74722a758cb405679cd3e5433ded2af5dc693da77593fcbba306\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://593bb5eebb02635cccff84277e60d92b71625d945cf5ceb5e399b488c87a8499\",\"dweb:/ipfs/QmeZGgasXRksPxiz8NHR3advUuzA3wbdd9S2d6t7gVkzK2\"]},\"test/utils/events/SuiteEvents.t.sol\":{\"keccak256\":\"0x2283ce345a470e46be1f1803da9a9e17c2896428fe9aef871c1bb38012403ae3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b8083cc6bde1c1e638096347a89e7db037bc3dc3e179fe249bbb5590dd83198c\",\"dweb:/ipfs/QmNZp2dcYPgkV3RR14gkY9JeevcW3kHvqbymB8aHnQsVrW\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "msgValue",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "version",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "content",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "BaseMessageReceived",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/utils/events/SuiteEvents.t.sol": "SuiteEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "test/harnesses/events/BaseClientHarnessEvents.t.sol": {
+        "keccak256": "0xbbe298578bcd74722a758cb405679cd3e5433ded2af5dc693da77593fcbba306",
+        "urls": [
+          "bzz-raw://593bb5eebb02635cccff84277e60d92b71625d945cf5ceb5e399b488c87a8499",
+          "dweb:/ipfs/QmeZGgasXRksPxiz8NHR3advUuzA3wbdd9S2d6t7gVkzK2"
+        ],
+        "license": "MIT"
+      },
+      "test/utils/events/SuiteEvents.t.sol": {
+        "keccak256": "0x2283ce345a470e46be1f1803da9a9e17c2896428fe9aef871c1bb38012403ae3",
+        "urls": [
+          "bzz-raw://b8083cc6bde1c1e638096347a89e7db037bc3dc3e179fe249bbb5590dd83198c",
+          "dweb:/ipfs/QmNZp2dcYPgkV3RR14gkY9JeevcW3kHvqbymB8aHnQsVrW"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/utils/events/SuiteEvents.t.sol",
+    "id": 93160,
+    "exportedSymbols": {
+      "BaseClientHarnessEvents": [
+        54970
+      ],
+      "SuiteEvents": [
+        93159
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:215:187",
+    "nodes": [
+      {
+        "id": 93154,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:187",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 93156,
+        "nodeType": "ImportDirective",
+        "src": "57:93:187",
+        "nodes": [],
+        "absolutePath": "test/harnesses/events/BaseClientHarnessEvents.t.sol",
+        "file": "../../harnesses/events/BaseClientHarnessEvents.t.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93160,
+        "sourceUnit": 54971,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93155,
+              "name": "BaseClientHarnessEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 54970,
+              "src": "65:23:187",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93159,
+        "nodeType": "ContractDefinition",
+        "src": "187:59:187",
+        "nodes": [],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 93157,
+              "name": "BaseClientHarnessEvents",
+              "nameLocations": [
+                "220:23:187"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 54970,
+              "src": "220:23:187"
+            },
+            "id": 93158,
+            "nodeType": "InheritanceSpecifier",
+            "src": "220:23:187"
+          }
+        ],
+        "canonicalName": "SuiteEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          93159,
+          54970
+        ],
+        "name": "SuiteEvents",
+        "nameLocation": "205:11:187",
+        "scope": 93160,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 187
+}

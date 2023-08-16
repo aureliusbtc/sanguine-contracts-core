@@ -1,0 +1,196 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "state",
+          "type": "bytes"
+        }
+      ],
+      "name": "StateSaved",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"state\",\"type\":\"bytes\"}],\"name\":\"StateSaved\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"StateSaved(bytes)\":{\"params\":{\"state\":\"Raw payload with state data\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"StateSaved(bytes)\":{\"notice\":\"Emitted when a new Origin State is saved after a message was sent.\"}},\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the StateHub contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/StateHubEvents.sol\":\"StateHubEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/StateHubEvents.sol\":{\"keccak256\":\"0x6c4a2f6a342d579b561de4a4027bef31a7d0eec04e495373fab36f109069cf0f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://56db1ec51d7063105fbac6022feb4c24aed863fea534af26fa18d4059b99038a\",\"dweb:/ipfs/Qmb8kFvmURYrSfjhtkrBcQvPUprdf4xN8w3wQhPsoXWat9\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "state",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StateSaved",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/StateHubEvents.sol": "StateHubEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/StateHubEvents.sol": {
+        "keccak256": "0x6c4a2f6a342d579b561de4a4027bef31a7d0eec04e495373fab36f109069cf0f",
+        "urls": [
+          "bzz-raw://56db1ec51d7063105fbac6022feb4c24aed863fea534af26fa18d4059b99038a",
+          "dweb:/ipfs/Qmb8kFvmURYrSfjhtkrBcQvPUprdf4xN8w3wQhPsoXWat9"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/StateHubEvents.sol",
+    "id": 4049,
+    "exportedSymbols": {
+      "StateHubEvents": [
+        4048
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:315:21",
+    "nodes": [
+      {
+        "id": 4041,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:21",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 4048,
+        "nodeType": "ContractDefinition",
+        "src": "125:221:21",
+        "nodes": [
+          {
+            "id": 4047,
+            "nodeType": "EventDefinition",
+            "src": "314:30:21",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 4043,
+              "nodeType": "StructuredDocumentation",
+              "src": "164:145:21",
+              "text": " @notice Emitted when a new Origin State is saved after a message was sent.\n @param state     Raw payload with state data"
+            },
+            "eventSelector": "c82fd59396134ccdeb4ce594571af6fe8f87d1df40fb6aaf1463ee06d610d0cb",
+            "name": "StateSaved",
+            "nameLocation": "320:10:21",
+            "parameters": {
+              "id": 4046,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4045,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "state",
+                  "nameLocation": "337:5:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4047,
+                  "src": "331:11:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4044,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "331:5:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "330:13:21"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "StateHubEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 4042,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:68:21",
+          "text": "@notice A collection of events emitted by the StateHub contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          4048
+        ],
+        "name": "StateHubEvents",
+        "nameLocation": "143:14:21",
+        "scope": 4049,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 21
+}

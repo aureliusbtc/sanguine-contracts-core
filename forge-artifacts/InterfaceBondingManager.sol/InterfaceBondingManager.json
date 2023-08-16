@@ -1,0 +1,2136 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "addAgent",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "agentLeaf",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "leaf",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "allLeafs",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "leafs",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "completeSlashing",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "completeUnstaking",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        }
+      ],
+      "name": "getActiveAgents",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "agents",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "indexFrom",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "getLeafs",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "leafs",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "getProof",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "proof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "initiateUnstaking",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "leafsAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "msgOrigin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "proofMaturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "prover",
+          "type": "address"
+        }
+      ],
+      "name": "remoteSlashAgent",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "magicValue",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawTips",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addAgent(uint32,address,bytes32[])": "237a85a5",
+    "agentLeaf(address)": "c99dcb9e",
+    "allLeafs()": "12db2ef6",
+    "completeSlashing(uint32,address,bytes32[])": "fbc5265e",
+    "completeUnstaking(uint32,address,bytes32[])": "4c3e1c1f",
+    "getActiveAgents(uint32)": "c1c0f4f6",
+    "getLeafs(uint256,uint256)": "33d1b2e8",
+    "getProof(address)": "3eea79d1",
+    "initiateUnstaking(uint32,address,bytes32[])": "130c5673",
+    "leafsAmount()": "33c3a8f3",
+    "remoteSlashAgent(uint32,uint256,uint32,address,address)": "9d228a51",
+    "withdrawTips(address,uint32,uint256)": "cc875501"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"internalType\":\"bytes32[]\",\"name\":\"proof\",\"type\":\"bytes32[]\"}],\"name\":\"addAgent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"agentLeaf\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"leaf\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"allLeafs\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"leafs\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"internalType\":\"bytes32[]\",\"name\":\"proof\",\"type\":\"bytes32[]\"}],\"name\":\"completeSlashing\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"internalType\":\"bytes32[]\",\"name\":\"proof\",\"type\":\"bytes32[]\"}],\"name\":\"completeUnstaking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"}],\"name\":\"getActiveAgents\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"agents\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"indexFrom\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"getLeafs\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"leafs\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"getProof\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"proof\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"internalType\":\"bytes32[]\",\"name\":\"proof\",\"type\":\"bytes32[]\"}],\"name\":\"initiateUnstaking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"leafsAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"msgOrigin\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"proofMaturity\",\"type\":\"uint256\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"prover\",\"type\":\"address\"}],\"name\":\"remoteSlashAgent\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"magicValue\",\"type\":\"bytes4\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawTips\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addAgent(uint32,address,bytes32[])\":{\"details\":\"Inactive: `proof` should be the proof of inclusion of an empty leaf having index following the last added agent in the tree.Resting: `proof` should be the proof of inclusion of the agent leaf with Resting flag having index previously assigned to the agent.\",\"params\":{\"agent\":\"Address of the Agent\",\"domain\":\"Domain where the Agent will be active\",\"proof\":\"Merkle proof of the Inactive/Resting status for the agent\"}},\"agentLeaf(address)\":{\"details\":\"Will return an empty leaf, if agent is not added to the tree yet.\",\"params\":{\"agent\":\"Agent address\"},\"returns\":{\"leaf\":\"    Agent leaf in the Agent Merkle Tree\"}},\"allLeafs()\":{\"details\":\"This might consume a lot of gas, do not use this on-chain.\"},\"completeSlashing(uint32,address,bytes32[])\":{\"details\":\"`proof` should be the proof of inclusion of the agent leaf with Active/Unstaking flag having index previously assigned to the agent.\",\"params\":{\"agent\":\"Address of the Agent\",\"domain\":\"Domain where the Agent was active\",\"proof\":\"Merkle proof of the active/unstaking status for the agent\"}},\"completeUnstaking(uint32,address,bytes32[])\":{\"details\":\"`proof` should be the proof of inclusion of the agent leaf with Unstaking flag having index previously assigned to the agent.\",\"params\":{\"agent\":\"Address of the Agent\",\"domain\":\"Domain where the Agent was active\",\"proof\":\"Merkle proof of the unstaking status for the agent\"}},\"getActiveAgents(uint32)\":{\"params\":{\"agents\":\"List of active agents for the domain\",\"domain\":\"Domain to get agents from (ZERO for Guards)\"}},\"getLeafs(uint256,uint256)\":{\"details\":\"This might consume a lot of gas, do not use this on-chain.Will return less than `amount` entries, if indexFrom + amount > leafsAmount\"},\"getProof(address)\":{\"details\":\"Will return a proof for an empty leaf, if agent is not added to the tree yet. This proof could be used by ANY next new agent that calls {addAgent}.This WILL consume a lot of gas, do not use this on-chain.The alternative way to create a proof is to fetch the full list of leafs using either {allLeafs} or {getLeafs}, and create a merkle proof from that.\",\"params\":{\"agent\":\"Agent address\"},\"returns\":{\"proof\":\"   Merkle proof for the agent\"}},\"initiateUnstaking(uint32,address,bytes32[])\":{\"details\":\"`proof` should be the proof of inclusion of the agent leaf with Active flag having index previously assigned to the agent.\",\"params\":{\"agent\":\"Address of the Agent\",\"domain\":\"Domain where the Agent is active\",\"proof\":\"Merkle proof of the Active status for the agent\"}},\"leafsAmount()\":{\"details\":\"This includes active, unstaking, resting and slashed agents. This also includes an empty leaf as the very first entry.\"},\"remoteSlashAgent(uint32,uint256,uint32,address,address)\":{\"details\":\"This initiates the process of agent slashing. It could be immediately completed by anyone calling completeSlashing() providing a correct merkle proof for the OLD agent status. Note: as an extra security check this function returns its own selector, so that Destination could verify that a \\\"remote\\\" function was called when executing a manager message.\",\"params\":{\"agent\":\"Address of the slashed Agent\",\"domain\":\"Domain where the slashed agent was active\",\"prover\":\"Address that initially provided fraud proof to remote AgentManager\"},\"returns\":{\"magicValue\":\"  Selector of this function\"}},\"withdrawTips(address,uint32,uint256)\":{\"details\":\"Could only be called by the Summit contract.\",\"params\":{\"amount\":\"Tips value to withdraw\",\"origin\":\"Domain where tips need to be withdrawn\",\"recipient\":\"Address to withdraw tips to\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addAgent(uint32,address,bytes32[])\":{\"notice\":\"Adds a new agent for the domain. This is either a fresh address (Inactive), or an agent who used to be active on the same domain before (Resting).\"},\"agentLeaf(address)\":{\"notice\":\"Returns a leaf representing the current status of agent in the Agent Merkle Tree.\"},\"allLeafs()\":{\"notice\":\"Returns a full list of leafs from the Agent Merkle Tree.\"},\"completeSlashing(uint32,address,bytes32[])\":{\"notice\":\"Completes the slashing of the agent bond. Agent signature is no longer considered valid under the updated Agent Merkle Root.\"},\"completeUnstaking(uint32,address,bytes32[])\":{\"notice\":\"Completes the unstaking of the agent bond. Agent signature is no longer considered valid on any of the chains.\"},\"getActiveAgents(uint32)\":{\"notice\":\"Returns all active agents for a given domain.\"},\"getLeafs(uint256,uint256)\":{\"notice\":\"Returns a list of leafs from the Agent Merkle Tree with indexes [indexFrom .. indexFrom + amount).\"},\"getProof(address)\":{\"notice\":\"Returns a proof of inclusion of the agent in the Agent Merkle Tree.\"},\"initiateUnstaking(uint32,address,bytes32[])\":{\"notice\":\"Initiates the unstaking of the agent bond. Agent signature is immediately no longer considered valid on Synapse Chain, and will be invalid on other chains once the Light Manager updates their agent merkle root on these chains.\"},\"leafsAmount()\":{\"notice\":\"Returns a total amount of leafs representing known agents.\"},\"remoteSlashAgent(uint32,uint256,uint32,address,address)\":{\"notice\":\"Remote AgentManager should call this function to indicate that the agent has been proven to commit fraud on the origin chain.\"},\"withdrawTips(address,uint32,uint256)\":{\"notice\":\"Withdraws locked base message tips from requested domain Origin to the recipient. Issues a call to a local Origin contract, or sends a manager message to the remote chain.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/InterfaceBondingManager.sol\":\"InterfaceBondingManager\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/InterfaceBondingManager.sol\":{\"keccak256\":\"0x0c94cb27bd86eb1f0a48bf9ae15f747f4d0cc9c3e210a7eb75f255d44ccb3ec6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3ca990b2704379039a58af30ef2e4f8db6165d8634cb77bcf2c34a1f3c09eb42\",\"dweb:/ipfs/Qmb5aNdpJrqry3o87KWwYf23kT691xf7GujzmQFy2S3sop\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "proof",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addAgent"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentLeaf",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "leaf",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allLeafs",
+          "outputs": [
+            {
+              "internalType": "bytes32[]",
+              "name": "leafs",
+              "type": "bytes32[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "proof",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "completeSlashing"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "proof",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "completeUnstaking"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getActiveAgents",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "agents",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "indexFrom",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLeafs",
+          "outputs": [
+            {
+              "internalType": "bytes32[]",
+              "name": "leafs",
+              "type": "bytes32[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getProof",
+          "outputs": [
+            {
+              "internalType": "bytes32[]",
+              "name": "proof",
+              "type": "bytes32[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "proof",
+              "type": "bytes32[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initiateUnstaking"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "leafsAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "msgOrigin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "proofMaturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "prover",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "remoteSlashAgent",
+          "outputs": [
+            {
+              "internalType": "bytes4",
+              "name": "magicValue",
+              "type": "bytes4"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawTips"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addAgent(uint32,address,bytes32[])": {
+            "details": "Inactive: `proof` should be the proof of inclusion of an empty leaf having index following the last added agent in the tree.Resting: `proof` should be the proof of inclusion of the agent leaf with Resting flag having index previously assigned to the agent.",
+            "params": {
+              "agent": "Address of the Agent",
+              "domain": "Domain where the Agent will be active",
+              "proof": "Merkle proof of the Inactive/Resting status for the agent"
+            }
+          },
+          "agentLeaf(address)": {
+            "details": "Will return an empty leaf, if agent is not added to the tree yet.",
+            "params": {
+              "agent": "Agent address"
+            },
+            "returns": {
+              "leaf": "    Agent leaf in the Agent Merkle Tree"
+            }
+          },
+          "allLeafs()": {
+            "details": "This might consume a lot of gas, do not use this on-chain."
+          },
+          "completeSlashing(uint32,address,bytes32[])": {
+            "details": "`proof` should be the proof of inclusion of the agent leaf with Active/Unstaking flag having index previously assigned to the agent.",
+            "params": {
+              "agent": "Address of the Agent",
+              "domain": "Domain where the Agent was active",
+              "proof": "Merkle proof of the active/unstaking status for the agent"
+            }
+          },
+          "completeUnstaking(uint32,address,bytes32[])": {
+            "details": "`proof` should be the proof of inclusion of the agent leaf with Unstaking flag having index previously assigned to the agent.",
+            "params": {
+              "agent": "Address of the Agent",
+              "domain": "Domain where the Agent was active",
+              "proof": "Merkle proof of the unstaking status for the agent"
+            }
+          },
+          "getActiveAgents(uint32)": {
+            "params": {
+              "agents": "List of active agents for the domain",
+              "domain": "Domain to get agents from (ZERO for Guards)"
+            }
+          },
+          "getLeafs(uint256,uint256)": {
+            "details": "This might consume a lot of gas, do not use this on-chain.Will return less than `amount` entries, if indexFrom + amount > leafsAmount"
+          },
+          "getProof(address)": {
+            "details": "Will return a proof for an empty leaf, if agent is not added to the tree yet. This proof could be used by ANY next new agent that calls {addAgent}.This WILL consume a lot of gas, do not use this on-chain.The alternative way to create a proof is to fetch the full list of leafs using either {allLeafs} or {getLeafs}, and create a merkle proof from that.",
+            "params": {
+              "agent": "Agent address"
+            },
+            "returns": {
+              "proof": "   Merkle proof for the agent"
+            }
+          },
+          "initiateUnstaking(uint32,address,bytes32[])": {
+            "details": "`proof` should be the proof of inclusion of the agent leaf with Active flag having index previously assigned to the agent.",
+            "params": {
+              "agent": "Address of the Agent",
+              "domain": "Domain where the Agent is active",
+              "proof": "Merkle proof of the Active status for the agent"
+            }
+          },
+          "leafsAmount()": {
+            "details": "This includes active, unstaking, resting and slashed agents. This also includes an empty leaf as the very first entry."
+          },
+          "remoteSlashAgent(uint32,uint256,uint32,address,address)": {
+            "details": "This initiates the process of agent slashing. It could be immediately completed by anyone calling completeSlashing() providing a correct merkle proof for the OLD agent status. Note: as an extra security check this function returns its own selector, so that Destination could verify that a \"remote\" function was called when executing a manager message.",
+            "params": {
+              "agent": "Address of the slashed Agent",
+              "domain": "Domain where the slashed agent was active",
+              "prover": "Address that initially provided fraud proof to remote AgentManager"
+            },
+            "returns": {
+              "magicValue": "  Selector of this function"
+            }
+          },
+          "withdrawTips(address,uint32,uint256)": {
+            "details": "Could only be called by the Summit contract.",
+            "params": {
+              "amount": "Tips value to withdraw",
+              "origin": "Domain where tips need to be withdrawn",
+              "recipient": "Address to withdraw tips to"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addAgent(uint32,address,bytes32[])": {
+            "notice": "Adds a new agent for the domain. This is either a fresh address (Inactive), or an agent who used to be active on the same domain before (Resting)."
+          },
+          "agentLeaf(address)": {
+            "notice": "Returns a leaf representing the current status of agent in the Agent Merkle Tree."
+          },
+          "allLeafs()": {
+            "notice": "Returns a full list of leafs from the Agent Merkle Tree."
+          },
+          "completeSlashing(uint32,address,bytes32[])": {
+            "notice": "Completes the slashing of the agent bond. Agent signature is no longer considered valid under the updated Agent Merkle Root."
+          },
+          "completeUnstaking(uint32,address,bytes32[])": {
+            "notice": "Completes the unstaking of the agent bond. Agent signature is no longer considered valid on any of the chains."
+          },
+          "getActiveAgents(uint32)": {
+            "notice": "Returns all active agents for a given domain."
+          },
+          "getLeafs(uint256,uint256)": {
+            "notice": "Returns a list of leafs from the Agent Merkle Tree with indexes [indexFrom .. indexFrom + amount)."
+          },
+          "getProof(address)": {
+            "notice": "Returns a proof of inclusion of the agent in the Agent Merkle Tree."
+          },
+          "initiateUnstaking(uint32,address,bytes32[])": {
+            "notice": "Initiates the unstaking of the agent bond. Agent signature is immediately no longer considered valid on Synapse Chain, and will be invalid on other chains once the Light Manager updates their agent merkle root on these chains."
+          },
+          "leafsAmount()": {
+            "notice": "Returns a total amount of leafs representing known agents."
+          },
+          "remoteSlashAgent(uint32,uint256,uint32,address,address)": {
+            "notice": "Remote AgentManager should call this function to indicate that the agent has been proven to commit fraud on the origin chain."
+          },
+          "withdrawTips(address,uint32,uint256)": {
+            "notice": "Withdraws locked base message tips from requested domain Origin to the recipient. Issues a call to a local Origin contract, or sends a manager message to the remote chain."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/InterfaceBondingManager.sol": "InterfaceBondingManager"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/InterfaceBondingManager.sol": {
+        "keccak256": "0x0c94cb27bd86eb1f0a48bf9ae15f747f4d0cc9c3e210a7eb75f255d44ccb3ec6",
+        "urls": [
+          "bzz-raw://3ca990b2704379039a58af30ef2e4f8db6165d8634cb77bcf2c34a1f3c09eb42",
+          "dweb:/ipfs/Qmb5aNdpJrqry3o87KWwYf23kT691xf7GujzmQFy2S3sop"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/InterfaceBondingManager.sol",
+    "id": 9645,
+    "exportedSymbols": {
+      "InterfaceBondingManager": [
+        9644
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:7127:37",
+    "nodes": [
+      {
+        "id": 9523,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:37",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9644,
+        "nodeType": "ContractDefinition",
+        "src": "57:7101:37",
+        "nodes": [
+          {
+            "id": 9534,
+            "nodeType": "FunctionDefinition",
+            "src": "1087:81:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9524,
+              "nodeType": "StructuredDocumentation",
+              "src": "417:665:37",
+              "text": " @notice Adds a new agent for the domain. This is either a fresh address (Inactive),\n or an agent who used to be active on the same domain before (Resting).\n @dev Inactive: `proof` should be the proof of inclusion of an empty leaf\n having index following the last added agent in the tree.\n @dev Resting: `proof` should be the proof of inclusion of the agent leaf\n with Resting flag having index previously assigned to the agent.\n @param domain    Domain where the Agent will be active\n @param agent     Address of the Agent\n @param proof     Merkle proof of the Inactive/Resting status for the agent"
+            },
+            "functionSelector": "237a85a5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAgent",
+            "nameLocation": "1096:8:37",
+            "parameters": {
+              "id": 9532,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9526,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "1112:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9534,
+                  "src": "1105:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9525,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1105:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9528,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "1128:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9534,
+                  "src": "1120:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9527,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1120:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9531,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "1152:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9534,
+                  "src": "1135:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9529,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1135:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9530,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1135:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1104:54:37"
+            },
+            "returnParameters": {
+              "id": 9533,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1167:0:37"
+            },
+            "scope": 9644,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9545,
+            "nodeType": "FunctionDefinition",
+            "src": "1762:90:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9535,
+              "nodeType": "StructuredDocumentation",
+              "src": "1174:583:37",
+              "text": " @notice Initiates the unstaking of the agent bond. Agent signature is immediately no longer\n considered valid on Synapse Chain, and will be invalid on other chains once the Light Manager\n updates their agent merkle root on these chains.\n @dev `proof` should be the proof of inclusion of the agent leaf\n with Active flag having index previously assigned to the agent.\n @param domain    Domain where the Agent is active\n @param agent     Address of the Agent\n @param proof     Merkle proof of the Active status for the agent"
+            },
+            "functionSelector": "130c5673",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateUnstaking",
+            "nameLocation": "1771:17:37",
+            "parameters": {
+              "id": 9543,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9537,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "1796:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9545,
+                  "src": "1789:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9536,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1789:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9539,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "1812:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9545,
+                  "src": "1804:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9538,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1804:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9542,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "1836:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9545,
+                  "src": "1819:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9540,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1819:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9541,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1819:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1788:54:37"
+            },
+            "returnParameters": {
+              "id": 9544,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1851:0:37"
+            },
+            "scope": 9644,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9556,
+            "nodeType": "FunctionDefinition",
+            "src": "2330:90:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9546,
+              "nodeType": "StructuredDocumentation",
+              "src": "1858:467:37",
+              "text": " @notice Completes the unstaking of the agent bond. Agent signature is no longer considered\n valid on any of the chains.\n @dev `proof` should be the proof of inclusion of the agent leaf\n with Unstaking flag having index previously assigned to the agent.\n @param domain    Domain where the Agent was active\n @param agent     Address of the Agent\n @param proof     Merkle proof of the unstaking status for the agent"
+            },
+            "functionSelector": "4c3e1c1f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "completeUnstaking",
+            "nameLocation": "2339:17:37",
+            "parameters": {
+              "id": 9554,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9548,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "2364:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9556,
+                  "src": "2357:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9547,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2357:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9550,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "2380:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9556,
+                  "src": "2372:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9549,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2372:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9553,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "2404:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9556,
+                  "src": "2387:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9551,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2387:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9552,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2387:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2356:54:37"
+            },
+            "returnParameters": {
+              "id": 9555,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2419:0:37"
+            },
+            "scope": 9644,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9567,
+            "nodeType": "FunctionDefinition",
+            "src": "2926:89:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9557,
+              "nodeType": "StructuredDocumentation",
+              "src": "2426:495:37",
+              "text": " @notice Completes the slashing of the agent bond. Agent signature is no longer considered\n valid under the updated Agent Merkle Root.\n @dev `proof` should be the proof of inclusion of the agent leaf\n with Active/Unstaking flag having index previously assigned to the agent.\n @param domain    Domain where the Agent was active\n @param agent     Address of the Agent\n @param proof     Merkle proof of the active/unstaking status for the agent"
+            },
+            "functionSelector": "fbc5265e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "completeSlashing",
+            "nameLocation": "2935:16:37",
+            "parameters": {
+              "id": 9565,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9559,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "2959:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9567,
+                  "src": "2952:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9558,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2952:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9561,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "2975:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9567,
+                  "src": "2967:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9560,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2967:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9564,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "2999:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9567,
+                  "src": "2982:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9562,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2982:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9563,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2982:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2951:54:37"
+            },
+            "returnParameters": {
+              "id": 9566,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3014:0:37"
+            },
+            "scope": 9644,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9583,
+            "nodeType": "FunctionDefinition",
+            "src": "3853:166:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9568,
+              "nodeType": "StructuredDocumentation",
+              "src": "3021:827:37",
+              "text": " @notice Remote AgentManager should call this function to indicate that the agent\n has been proven to commit fraud on the origin chain.\n @dev This initiates the process of agent slashing. It could be immediately\n completed by anyone calling completeSlashing() providing a correct merkle proof\n for the OLD agent status.\n Note: as an extra security check this function returns its own selector, so that\n Destination could verify that a \"remote\" function was called when executing a manager message.\n @param domain        Domain where the slashed agent was active\n @param agent         Address of the slashed Agent\n @param prover        Address that initially provided fraud proof to remote AgentManager\n @return magicValue   Selector of this function"
+            },
+            "functionSelector": "9d228a51",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remoteSlashAgent",
+            "nameLocation": "3862:16:37",
+            "parameters": {
+              "id": 9579,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9570,
+                  "mutability": "mutable",
+                  "name": "msgOrigin",
+                  "nameLocation": "3886:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9583,
+                  "src": "3879:16:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9569,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3879:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9572,
+                  "mutability": "mutable",
+                  "name": "proofMaturity",
+                  "nameLocation": "3905:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9583,
+                  "src": "3897:21:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9571,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3897:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9574,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "3927:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9583,
+                  "src": "3920:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9573,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3920:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9576,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "3943:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9583,
+                  "src": "3935:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9575,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3935:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9578,
+                  "mutability": "mutable",
+                  "name": "prover",
+                  "nameLocation": "3958:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9583,
+                  "src": "3950:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9577,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3950:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3878:87:37"
+            },
+            "returnParameters": {
+              "id": 9582,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9581,
+                  "mutability": "mutable",
+                  "name": "magicValue",
+                  "nameLocation": "4007:10:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9583,
+                  "src": "4000:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 9580,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4000:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3999:19:37"
+            },
+            "scope": 9644,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9593,
+            "nodeType": "FunctionDefinition",
+            "src": "4466:81:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9584,
+              "nodeType": "StructuredDocumentation",
+              "src": "4025:436:37",
+              "text": " @notice Withdraws locked base message tips from requested domain Origin to the recipient.\n Issues a call to a local Origin contract, or sends a manager message to the remote chain.\n @dev Could only be called by the Summit contract.\n @param recipient     Address to withdraw tips to\n @param origin        Domain where tips need to be withdrawn\n @param amount        Tips value to withdraw"
+            },
+            "functionSelector": "cc875501",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawTips",
+            "nameLocation": "4475:12:37",
+            "parameters": {
+              "id": 9591,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9586,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "4496:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9593,
+                  "src": "4488:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9585,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4488:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9588,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "4514:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9593,
+                  "src": "4507:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9587,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4507:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9590,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "4530:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9593,
+                  "src": "4522:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9589,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4522:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4487:50:37"
+            },
+            "returnParameters": {
+              "id": 9592,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4546:0:37"
+            },
+            "scope": 9644,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9602,
+            "nodeType": "FunctionDefinition",
+            "src": "5093:88:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9594,
+              "nodeType": "StructuredDocumentation",
+              "src": "4887:201:37",
+              "text": " @notice Returns all active agents for a given domain.\n @param domain    Domain to get agents from (ZERO for Guards)\n @param agents    List of active agents for the domain"
+            },
+            "functionSelector": "c1c0f4f6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getActiveAgents",
+            "nameLocation": "5102:15:37",
+            "parameters": {
+              "id": 9597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9596,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "5125:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9602,
+                  "src": "5118:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9595,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5118:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5117:15:37"
+            },
+            "returnParameters": {
+              "id": 9601,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9600,
+                  "mutability": "mutable",
+                  "name": "agents",
+                  "nameLocation": "5173:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9602,
+                  "src": "5156:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9598,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "5156:7:37",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 9599,
+                    "nodeType": "ArrayTypeName",
+                    "src": "5156:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5155:25:37"
+            },
+            "scope": 9644,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9610,
+            "nodeType": "FunctionDefinition",
+            "src": "5476:71:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9603,
+              "nodeType": "StructuredDocumentation",
+              "src": "5187:284:37",
+              "text": " @notice Returns a leaf representing the current status of agent in the Agent Merkle Tree.\n @dev Will return an empty leaf, if agent is not added to the tree yet.\n @param agent     Agent address\n @return leaf     Agent leaf in the Agent Merkle Tree"
+            },
+            "functionSelector": "c99dcb9e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "agentLeaf",
+            "nameLocation": "5485:9:37",
+            "parameters": {
+              "id": 9606,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9605,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "5503:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9610,
+                  "src": "5495:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9604,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5495:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5494:15:37"
+            },
+            "returnParameters": {
+              "id": 9609,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9608,
+                  "mutability": "mutable",
+                  "name": "leaf",
+                  "nameLocation": "5541:4:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9610,
+                  "src": "5533:12:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9607,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5533:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5532:14:37"
+            },
+            "scope": 9644,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9616,
+            "nodeType": "FunctionDefinition",
+            "src": "5781:62:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9611,
+              "nodeType": "StructuredDocumentation",
+              "src": "5553:223:37",
+              "text": " @notice Returns a total amount of leafs representing known agents.\n @dev This includes active, unstaking, resting and slashed agents.\n This also includes an empty leaf as the very first entry."
+            },
+            "functionSelector": "33c3a8f3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "leafsAmount",
+            "nameLocation": "5790:11:37",
+            "parameters": {
+              "id": 9612,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5801:2:37"
+            },
+            "returnParameters": {
+              "id": 9615,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9614,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "5835:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9616,
+                  "src": "5827:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9613,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5827:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5826:16:37"
+            },
+            "scope": 9644,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9623,
+            "nodeType": "FunctionDefinition",
+            "src": "6008:67:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9617,
+              "nodeType": "StructuredDocumentation",
+              "src": "5849:154:37",
+              "text": " @notice Returns a full list of leafs from the Agent Merkle Tree.\n @dev This might consume a lot of gas, do not use this on-chain."
+            },
+            "functionSelector": "12db2ef6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "allLeafs",
+            "nameLocation": "6017:8:37",
+            "parameters": {
+              "id": 9618,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6025:2:37"
+            },
+            "returnParameters": {
+              "id": 9622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9621,
+                  "mutability": "mutable",
+                  "name": "leafs",
+                  "nameLocation": "6068:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9623,
+                  "src": "6051:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9619,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6051:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9620,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6051:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6050:24:37"
+            },
+            "scope": 9644,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9634,
+            "nodeType": "FunctionDefinition",
+            "src": "6377:100:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9624,
+              "nodeType": "StructuredDocumentation",
+              "src": "6081:291:37",
+              "text": " @notice Returns a list of leafs from the Agent Merkle Tree\n with indexes [indexFrom .. indexFrom + amount).\n @dev This might consume a lot of gas, do not use this on-chain.\n @dev Will return less than `amount` entries, if indexFrom + amount > leafsAmount"
+            },
+            "functionSelector": "33d1b2e8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLeafs",
+            "nameLocation": "6386:8:37",
+            "parameters": {
+              "id": 9629,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9626,
+                  "mutability": "mutable",
+                  "name": "indexFrom",
+                  "nameLocation": "6403:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9634,
+                  "src": "6395:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9625,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6395:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9628,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "6422:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9634,
+                  "src": "6414:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9627,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6414:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6394:35:37"
+            },
+            "returnParameters": {
+              "id": 9633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9632,
+                  "mutability": "mutable",
+                  "name": "leafs",
+                  "nameLocation": "6470:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9634,
+                  "src": "6453:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9630,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6453:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9631,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6453:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6452:24:37"
+            },
+            "scope": 9644,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9643,
+            "nodeType": "FunctionDefinition",
+            "src": "7076:80:37",
+            "nodes": [],
+            "documentation": {
+              "id": 9635,
+              "nodeType": "StructuredDocumentation",
+              "src": "6483:588:37",
+              "text": " @notice Returns a proof of inclusion of the agent in the Agent Merkle Tree.\n @dev Will return a proof for an empty leaf, if agent is not added to the tree yet.\n This proof could be used by ANY next new agent that calls {addAgent}.\n @dev This WILL consume a lot of gas, do not use this on-chain.\n @dev The alternative way to create a proof is to fetch the full list of leafs using\n either {allLeafs} or {getLeafs}, and create a merkle proof from that.\n @param agent     Agent address\n @return proof    Merkle proof for the agent"
+            },
+            "functionSelector": "3eea79d1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProof",
+            "nameLocation": "7085:8:37",
+            "parameters": {
+              "id": 9638,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9637,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "7102:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9643,
+                  "src": "7094:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9636,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7094:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7093:15:37"
+            },
+            "returnParameters": {
+              "id": 9642,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9641,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "7149:5:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9643,
+                  "src": "7132:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9639,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "7132:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9640,
+                    "nodeType": "ArrayTypeName",
+                    "src": "7132:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7131:24:37"
+            },
+            "scope": 9644,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "InterfaceBondingManager",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9644
+        ],
+        "name": "InterfaceBondingManager",
+        "nameLocation": "67:23:37",
+        "scope": 9645,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 37
+}

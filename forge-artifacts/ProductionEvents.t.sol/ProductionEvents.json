@@ -1,0 +1,1569 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "AgentRootAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "notary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "AttestationAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attestation",
+          "type": "bytes"
+        }
+      ],
+      "name": "AttestationSaved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "Dispatched",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputeIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "guardIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "notaryIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "DisputeOpened",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputeIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "slashedIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "rivalIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "fraudProver",
+          "type": "address"
+        }
+      ],
+      "name": "DisputeResolved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "remoteDomain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "name": "Executed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidAttestation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "arPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "arSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidAttestationReport",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rcptSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidReceipt",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rrPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rrSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidReceiptReport",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "srPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "srSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidStateReport",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "stateIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidStateWithAttestation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "stateIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidStateWithSnapshot",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "notary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rcptSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "ReceiptAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "newRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RootUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "Sent",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "SnapshotAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "state",
+          "type": "bytes"
+        }
+      ],
+      "name": "StateSaved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "enum AgentFlag",
+          "name": "flag",
+          "type": "uint8"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "StatusUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "actor",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tip",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipAwarded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "paddedTips",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipsRecorded",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"}],\"name\":\"AgentRootAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"notary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attSignature\",\"type\":\"bytes\"}],\"name\":\"AttestationAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attestation\",\"type\":\"bytes\"}],\"name\":\"AttestationSaved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"Dispatched\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputeIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"guardIndex\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"notaryIndex\",\"type\":\"uint32\"}],\"name\":\"DisputeOpened\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputeIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"slashedIndex\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"rivalIndex\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"fraudProver\",\"type\":\"address\"}],\"name\":\"DisputeResolved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"remoteDomain\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"name\":\"Executed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidAttestation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"arPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"arSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidAttestationReport\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rcptSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidReceipt\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rrPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rrSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidReceiptReport\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"srPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"srSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidStateReport\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stateIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidStateWithAttestation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stateIndex\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidStateWithSnapshot\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"notary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rcptSignature\",\"type\":\"bytes\"}],\"name\":\"ReceiptAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"newRoot\",\"type\":\"bytes32\"}],\"name\":\"RootUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"Sent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"name\":\"SnapshotAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"state\",\"type\":\"bytes\"}],\"name\":\"StateSaved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"StatusUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"actor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tip\",\"type\":\"uint256\"}],\"name\":\"TipAwarded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"TipsRecorded\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"AttestationAccepted(uint32,address,bytes,bytes)\":{\"notice\":\"Emitted when a snapshot is accepted by the Destination contract.\"},\"AttestationSaved(bytes)\":{\"notice\":\"Emitted when a new Attestation is saved (derived from a Notary snapshot).\"},\"DisputeOpened(uint256,uint32,uint32)\":{\"notice\":\"Emitted whenever a Dispute is opened between two agents. This happens when a Guard submits their report for the Notary-signed statement to `StatementInbox`.\"},\"DisputeResolved(uint256,uint32,uint32,address)\":{\"notice\":\"Emitted whenever a Dispute is resolved. This happens when an Agent who was in Dispute is slashed. Note: this won't be emitted, if an Agent was slashed without being in Dispute.\"},\"Executed(uint32,bytes32,bool)\":{\"notice\":\"Emitted when message is executed.\"},\"InvalidAttestation(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid attestation is submitted.\"},\"InvalidAttestationReport(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid attestation report is submitted.\"},\"InvalidReceipt(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid receipt statement is submitted.\"},\"InvalidReceiptReport(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid receipt report is submitted.\"},\"InvalidStateReport(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid state report is submitted.\"},\"InvalidStateWithAttestation(uint256,bytes,bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid state in the signed attestation is submitted.\"},\"InvalidStateWithSnapshot(uint256,bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid state in the signed snapshot is submitted.\"},\"ReceiptAccepted(uint32,address,bytes,bytes)\":{\"notice\":\"Emitted when a snapshot is accepted by the Summit contract.\"},\"RootUpdated(bytes32)\":{\"notice\":\"Emitted whenever the root of the Agent Merkle Tree is updated.\"},\"Sent(bytes32,uint32,uint32,bytes)\":{\"notice\":\"Emitted when a new message is sent.\"},\"SnapshotAccepted(uint32,address,bytes,bytes)\":{\"notice\":\"Emitted when a snapshot is accepted by the Summit contract.\"},\"StateSaved(bytes)\":{\"notice\":\"Emitted when a new Origin State is saved from a Guard snapshot.\"},\"StatusUpdated(uint8,uint32,address)\":{\"notice\":\"Emitted whenever a status of the agent is updated.\"},\"TipAwarded(address,uint32,uint256)\":{\"notice\":\"Emitted when a tip is awarded to the actor, whether they are bonded or unbonded actor.\"},\"TipsRecorded(bytes32,uint256)\":{\"notice\":\"Emitted when message tips are recorded.\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/utils/events/ProductionEvents.t.sol\":\"ProductionEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/AgentManagerEvents.sol\":{\"keccak256\":\"0xa56624a0db82d304bfba608d1b4d58f9c3d6165d6f7bfb2f7b90d91f232b646a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://32f9e512ad758b98cb3a99611a2cac035ec9e8b0e4f031c88ea8dd46bb2a7dbe\",\"dweb:/ipfs/QmbZXsV3jcBgbsAc8FRGTkMrWDVHPk19p2GoKkxmHov9ei\"]},\"contracts/events/DestinationEvents.sol\":{\"keccak256\":\"0xf6f88d5a7da3fee51ecb0727a738e77f760c3f99d23e714286080eeb97e31132\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3fe5c98c93ea072acd1f5412542236e5e4e6101382f452bbff9b8d8a213a56b4\",\"dweb:/ipfs/Qmc1PthuPTZyL1FWXtL9TvXNWiSLcWzim317AUucnCeqoe\"]},\"contracts/events/ExecutionHubEvents.sol\":{\"keccak256\":\"0x17d62c5bc175a1bd90a12d78c25a28ef196f79f4c22ecd16822ee3bf347263d9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://664fe255227dbc3958404e4019559038281f8bebdb7c0ee3f36abeb82ffbfbf0\",\"dweb:/ipfs/QmbvQ4ms13D8xHSamrnhtJ1qZtRuEjwLT2kcNf34vA1h9L\"]},\"contracts/events/InboxEvents.sol\":{\"keccak256\":\"0x4e834b480f9fba7e803fdce5e22f55a2c4e78a8198a0e34e2bb741e9c998299b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://56c46f45e8e395fae57202449cf8d0786416360906447c400f740cacefd90425\",\"dweb:/ipfs/QmWZLaJAz1ZJuoas3x1NhDtGyAVWCHuzbA8bASXV5Va4Y3\"]},\"contracts/events/OriginEvents.sol\":{\"keccak256\":\"0xabbd42433e30a5fcfdf1c60f1a76fcf3872059f6bdcae60f8ec0c14545f8ce20\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://348e64e45921c8b4b5b290ad106ba0a14d85776481e5f4e3f20430883d04f118\",\"dweb:/ipfs/QmZEbt1JtxALE42XPjAuicwMt5GH14hHojEixwncuUkEu1\"]},\"contracts/events/SnapshotHubEvents.sol\":{\"keccak256\":\"0xc0d09b33210770dd671dcbef8183768346b3eacf38d0801f4629e599424b4011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90ae826aa534c1631d88e114ee25cbadd01a16661f1b6ad4451034a62232260b\",\"dweb:/ipfs/QmQjuw6dDegAULhC8stnvUGziNKupioWQoNqNxXSSAMVaj\"]},\"contracts/events/StatementInboxEvents.sol\":{\"keccak256\":\"0x31b50f36f0c2060313ea7a8b6564057449c9a957a77d202c5ec3c02623c20511\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d794adac1f7491f684964233bb3d5152402555dfe20743bb8c8ca1a61c17a5d8\",\"dweb:/ipfs/QmZbj2btws52KkpHy8maks6xkqL9nq76LZx8ey2QKmxeFS\"]},\"contracts/events/SummitEvents.sol\":{\"keccak256\":\"0xe5069b8a4681622830714d8650130aea401c7228d8fe88e46e28466c08835f91\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://373a684ee42c029db52944caa695356a2208eba16acb4bbac0fa8d7905b6240b\",\"dweb:/ipfs/QmZPSeugLqsvHGwDtpAbYcC3qfqowMn19nrYCuWJQmi5pa\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]},\"test/utils/events/ProductionEvents.t.sol\":{\"keccak256\":\"0x8f7b545fbbe599d21f5154706c1f7ad1539566738bcf2732fb5cd793555aa108\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c2e08e22817a04013c74e949a944e81e8b5d6196d4203d08b3e2221f0778bcb\",\"dweb:/ipfs/QmUfxoBF3XzWk8LgKg2Xr5AvuzqaLL7YUz5hrEZCtJMeMA\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AgentRootAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "notary",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "attSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AttestationAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attestation",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AttestationSaved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Dispatched",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "disputeIndex",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "guardIndex",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "notaryIndex",
+              "type": "uint32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "DisputeOpened",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "disputeIndex",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "slashedIndex",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "rivalIndex",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "fraudProver",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "DisputeResolved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "remoteDomain",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Executed",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "attSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidAttestation",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "arPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "arSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidAttestationReport",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidReceipt",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "rrPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "rrSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidReceiptReport",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "srPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "srSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidStateReport",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "stateIndex",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "attSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidStateWithAttestation",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "stateIndex",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidStateWithSnapshot",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "notary",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ReceiptAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "newRoot",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "RootUpdated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Sent",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SnapshotAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "state",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StateSaved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "StatusUpdated",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "actor",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "tip",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "TipAwarded",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedTips",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "TipsRecorded",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/utils/events/ProductionEvents.t.sol": "ProductionEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/AgentManagerEvents.sol": {
+        "keccak256": "0xa56624a0db82d304bfba608d1b4d58f9c3d6165d6f7bfb2f7b90d91f232b646a",
+        "urls": [
+          "bzz-raw://32f9e512ad758b98cb3a99611a2cac035ec9e8b0e4f031c88ea8dd46bb2a7dbe",
+          "dweb:/ipfs/QmbZXsV3jcBgbsAc8FRGTkMrWDVHPk19p2GoKkxmHov9ei"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/DestinationEvents.sol": {
+        "keccak256": "0xf6f88d5a7da3fee51ecb0727a738e77f760c3f99d23e714286080eeb97e31132",
+        "urls": [
+          "bzz-raw://3fe5c98c93ea072acd1f5412542236e5e4e6101382f452bbff9b8d8a213a56b4",
+          "dweb:/ipfs/Qmc1PthuPTZyL1FWXtL9TvXNWiSLcWzim317AUucnCeqoe"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/ExecutionHubEvents.sol": {
+        "keccak256": "0x17d62c5bc175a1bd90a12d78c25a28ef196f79f4c22ecd16822ee3bf347263d9",
+        "urls": [
+          "bzz-raw://664fe255227dbc3958404e4019559038281f8bebdb7c0ee3f36abeb82ffbfbf0",
+          "dweb:/ipfs/QmbvQ4ms13D8xHSamrnhtJ1qZtRuEjwLT2kcNf34vA1h9L"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/InboxEvents.sol": {
+        "keccak256": "0x4e834b480f9fba7e803fdce5e22f55a2c4e78a8198a0e34e2bb741e9c998299b",
+        "urls": [
+          "bzz-raw://56c46f45e8e395fae57202449cf8d0786416360906447c400f740cacefd90425",
+          "dweb:/ipfs/QmWZLaJAz1ZJuoas3x1NhDtGyAVWCHuzbA8bASXV5Va4Y3"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/OriginEvents.sol": {
+        "keccak256": "0xabbd42433e30a5fcfdf1c60f1a76fcf3872059f6bdcae60f8ec0c14545f8ce20",
+        "urls": [
+          "bzz-raw://348e64e45921c8b4b5b290ad106ba0a14d85776481e5f4e3f20430883d04f118",
+          "dweb:/ipfs/QmZEbt1JtxALE42XPjAuicwMt5GH14hHojEixwncuUkEu1"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/SnapshotHubEvents.sol": {
+        "keccak256": "0xc0d09b33210770dd671dcbef8183768346b3eacf38d0801f4629e599424b4011",
+        "urls": [
+          "bzz-raw://90ae826aa534c1631d88e114ee25cbadd01a16661f1b6ad4451034a62232260b",
+          "dweb:/ipfs/QmQjuw6dDegAULhC8stnvUGziNKupioWQoNqNxXSSAMVaj"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/StatementInboxEvents.sol": {
+        "keccak256": "0x31b50f36f0c2060313ea7a8b6564057449c9a957a77d202c5ec3c02623c20511",
+        "urls": [
+          "bzz-raw://d794adac1f7491f684964233bb3d5152402555dfe20743bb8c8ca1a61c17a5d8",
+          "dweb:/ipfs/QmZbj2btws52KkpHy8maks6xkqL9nq76LZx8ey2QKmxeFS"
+        ],
+        "license": "MIT"
+      },
+      "contracts/events/SummitEvents.sol": {
+        "keccak256": "0xe5069b8a4681622830714d8650130aea401c7228d8fe88e46e28466c08835f91",
+        "urls": [
+          "bzz-raw://373a684ee42c029db52944caa695356a2208eba16acb4bbac0fa8d7905b6240b",
+          "dweb:/ipfs/QmZPSeugLqsvHGwDtpAbYcC3qfqowMn19nrYCuWJQmi5pa"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      },
+      "test/utils/events/ProductionEvents.t.sol": {
+        "keccak256": "0x8f7b545fbbe599d21f5154706c1f7ad1539566738bcf2732fb5cd793555aa108",
+        "urls": [
+          "bzz-raw://6c2e08e22817a04013c74e949a944e81e8b5d6196d4203d08b3e2221f0778bcb",
+          "dweb:/ipfs/QmUfxoBF3XzWk8LgKg2Xr5AvuzqaLL7YUz5hrEZCtJMeMA"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/utils/events/ProductionEvents.t.sol",
+    "id": 93153,
+    "exportedSymbols": {
+      "AgentManagerEvents": [
+        3922
+      ],
+      "DestinationEvents": [
+        3930
+      ],
+      "ExecutionHubEvents": [
+        3950
+      ],
+      "InboxEvents": [
+        4000
+      ],
+      "OriginEvents": [
+        4025
+      ],
+      "ProductionEvents": [
+        93152
+      ],
+      "SnapshotHubEvents": [
+        4039
+      ],
+      "StatementInboxEvents": [
+        4103
+      ],
+      "SummitEvents": [
+        4116
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:916:186",
+    "nodes": [
+      {
+        "id": 93119,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:186",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 93121,
+        "nodeType": "ImportDirective",
+        "src": "57:84:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/AgentManagerEvents.sol",
+        "file": "../../../contracts/events/AgentManagerEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 3923,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93120,
+              "name": "AgentManagerEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3922,
+              "src": "65:18:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93123,
+        "nodeType": "ImportDirective",
+        "src": "142:82:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/DestinationEvents.sol",
+        "file": "../../../contracts/events/DestinationEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 3931,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93122,
+              "name": "DestinationEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3930,
+              "src": "150:17:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93125,
+        "nodeType": "ImportDirective",
+        "src": "225:84:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/ExecutionHubEvents.sol",
+        "file": "../../../contracts/events/ExecutionHubEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 3951,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93124,
+              "name": "ExecutionHubEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3950,
+              "src": "233:18:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93127,
+        "nodeType": "ImportDirective",
+        "src": "310:70:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/InboxEvents.sol",
+        "file": "../../../contracts/events/InboxEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 4001,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93126,
+              "name": "InboxEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4000,
+              "src": "318:11:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93129,
+        "nodeType": "ImportDirective",
+        "src": "381:72:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/OriginEvents.sol",
+        "file": "../../../contracts/events/OriginEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 4026,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93128,
+              "name": "OriginEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4025,
+              "src": "389:12:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93131,
+        "nodeType": "ImportDirective",
+        "src": "454:82:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/SnapshotHubEvents.sol",
+        "file": "../../../contracts/events/SnapshotHubEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 4040,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93130,
+              "name": "SnapshotHubEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4039,
+              "src": "462:17:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93133,
+        "nodeType": "ImportDirective",
+        "src": "537:88:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/StatementInboxEvents.sol",
+        "file": "../../../contracts/events/StatementInboxEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 4104,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93132,
+              "name": "StatementInboxEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4103,
+              "src": "545:20:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93135,
+        "nodeType": "ImportDirective",
+        "src": "626:72:186",
+        "nodes": [],
+        "absolutePath": "contracts/events/SummitEvents.sol",
+        "file": "../../../contracts/events/SummitEvents.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93153,
+        "sourceUnit": 4117,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93134,
+              "name": "SummitEvents",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 4116,
+              "src": "634:12:186",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93152,
+        "nodeType": "ContractDefinition",
+        "src": "735:212:186",
+        "nodes": [],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 93136,
+              "name": "AgentManagerEvents",
+              "nameLocations": [
+                "777:18:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3922,
+              "src": "777:18:186"
+            },
+            "id": 93137,
+            "nodeType": "InheritanceSpecifier",
+            "src": "777:18:186"
+          },
+          {
+            "baseName": {
+              "id": 93138,
+              "name": "DestinationEvents",
+              "nameLocations": [
+                "801:17:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3930,
+              "src": "801:17:186"
+            },
+            "id": 93139,
+            "nodeType": "InheritanceSpecifier",
+            "src": "801:17:186"
+          },
+          {
+            "baseName": {
+              "id": 93140,
+              "name": "ExecutionHubEvents",
+              "nameLocations": [
+                "824:18:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3950,
+              "src": "824:18:186"
+            },
+            "id": 93141,
+            "nodeType": "InheritanceSpecifier",
+            "src": "824:18:186"
+          },
+          {
+            "baseName": {
+              "id": 93142,
+              "name": "InboxEvents",
+              "nameLocations": [
+                "848:11:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4000,
+              "src": "848:11:186"
+            },
+            "id": 93143,
+            "nodeType": "InheritanceSpecifier",
+            "src": "848:11:186"
+          },
+          {
+            "baseName": {
+              "id": 93144,
+              "name": "OriginEvents",
+              "nameLocations": [
+                "865:12:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4025,
+              "src": "865:12:186"
+            },
+            "id": 93145,
+            "nodeType": "InheritanceSpecifier",
+            "src": "865:12:186"
+          },
+          {
+            "baseName": {
+              "id": 93146,
+              "name": "SnapshotHubEvents",
+              "nameLocations": [
+                "883:17:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4039,
+              "src": "883:17:186"
+            },
+            "id": 93147,
+            "nodeType": "InheritanceSpecifier",
+            "src": "883:17:186"
+          },
+          {
+            "baseName": {
+              "id": 93148,
+              "name": "StatementInboxEvents",
+              "nameLocations": [
+                "906:20:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4103,
+              "src": "906:20:186"
+            },
+            "id": 93149,
+            "nodeType": "InheritanceSpecifier",
+            "src": "906:20:186"
+          },
+          {
+            "baseName": {
+              "id": 93150,
+              "name": "SummitEvents",
+              "nameLocations": [
+                "932:12:186"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4116,
+              "src": "932:12:186"
+            },
+            "id": 93151,
+            "nodeType": "InheritanceSpecifier",
+            "src": "932:12:186"
+          }
+        ],
+        "canonicalName": "ProductionEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          93152,
+          4116,
+          4103,
+          4039,
+          4025,
+          4000,
+          3950,
+          3930,
+          3922
+        ],
+        "name": "ProductionEvents",
+        "nameLocation": "753:16:186",
+        "scope": 93153,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 186
+}

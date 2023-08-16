@@ -1,0 +1,403 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "sender",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "proofMaturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32",
+          "name": "version",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "content",
+          "type": "bytes"
+        }
+      ],
+      "name": "receiveBaseMessage",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)": "032f287e"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"internalType\":\"bytes32\",\"name\":\"sender\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"proofMaturity\",\"type\":\"uint256\"},{\"internalType\":\"uint32\",\"name\":\"version\",\"type\":\"uint32\"},{\"internalType\":\"bytes\",\"name\":\"content\",\"type\":\"bytes\"}],\"name\":\"receiveBaseMessage\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)\":{\"details\":\"Message recipient needs to ensure that merkle proof for the message is at least as old as the optimistic period that the recipient is using. Note: as this point it is checked that the \\\"message optimistic period\\\" has passed, however the period value itself could be anything, and thus could differ from the one that the recipient would like to enforce.\",\"params\":{\"content\":\"Raw bytes content of message\",\"nonce\":\"Message nonce on the origin domain\",\"origin\":\"Domain where message originated\",\"proofMaturity\":\"Message's merkle proof age in seconds\",\"sender\":\"Sender address on origin chain\",\"version\":\"Message version specified by sender\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)\":{\"notice\":\"Message recipient needs to implement this function in order to receive cross-chain messages.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IMessageRecipient.sol\":\"IMessageRecipient\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IMessageRecipient.sol\":{\"keccak256\":\"0x342bc1cf70e5a37e6a14d871297e845120608412d1be5dcd2657fc0dae5ebbde\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6d8b93ab4b2d4e85b0dcb62cf0beeaa0289aebc7b3dbc3fb9cad9e82639cbc5e\",\"dweb:/ipfs/QmRHr2Dqr6tcFWZ7osKisaGg6QZtvwGrncchYjJ1UYWWVx\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "sender",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "proofMaturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint32",
+              "name": "version",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "content",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "receiveBaseMessage"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)": {
+            "details": "Message recipient needs to ensure that merkle proof for the message is at least as old as the optimistic period that the recipient is using. Note: as this point it is checked that the \"message optimistic period\" has passed, however the period value itself could be anything, and thus could differ from the one that the recipient would like to enforce.",
+            "params": {
+              "content": "Raw bytes content of message",
+              "nonce": "Message nonce on the origin domain",
+              "origin": "Domain where message originated",
+              "proofMaturity": "Message's merkle proof age in seconds",
+              "sender": "Sender address on origin chain",
+              "version": "Message version specified by sender"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)": {
+            "notice": "Message recipient needs to implement this function in order to receive cross-chain messages."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IMessageRecipient.sol": "IMessageRecipient"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IMessageRecipient.sol": {
+        "keccak256": "0x342bc1cf70e5a37e6a14d871297e845120608412d1be5dcd2657fc0dae5ebbde",
+        "urls": [
+          "bzz-raw://6d8b93ab4b2d4e85b0dcb62cf0beeaa0289aebc7b3dbc3fb9cad9e82639cbc5e",
+          "dweb:/ipfs/QmRHr2Dqr6tcFWZ7osKisaGg6QZtvwGrncchYjJ1UYWWVx"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IMessageRecipient.sol",
+    "id": 9254,
+    "exportedSymbols": {
+      "IMessageRecipient": [
+        9253
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1183:33",
+    "nodes": [
+      {
+        "id": 9236,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:33",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9253,
+        "nodeType": "ContractDefinition",
+        "src": "57:1157:33",
+        "nodes": [
+          {
+            "id": 9252,
+            "nodeType": "FunctionDefinition",
+            "src": "1007:205:33",
+            "nodes": [],
+            "documentation": {
+              "id": 9237,
+              "nodeType": "StructuredDocumentation",
+              "src": "91:911:33",
+              "text": " @notice Message recipient needs to implement this function in order to\n receive cross-chain messages.\n @dev Message recipient needs to ensure that merkle proof for the message\n is at least as old as the optimistic period that the recipient is using.\n Note: as this point it is checked that the \"message optimistic period\" has passed,\n however the period value itself could be anything, and thus could differ from the one\n that the recipient would like to enforce.\n @param origin            Domain where message originated\n @param nonce             Message nonce on the origin domain\n @param sender            Sender address on origin chain\n @param proofMaturity     Message's merkle proof age in seconds\n @param version           Message version specified by sender\n @param content           Raw bytes content of message"
+            },
+            "functionSelector": "032f287e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveBaseMessage",
+            "nameLocation": "1016:18:33",
+            "parameters": {
+              "id": 9250,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9239,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "1051:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9252,
+                  "src": "1044:13:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9238,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1044:6:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9241,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "1074:5:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9252,
+                  "src": "1067:12:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9240,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1067:6:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9243,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "1097:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9252,
+                  "src": "1089:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9242,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1089:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9245,
+                  "mutability": "mutable",
+                  "name": "proofMaturity",
+                  "nameLocation": "1121:13:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9252,
+                  "src": "1113:21:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9244,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9247,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "1151:7:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9252,
+                  "src": "1144:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9246,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1144:6:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9249,
+                  "mutability": "mutable",
+                  "name": "content",
+                  "nameLocation": "1181:7:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9252,
+                  "src": "1168:20:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9248,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1168:5:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1034:160:33"
+            },
+            "returnParameters": {
+              "id": 9251,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1211:0:33"
+            },
+            "scope": 9253,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMessageRecipient",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9253
+        ],
+        "name": "IMessageRecipient",
+        "nameLocation": "67:17:33",
+        "scope": 9254,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 33
+}

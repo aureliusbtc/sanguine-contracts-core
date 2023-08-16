@@ -1,0 +1,589 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "isValidState",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValid",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "statesAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "suggestLatestState",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        }
+      ],
+      "name": "suggestState",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isValidState(bytes)": "a9dcf22d",
+    "statesAmount()": "f2437942",
+    "suggestLatestState()": "c0b56f7c",
+    "suggestState(uint32)": "b4596b4b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"}],\"name\":\"isValidState\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValid\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"statesAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"suggestLatestState\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"}],\"name\":\"suggestState\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"isValidState(bytes)\":{\"details\":\"Will revert if any of these is true:  - State payload is not properly formatted.\",\"params\":{\"statePayload\":\"Raw payload with state data\"},\"returns\":{\"isValid\":\"         Whether the provided state is valid\"}},\"statesAmount()\":{\"details\":\"This includes the initial state of \\\"empty Origin Merkle Tree\\\".\"},\"suggestLatestState()\":{\"returns\":{\"statePayload\":\"    Raw payload with the latest state data\"}},\"suggestState(uint32)\":{\"params\":{\"nonce\":\"Historical nonce to form a state\"},\"returns\":{\"statePayload\":\"    Raw payload with historical state data\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isValidState(bytes)\":{\"notice\":\"Check that a given state is valid: matches the historical state of Origin contract. Note: any Agent including an invalid state in their snapshot will be slashed upon providing the snapshot and agent signature for it to Origin contract.\"},\"statesAmount()\":{\"notice\":\"Returns the amount of saved states so far.\"},\"suggestLatestState()\":{\"notice\":\"Suggest the data (state after latest sent message) to sign for an Agent. Note: signing the suggested state data will will never lead to slashing of the actor, assuming they have confirmed that the block, which number is included in the data, is not subject to reorganization (which is different for every observed chain).\"},\"suggestState(uint32)\":{\"notice\":\"Given the historical nonce, suggest the state data to sign for an Agent. Note: signing the suggested state data will will never lead to slashing of the actor, assuming they have confirmed that the block, which number is included in the data, is not subject to reorganization (which is different for every observed chain).\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IStateHub.sol\":\"IStateHub\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IStateHub.sol\":{\"keccak256\":\"0x26cf1842739cb65203ed5f243879b11939d2e77c46cc629349f016d667c003f1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d8f9959d5230d5b0cac7bc3171cee2cfd95ab548bbcff0da3b06d02a02f61f31\",\"dweb:/ipfs/QmezRqMJF1MfxxU8dzXYFVteBTPq4yuaMVZLNVTMayUzuV\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isValidState",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "isValid",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "statesAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "suggestLatestState",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "suggestState",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "isValidState(bytes)": {
+            "details": "Will revert if any of these is true:  - State payload is not properly formatted.",
+            "params": {
+              "statePayload": "Raw payload with state data"
+            },
+            "returns": {
+              "isValid": "         Whether the provided state is valid"
+            }
+          },
+          "statesAmount()": {
+            "details": "This includes the initial state of \"empty Origin Merkle Tree\"."
+          },
+          "suggestLatestState()": {
+            "returns": {
+              "statePayload": "    Raw payload with the latest state data"
+            }
+          },
+          "suggestState(uint32)": {
+            "params": {
+              "nonce": "Historical nonce to form a state"
+            },
+            "returns": {
+              "statePayload": "    Raw payload with historical state data"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "isValidState(bytes)": {
+            "notice": "Check that a given state is valid: matches the historical state of Origin contract. Note: any Agent including an invalid state in their snapshot will be slashed upon providing the snapshot and agent signature for it to Origin contract."
+          },
+          "statesAmount()": {
+            "notice": "Returns the amount of saved states so far."
+          },
+          "suggestLatestState()": {
+            "notice": "Suggest the data (state after latest sent message) to sign for an Agent. Note: signing the suggested state data will will never lead to slashing of the actor, assuming they have confirmed that the block, which number is included in the data, is not subject to reorganization (which is different for every observed chain)."
+          },
+          "suggestState(uint32)": {
+            "notice": "Given the historical nonce, suggest the state data to sign for an Agent. Note: signing the suggested state data will will never lead to slashing of the actor, assuming they have confirmed that the block, which number is included in the data, is not subject to reorganization (which is different for every observed chain)."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IStateHub.sol": "IStateHub"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IStateHub.sol": {
+        "keccak256": "0x26cf1842739cb65203ed5f243879b11939d2e77c46cc629349f016d667c003f1",
+        "urls": [
+          "bzz-raw://d8f9959d5230d5b0cac7bc3171cee2cfd95ab548bbcff0da3b06d02a02f61f31",
+          "dweb:/ipfs/QmezRqMJF1MfxxU8dzXYFVteBTPq4yuaMVZLNVTMayUzuV"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IStateHub.sol",
+    "id": 9373,
+    "exportedSymbols": {
+      "IStateHub": [
+        9372
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1993:35",
+    "nodes": [
+      {
+        "id": 9343,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:35",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9372,
+        "nodeType": "ContractDefinition",
+        "src": "57:1967:35",
+        "nodes": [
+          {
+            "id": 9351,
+            "nodeType": "FunctionDefinition",
+            "src": "592:86:35",
+            "nodes": [],
+            "documentation": {
+              "id": 9344,
+              "nodeType": "StructuredDocumentation",
+              "src": "83:504:35",
+              "text": " @notice Check that a given state is valid: matches the historical state of Origin contract.\n Note: any Agent including an invalid state in their snapshot will be slashed\n upon providing the snapshot and agent signature for it to Origin contract.\n @dev Will revert if any of these is true:\n  - State payload is not properly formatted.\n @param statePayload      Raw payload with state data\n @return isValid          Whether the provided state is valid"
+            },
+            "functionSelector": "a9dcf22d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidState",
+            "nameLocation": "601:12:35",
+            "parameters": {
+              "id": 9347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9346,
+                  "mutability": "mutable",
+                  "name": "statePayload",
+                  "nameLocation": "627:12:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9351,
+                  "src": "614:25:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9345,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "614:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "613:27:35"
+            },
+            "returnParameters": {
+              "id": 9350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9349,
+                  "mutability": "mutable",
+                  "name": "isValid",
+                  "nameLocation": "669:7:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9351,
+                  "src": "664:12:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9348,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:4:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "663:14:35"
+            },
+            "scope": 9372,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9357,
+            "nodeType": "FunctionDefinition",
+            "src": "833:56:35",
+            "nodes": [],
+            "documentation": {
+              "id": 9352,
+              "nodeType": "StructuredDocumentation",
+              "src": "684:144:35",
+              "text": " @notice Returns the amount of saved states so far.\n @dev This includes the initial state of \"empty Origin Merkle Tree\"."
+            },
+            "functionSelector": "f2437942",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "statesAmount",
+            "nameLocation": "842:12:35",
+            "parameters": {
+              "id": 9353,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "854:2:35"
+            },
+            "returnParameters": {
+              "id": 9356,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9355,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9357,
+                  "src": "880:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9354,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "880:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "879:9:35"
+            },
+            "scope": 9372,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9363,
+            "nodeType": "FunctionDefinition",
+            "src": "1340:80:35",
+            "nodes": [],
+            "documentation": {
+              "id": 9358,
+              "nodeType": "StructuredDocumentation",
+              "src": "895:440:35",
+              "text": " @notice Suggest the data (state after latest sent message) to sign for an Agent.\n Note: signing the suggested state data will will never lead to slashing of the actor,\n assuming they have confirmed that the block, which number is included in the data,\n is not subject to reorganization (which is different for every observed chain).\n @return statePayload     Raw payload with the latest state data"
+            },
+            "functionSelector": "c0b56f7c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "suggestLatestState",
+            "nameLocation": "1349:18:35",
+            "parameters": {
+              "id": 9359,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1367:2:35"
+            },
+            "returnParameters": {
+              "id": 9362,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9361,
+                  "mutability": "mutable",
+                  "name": "statePayload",
+                  "nameLocation": "1406:12:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9363,
+                  "src": "1393:25:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9360,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1393:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1392:27:35"
+            },
+            "scope": 9372,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9371,
+            "nodeType": "FunctionDefinition",
+            "src": "1936:86:35",
+            "nodes": [],
+            "documentation": {
+              "id": 9364,
+              "nodeType": "StructuredDocumentation",
+              "src": "1426:505:35",
+              "text": " @notice Given the historical nonce, suggest the state data to sign for an Agent.\n Note: signing the suggested state data will will never lead to slashing of the actor,\n assuming they have confirmed that the block, which number is included in the data,\n is not subject to reorganization (which is different for every observed chain).\n @param nonce             Historical nonce to form a state\n @return statePayload     Raw payload with historical state data"
+            },
+            "functionSelector": "b4596b4b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "suggestState",
+            "nameLocation": "1945:12:35",
+            "parameters": {
+              "id": 9367,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9366,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "1965:5:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "1958:12:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9365,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1958:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1957:14:35"
+            },
+            "returnParameters": {
+              "id": 9370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9369,
+                  "mutability": "mutable",
+                  "name": "statePayload",
+                  "nameLocation": "2008:12:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9371,
+                  "src": "1995:25:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9368,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1995:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1994:27:35"
+            },
+            "scope": 9372,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IStateHub",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9372
+        ],
+        "name": "IStateHub",
+        "nameLocation": "67:9:35",
+        "scope": 9373,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 35
+}

@@ -1,0 +1,507 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "Dispatched",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "Sent",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"Dispatched\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"Sent\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"Sent(bytes32,uint32,uint32,bytes)\":{\"params\":{\"destination\":\"Destination domain\",\"message\":\"Raw bytes of message\",\"messageHash\":\"Hash of message; the leaf inserted to the Merkle tree for the message\",\"nonce\":\"Nonce of sent message (starts from 1)\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"Sent(bytes32,uint32,uint32,bytes)\":{\"notice\":\"Emitted when a new message is sent.\"}},\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the Origin contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/OriginEvents.sol\":\"OriginEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/OriginEvents.sol\":{\"keccak256\":\"0xabbd42433e30a5fcfdf1c60f1a76fcf3872059f6bdcae60f8ec0c14545f8ce20\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://348e64e45921c8b4b5b290ad106ba0a14d85776481e5f4e3f20430883d04f118\",\"dweb:/ipfs/QmZEbt1JtxALE42XPjAuicwMt5GH14hHojEixwncuUkEu1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Dispatched",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Sent",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/OriginEvents.sol": "OriginEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/OriginEvents.sol": {
+        "keccak256": "0xabbd42433e30a5fcfdf1c60f1a76fcf3872059f6bdcae60f8ec0c14545f8ce20",
+        "urls": [
+          "bzz-raw://348e64e45921c8b4b5b290ad106ba0a14d85776481e5f4e3f20430883d04f118",
+          "dweb:/ipfs/QmZEbt1JtxALE42XPjAuicwMt5GH14hHojEixwncuUkEu1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/OriginEvents.sol",
+    "id": 4026,
+    "exportedSymbols": {
+      "OriginEvents": [
+        4025
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:832:19",
+    "nodes": [
+      {
+        "id": 4002,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:19",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 4025,
+        "nodeType": "ContractDefinition",
+        "src": "123:740:19",
+        "nodes": [
+          {
+            "id": 4013,
+            "nodeType": "EventDefinition",
+            "src": "312:111:19",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "7627271451db6318f9bd8c5c92729cc075f1f32825474f9b5826e0a7b42434a7",
+            "name": "Dispatched",
+            "nameLocation": "318:10:19",
+            "parameters": {
+              "id": 4012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4005,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "345:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4013,
+                  "src": "329:27:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 4004,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4007,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "373:5:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4013,
+                  "src": "358:20:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 4006,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4009,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "destination",
+                  "nameLocation": "395:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4013,
+                  "src": "380:26:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 4008,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4011,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "414:7:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4013,
+                  "src": "408:13:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4010,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:5:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "328:94:19"
+            }
+          },
+          {
+            "id": 4024,
+            "nodeType": "EventDefinition",
+            "src": "756:105:19",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 4014,
+              "nodeType": "StructuredDocumentation",
+              "src": "429:322:19",
+              "text": " @notice Emitted when a new message is sent.\n @param messageHash   Hash of message; the leaf inserted to the Merkle tree for the message\n @param nonce         Nonce of sent message (starts from 1)\n @param destination   Destination domain\n @param message       Raw bytes of message"
+            },
+            "eventSelector": "cb1f6736605c149e8d69fd9f5393ff113515c28fa5848a3dc26dbde76dd16e87",
+            "name": "Sent",
+            "nameLocation": "762:4:19",
+            "parameters": {
+              "id": 4023,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4016,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "783:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4024,
+                  "src": "767:27:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 4015,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "767:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4018,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "811:5:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4024,
+                  "src": "796:20:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 4017,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "796:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4020,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "destination",
+                  "nameLocation": "833:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4024,
+                  "src": "818:26:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 4019,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "818:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4022,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "852:7:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4024,
+                  "src": "846:13:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4021,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:5:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "766:94:19"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "OriginEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 4003,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:66:19",
+          "text": "@notice A collection of events emitted by the Origin contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          4025
+        ],
+        "name": "OriginEvents",
+        "nameLocation": "141:12:19",
+        "scope": 4026,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 19
+}

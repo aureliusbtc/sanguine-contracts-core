@@ -1,0 +1,273 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attestation",
+          "type": "bytes"
+        }
+      ],
+      "name": "AttestationSaved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "state",
+          "type": "bytes"
+        }
+      ],
+      "name": "StateSaved",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attestation\",\"type\":\"bytes\"}],\"name\":\"AttestationSaved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"state\",\"type\":\"bytes\"}],\"name\":\"StateSaved\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"AttestationSaved(bytes)\":{\"params\":{\"attestation\":\"Raw payload with attestation data\"}},\"StateSaved(bytes)\":{\"params\":{\"state\":\"Raw payload with state data\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"AttestationSaved(bytes)\":{\"notice\":\"Emitted when a new Attestation is saved (derived from a Notary snapshot).\"},\"StateSaved(bytes)\":{\"notice\":\"Emitted when a new Origin State is saved from a Guard snapshot.\"}},\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the SnapshotHub contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/SnapshotHubEvents.sol\":\"SnapshotHubEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/SnapshotHubEvents.sol\":{\"keccak256\":\"0xc0d09b33210770dd671dcbef8183768346b3eacf38d0801f4629e599424b4011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90ae826aa534c1631d88e114ee25cbadd01a16661f1b6ad4451034a62232260b\",\"dweb:/ipfs/QmQjuw6dDegAULhC8stnvUGziNKupioWQoNqNxXSSAMVaj\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attestation",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AttestationSaved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "state",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "StateSaved",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/SnapshotHubEvents.sol": "SnapshotHubEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/SnapshotHubEvents.sol": {
+        "keccak256": "0xc0d09b33210770dd671dcbef8183768346b3eacf38d0801f4629e599424b4011",
+        "urls": [
+          "bzz-raw://90ae826aa534c1631d88e114ee25cbadd01a16661f1b6ad4451034a62232260b",
+          "dweb:/ipfs/QmQjuw6dDegAULhC8stnvUGziNKupioWQoNqNxXSSAMVaj"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/SnapshotHubEvents.sol",
+    "id": 4040,
+    "exportedSymbols": {
+      "SnapshotHubEvents": [
+        4039
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:533:20",
+    "nodes": [
+      {
+        "id": 4027,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:20",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 4039,
+        "nodeType": "ContractDefinition",
+        "src": "128:436:20",
+        "nodes": [
+          {
+            "id": 4033,
+            "nodeType": "EventDefinition",
+            "src": "337:42:20",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 4029,
+              "nodeType": "StructuredDocumentation",
+              "src": "170:162:20",
+              "text": " @notice Emitted when a new Attestation is saved (derived from a Notary snapshot).\n @param attestation   Raw payload with attestation data"
+            },
+            "eventSelector": "60c3a1f5763d1f5370168d8e60a7e6c27c5200c3327a20af481c738a9b11d7de",
+            "name": "AttestationSaved",
+            "nameLocation": "343:16:20",
+            "parameters": {
+              "id": 4032,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4031,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "attestation",
+                  "nameLocation": "366:11:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4033,
+                  "src": "360:17:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4030,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "360:5:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "359:19:20"
+            }
+          },
+          {
+            "id": 4038,
+            "nodeType": "EventDefinition",
+            "src": "532:30:20",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 4034,
+              "nodeType": "StructuredDocumentation",
+              "src": "385:142:20",
+              "text": " @notice Emitted when a new Origin State is saved from a Guard snapshot.\n @param state     Raw payload with state data"
+            },
+            "eventSelector": "c82fd59396134ccdeb4ce594571af6fe8f87d1df40fb6aaf1463ee06d610d0cb",
+            "name": "StateSaved",
+            "nameLocation": "538:10:20",
+            "parameters": {
+              "id": 4037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4036,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "state",
+                  "nameLocation": "555:5:20",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4038,
+                  "src": "549:11:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 4035,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "549:5:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "548:13:20"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "SnapshotHubEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 4028,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:71:20",
+          "text": "@notice A collection of events emitted by the SnapshotHub contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          4039
+        ],
+        "name": "SnapshotHubEvents",
+        "nameLocation": "146:17:20",
+        "scope": 4040,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 20
+}

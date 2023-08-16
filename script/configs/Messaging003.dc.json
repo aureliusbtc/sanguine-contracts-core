@@ -1,9 +1,9 @@
 {
   "agents": {
-    "0": ["0x2321A2271ebCdCE886cF6F8022D29b54e9e40e17"],
-    "900": ["0x2321A2271ebCdCE886cF6F8022D29b54e9e40e16"]
+    "0": ["0xF0A00BfcffB30a8aFc46b3C709dC5895BBA34E59"],
+    "900": ["0x21b24CD7eD8aEAA70dcd0b42d3eD0e03CeDb4aC7"]
   },
   "chainidSummit": 901,
   "domains": [0, 900],
-  "owner": "0x66d7F30bC941b052A42dd7Fd6FA662B7b153Bb6f"
+  "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
 }

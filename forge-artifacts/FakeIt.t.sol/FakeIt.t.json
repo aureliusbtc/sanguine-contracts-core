@@ -1,0 +1,2572 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/utils/libs/FakeIt.t.sol",
+    "id": 93382,
+    "exportedSymbols": {
+      "RawSnapshot": [
+        94419
+      ],
+      "RawState": [
+        94401
+      ],
+      "RawStateIndex": [
+        94410
+      ],
+      "STATE_LENGTH": [
+        10085
+      ],
+      "State": [
+        13434
+      ],
+      "StateLib": [
+        13845
+      ],
+      "fakeSnapshot": [
+        93359,
+        93381
+      ],
+      "fakeState": [
+        93302
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1684:188",
+    "nodes": [
+      {
+        "id": 93161,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:188",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 93165,
+        "nodeType": "ImportDirective",
+        "src": "57:87:188",
+        "nodes": [],
+        "absolutePath": "contracts/libs/memory/State.sol",
+        "file": "../../../contracts/libs/memory/State.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93382,
+        "sourceUnit": 13846,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93162,
+              "name": "State",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 13434,
+              "src": "65:5:188",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 93163,
+              "name": "StateLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 13845,
+              "src": "72:8:188",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 93164,
+              "name": "STATE_LENGTH",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10085,
+              "src": "82:12:188",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93169,
+        "nodeType": "ImportDirective",
+        "src": "146:76:188",
+        "nodes": [],
+        "absolutePath": "test/utils/libs/SynapseStructs.t.sol",
+        "file": "./SynapseStructs.t.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 93382,
+        "sourceUnit": 96301,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 93166,
+              "name": "RawSnapshot",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 94419,
+              "src": "154:11:188",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 93167,
+              "name": "RawState",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 94401,
+              "src": "167:8:188",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 93168,
+              "name": "RawStateIndex",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 94410,
+              "src": "177:13:188",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 93302,
+        "nodeType": "FunctionDefinition",
+        "src": "373:611:188",
+        "nodes": [],
+        "body": {
+          "id": 93301,
+          "nodeType": "Block",
+          "src": "448:536:188",
+          "nodes": [],
+          "statements": [
+            {
+              "expression": {
+                "id": 93185,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "id": 93178,
+                    "name": "state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93176,
+                    "src": "454:5:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    }
+                  },
+                  "id": 93180,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "460:4:188",
+                  "memberName": "root",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94389,
+                  "src": "454:10:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93183,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "475:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93182,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "467:7:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_bytes32_$",
+                      "typeString": "type(bytes32)"
+                    },
+                    "typeName": {
+                      "id": 93181,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "467:7:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93184,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "467:18:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "src": "454:31:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 93186,
+              "nodeType": "ExpressionStatement",
+              "src": "454:31:188"
+            },
+            {
+              "expression": {
+                "id": 93194,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "id": 93187,
+                    "name": "state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93176,
+                    "src": "491:5:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    }
+                  },
+                  "id": 93189,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "497:6:188",
+                  "memberName": "origin",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94391,
+                  "src": "491:12:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93192,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "513:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93191,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "506:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint32_$",
+                      "typeString": "type(uint32)"
+                    },
+                    "typeName": {
+                      "id": 93190,
+                      "name": "uint32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "506:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93193,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "506:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "src": "491:32:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                }
+              },
+              "id": 93195,
+              "nodeType": "ExpressionStatement",
+              "src": "491:32:188"
+            },
+            {
+              "expression": {
+                "id": 93203,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "id": 93196,
+                    "name": "state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93176,
+                    "src": "529:5:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    }
+                  },
+                  "id": 93198,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "535:5:188",
+                  "memberName": "nonce",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94393,
+                  "src": "529:11:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93201,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "550:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93200,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "543:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint32_$",
+                      "typeString": "type(uint32)"
+                    },
+                    "typeName": {
+                      "id": 93199,
+                      "name": "uint32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "543:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93202,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "543:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "src": "529:31:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                }
+              },
+              "id": 93204,
+              "nodeType": "ExpressionStatement",
+              "src": "529:31:188"
+            },
+            {
+              "expression": {
+                "id": 93212,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "id": 93205,
+                    "name": "state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93176,
+                    "src": "566:5:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    }
+                  },
+                  "id": 93207,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "572:11:188",
+                  "memberName": "blockNumber",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94395,
+                  "src": "566:17:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93210,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "593:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93209,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "586:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint40_$",
+                      "typeString": "type(uint40)"
+                    },
+                    "typeName": {
+                      "id": 93208,
+                      "name": "uint40",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "586:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93211,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "586:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "src": "566:37:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                }
+              },
+              "id": 93213,
+              "nodeType": "ExpressionStatement",
+              "src": "566:37:188"
+            },
+            {
+              "expression": {
+                "id": 93221,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "id": 93214,
+                    "name": "state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93176,
+                    "src": "609:5:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    }
+                  },
+                  "id": 93216,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "615:9:188",
+                  "memberName": "timestamp",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94397,
+                  "src": "609:15:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93219,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "634:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93218,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "627:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint40_$",
+                      "typeString": "type(uint40)"
+                    },
+                    "typeName": {
+                      "id": 93217,
+                      "name": "uint40",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "627:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93220,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "627:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  }
+                },
+                "src": "609:35:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint40",
+                  "typeString": "uint40"
+                }
+              },
+              "id": 93222,
+              "nodeType": "ExpressionStatement",
+              "src": "609:35:188"
+            },
+            {
+              "expression": {
+                "id": 93234,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "expression": {
+                      "expression": {
+                        "id": 93223,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93176,
+                        "src": "650:5:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "id": 93227,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "656:7:188",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94400,
+                      "src": "650:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawGasData_$94356_memory_ptr",
+                        "typeString": "struct RawGasData memory"
+                      }
+                    },
+                    "id": 93228,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "664:8:188",
+                    "memberName": "gasPrice",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 94340,
+                    "src": "650:22:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawNumber_$94333_memory_ptr",
+                      "typeString": "struct RawNumber memory"
+                    }
+                  },
+                  "id": 93229,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "673:6:188",
+                  "memberName": "number",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94332,
+                  "src": "650:29:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93232,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "689:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93231,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "682:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint16_$",
+                      "typeString": "type(uint16)"
+                    },
+                    "typeName": {
+                      "id": 93230,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "682:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93233,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "682:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "src": "650:49:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                }
+              },
+              "id": 93235,
+              "nodeType": "ExpressionStatement",
+              "src": "650:49:188"
+            },
+            {
+              "expression": {
+                "id": 93247,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "expression": {
+                      "expression": {
+                        "id": 93236,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93176,
+                        "src": "705:5:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "id": 93240,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "711:7:188",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94400,
+                      "src": "705:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawGasData_$94356_memory_ptr",
+                        "typeString": "struct RawGasData memory"
+                      }
+                    },
+                    "id": 93241,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "719:9:188",
+                    "memberName": "dataPrice",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 94343,
+                    "src": "705:23:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawNumber_$94333_memory_ptr",
+                      "typeString": "struct RawNumber memory"
+                    }
+                  },
+                  "id": 93242,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "729:6:188",
+                  "memberName": "number",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94332,
+                  "src": "705:30:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93245,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "745:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93244,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "738:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint16_$",
+                      "typeString": "type(uint16)"
+                    },
+                    "typeName": {
+                      "id": 93243,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "738:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93246,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "738:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "src": "705:50:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                }
+              },
+              "id": 93248,
+              "nodeType": "ExpressionStatement",
+              "src": "705:50:188"
+            },
+            {
+              "expression": {
+                "id": 93260,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "expression": {
+                      "expression": {
+                        "id": 93249,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93176,
+                        "src": "761:5:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "id": 93253,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "767:7:188",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94400,
+                      "src": "761:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawGasData_$94356_memory_ptr",
+                        "typeString": "struct RawGasData memory"
+                      }
+                    },
+                    "id": 93254,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "775:10:188",
+                    "memberName": "execBuffer",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 94346,
+                    "src": "761:24:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawNumber_$94333_memory_ptr",
+                      "typeString": "struct RawNumber memory"
+                    }
+                  },
+                  "id": 93255,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "786:6:188",
+                  "memberName": "number",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94332,
+                  "src": "761:31:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93258,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "802:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93257,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "795:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint16_$",
+                      "typeString": "type(uint16)"
+                    },
+                    "typeName": {
+                      "id": 93256,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "795:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93259,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "795:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "src": "761:51:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                }
+              },
+              "id": 93261,
+              "nodeType": "ExpressionStatement",
+              "src": "761:51:188"
+            },
+            {
+              "expression": {
+                "id": 93273,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "expression": {
+                      "expression": {
+                        "id": 93262,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93176,
+                        "src": "818:5:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "id": 93266,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "824:7:188",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94400,
+                      "src": "818:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawGasData_$94356_memory_ptr",
+                        "typeString": "struct RawGasData memory"
+                      }
+                    },
+                    "id": 93267,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "832:12:188",
+                    "memberName": "amortAttCost",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 94349,
+                    "src": "818:26:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawNumber_$94333_memory_ptr",
+                      "typeString": "struct RawNumber memory"
+                    }
+                  },
+                  "id": 93268,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "845:6:188",
+                  "memberName": "number",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94332,
+                  "src": "818:33:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93271,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "861:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93270,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "854:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint16_$",
+                      "typeString": "type(uint16)"
+                    },
+                    "typeName": {
+                      "id": 93269,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "854:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93272,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "854:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "src": "818:53:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                }
+              },
+              "id": 93274,
+              "nodeType": "ExpressionStatement",
+              "src": "818:53:188"
+            },
+            {
+              "expression": {
+                "id": 93286,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "expression": {
+                      "expression": {
+                        "id": 93275,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93176,
+                        "src": "877:5:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "id": 93279,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "883:7:188",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94400,
+                      "src": "877:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawGasData_$94356_memory_ptr",
+                        "typeString": "struct RawGasData memory"
+                      }
+                    },
+                    "id": 93280,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "891:10:188",
+                    "memberName": "etherPrice",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 94352,
+                    "src": "877:24:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawNumber_$94333_memory_ptr",
+                      "typeString": "struct RawNumber memory"
+                    }
+                  },
+                  "id": 93281,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "902:6:188",
+                  "memberName": "number",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94332,
+                  "src": "877:31:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93284,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "918:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93283,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "911:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint16_$",
+                      "typeString": "type(uint16)"
+                    },
+                    "typeName": {
+                      "id": 93282,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "911:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93285,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "911:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "src": "877:51:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                }
+              },
+              "id": 93287,
+              "nodeType": "ExpressionStatement",
+              "src": "877:51:188"
+            },
+            {
+              "expression": {
+                "id": 93299,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "expression": {
+                      "expression": {
+                        "id": 93288,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93176,
+                        "src": "934:5:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "id": 93292,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "940:7:188",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94400,
+                      "src": "934:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawGasData_$94356_memory_ptr",
+                        "typeString": "struct RawGasData memory"
+                      }
+                    },
+                    "id": 93293,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "948:6:188",
+                    "memberName": "markup",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 94355,
+                    "src": "934:20:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawNumber_$94333_memory_ptr",
+                      "typeString": "struct RawNumber memory"
+                    }
+                  },
+                  "id": 93294,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "955:6:188",
+                  "memberName": "number",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94332,
+                  "src": "934:27:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "id": 93297,
+                      "name": "fakeValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93172,
+                      "src": "971:9:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93296,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "ElementaryTypeNameExpression",
+                    "src": "964:6:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_uint16_$",
+                      "typeString": "type(uint16)"
+                    },
+                    "typeName": {
+                      "id": 93295,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "964:6:188",
+                      "typeDescriptions": {}
+                    }
+                  },
+                  "id": 93298,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "typeConversion",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "964:17:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "src": "934:47:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                }
+              },
+              "id": 93300,
+              "nodeType": "ExpressionStatement",
+              "src": "934:47:188"
+            }
+          ]
+        },
+        "documentation": {
+          "id": 93170,
+          "nodeType": "StructuredDocumentation",
+          "src": "314:59:188",
+          "text": "@notice Returns RawState struct filled with fake data."
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "fakeState",
+        "nameLocation": "382:9:188",
+        "parameters": {
+          "id": 93173,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 93172,
+              "mutability": "mutable",
+              "name": "fakeValue",
+              "nameLocation": "400:9:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93302,
+              "src": "392:17:188",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 93171,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "392:7:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "391:19:188"
+        },
+        "returnParameters": {
+          "id": 93177,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 93176,
+              "mutability": "mutable",
+              "name": "state",
+              "nameLocation": "441:5:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93302,
+              "src": "425:21:188",
+              "stateVariable": false,
+              "storageLocation": "memory",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                "typeString": "struct RawState"
+              },
+              "typeName": {
+                "id": 93175,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 93174,
+                  "name": "RawState",
+                  "nameLocations": [
+                    "425:8:188"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 94401,
+                  "src": "425:8:188"
+                },
+                "referencedDeclaration": 94401,
+                "src": "425:8:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RawState_$94401_storage_ptr",
+                  "typeString": "struct RawState"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "424:23:188"
+        },
+        "scope": 93382,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      },
+      {
+        "id": 93359,
+        "nodeType": "FunctionDefinition",
+        "src": "1107:358:188",
+        "nodes": [],
+        "body": {
+          "id": 93358,
+          "nodeType": "Block",
+          "src": "1220:245:188",
+          "nodes": [],
+          "statements": [
+            {
+              "expression": {
+                "id": 93325,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftHandSide": {
+                  "expression": {
+                    "id": 93315,
+                    "name": "rawSnap",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93313,
+                    "src": "1226:7:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawSnapshot_$94419_memory_ptr",
+                      "typeString": "struct RawSnapshot memory"
+                    }
+                  },
+                  "id": 93317,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": true,
+                  "memberLocation": "1234:6:188",
+                  "memberName": "states",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94418,
+                  "src": "1226:14:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RawState_$94401_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct RawState memory[] memory"
+                  }
+                },
+                "nodeType": "Assignment",
+                "operator": "=",
+                "rightHandSide": {
+                  "arguments": [
+                    {
+                      "expression": {
+                        "id": 93322,
+                        "name": "rsi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93309,
+                        "src": "1258:3:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawStateIndex_$94410_memory_ptr",
+                          "typeString": "struct RawStateIndex memory"
+                        }
+                      },
+                      "id": 93323,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1262:12:188",
+                      "memberName": "statesAmount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94409,
+                      "src": "1258:16:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    ],
+                    "id": 93321,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "NewExpression",
+                    "src": "1243:14:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_RawState_$94401_memory_ptr_$dyn_memory_ptr_$",
+                      "typeString": "function (uint256) pure returns (struct RawState memory[] memory)"
+                    },
+                    "typeName": {
+                      "baseType": {
+                        "id": 93319,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 93318,
+                          "name": "RawState",
+                          "nameLocations": [
+                            "1247:8:188"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 94401,
+                          "src": "1247:8:188"
+                        },
+                        "referencedDeclaration": 94401,
+                        "src": "1247:8:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_storage_ptr",
+                          "typeString": "struct RawState"
+                        }
+                      },
+                      "id": 93320,
+                      "nodeType": "ArrayTypeName",
+                      "src": "1247:10:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_RawState_$94401_storage_$dyn_storage_ptr",
+                        "typeString": "struct RawState[]"
+                      }
+                    }
+                  },
+                  "id": 93324,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "nameLocations": [],
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "1243:32:188",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RawState_$94401_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct RawState memory[] memory"
+                  }
+                },
+                "src": "1226:49:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_RawState_$94401_memory_ptr_$dyn_memory_ptr",
+                  "typeString": "struct RawState memory[] memory"
+                }
+              },
+              "id": 93326,
+              "nodeType": "ExpressionStatement",
+              "src": "1226:49:188"
+            },
+            {
+              "body": {
+                "id": 93356,
+                "nodeType": "Block",
+                "src": "1328:135:188",
+                "statements": [
+                  {
+                    "expression": {
+                      "id": 93354,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "baseExpression": {
+                          "expression": {
+                            "id": 93338,
+                            "name": "rawSnap",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93313,
+                            "src": "1390:7:188",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_RawSnapshot_$94419_memory_ptr",
+                              "typeString": "struct RawSnapshot memory"
+                            }
+                          },
+                          "id": 93341,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1398:6:188",
+                          "memberName": "states",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 94418,
+                          "src": "1390:14:188",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_RawState_$94401_memory_ptr_$dyn_memory_ptr",
+                            "typeString": "struct RawState memory[] memory"
+                          }
+                        },
+                        "id": 93342,
+                        "indexExpression": {
+                          "id": 93340,
+                          "name": "i",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 93328,
+                          "src": "1405:1:188",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": true,
+                        "nodeType": "IndexAccess",
+                        "src": "1390:17:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "condition": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 93346,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 93343,
+                            "name": "i",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93328,
+                            "src": "1410:1:188",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "expression": {
+                              "id": 93344,
+                              "name": "rsi",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 93309,
+                              "src": "1415:3:188",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_RawStateIndex_$94410_memory_ptr",
+                                "typeString": "struct RawStateIndex memory"
+                              }
+                            },
+                            "id": 93345,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberLocation": "1419:10:188",
+                            "memberName": "stateIndex",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 94407,
+                            "src": "1415:14:188",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1410:19:188",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseExpression": {
+                          "arguments": [
+                            {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 93351,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "id": 93349,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 93328,
+                                "src": "1450:1:188",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "+",
+                              "rightExpression": {
+                                "hexValue": "31",
+                                "id": 93350,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "1454:1:188",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_1_by_1",
+                                  "typeString": "int_const 1"
+                                },
+                                "value": "1"
+                              },
+                              "src": "1450:5:188",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 93348,
+                            "name": "fakeState",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93302,
+                            "src": "1440:9:188",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_struct$_RawState_$94401_memory_ptr_$",
+                              "typeString": "function (uint256) pure returns (struct RawState memory)"
+                            }
+                          },
+                          "id": 93352,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1440:16:188",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                            "typeString": "struct RawState memory"
+                          }
+                        },
+                        "id": 93353,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "Conditional",
+                        "src": "1410:46:188",
+                        "trueExpression": {
+                          "id": 93347,
+                          "name": "state",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 93306,
+                          "src": "1432:5:188",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                            "typeString": "struct RawState memory"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                          "typeString": "struct RawState memory"
+                        }
+                      },
+                      "src": "1390:66:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                        "typeString": "struct RawState memory"
+                      }
+                    },
+                    "id": 93355,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1390:66:188"
+                  }
+                ]
+              },
+              "condition": {
+                "commonType": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "id": 93334,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "leftExpression": {
+                  "id": 93331,
+                  "name": "i",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 93328,
+                  "src": "1301:1:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "BinaryOperation",
+                "operator": "<",
+                "rightExpression": {
+                  "expression": {
+                    "id": 93332,
+                    "name": "rsi",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93309,
+                    "src": "1305:3:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawStateIndex_$94410_memory_ptr",
+                      "typeString": "struct RawStateIndex memory"
+                    }
+                  },
+                  "id": 93333,
+                  "isConstant": false,
+                  "isLValue": true,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberLocation": "1309:12:188",
+                  "memberName": "statesAmount",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 94409,
+                  "src": "1305:16:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "src": "1301:20:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              },
+              "id": 93357,
+              "initializationExpression": {
+                "assignments": [
+                  93328
+                ],
+                "declarations": [
+                  {
+                    "constant": false,
+                    "id": 93328,
+                    "mutability": "mutable",
+                    "name": "i",
+                    "nameLocation": "1294:1:188",
+                    "nodeType": "VariableDeclaration",
+                    "scope": 93357,
+                    "src": "1286:9:188",
+                    "stateVariable": false,
+                    "storageLocation": "default",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "typeName": {
+                      "id": 93327,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1286:7:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "visibility": "internal"
+                  }
+                ],
+                "id": 93330,
+                "initialValue": {
+                  "hexValue": "30",
+                  "id": 93329,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1298:1:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                },
+                "nodeType": "VariableDeclarationStatement",
+                "src": "1286:13:188"
+              },
+              "loopExpression": {
+                "expression": {
+                  "id": 93336,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "nodeType": "UnaryOperation",
+                  "operator": "++",
+                  "prefix": true,
+                  "src": "1323:3:188",
+                  "subExpression": {
+                    "id": 93335,
+                    "name": "i",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93328,
+                    "src": "1325:1:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "id": 93337,
+                "nodeType": "ExpressionStatement",
+                "src": "1323:3:188"
+              },
+              "nodeType": "ForStatement",
+              "src": "1281:182:188"
+            }
+          ]
+        },
+        "documentation": {
+          "id": 93303,
+          "nodeType": "StructuredDocumentation",
+          "src": "986:121:188",
+          "text": "@notice Returns RawSnapshot struct with given state on given position,\n and with fake states for everything else."
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "fakeSnapshot",
+        "nameLocation": "1116:12:188",
+        "parameters": {
+          "id": 93310,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 93306,
+              "mutability": "mutable",
+              "name": "state",
+              "nameLocation": "1145:5:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93359,
+              "src": "1129:21:188",
+              "stateVariable": false,
+              "storageLocation": "memory",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                "typeString": "struct RawState"
+              },
+              "typeName": {
+                "id": 93305,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 93304,
+                  "name": "RawState",
+                  "nameLocations": [
+                    "1129:8:188"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 94401,
+                  "src": "1129:8:188"
+                },
+                "referencedDeclaration": 94401,
+                "src": "1129:8:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RawState_$94401_storage_ptr",
+                  "typeString": "struct RawState"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 93309,
+              "mutability": "mutable",
+              "name": "rsi",
+              "nameLocation": "1173:3:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93359,
+              "src": "1152:24:188",
+              "stateVariable": false,
+              "storageLocation": "memory",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RawStateIndex_$94410_memory_ptr",
+                "typeString": "struct RawStateIndex"
+              },
+              "typeName": {
+                "id": 93308,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 93307,
+                  "name": "RawStateIndex",
+                  "nameLocations": [
+                    "1152:13:188"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 94410,
+                  "src": "1152:13:188"
+                },
+                "referencedDeclaration": 94410,
+                "src": "1152:13:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RawStateIndex_$94410_storage_ptr",
+                  "typeString": "struct RawStateIndex"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "1128:49:188"
+        },
+        "returnParameters": {
+          "id": 93314,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 93313,
+              "mutability": "mutable",
+              "name": "rawSnap",
+              "nameLocation": "1211:7:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93359,
+              "src": "1192:26:188",
+              "stateVariable": false,
+              "storageLocation": "memory",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RawSnapshot_$94419_memory_ptr",
+                "typeString": "struct RawSnapshot"
+              },
+              "typeName": {
+                "id": 93312,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 93311,
+                  "name": "RawSnapshot",
+                  "nameLocations": [
+                    "1192:11:188"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 94419,
+                  "src": "1192:11:188"
+                },
+                "referencedDeclaration": 94419,
+                "src": "1192:11:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RawSnapshot_$94419_storage_ptr",
+                  "typeString": "struct RawSnapshot"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "1191:28:188"
+        },
+        "scope": 93382,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      },
+      {
+        "id": 93381,
+        "nodeType": "FunctionDefinition",
+        "src": "1524:191:188",
+        "nodes": [],
+        "body": {
+          "id": 93380,
+          "nodeType": "Block",
+          "src": "1610:105:188",
+          "nodes": [],
+          "statements": [
+            {
+              "assignments": [
+                93370
+              ],
+              "declarations": [
+                {
+                  "constant": false,
+                  "id": 93370,
+                  "mutability": "mutable",
+                  "name": "state",
+                  "nameLocation": "1632:5:188",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93380,
+                  "src": "1616:21:188",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                    "typeString": "struct RawState"
+                  },
+                  "typeName": {
+                    "id": 93369,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 93368,
+                      "name": "RawState",
+                      "nameLocations": [
+                        "1616:8:188"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 94401,
+                      "src": "1616:8:188"
+                    },
+                    "referencedDeclaration": 94401,
+                    "src": "1616:8:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_storage_ptr",
+                      "typeString": "struct RawState"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "id": 93371,
+              "nodeType": "VariableDeclarationStatement",
+              "src": "1616:21:188"
+            },
+            {
+              "expression": {
+                "arguments": [
+                  {
+                    "id": 93373,
+                    "name": "state",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 93370,
+                    "src": "1663:5:188",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    }
+                  },
+                  {
+                    "arguments": [
+                      {
+                        "id": 93375,
+                        "name": "statesAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93362,
+                        "src": "1684:12:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 93376,
+                        "name": "statesAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93362,
+                        "src": "1698:12:188",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 93374,
+                      "name": "RawStateIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 94410,
+                      "src": "1670:13:188",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_RawStateIndex_$94410_storage_ptr_$",
+                        "typeString": "type(struct RawStateIndex storage pointer)"
+                      }
+                    },
+                    "id": 93377,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1670:41:188",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RawStateIndex_$94410_memory_ptr",
+                      "typeString": "struct RawStateIndex memory"
+                    }
+                  }
+                ],
+                "expression": {
+                  "argumentTypes": [
+                    {
+                      "typeIdentifier": "t_struct$_RawState_$94401_memory_ptr",
+                      "typeString": "struct RawState memory"
+                    },
+                    {
+                      "typeIdentifier": "t_struct$_RawStateIndex_$94410_memory_ptr",
+                      "typeString": "struct RawStateIndex memory"
+                    }
+                  ],
+                  "id": 93372,
+                  "name": "fakeSnapshot",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [
+                    93359,
+                    93381
+                  ],
+                  "referencedDeclaration": 93359,
+                  "src": "1650:12:188",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_function_internal_pure$_t_struct$_RawState_$94401_memory_ptr_$_t_struct$_RawStateIndex_$94410_memory_ptr_$returns$_t_struct$_RawSnapshot_$94419_memory_ptr_$",
+                    "typeString": "function (struct RawState memory,struct RawStateIndex memory) pure returns (struct RawSnapshot memory)"
+                  }
+                },
+                "id": 93378,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "kind": "functionCall",
+                "lValueRequested": false,
+                "nameLocations": [],
+                "names": [],
+                "nodeType": "FunctionCall",
+                "src": "1650:62:188",
+                "tryCall": false,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RawSnapshot_$94419_memory_ptr",
+                  "typeString": "struct RawSnapshot memory"
+                }
+              },
+              "functionReturnParameters": 93367,
+              "id": 93379,
+              "nodeType": "Return",
+              "src": "1643:69:188"
+            }
+          ]
+        },
+        "documentation": {
+          "id": 93360,
+          "nodeType": "StructuredDocumentation",
+          "src": "1467:57:188",
+          "text": "@notice Returns RawSnapshot struct with fake states."
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "fakeSnapshot",
+        "nameLocation": "1533:12:188",
+        "parameters": {
+          "id": 93363,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 93362,
+              "mutability": "mutable",
+              "name": "statesAmount",
+              "nameLocation": "1554:12:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93381,
+              "src": "1546:20:188",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 93361,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1546:7:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "1545:22:188"
+        },
+        "returnParameters": {
+          "id": 93367,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 93366,
+              "mutability": "mutable",
+              "name": "rawSnap",
+              "nameLocation": "1601:7:188",
+              "nodeType": "VariableDeclaration",
+              "scope": 93381,
+              "src": "1582:26:188",
+              "stateVariable": false,
+              "storageLocation": "memory",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_RawSnapshot_$94419_memory_ptr",
+                "typeString": "struct RawSnapshot"
+              },
+              "typeName": {
+                "id": 93365,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 93364,
+                  "name": "RawSnapshot",
+                  "nameLocations": [
+                    "1582:11:188"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 94419,
+                  "src": "1582:11:188"
+                },
+                "referencedDeclaration": 94419,
+                "src": "1582:11:188",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RawSnapshot_$94419_storage_ptr",
+                  "typeString": "struct RawSnapshot"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "1581:28:188"
+        },
+        "scope": 93382,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 188
+}

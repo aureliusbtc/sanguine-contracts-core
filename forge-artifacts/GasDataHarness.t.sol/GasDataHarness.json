@@ -1,0 +1,3401 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        }
+      ],
+      "name": "amortAttCost",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        }
+      ],
+      "name": "dataPrice",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ChainGas",
+          "name": "chainData_",
+          "type": "uint128"
+        }
+      ],
+      "name": "domain",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        },
+        {
+          "internalType": "uint32",
+          "name": "domain_",
+          "type": "uint32"
+        }
+      ],
+      "name": "encodeChainGas",
+      "outputs": [
+        {
+          "internalType": "ChainGas",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Number",
+          "name": "gasPrice_",
+          "type": "uint16"
+        },
+        {
+          "internalType": "Number",
+          "name": "dataPrice_",
+          "type": "uint16"
+        },
+        {
+          "internalType": "Number",
+          "name": "execBuffer_",
+          "type": "uint16"
+        },
+        {
+          "internalType": "Number",
+          "name": "amortAttCost_",
+          "type": "uint16"
+        },
+        {
+          "internalType": "Number",
+          "name": "etherPrice_",
+          "type": "uint16"
+        },
+        {
+          "internalType": "Number",
+          "name": "markup_",
+          "type": "uint16"
+        }
+      ],
+      "name": "encodeGasData",
+      "outputs": [
+        {
+          "internalType": "GasData",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        }
+      ],
+      "name": "etherPrice",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        }
+      ],
+      "name": "execBuffer",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ChainGas",
+          "name": "chainData_",
+          "type": "uint128"
+        }
+      ],
+      "name": "gasData",
+      "outputs": [
+        {
+          "internalType": "GasData",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        }
+      ],
+      "name": "gasPrice",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "GasData",
+          "name": "gasData_",
+          "type": "uint96"
+        }
+      ],
+      "name": "markup",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ChainGas[]",
+          "name": "snapGas",
+          "type": "uint128[]"
+        }
+      ],
+      "name": "snapGasHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "paddedChainGas",
+          "type": "uint256"
+        }
+      ],
+      "name": "wrapChainGas",
+      "outputs": [
+        {
+          "internalType": "ChainGas",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "paddedGasData",
+          "type": "uint256"
+        }
+      ],
+      "name": "wrapGasData",
+      "outputs": [
+        {
+          "internalType": "GasData",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506105b7806100206000396000f3fe608060405234801561001057600080fd5b50600436106100cf5760003560e01c806376fb64391161008c578063b75c78b311610066578063b75c78b3146101f9578063e0fdbe0c14610207578063e47805cd1461021a578063f26b89891461022d57600080fd5b806376fb6439146101c0578063a1a8a01c146101d3578063a1ae8d43146101e657600080fd5b8063092d72d1146100d457806313092f82146100ff57806334ec6ed41461012a578063405f3dfa1461015a57806356ce0ac41461016d5780635f331a8314610198575b600080fd5b6100e76100e236600461037f565b61024e565b60405161ffff90911681526020015b60405180910390f35b61011261010d3660046103a1565b610262565b6040516001600160801b0390911681526020016100f6565b6101126101383660046103ba565b63ffffffff1660209190911b6fffffffffffffffffffffffff00000000161790565b6100e761016836600461037f565b61026a565b61018061017b366004610411565b61027b565b6040516001600160601b0390911681526020016100f6565b6101ab6101a6366004610411565b610290565b60405163ffffffff90911681526020016100f6565b6100e76101ce36600461037f565b6102a1565b6100e76101e136600461037f565b6102b9565b6100e76101f436600461037f565b6102cf565b61018061010d3660046103a1565b61018061021536600461043e565b6102e3565b6100e761022836600461037f565b610341565b61024061023b3660046104c8565b610351565b6040519081526020016100f6565b6000604082901c63ffffffff165b92915050565b60008161025c565b60006001600160601b03821661025c565b6000602082901c6001600160601b031661025c565b60006001600160801b03821661025c565b6000601082901c69ffffffffffffffffffff1661025c565b6000602082901c67ffffffffffffffff1661025c565b6000603082901c65ffffffffffff1661025c565b60008061ffff8316601085901b63ffff000016602087901b65ffff0000000016603089901b67ffff0000000000001660408b901b69ffff00000000000000001660508d901b61ffff60501b1617171717175b98975050505050505050565b6000605082901c61ffff1661025c565b805160051b602082012060009061025c565b80356001600160601b038116811461037a57600080fd5b919050565b60006020828403121561039157600080fd5b61039a82610363565b9392505050565b6000602082840312156103b357600080fd5b5035919050565b600080604083850312156103cd57600080fd5b6103d683610363565b9150602083013563ffffffff811681146103ef57600080fd5b809150509250929050565b80356001600160801b038116811461037a57600080fd5b60006020828403121561042357600080fd5b61039a826103fa565b803561ffff8116811461037a57600080fd5b60008060008060008060c0878903121561045757600080fd5b6104608761042c565b955061046e6020880161042c565b945061047c6040880161042c565b935061048a6060880161042c565b92506104986080880161042c565b91506104a660a0880161042c565b90509295509295509295565b634e487b7160e01b600052604160045260246000fd5b600060208083850312156104db57600080fd5b823567ffffffffffffffff808211156104f357600080fd5b818501915085601f83011261050757600080fd5b813581811115610519576105196104b2565b8060051b604051601f19603f8301168101818110858211171561053e5761053e6104b2565b60405291825284820192508381018501918883111561055c57600080fd5b938501935b8285101561033557610572856103fa565b8452938501939285019261056156fea2646970667358221220b387100430c692a27cee862d0e264cea64a7854befd538f8ba6dbe5edf3fc21964736f6c63430008110033",
+    "sourceMap": "158:2108:124:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100cf5760003560e01c806376fb64391161008c578063b75c78b311610066578063b75c78b3146101f9578063e0fdbe0c14610207578063e47805cd1461021a578063f26b89891461022d57600080fd5b806376fb6439146101c0578063a1a8a01c146101d3578063a1ae8d43146101e657600080fd5b8063092d72d1146100d457806313092f82146100ff57806334ec6ed41461012a578063405f3dfa1461015a57806356ce0ac41461016d5780635f331a8314610198575b600080fd5b6100e76100e236600461037f565b61024e565b60405161ffff90911681526020015b60405180910390f35b61011261010d3660046103a1565b610262565b6040516001600160801b0390911681526020016100f6565b6101126101383660046103ba565b63ffffffff1660209190911b6fffffffffffffffffffffffff00000000161790565b6100e761016836600461037f565b61026a565b61018061017b366004610411565b61027b565b6040516001600160601b0390911681526020016100f6565b6101ab6101a6366004610411565b610290565b60405163ffffffff90911681526020016100f6565b6100e76101ce36600461037f565b6102a1565b6100e76101e136600461037f565b6102b9565b6100e76101f436600461037f565b6102cf565b61018061010d3660046103a1565b61018061021536600461043e565b6102e3565b6100e761022836600461037f565b610341565b61024061023b3660046104c8565b610351565b6040519081526020016100f6565b6000604082901c63ffffffff165b92915050565b60008161025c565b60006001600160601b03821661025c565b6000602082901c6001600160601b031661025c565b60006001600160801b03821661025c565b6000601082901c69ffffffffffffffffffff1661025c565b6000602082901c67ffffffffffffffff1661025c565b6000603082901c65ffffffffffff1661025c565b60008061ffff8316601085901b63ffff000016602087901b65ffff0000000016603089901b67ffff0000000000001660408b901b69ffff00000000000000001660508d901b61ffff60501b1617171717175b98975050505050505050565b6000605082901c61ffff1661025c565b805160051b602082012060009061025c565b80356001600160601b038116811461037a57600080fd5b919050565b60006020828403121561039157600080fd5b61039a82610363565b9392505050565b6000602082840312156103b357600080fd5b5035919050565b600080604083850312156103cd57600080fd5b6103d683610363565b9150602083013563ffffffff811681146103ef57600080fd5b809150509250929050565b80356001600160801b038116811461037a57600080fd5b60006020828403121561042357600080fd5b61039a826103fa565b803561ffff8116811461037a57600080fd5b60008060008060008060c0878903121561045757600080fd5b6104608761042c565b955061046e6020880161042c565b945061047c6040880161042c565b935061048a6060880161042c565b92506104986080880161042c565b91506104a660a0880161042c565b90509295509295509295565b634e487b7160e01b600052604160045260246000fd5b600060208083850312156104db57600080fd5b823567ffffffffffffffff808211156104f357600080fd5b818501915085601f83011261050757600080fd5b813581811115610519576105196104b2565b8060051b604051601f19603f8301168101818110858211171561053e5761053e6104b2565b60405291825284820192508381018501918883111561055c57600080fd5b938501935b8285101561033557610572856103fa565b8452938501939285019261056156fea2646970667358221220b387100430c692a27cee862d0e264cea64a7854befd538f8ba6dbe5edf3fc21964736f6c63430008110033",
+    "sourceMap": "158:2108:124:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1314:110;;;;;;:::i;:::-;;:::i;:::-;;;664:6:200;652:19;;;634:38;;622:2;607:18;1314:110:124;;;;;;;;1054:140;;;;;;:::i;:::-;;:::i;:::-;;;-1:-1:-1;;;;;1062:47:200;;;1044:66;;1032:2;1017:18;1054:140:124;868:248:200;857:191:124;;;;;;:::i;:::-;7560:16:59;;3168:5;7506:51;;;;;;:70;;857:191:124;1788:104;;;;;;:::i;:::-;;:::i;2013:112::-;;;;;;:::i;:::-;;:::i;:::-;;;-1:-1:-1;;;;;2176:39:200;;;2158:58;;2146:2;2131:18;2013:112:124;1984:238:200;1898:109:124;;;;;;:::i;:::-;;:::i;:::-;;;2401:10:200;2389:23;;;2371:42;;2359:2;2344:18;1898:109:124;2227:192:200;1670:112:124;;;;;;:::i;:::-;;:::i;1548:116::-;;;;;;:::i;:::-;;:::i;1430:112::-;;;;;;:::i;:::-;;:::i;716:135::-;;;;;;:::i;322:388::-;;;;;;:::i;:::-;;:::i;1200:108::-;;;;;;:::i;:::-;;:::i;2131:133::-;;;;;;:::i;:::-;;:::i;:::-;;;4917:25:200;;;4905:2;4890:18;2131:133:124;4771:177:200;1314:110:124;1372:6;2719:5:59;5550:40;;;;;1397:20:124;1390:27;1314:110;-1:-1:-1;;1314:110:124:o;1054:140::-;1121:8;1172:14;1148:39;7655:141:59;1788:104:124;1843:6;-1:-1:-1;;;;;1868:15:124;;:17;7655:141:59;2013:112:124;2072:7;3168:5:59;8040:39;;;-1:-1:-1;;;;;8040:39:59;2098:20:124;7848:240:59;1898:109:124;1956:6;-1:-1:-1;;;;;1981:17:124;;:19;7655:141:59;1670:112:124;1729:6;3060:5:59;6551:41;;;;;1754:21:124;6359:242:59;1548:116:124;1609:6;2948:5:59;6206:44;;;;;1634:23:124;6012:247:59;1430:112:124;1489:6;2831:5:59;5877:41;;;;;1514:21:124;5685:242:59;322:388:124;535:7;;4725:30:59;;;3060:5;4655:55;;;;;2948:5;4580:60;;;;;2831:5;4510:55;;;;;2719:5;4442:53;;;;;2608:6;4376:51;;;-1:-1:-1;;;4376:51:59;:119;:189;:264;:334;:379;583:97:124;554:126;322:388;-1:-1:-1;;;;;;;;322:388:124:o;1200:108::-;1257:6;2608::59;5233:39;;;;;1282:19:124;5043:238:59;2131:133:124;9249:14:59;;9246:1;9242:22;9050:4;9037:18;;9340:19;2200:7:124;;2226:31;8417:958:59;14:201:200;103:20;;-1:-1:-1;;;;;152:38:200;;142:49;;132:77;;205:1;202;195:12;132:77;14:201;;;:::o;220:236::-;308:6;361:2;349:9;340:7;336:23;332:32;329:52;;;377:1;374;367:12;329:52;400:50;440:9;400:50;:::i;:::-;390:60;220:236;-1:-1:-1;;;220:236:200:o;683:180::-;742:6;795:2;783:9;774:7;770:23;766:32;763:52;;;811:1;808;801:12;763:52;-1:-1:-1;834:23:200;;683:180;-1:-1:-1;683:180:200:o;1121:400::-;1217:6;1225;1278:2;1266:9;1257:7;1253:23;1249:32;1246:52;;;1294:1;1291;1284:12;1246:52;1317:50;1357:9;1317:50;:::i;:::-;1307:60;;1417:2;1406:9;1402:18;1389:32;1461:10;1454:5;1450:22;1443:5;1440:33;1430:61;;1487:1;1484;1477:12;1430:61;1510:5;1500:15;;;1121:400;;;;;:::o;1526:210::-;1616:20;;-1:-1:-1;;;;;1665:46:200;;1655:57;;1645:85;;1726:1;1723;1716:12;1741:238;1830:6;1883:2;1871:9;1862:7;1858:23;1854:32;1851:52;;;1899:1;1896;1889:12;1851:52;1922:51;1963:9;1922:51;:::i;2424:180::-;2512:20;;2572:6;2561:18;;2551:29;;2541:57;;2594:1;2591;2584:12;2609:847;2881:6;2889;2897;2905;2913;2921;2974:3;2962:9;2953:7;2949:23;2945:33;2942:53;;;2991:1;2988;2981:12;2942:53;3014:49;3053:9;3014:49;:::i;:::-;3004:59;;3082:58;3136:2;3125:9;3121:18;3082:58;:::i;:::-;3072:68;;3159:58;3213:2;3202:9;3198:18;3159:58;:::i;:::-;3149:68;;3236:58;3290:2;3279:9;3275:18;3236:58;:::i;:::-;3226:68;;3313:59;3367:3;3356:9;3352:19;3313:59;:::i;:::-;3303:69;;3391:59;3445:3;3434:9;3430:19;3391:59;:::i;:::-;3381:69;;2609:847;;;;;;;;:::o;3461:127::-;3522:10;3517:3;3513:20;3510:1;3503:31;3553:4;3550:1;3543:15;3577:4;3574:1;3567:15;3593:1173;3707:6;3738:2;3781;3769:9;3760:7;3756:23;3752:32;3749:52;;;3797:1;3794;3787:12;3749:52;3837:9;3824:23;3866:18;3907:2;3899:6;3896:14;3893:34;;;3923:1;3920;3913:12;3893:34;3961:6;3950:9;3946:22;3936:32;;4006:7;3999:4;3995:2;3991:13;3987:27;3977:55;;4028:1;4025;4018:12;3977:55;4064:2;4051:16;4086:2;4082;4079:10;4076:36;;;4092:18;;:::i;:::-;4138:2;4135:1;4131:10;4170:2;4164:9;4233:2;4229:7;4224:2;4220;4216:11;4212:25;4204:6;4200:38;4288:6;4276:10;4273:22;4268:2;4256:10;4253:18;4250:46;4247:72;;;4299:18;;:::i;:::-;4335:2;4328:22;4385:18;;;4419:15;;;;-1:-1:-1;4461:11:200;;;4457:20;;;4489:19;;;4486:39;;;4521:1;4518;4511:12;4486:39;4545:11;;;;4565:170;4581:6;4576:3;4573:15;4565:170;;;4647:45;4688:3;4647:45;:::i;:::-;4635:58;;4598:12;;;;4713;;;;4565:170;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "amortAttCost(uint96)": "a1a8a01c",
+    "dataPrice(uint96)": "092d72d1",
+    "domain(uint128)": "5f331a83",
+    "encodeChainGas(uint96,uint32)": "34ec6ed4",
+    "encodeGasData(uint16,uint16,uint16,uint16,uint16,uint16)": "e0fdbe0c",
+    "etherPrice(uint96)": "76fb6439",
+    "execBuffer(uint96)": "a1ae8d43",
+    "gasData(uint128)": "56ce0ac4",
+    "gasPrice(uint96)": "e47805cd",
+    "markup(uint96)": "405f3dfa",
+    "snapGasHash(uint128[])": "f26b8989",
+    "wrapChainGas(uint256)": "13092f82",
+    "wrapGasData(uint256)": "b75c78b3"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"}],\"name\":\"amortAttCost\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"}],\"name\":\"dataPrice\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ChainGas\",\"name\":\"chainData_\",\"type\":\"uint128\"}],\"name\":\"domain\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"},{\"internalType\":\"uint32\",\"name\":\"domain_\",\"type\":\"uint32\"}],\"name\":\"encodeChainGas\",\"outputs\":[{\"internalType\":\"ChainGas\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Number\",\"name\":\"gasPrice_\",\"type\":\"uint16\"},{\"internalType\":\"Number\",\"name\":\"dataPrice_\",\"type\":\"uint16\"},{\"internalType\":\"Number\",\"name\":\"execBuffer_\",\"type\":\"uint16\"},{\"internalType\":\"Number\",\"name\":\"amortAttCost_\",\"type\":\"uint16\"},{\"internalType\":\"Number\",\"name\":\"etherPrice_\",\"type\":\"uint16\"},{\"internalType\":\"Number\",\"name\":\"markup_\",\"type\":\"uint16\"}],\"name\":\"encodeGasData\",\"outputs\":[{\"internalType\":\"GasData\",\"name\":\"\",\"type\":\"uint96\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"}],\"name\":\"etherPrice\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"}],\"name\":\"execBuffer\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ChainGas\",\"name\":\"chainData_\",\"type\":\"uint128\"}],\"name\":\"gasData\",\"outputs\":[{\"internalType\":\"GasData\",\"name\":\"\",\"type\":\"uint96\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"}],\"name\":\"gasPrice\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"GasData\",\"name\":\"gasData_\",\"type\":\"uint96\"}],\"name\":\"markup\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ChainGas[]\",\"name\":\"snapGas\",\"type\":\"uint128[]\"}],\"name\":\"snapGasHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedChainGas\",\"type\":\"uint256\"}],\"name\":\"wrapChainGas\",\"outputs\":[{\"internalType\":\"ChainGas\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedGasData\",\"type\":\"uint256\"}],\"name\":\"wrapGasData\",\"outputs\":[{\"internalType\":\"GasData\",\"name\":\"\",\"type\":\"uint96\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/libs/stack/GasDataHarness.t.sol\":\"GasDataHarness\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/stack/GasData.sol\":{\"keccak256\":\"0x2007fd4b97cf33bfe4aa7dc6ac887af87b4010ec9834636b4dd5685582ac26cb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8b54ca8b659d63ef7138c5b3b243190ca19b1e893b7b49dee1f8790d55b9e691\",\"dweb:/ipfs/Qmc2FGb16uosZ5kvyEK2onpWVPvWeE9X72xNWeJw8CbweD\"]},\"contracts/libs/stack/Number.sol\":{\"keccak256\":\"0xe4e0d66268eb69304cda001a3e03242e9f4af8680830c92b3d6ebe83e96acb96\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f70c28a10a2d34849614ff51c74f8c6107093b4d01eb865b2ab0d4efe9294cfd\",\"dweb:/ipfs/QmQbXCnHfPJjdNCK1UuQ2ShNan6H7j5s9DLS4HygQ5wfP5\"]},\"test/harnesses/libs/stack/GasDataHarness.t.sol\":{\"keccak256\":\"0x621d51d04b3fd3ea794b1d00983de793fc47a88d89d7901e112f9b72ce479858\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08bb37c3639abb464ff48690486e4b0fe90a9bda18ee8b314c58397a2869a662\",\"dweb:/ipfs/QmWUusf6e15P2EUJzwdmH13srWthayfnu5Km3PrSKEEr2b\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "amortAttCost",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "dataPrice",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ChainGas",
+              "name": "chainData_",
+              "type": "uint128"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "domain",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain_",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "encodeChainGas",
+          "outputs": [
+            {
+              "internalType": "ChainGas",
+              "name": "",
+              "type": "uint128"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Number",
+              "name": "gasPrice_",
+              "type": "uint16"
+            },
+            {
+              "internalType": "Number",
+              "name": "dataPrice_",
+              "type": "uint16"
+            },
+            {
+              "internalType": "Number",
+              "name": "execBuffer_",
+              "type": "uint16"
+            },
+            {
+              "internalType": "Number",
+              "name": "amortAttCost_",
+              "type": "uint16"
+            },
+            {
+              "internalType": "Number",
+              "name": "etherPrice_",
+              "type": "uint16"
+            },
+            {
+              "internalType": "Number",
+              "name": "markup_",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "encodeGasData",
+          "outputs": [
+            {
+              "internalType": "GasData",
+              "name": "",
+              "type": "uint96"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "etherPrice",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "execBuffer",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ChainGas",
+              "name": "chainData_",
+              "type": "uint128"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "gasData",
+          "outputs": [
+            {
+              "internalType": "GasData",
+              "name": "",
+              "type": "uint96"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "gasPrice",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "GasData",
+              "name": "gasData_",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "markup",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ChainGas[]",
+              "name": "snapGas",
+              "type": "uint128[]"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "snapGasHash",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "paddedChainGas",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "wrapChainGas",
+          "outputs": [
+            {
+              "internalType": "ChainGas",
+              "name": "",
+              "type": "uint128"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "paddedGasData",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "wrapGasData",
+          "outputs": [
+            {
+              "internalType": "GasData",
+              "name": "",
+              "type": "uint96"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/harnesses/libs/stack/GasDataHarness.t.sol": "GasDataHarness"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/libs/stack/GasData.sol": {
+        "keccak256": "0x2007fd4b97cf33bfe4aa7dc6ac887af87b4010ec9834636b4dd5685582ac26cb",
+        "urls": [
+          "bzz-raw://8b54ca8b659d63ef7138c5b3b243190ca19b1e893b7b49dee1f8790d55b9e691",
+          "dweb:/ipfs/Qmc2FGb16uosZ5kvyEK2onpWVPvWeE9X72xNWeJw8CbweD"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/stack/Number.sol": {
+        "keccak256": "0xe4e0d66268eb69304cda001a3e03242e9f4af8680830c92b3d6ebe83e96acb96",
+        "urls": [
+          "bzz-raw://f70c28a10a2d34849614ff51c74f8c6107093b4d01eb865b2ab0d4efe9294cfd",
+          "dweb:/ipfs/QmQbXCnHfPJjdNCK1UuQ2ShNan6H7j5s9DLS4HygQ5wfP5"
+        ],
+        "license": "MIT"
+      },
+      "test/harnesses/libs/stack/GasDataHarness.t.sol": {
+        "keccak256": "0x621d51d04b3fd3ea794b1d00983de793fc47a88d89d7901e112f9b72ce479858",
+        "urls": [
+          "bzz-raw://08bb37c3639abb464ff48690486e4b0fe90a9bda18ee8b314c58397a2869a662",
+          "dweb:/ipfs/QmWUusf6e15P2EUJzwdmH13srWthayfnu5Km3PrSKEEr2b"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/harnesses/libs/stack/GasDataHarness.t.sol",
+    "id": 57770,
+    "exportedSymbols": {
+      "ChainGas": [
+        14599
+      ],
+      "GasData": [
+        14593
+      ],
+      "GasDataHarness": [
+        57769
+      ],
+      "GasDataLib": [
+        14991
+      ],
+      "Number": [
+        15268
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2235:124",
+    "nodes": [
+      {
+        "id": 57546,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:124",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 57551,
+        "nodeType": "ImportDirective",
+        "src": "57:99:124",
+        "nodes": [],
+        "absolutePath": "contracts/libs/stack/GasData.sol",
+        "file": "../../../../contracts/libs/stack/GasData.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 57770,
+        "sourceUnit": 14992,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 57547,
+              "name": "GasData",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 14593,
+              "src": "65:7:124",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 57548,
+              "name": "ChainGas",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 14599,
+              "src": "74:8:124",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 57549,
+              "name": "GasDataLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 14991,
+              "src": "84:10:124",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 57550,
+              "name": "Number",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 15268,
+              "src": "96:6:124",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 57769,
+        "nodeType": "ContractDefinition",
+        "src": "158:2108:124",
+        "nodes": [
+          {
+            "id": 57591,
+            "nodeType": "FunctionDefinition",
+            "src": "322:388:124",
+            "nodes": [],
+            "body": {
+              "id": 57590,
+              "nodeType": "Block",
+              "src": "544:166:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    57577
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 57577,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nameLocation": "562:6:124",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 57590,
+                      "src": "554:14:124",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                        "typeString": "GasData"
+                      },
+                      "typeName": {
+                        "id": 57576,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 57575,
+                          "name": "GasData",
+                          "nameLocations": [
+                            "554:7:124"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 14593,
+                          "src": "554:7:124"
+                        },
+                        "referencedDeclaration": 14593,
+                        "src": "554:7:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 57587,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 57580,
+                        "name": "gasPrice_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57554,
+                        "src": "608:9:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      },
+                      {
+                        "id": 57581,
+                        "name": "dataPrice_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57557,
+                        "src": "619:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      },
+                      {
+                        "id": 57582,
+                        "name": "execBuffer_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57560,
+                        "src": "631:11:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      },
+                      {
+                        "id": 57583,
+                        "name": "amortAttCost_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57563,
+                        "src": "644:13:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      },
+                      {
+                        "id": 57584,
+                        "name": "etherPrice_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57566,
+                        "src": "659:11:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      },
+                      {
+                        "id": 57585,
+                        "name": "markup_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57569,
+                        "src": "672:7:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57578,
+                        "name": "GasDataLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14991,
+                        "src": "583:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_GasDataLib_$14991_$",
+                          "typeString": "type(library GasDataLib)"
+                        }
+                      },
+                      "id": 57579,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "594:13:124",
+                      "memberName": "encodeGasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14727,
+                      "src": "583:24:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Number_$15268_$_t_userDefinedValueType$_Number_$15268_$_t_userDefinedValueType$_Number_$15268_$_t_userDefinedValueType$_Number_$15268_$_t_userDefinedValueType$_Number_$15268_$_t_userDefinedValueType$_Number_$15268_$returns$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (Number,Number,Number,Number,Number,Number) pure returns (GasData)"
+                      }
+                    },
+                    "id": 57586,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "583:97:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "554:126:124"
+                },
+                {
+                  "expression": {
+                    "id": 57588,
+                    "name": "result",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 57577,
+                    "src": "697:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "functionReturnParameters": 57574,
+                  "id": 57589,
+                  "nodeType": "Return",
+                  "src": "690:13:124"
+                }
+              ]
+            },
+            "functionSelector": "e0fdbe0c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "encodeGasData",
+            "nameLocation": "331:13:124",
+            "parameters": {
+              "id": 57570,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57554,
+                  "mutability": "mutable",
+                  "name": "gasPrice_",
+                  "nameLocation": "361:9:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "354:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57553,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57552,
+                      "name": "Number",
+                      "nameLocations": [
+                        "354:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "354:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "354:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57557,
+                  "mutability": "mutable",
+                  "name": "dataPrice_",
+                  "nameLocation": "387:10:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "380:17:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57556,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57555,
+                      "name": "Number",
+                      "nameLocations": [
+                        "380:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "380:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "380:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57560,
+                  "mutability": "mutable",
+                  "name": "execBuffer_",
+                  "nameLocation": "414:11:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "407:18:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57559,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57558,
+                      "name": "Number",
+                      "nameLocations": [
+                        "407:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "407:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "407:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57563,
+                  "mutability": "mutable",
+                  "name": "amortAttCost_",
+                  "nameLocation": "442:13:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "435:20:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57562,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57561,
+                      "name": "Number",
+                      "nameLocations": [
+                        "435:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "435:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "435:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57566,
+                  "mutability": "mutable",
+                  "name": "etherPrice_",
+                  "nameLocation": "472:11:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "465:18:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57565,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57564,
+                      "name": "Number",
+                      "nameLocations": [
+                        "465:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "465:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "465:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57569,
+                  "mutability": "mutable",
+                  "name": "markup_",
+                  "nameLocation": "500:7:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "493:14:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57568,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57567,
+                      "name": "Number",
+                      "nameLocations": [
+                        "493:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "493:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "493:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:169:124"
+            },
+            "returnParameters": {
+              "id": 57574,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57573,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57591,
+                  "src": "535:7:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57572,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57571,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "535:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "535:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "535:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "534:9:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57605,
+            "nodeType": "FunctionDefinition",
+            "src": "716:135:124",
+            "nodes": [],
+            "body": {
+              "id": 57604,
+              "nodeType": "Block",
+              "src": "790:61:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 57601,
+                        "name": "paddedGasData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57593,
+                        "src": "830:13:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57599,
+                        "name": "GasDataLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14991,
+                        "src": "807:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_GasDataLib_$14991_$",
+                          "typeString": "type(library GasDataLib)"
+                        }
+                      },
+                      "id": 57600,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "818:11:124",
+                      "memberName": "wrapGasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14745,
+                      "src": "807:22:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (uint256) pure returns (GasData)"
+                      }
+                    },
+                    "id": 57602,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "807:37:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "functionReturnParameters": 57598,
+                  "id": 57603,
+                  "nodeType": "Return",
+                  "src": "800:44:124"
+                }
+              ]
+            },
+            "functionSelector": "b75c78b3",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "wrapGasData",
+            "nameLocation": "725:11:124",
+            "parameters": {
+              "id": 57594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57593,
+                  "mutability": "mutable",
+                  "name": "paddedGasData",
+                  "nameLocation": "745:13:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57605,
+                  "src": "737:21:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57592,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "736:23:124"
+            },
+            "returnParameters": {
+              "id": 57598,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57597,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57605,
+                  "src": "781:7:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57596,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57595,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "781:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "781:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "781:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "780:9:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57628,
+            "nodeType": "FunctionDefinition",
+            "src": "857:191:124",
+            "nodes": [],
+            "body": {
+              "id": 57627,
+              "nodeType": "Block",
+              "src": "946:102:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    57618
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 57618,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nameLocation": "965:6:124",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 57627,
+                      "src": "956:15:124",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                        "typeString": "ChainGas"
+                      },
+                      "typeName": {
+                        "id": 57617,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 57616,
+                          "name": "ChainGas",
+                          "nameLocations": [
+                            "956:8:124"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 14599,
+                          "src": "956:8:124"
+                        },
+                        "referencedDeclaration": 14599,
+                        "src": "956:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                          "typeString": "ChainGas"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 57624,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 57621,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57608,
+                        "src": "1000:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      {
+                        "id": 57622,
+                        "name": "domain_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57610,
+                        "src": "1010:7:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        },
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57619,
+                        "name": "GasDataLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14991,
+                        "src": "974:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_GasDataLib_$14991_$",
+                          "typeString": "type(library GasDataLib)"
+                        }
+                      },
+                      "id": 57620,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "985:14:124",
+                      "memberName": "encodeChainGas",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14918,
+                      "src": "974:25:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$_t_uint32_$returns$_t_userDefinedValueType$_ChainGas_$14599_$",
+                        "typeString": "function (GasData,uint32) pure returns (ChainGas)"
+                      }
+                    },
+                    "id": 57623,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "974:44:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "956:62:124"
+                },
+                {
+                  "expression": {
+                    "id": 57625,
+                    "name": "result",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 57618,
+                    "src": "1035:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "functionReturnParameters": 57615,
+                  "id": 57626,
+                  "nodeType": "Return",
+                  "src": "1028:13:124"
+                }
+              ]
+            },
+            "functionSelector": "34ec6ed4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "encodeChainGas",
+            "nameLocation": "866:14:124",
+            "parameters": {
+              "id": 57611,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57608,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "889:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57628,
+                  "src": "881:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57607,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57606,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "881:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "881:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "881:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 57610,
+                  "mutability": "mutable",
+                  "name": "domain_",
+                  "nameLocation": "906:7:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57628,
+                  "src": "899:14:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 57609,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "880:34:124"
+            },
+            "returnParameters": {
+              "id": 57615,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57614,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57628,
+                  "src": "936:8:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                    "typeString": "ChainGas"
+                  },
+                  "typeName": {
+                    "id": 57613,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57612,
+                      "name": "ChainGas",
+                      "nameLocations": [
+                        "936:8:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14599,
+                      "src": "936:8:124"
+                    },
+                    "referencedDeclaration": 14599,
+                    "src": "936:8:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "935:10:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57642,
+            "nodeType": "FunctionDefinition",
+            "src": "1054:140:124",
+            "nodes": [],
+            "body": {
+              "id": 57641,
+              "nodeType": "Block",
+              "src": "1131:63:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 57638,
+                        "name": "paddedChainGas",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57630,
+                        "src": "1172:14:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57636,
+                        "name": "GasDataLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14991,
+                        "src": "1148:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_GasDataLib_$14991_$",
+                          "typeString": "type(library GasDataLib)"
+                        }
+                      },
+                      "id": 57637,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1159:12:124",
+                      "memberName": "wrapChainGas",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14936,
+                      "src": "1148:23:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_ChainGas_$14599_$",
+                        "typeString": "function (uint256) pure returns (ChainGas)"
+                      }
+                    },
+                    "id": 57639,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1148:39:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "functionReturnParameters": 57635,
+                  "id": 57640,
+                  "nodeType": "Return",
+                  "src": "1141:46:124"
+                }
+              ]
+            },
+            "functionSelector": "13092f82",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "wrapChainGas",
+            "nameLocation": "1063:12:124",
+            "parameters": {
+              "id": 57631,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57630,
+                  "mutability": "mutable",
+                  "name": "paddedChainGas",
+                  "nameLocation": "1084:14:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57642,
+                  "src": "1076:22:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57629,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1076:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1075:24:124"
+            },
+            "returnParameters": {
+              "id": 57635,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57634,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57642,
+                  "src": "1121:8:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                    "typeString": "ChainGas"
+                  },
+                  "typeName": {
+                    "id": 57633,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57632,
+                      "name": "ChainGas",
+                      "nameLocations": [
+                        "1121:8:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14599,
+                      "src": "1121:8:124"
+                    },
+                    "referencedDeclaration": 14599,
+                    "src": "1121:8:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1120:10:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57656,
+            "nodeType": "FunctionDefinition",
+            "src": "1200:108:124",
+            "nodes": [],
+            "body": {
+              "id": 57655,
+              "nodeType": "Block",
+              "src": "1265:43:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57651,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57645,
+                        "src": "1282:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "id": 57652,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1291:8:124",
+                      "memberName": "gasPrice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14769,
+                      "src": "1282:17:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$returns$_t_userDefinedValueType$_Number_$15268_$bound_to$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (GasData) pure returns (Number)"
+                      }
+                    },
+                    "id": 57653,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1282:19:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57650,
+                  "id": 57654,
+                  "nodeType": "Return",
+                  "src": "1275:26:124"
+                }
+              ]
+            },
+            "functionSelector": "e47805cd",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gasPrice",
+            "nameLocation": "1209:8:124",
+            "parameters": {
+              "id": 57646,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57645,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "1226:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57656,
+                  "src": "1218:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57644,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57643,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "1218:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "1218:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "1218:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1217:18:124"
+            },
+            "returnParameters": {
+              "id": 57650,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57649,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57656,
+                  "src": "1257:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57648,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57647,
+                      "name": "Number",
+                      "nameLocations": [
+                        "1257:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "1257:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "1257:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1256:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57670,
+            "nodeType": "FunctionDefinition",
+            "src": "1314:110:124",
+            "nodes": [],
+            "body": {
+              "id": 57669,
+              "nodeType": "Block",
+              "src": "1380:44:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57665,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57659,
+                        "src": "1397:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "id": 57666,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1406:9:124",
+                      "memberName": "dataPrice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14793,
+                      "src": "1397:18:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$returns$_t_userDefinedValueType$_Number_$15268_$bound_to$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (GasData) pure returns (Number)"
+                      }
+                    },
+                    "id": 57667,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1397:20:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57664,
+                  "id": 57668,
+                  "nodeType": "Return",
+                  "src": "1390:27:124"
+                }
+              ]
+            },
+            "functionSelector": "092d72d1",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dataPrice",
+            "nameLocation": "1323:9:124",
+            "parameters": {
+              "id": 57660,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57659,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "1341:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57670,
+                  "src": "1333:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57658,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57657,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "1333:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "1333:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "1333:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1332:18:124"
+            },
+            "returnParameters": {
+              "id": 57664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57663,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57670,
+                  "src": "1372:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57662,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57661,
+                      "name": "Number",
+                      "nameLocations": [
+                        "1372:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "1372:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "1372:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1371:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57684,
+            "nodeType": "FunctionDefinition",
+            "src": "1430:112:124",
+            "nodes": [],
+            "body": {
+              "id": 57683,
+              "nodeType": "Block",
+              "src": "1497:45:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57679,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57673,
+                        "src": "1514:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "id": 57680,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1523:10:124",
+                      "memberName": "execBuffer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14817,
+                      "src": "1514:19:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$returns$_t_userDefinedValueType$_Number_$15268_$bound_to$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (GasData) pure returns (Number)"
+                      }
+                    },
+                    "id": 57681,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1514:21:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57678,
+                  "id": 57682,
+                  "nodeType": "Return",
+                  "src": "1507:28:124"
+                }
+              ]
+            },
+            "functionSelector": "a1ae8d43",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execBuffer",
+            "nameLocation": "1439:10:124",
+            "parameters": {
+              "id": 57674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57673,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "1458:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57684,
+                  "src": "1450:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57672,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57671,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "1450:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "1450:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "1450:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1449:18:124"
+            },
+            "returnParameters": {
+              "id": 57678,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57677,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57684,
+                  "src": "1489:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57676,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57675,
+                      "name": "Number",
+                      "nameLocations": [
+                        "1489:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "1489:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "1489:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1488:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57698,
+            "nodeType": "FunctionDefinition",
+            "src": "1548:116:124",
+            "nodes": [],
+            "body": {
+              "id": 57697,
+              "nodeType": "Block",
+              "src": "1617:47:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57693,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57687,
+                        "src": "1634:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "id": 57694,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1643:12:124",
+                      "memberName": "amortAttCost",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14841,
+                      "src": "1634:21:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$returns$_t_userDefinedValueType$_Number_$15268_$bound_to$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (GasData) pure returns (Number)"
+                      }
+                    },
+                    "id": 57695,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1634:23:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57692,
+                  "id": 57696,
+                  "nodeType": "Return",
+                  "src": "1627:30:124"
+                }
+              ]
+            },
+            "functionSelector": "a1a8a01c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "amortAttCost",
+            "nameLocation": "1557:12:124",
+            "parameters": {
+              "id": 57688,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57687,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "1578:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57698,
+                  "src": "1570:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57686,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57685,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "1570:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "1570:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "1570:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1569:18:124"
+            },
+            "returnParameters": {
+              "id": 57692,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57691,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57698,
+                  "src": "1609:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57690,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57689,
+                      "name": "Number",
+                      "nameLocations": [
+                        "1609:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "1609:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "1609:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1608:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57712,
+            "nodeType": "FunctionDefinition",
+            "src": "1670:112:124",
+            "nodes": [],
+            "body": {
+              "id": 57711,
+              "nodeType": "Block",
+              "src": "1737:45:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57707,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57701,
+                        "src": "1754:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "id": 57708,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1763:10:124",
+                      "memberName": "etherPrice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14865,
+                      "src": "1754:19:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$returns$_t_userDefinedValueType$_Number_$15268_$bound_to$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (GasData) pure returns (Number)"
+                      }
+                    },
+                    "id": 57709,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1754:21:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57706,
+                  "id": 57710,
+                  "nodeType": "Return",
+                  "src": "1747:28:124"
+                }
+              ]
+            },
+            "functionSelector": "76fb6439",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "etherPrice",
+            "nameLocation": "1679:10:124",
+            "parameters": {
+              "id": 57702,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57701,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "1698:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57712,
+                  "src": "1690:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57700,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57699,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "1690:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "1690:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "1690:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1689:18:124"
+            },
+            "returnParameters": {
+              "id": 57706,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57705,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57712,
+                  "src": "1729:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57704,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57703,
+                      "name": "Number",
+                      "nameLocations": [
+                        "1729:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "1729:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "1729:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1728:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57726,
+            "nodeType": "FunctionDefinition",
+            "src": "1788:104:124",
+            "nodes": [],
+            "body": {
+              "id": 57725,
+              "nodeType": "Block",
+              "src": "1851:41:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57721,
+                        "name": "gasData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57715,
+                        "src": "1868:8:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                          "typeString": "GasData"
+                        }
+                      },
+                      "id": 57722,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1877:6:124",
+                      "memberName": "markup",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14887,
+                      "src": "1868:15:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_GasData_$14593_$returns$_t_userDefinedValueType$_Number_$15268_$bound_to$_t_userDefinedValueType$_GasData_$14593_$",
+                        "typeString": "function (GasData) pure returns (Number)"
+                      }
+                    },
+                    "id": 57723,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1868:17:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57720,
+                  "id": 57724,
+                  "nodeType": "Return",
+                  "src": "1861:24:124"
+                }
+              ]
+            },
+            "functionSelector": "405f3dfa",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "markup",
+            "nameLocation": "1797:6:124",
+            "parameters": {
+              "id": 57716,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57715,
+                  "mutability": "mutable",
+                  "name": "gasData_",
+                  "nameLocation": "1812:8:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57726,
+                  "src": "1804:16:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57714,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57713,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "1804:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "1804:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "1804:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1803:18:124"
+            },
+            "returnParameters": {
+              "id": 57720,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57719,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57726,
+                  "src": "1843:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57718,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57717,
+                      "name": "Number",
+                      "nameLocations": [
+                        "1843:6:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "1843:6:124"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "1843:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1842:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57739,
+            "nodeType": "FunctionDefinition",
+            "src": "1898:109:124",
+            "nodes": [],
+            "body": {
+              "id": 57738,
+              "nodeType": "Block",
+              "src": "1964:43:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57734,
+                        "name": "chainData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57729,
+                        "src": "1981:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                          "typeString": "ChainGas"
+                        }
+                      },
+                      "id": 57735,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1992:6:124",
+                      "memberName": "domain",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14978,
+                      "src": "1981:17:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_ChainGas_$14599_$returns$_t_uint32_$bound_to$_t_userDefinedValueType$_ChainGas_$14599_$",
+                        "typeString": "function (ChainGas) pure returns (uint32)"
+                      }
+                    },
+                    "id": 57736,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1981:19:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "functionReturnParameters": 57733,
+                  "id": 57737,
+                  "nodeType": "Return",
+                  "src": "1974:26:124"
+                }
+              ]
+            },
+            "functionSelector": "5f331a83",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "domain",
+            "nameLocation": "1907:6:124",
+            "parameters": {
+              "id": 57730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57729,
+                  "mutability": "mutable",
+                  "name": "chainData_",
+                  "nameLocation": "1923:10:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57739,
+                  "src": "1914:19:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                    "typeString": "ChainGas"
+                  },
+                  "typeName": {
+                    "id": 57728,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57727,
+                      "name": "ChainGas",
+                      "nameLocations": [
+                        "1914:8:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14599,
+                      "src": "1914:8:124"
+                    },
+                    "referencedDeclaration": 14599,
+                    "src": "1914:8:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1913:21:124"
+            },
+            "returnParameters": {
+              "id": 57733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57732,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57739,
+                  "src": "1956:6:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 57731,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1956:6:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1955:8:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57753,
+            "nodeType": "FunctionDefinition",
+            "src": "2013:112:124",
+            "nodes": [],
+            "body": {
+              "id": 57752,
+              "nodeType": "Block",
+              "src": "2081:44:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 57748,
+                        "name": "chainData_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57742,
+                        "src": "2098:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                          "typeString": "ChainGas"
+                        }
+                      },
+                      "id": 57749,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2109:7:124",
+                      "memberName": "gasData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14960,
+                      "src": "2098:18:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_ChainGas_$14599_$returns$_t_userDefinedValueType$_GasData_$14593_$bound_to$_t_userDefinedValueType$_ChainGas_$14599_$",
+                        "typeString": "function (ChainGas) pure returns (GasData)"
+                      }
+                    },
+                    "id": 57750,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2098:20:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "functionReturnParameters": 57747,
+                  "id": 57751,
+                  "nodeType": "Return",
+                  "src": "2091:27:124"
+                }
+              ]
+            },
+            "functionSelector": "56ce0ac4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gasData",
+            "nameLocation": "2022:7:124",
+            "parameters": {
+              "id": 57743,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57742,
+                  "mutability": "mutable",
+                  "name": "chainData_",
+                  "nameLocation": "2039:10:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57753,
+                  "src": "2030:19:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                    "typeString": "ChainGas"
+                  },
+                  "typeName": {
+                    "id": 57741,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57740,
+                      "name": "ChainGas",
+                      "nameLocations": [
+                        "2030:8:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14599,
+                      "src": "2030:8:124"
+                    },
+                    "referencedDeclaration": 14599,
+                    "src": "2030:8:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                      "typeString": "ChainGas"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2029:21:124"
+            },
+            "returnParameters": {
+              "id": 57747,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57746,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57753,
+                  "src": "2072:7:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                    "typeString": "GasData"
+                  },
+                  "typeName": {
+                    "id": 57745,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57744,
+                      "name": "GasData",
+                      "nameLocations": [
+                        "2072:7:124"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 14593,
+                      "src": "2072:7:124"
+                    },
+                    "referencedDeclaration": 14593,
+                    "src": "2072:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_GasData_$14593",
+                      "typeString": "GasData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2071:9:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57768,
+            "nodeType": "FunctionDefinition",
+            "src": "2131:133:124",
+            "nodes": [],
+            "body": {
+              "id": 57767,
+              "nodeType": "Block",
+              "src": "2209:55:124",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 57764,
+                        "name": "snapGas",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57757,
+                        "src": "2249:7:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_userDefinedValueType$_ChainGas_$14599_$dyn_memory_ptr",
+                          "typeString": "ChainGas[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_userDefinedValueType$_ChainGas_$14599_$dyn_memory_ptr",
+                          "typeString": "ChainGas[] memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57762,
+                        "name": "GasDataLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14991,
+                        "src": "2226:10:124",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_GasDataLib_$14991_$",
+                          "typeString": "type(library GasDataLib)"
+                        }
+                      },
+                      "id": 57763,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2237:11:124",
+                      "memberName": "snapGasHash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14990,
+                      "src": "2226:22:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_userDefinedValueType$_ChainGas_$14599_$dyn_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (ChainGas[] memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 57765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2226:31:124",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 57761,
+                  "id": 57766,
+                  "nodeType": "Return",
+                  "src": "2219:38:124"
+                }
+              ]
+            },
+            "functionSelector": "f26b8989",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "snapGasHash",
+            "nameLocation": "2140:11:124",
+            "parameters": {
+              "id": 57758,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57757,
+                  "mutability": "mutable",
+                  "name": "snapGas",
+                  "nameLocation": "2170:7:124",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57768,
+                  "src": "2152:25:124",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_userDefinedValueType$_ChainGas_$14599_$dyn_memory_ptr",
+                    "typeString": "ChainGas[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 57755,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 57754,
+                        "name": "ChainGas",
+                        "nameLocations": [
+                          "2152:8:124"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 14599,
+                        "src": "2152:8:124"
+                      },
+                      "referencedDeclaration": 14599,
+                      "src": "2152:8:124",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_ChainGas_$14599",
+                        "typeString": "ChainGas"
+                      }
+                    },
+                    "id": 57756,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2152:10:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_userDefinedValueType$_ChainGas_$14599_$dyn_storage_ptr",
+                      "typeString": "ChainGas[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2151:27:124"
+            },
+            "returnParameters": {
+              "id": 57761,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57760,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57768,
+                  "src": "2200:7:124",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 57759,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2200:7:124",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2199:9:124"
+            },
+            "scope": 57769,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "GasDataHarness",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          57769
+        ],
+        "name": "GasDataHarness",
+        "nameLocation": "167:14:124",
+        "scope": 57770,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 124
+}

@@ -1,0 +1,1599 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "guardIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sigIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "acceptGuardSnapshot",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "notaryIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sigIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "acceptNotarySnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "rcptNotaryIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "attNotaryIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sigIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "paddedTips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "acceptReceipt",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "wasAccepted",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "actor",
+          "type": "address"
+        },
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        }
+      ],
+      "name": "actorTips",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "earned",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "claimed",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "distributeTips",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "queuePopped",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        }
+      ],
+      "name": "getLatestState",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "receiptQueueLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawTips",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptGuardSnapshot(uint32,uint256,bytes)": "9cc1bb31",
+    "acceptNotarySnapshot(uint32,uint256,bytes32,bytes)": "00f34054",
+    "acceptReceipt(uint32,uint32,uint256,uint32,uint256,bytes)": "c79a431b",
+    "actorTips(address,uint32)": "47ca1b14",
+    "distributeTips()": "0729ae8a",
+    "getLatestState(uint32)": "d17db53a",
+    "receiptQueueLength()": "a5ba1a55",
+    "withdrawTips(uint32,uint256)": "6170e4e6"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"guardIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"sigIndex\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"}],\"name\":\"acceptGuardSnapshot\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"notaryIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"sigIndex\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"}],\"name\":\"acceptNotarySnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"rcptNotaryIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"attNotaryIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"sigIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"}],\"name\":\"acceptReceipt\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"wasAccepted\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"actor\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"}],\"name\":\"actorTips\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"earned\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"claimed\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distributeTips\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"queuePopped\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"}],\"name\":\"getLatestState\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"receiptQueueLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawTips\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"acceptGuardSnapshot(uint32,uint256,bytes)\":{\"params\":{\"guardIndex\":\"Index of Guard in Agent Merkle Tree\",\"sigIndex\":\"Index of stored Agent signature\",\"snapPayload\":\"Raw payload with snapshot data\"}},\"acceptNotarySnapshot(uint32,uint256,bytes32,bytes)\":{\"params\":{\"agentRoot\":\"Current root of the Agent Merkle Tree\",\"notaryIndex\":\"Index of Notary in Agent Merkle Tree\",\"sigIndex\":\"Index of stored Agent signature\",\"snapPayload\":\"Raw payload with snapshot data\"},\"returns\":{\"attPayload\":\"      Raw payload with data for attestation derived from Notary snapshot.\"}},\"acceptReceipt(uint32,uint32,uint256,uint32,uint256,bytes)\":{\"params\":{\"attNonce\":\"Nonce of the attestation used for proving the executed message\",\"attNotaryIndex\":\"Index of Attestation Notary in Agent Merkle Tree\",\"paddedTips\":\"Padded encoded paid tips information\",\"rcptNotaryIndex\":\"Index of Receipt Notary in Agent Merkle Tree\",\"rcptPayload\":\"Raw payload with message execution receipt\",\"sigIndex\":\"Index of stored Notary signature\"},\"returns\":{\"wasAccepted\":\"     Whether the receipt was accepted\"}},\"actorTips(address,uint32)\":{\"params\":{\"actor\":\"Address of the actor\",\"origin\":\"Domain where the tips were initially paid\"},\"returns\":{\"claimed\":\" Total amount of origin tips the actor has claimed so far\",\"earned\":\"  Total amount of origin tips the actor has earned so far\"}},\"distributeTips()\":{\"details\":\"Returned value makes it possible to do the following: `while (distributeTips()) {}`\",\"returns\":{\"queuePopped\":\"     Whether the first element was popped from the queue\"}},\"getLatestState(uint32)\":{\"params\":{\"origin\":\"Domain of origin chain\"},\"returns\":{\"statePayload\":\"Raw payload with latest active Guard state for origin\"}},\"withdrawTips(uint32,uint256)\":{\"details\":\"This will revert, if the pending balance of origin tips (earned-claimed) is lower than requested.\",\"params\":{\"amount\":\"Amount of tips to withdraw\",\"origin\":\"Domain of chain to withdraw tips on\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"acceptGuardSnapshot(uint32,uint256,bytes)\":{\"notice\":\"Accepts a snapshot, which local `AgentManager` verified to have been signed by an active Guard. > Snapshot is a list of states for a set of Origin contracts residing on any of the chains. All the states in the Guard-signed snapshot become available for Notary signing. > Will revert if any of these is true: > - Called by anyone other than local `AgentManager`. > - Snapshot payload is not properly formatted. > - Snapshot contains a state older then the Guard has previously submitted.\"},\"acceptNotarySnapshot(uint32,uint256,bytes32,bytes)\":{\"notice\":\"Accepts a snapshot, which local `AgentManager` verified to have been signed by an active Notary. > Snapshot is a list of states for a set of Origin contracts residing on any of the chains. Snapshot Merkle Root is calculated and saved for valid snapshots, i.e. snapshots which are only using states previously submitted by any of the Guards. - Notary could use states singed by the same of different Guards in their snapshot. - Notary could then proceed to sign the attestation for their submitted snapshot. > Will revert if any of these is true: > - Called by anyone other than local `AgentManager`. > - Snapshot payload is not properly formatted. > - Snapshot contains a state older then the Notary has previously submitted. > - Snapshot contains a state that no Guard has previously submitted.\"},\"acceptReceipt(uint32,uint32,uint256,uint32,uint256,bytes)\":{\"notice\":\"Accepts a receipt, which local `AgentManager` verified to have been signed by an active Notary. > Receipt is a statement about message execution status on the remote chain. - This will distribute the message tips across the off-chain actors once the receipt optimistic period is over. - Notary who signed the receipt is referenced as the \\\"Receipt Notary\\\". - Notary who signed the attestation on destination chain is referenced as the \\\"Attestation Notary\\\". > Will revert if any of these is true: > - Called by anyone other than local `AgentManager`. > - Receipt body payload is not properly formatted. > - Receipt signer is in Dispute. > - Receipt's snapshot root is unknown.\"},\"actorTips(address,uint32)\":{\"notice\":\"Returns earned and claimed tips for the actor. Note: Tips for address(0) belong to the Treasury.\"},\"distributeTips()\":{\"notice\":\"Distributes tips using the first Receipt from the \\\"receipt quarantine queue\\\". Possible scenarios:  - Receipt queue is empty => does nothing  - Receipt optimistic period is not over => does nothing  - Either of Notaries present in Receipt was slashed => receipt is deleted from the queue  - Either of Notaries present in Receipt in Dispute => receipt is moved to the end of queue  - None of the above => receipt tips are distributed\"},\"getLatestState(uint32)\":{\"notice\":\"Returns the state with the highest known nonce submitted by any of the currently active Guards.\"},\"receiptQueueLength()\":{\"notice\":\"Returns the amount of receipts in the \\\"Receipt Quarantine Queue\\\".\"},\"withdrawTips(uint32,uint256)\":{\"notice\":\"Withdraws locked base message tips from requested domain Origin to the recipient. This is done by a call to a local Origin contract, or by a manager message to the remote chain.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/InterfaceSummit.sol\":\"InterfaceSummit\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/InterfaceSummit.sol\":{\"keccak256\":\"0xeb60c7097b7e8a82e30e4e4e7788810d029a0bb013eb71d0e47d062abeb14494\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cc35dbea34e34c513507575b9189806412e6e0d9dd6c7c34c5e598a89c58ed43\",\"dweb:/ipfs/QmTe6U1pB7AQaDiRdQRGktx96BWkGQdb8vLqtSpqCu3XDK\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "guardIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "sigIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptGuardSnapshot"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "notaryIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "sigIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptNotarySnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "rcptNotaryIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "attNotaryIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "sigIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedTips",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptReceipt",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "wasAccepted",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "actor",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "actorTips",
+          "outputs": [
+            {
+              "internalType": "uint128",
+              "name": "earned",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "claimed",
+              "type": "uint128"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "distributeTips",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "queuePopped",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLatestState",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "receiptQueueLength",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawTips"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "acceptGuardSnapshot(uint32,uint256,bytes)": {
+            "params": {
+              "guardIndex": "Index of Guard in Agent Merkle Tree",
+              "sigIndex": "Index of stored Agent signature",
+              "snapPayload": "Raw payload with snapshot data"
+            }
+          },
+          "acceptNotarySnapshot(uint32,uint256,bytes32,bytes)": {
+            "params": {
+              "agentRoot": "Current root of the Agent Merkle Tree",
+              "notaryIndex": "Index of Notary in Agent Merkle Tree",
+              "sigIndex": "Index of stored Agent signature",
+              "snapPayload": "Raw payload with snapshot data"
+            },
+            "returns": {
+              "attPayload": "      Raw payload with data for attestation derived from Notary snapshot."
+            }
+          },
+          "acceptReceipt(uint32,uint32,uint256,uint32,uint256,bytes)": {
+            "params": {
+              "attNonce": "Nonce of the attestation used for proving the executed message",
+              "attNotaryIndex": "Index of Attestation Notary in Agent Merkle Tree",
+              "paddedTips": "Padded encoded paid tips information",
+              "rcptNotaryIndex": "Index of Receipt Notary in Agent Merkle Tree",
+              "rcptPayload": "Raw payload with message execution receipt",
+              "sigIndex": "Index of stored Notary signature"
+            },
+            "returns": {
+              "wasAccepted": "     Whether the receipt was accepted"
+            }
+          },
+          "actorTips(address,uint32)": {
+            "params": {
+              "actor": "Address of the actor",
+              "origin": "Domain where the tips were initially paid"
+            },
+            "returns": {
+              "claimed": " Total amount of origin tips the actor has claimed so far",
+              "earned": "  Total amount of origin tips the actor has earned so far"
+            }
+          },
+          "distributeTips()": {
+            "details": "Returned value makes it possible to do the following: `while (distributeTips()) {}`",
+            "returns": {
+              "queuePopped": "     Whether the first element was popped from the queue"
+            }
+          },
+          "getLatestState(uint32)": {
+            "params": {
+              "origin": "Domain of origin chain"
+            },
+            "returns": {
+              "statePayload": "Raw payload with latest active Guard state for origin"
+            }
+          },
+          "withdrawTips(uint32,uint256)": {
+            "details": "This will revert, if the pending balance of origin tips (earned-claimed) is lower than requested.",
+            "params": {
+              "amount": "Amount of tips to withdraw",
+              "origin": "Domain of chain to withdraw tips on"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "acceptGuardSnapshot(uint32,uint256,bytes)": {
+            "notice": "Accepts a snapshot, which local `AgentManager` verified to have been signed by an active Guard. > Snapshot is a list of states for a set of Origin contracts residing on any of the chains. All the states in the Guard-signed snapshot become available for Notary signing. > Will revert if any of these is true: > - Called by anyone other than local `AgentManager`. > - Snapshot payload is not properly formatted. > - Snapshot contains a state older then the Guard has previously submitted."
+          },
+          "acceptNotarySnapshot(uint32,uint256,bytes32,bytes)": {
+            "notice": "Accepts a snapshot, which local `AgentManager` verified to have been signed by an active Notary. > Snapshot is a list of states for a set of Origin contracts residing on any of the chains. Snapshot Merkle Root is calculated and saved for valid snapshots, i.e. snapshots which are only using states previously submitted by any of the Guards. - Notary could use states singed by the same of different Guards in their snapshot. - Notary could then proceed to sign the attestation for their submitted snapshot. > Will revert if any of these is true: > - Called by anyone other than local `AgentManager`. > - Snapshot payload is not properly formatted. > - Snapshot contains a state older then the Notary has previously submitted. > - Snapshot contains a state that no Guard has previously submitted."
+          },
+          "acceptReceipt(uint32,uint32,uint256,uint32,uint256,bytes)": {
+            "notice": "Accepts a receipt, which local `AgentManager` verified to have been signed by an active Notary. > Receipt is a statement about message execution status on the remote chain. - This will distribute the message tips across the off-chain actors once the receipt optimistic period is over. - Notary who signed the receipt is referenced as the \"Receipt Notary\". - Notary who signed the attestation on destination chain is referenced as the \"Attestation Notary\". > Will revert if any of these is true: > - Called by anyone other than local `AgentManager`. > - Receipt body payload is not properly formatted. > - Receipt signer is in Dispute. > - Receipt's snapshot root is unknown."
+          },
+          "actorTips(address,uint32)": {
+            "notice": "Returns earned and claimed tips for the actor. Note: Tips for address(0) belong to the Treasury."
+          },
+          "distributeTips()": {
+            "notice": "Distributes tips using the first Receipt from the \"receipt quarantine queue\". Possible scenarios:  - Receipt queue is empty => does nothing  - Receipt optimistic period is not over => does nothing  - Either of Notaries present in Receipt was slashed => receipt is deleted from the queue  - Either of Notaries present in Receipt in Dispute => receipt is moved to the end of queue  - None of the above => receipt tips are distributed"
+          },
+          "getLatestState(uint32)": {
+            "notice": "Returns the state with the highest known nonce submitted by any of the currently active Guards."
+          },
+          "receiptQueueLength()": {
+            "notice": "Returns the amount of receipts in the \"Receipt Quarantine Queue\"."
+          },
+          "withdrawTips(uint32,uint256)": {
+            "notice": "Withdraws locked base message tips from requested domain Origin to the recipient. This is done by a call to a local Origin contract, or by a manager message to the remote chain."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/InterfaceSummit.sol": "InterfaceSummit"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/InterfaceSummit.sol": {
+        "keccak256": "0xeb60c7097b7e8a82e30e4e4e7788810d029a0bb013eb71d0e47d062abeb14494",
+        "urls": [
+          "bzz-raw://cc35dbea34e34c513507575b9189806412e6e0d9dd6c7c34c5e598a89c58ed43",
+          "dweb:/ipfs/QmTe6U1pB7AQaDiRdQRGktx96BWkGQdb8vLqtSpqCu3XDK"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/InterfaceSummit.sol",
+    "id": 10054,
+    "exportedSymbols": {
+      "AgentStatus": [
+        10357
+      ],
+      "InterfaceSummit": [
+        10053
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:7212:44",
+    "nodes": [
+      {
+        "id": 9968,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:44",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9970,
+        "nodeType": "ImportDirective",
+        "src": "57:51:44",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Structures.sol",
+        "file": "../libs/Structures.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 10054,
+        "sourceUnit": 10474,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 9969,
+              "name": "AgentStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10357,
+              "src": "65:11:44",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10053,
+        "nodeType": "ContractDefinition",
+        "src": "110:7133:44",
+        "nodes": [
+          {
+            "id": 9988,
+            "nodeType": "FunctionDefinition",
+            "src": "1736:241:44",
+            "nodes": [],
+            "documentation": {
+              "id": 9971,
+              "nodeType": "StructuredDocumentation",
+              "src": "440:1291:44",
+              "text": " @notice Accepts a receipt, which local `AgentManager` verified to have been signed by an active Notary.\n > Receipt is a statement about message execution status on the remote chain.\n - This will distribute the message tips across the off-chain actors once the receipt optimistic period is over.\n - Notary who signed the receipt is referenced as the \"Receipt Notary\".\n - Notary who signed the attestation on destination chain is referenced as the \"Attestation Notary\".\n > Will revert if any of these is true:\n > - Called by anyone other than local `AgentManager`.\n > - Receipt body payload is not properly formatted.\n > - Receipt signer is in Dispute.\n > - Receipt's snapshot root is unknown.\n @param rcptNotaryIndex   Index of Receipt Notary in Agent Merkle Tree\n @param attNotaryIndex    Index of Attestation Notary in Agent Merkle Tree\n @param sigIndex          Index of stored Notary signature\n @param attNonce          Nonce of the attestation used for proving the executed message\n @param paddedTips        Padded encoded paid tips information\n @param rcptPayload       Raw payload with message execution receipt\n @return wasAccepted      Whether the receipt was accepted"
+            },
+            "functionSelector": "c79a431b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptReceipt",
+            "nameLocation": "1745:13:44",
+            "parameters": {
+              "id": 9984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9973,
+                  "mutability": "mutable",
+                  "name": "rcptNotaryIndex",
+                  "nameLocation": "1775:15:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1768:22:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9972,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1768:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9975,
+                  "mutability": "mutable",
+                  "name": "attNotaryIndex",
+                  "nameLocation": "1807:14:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1800:21:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9974,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1800:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9977,
+                  "mutability": "mutable",
+                  "name": "sigIndex",
+                  "nameLocation": "1839:8:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1831:16:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9976,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1831:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9979,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "1864:8:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1857:15:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9978,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1857:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9981,
+                  "mutability": "mutable",
+                  "name": "paddedTips",
+                  "nameLocation": "1890:10:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1882:18:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9980,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1882:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9983,
+                  "mutability": "mutable",
+                  "name": "rcptPayload",
+                  "nameLocation": "1923:11:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1910:24:44",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9982,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1910:5:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1758:182:44"
+            },
+            "returnParameters": {
+              "id": 9987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9986,
+                  "mutability": "mutable",
+                  "name": "wasAccepted",
+                  "nameLocation": "1964:11:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9988,
+                  "src": "1959:16:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9985,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1959:4:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1958:18:44"
+            },
+            "scope": 10053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9998,
+            "nodeType": "FunctionDefinition",
+            "src": "2738:101:44",
+            "nodes": [],
+            "documentation": {
+              "id": 9989,
+              "nodeType": "StructuredDocumentation",
+              "src": "1983:750:44",
+              "text": " @notice Accepts a snapshot, which local `AgentManager` verified to have been signed by an active Guard.\n > Snapshot is a list of states for a set of Origin contracts residing on any of the chains.\n All the states in the Guard-signed snapshot become available for Notary signing.\n > Will revert if any of these is true:\n > - Called by anyone other than local `AgentManager`.\n > - Snapshot payload is not properly formatted.\n > - Snapshot contains a state older then the Guard has previously submitted.\n @param guardIndex        Index of Guard in Agent Merkle Tree\n @param sigIndex          Index of stored Agent signature\n @param snapPayload       Raw payload with snapshot data"
+            },
+            "functionSelector": "9cc1bb31",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptGuardSnapshot",
+            "nameLocation": "2747:19:44",
+            "parameters": {
+              "id": 9996,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9991,
+                  "mutability": "mutable",
+                  "name": "guardIndex",
+                  "nameLocation": "2774:10:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9998,
+                  "src": "2767:17:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9990,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2767:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9993,
+                  "mutability": "mutable",
+                  "name": "sigIndex",
+                  "nameLocation": "2794:8:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9998,
+                  "src": "2786:16:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9992,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2786:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9995,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "2817:11:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9998,
+                  "src": "2804:24:44",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9994,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2804:5:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2766:63:44"
+            },
+            "returnParameters": {
+              "id": 9997,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2838:0:44"
+            },
+            "scope": 10053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10012,
+            "nodeType": "FunctionDefinition",
+            "src": "4108:172:44",
+            "nodes": [],
+            "documentation": {
+              "id": 9999,
+              "nodeType": "StructuredDocumentation",
+              "src": "2845:1258:44",
+              "text": " @notice Accepts a snapshot, which local `AgentManager` verified to have been signed by an active Notary.\n > Snapshot is a list of states for a set of Origin contracts residing on any of the chains.\n Snapshot Merkle Root is calculated and saved for valid snapshots, i.e.\n snapshots which are only using states previously submitted by any of the Guards.\n - Notary could use states singed by the same of different Guards in their snapshot.\n - Notary could then proceed to sign the attestation for their submitted snapshot.\n > Will revert if any of these is true:\n > - Called by anyone other than local `AgentManager`.\n > - Snapshot payload is not properly formatted.\n > - Snapshot contains a state older then the Notary has previously submitted.\n > - Snapshot contains a state that no Guard has previously submitted.\n @param notaryIndex       Index of Notary in Agent Merkle Tree\n @param sigIndex          Index of stored Agent signature\n @param agentRoot         Current root of the Agent Merkle Tree\n @param snapPayload       Raw payload with snapshot data\n @return attPayload       Raw payload with data for attestation derived from Notary snapshot."
+            },
+            "functionSelector": "00f34054",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptNotarySnapshot",
+            "nameLocation": "4117:20:44",
+            "parameters": {
+              "id": 10008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10001,
+                  "mutability": "mutable",
+                  "name": "notaryIndex",
+                  "nameLocation": "4145:11:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10012,
+                  "src": "4138:18:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10000,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4138:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10003,
+                  "mutability": "mutable",
+                  "name": "sigIndex",
+                  "nameLocation": "4166:8:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10012,
+                  "src": "4158:16:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10002,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4158:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10005,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "4184:9:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10012,
+                  "src": "4176:17:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10004,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4176:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10007,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "4208:11:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10012,
+                  "src": "4195:24:44",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10006,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4195:5:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4137:83:44"
+            },
+            "returnParameters": {
+              "id": 10011,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10010,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "4268:10:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10012,
+                  "src": "4255:23:44",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10009,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4255:5:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4254:25:44"
+            },
+            "scope": 10053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10018,
+            "nodeType": "FunctionDefinition",
+            "src": "5295:62:44",
+            "nodes": [],
+            "documentation": {
+              "id": 10013,
+              "nodeType": "StructuredDocumentation",
+              "src": "4610:680:44",
+              "text": " @notice Distributes tips using the first Receipt from the \"receipt quarantine queue\".\n Possible scenarios:\n  - Receipt queue is empty => does nothing\n  - Receipt optimistic period is not over => does nothing\n  - Either of Notaries present in Receipt was slashed => receipt is deleted from the queue\n  - Either of Notaries present in Receipt in Dispute => receipt is moved to the end of queue\n  - None of the above => receipt tips are distributed\n @dev Returned value makes it possible to do the following: `while (distributeTips()) {}`\n @return queuePopped      Whether the first element was popped from the queue"
+            },
+            "functionSelector": "0729ae8a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distributeTips",
+            "nameLocation": "5304:14:44",
+            "parameters": {
+              "id": 10014,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5318:2:44"
+            },
+            "returnParameters": {
+              "id": 10017,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10016,
+                  "mutability": "mutable",
+                  "name": "queuePopped",
+                  "nameLocation": "5344:11:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10018,
+                  "src": "5339:16:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10015,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5339:4:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5338:18:44"
+            },
+            "scope": 10053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10026,
+            "nodeType": "FunctionDefinition",
+            "src": "5800:62:44",
+            "nodes": [],
+            "documentation": {
+              "id": 10019,
+              "nodeType": "StructuredDocumentation",
+              "src": "5363:432:44",
+              "text": " @notice Withdraws locked base message tips from requested domain Origin to the recipient.\n This is done by a call to a local Origin contract, or by a manager message to the remote chain.\n @dev This will revert, if the pending balance of origin tips (earned-claimed) is lower than requested.\n @param origin    Domain of chain to withdraw tips on\n @param amount    Amount of tips to withdraw"
+            },
+            "functionSelector": "6170e4e6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawTips",
+            "nameLocation": "5809:12:44",
+            "parameters": {
+              "id": 10024,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10021,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "5829:6:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10026,
+                  "src": "5822:13:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10020,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5822:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10023,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "5845:6:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10026,
+                  "src": "5837:14:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10022,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5837:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5821:31:44"
+            },
+            "returnParameters": {
+              "id": 10025,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5861:0:44"
+            },
+            "scope": 10053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10038,
+            "nodeType": "FunctionDefinition",
+            "src": "6609:105:44",
+            "nodes": [],
+            "documentation": {
+              "id": 10027,
+              "nodeType": "StructuredDocumentation",
+              "src": "6202:402:44",
+              "text": " @notice Returns earned and claimed tips for the actor.\n Note: Tips for address(0) belong to the Treasury.\n @param actor     Address of the actor\n @param origin    Domain where the tips were initially paid\n @return earned   Total amount of origin tips the actor has earned so far\n @return claimed  Total amount of origin tips the actor has claimed so far"
+            },
+            "functionSelector": "47ca1b14",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "actorTips",
+            "nameLocation": "6618:9:44",
+            "parameters": {
+              "id": 10032,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10029,
+                  "mutability": "mutable",
+                  "name": "actor",
+                  "nameLocation": "6636:5:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10038,
+                  "src": "6628:13:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10028,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6628:7:44",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10031,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "6650:6:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10038,
+                  "src": "6643:13:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10030,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6643:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6627:30:44"
+            },
+            "returnParameters": {
+              "id": 10037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10034,
+                  "mutability": "mutable",
+                  "name": "earned",
+                  "nameLocation": "6689:6:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10038,
+                  "src": "6681:14:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 10033,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6681:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10036,
+                  "mutability": "mutable",
+                  "name": "claimed",
+                  "nameLocation": "6705:7:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10038,
+                  "src": "6697:15:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 10035,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6697:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6680:33:44"
+            },
+            "scope": 10053,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10044,
+            "nodeType": "FunctionDefinition",
+            "src": "6817:62:44",
+            "nodes": [],
+            "documentation": {
+              "id": 10039,
+              "nodeType": "StructuredDocumentation",
+              "src": "6720:92:44",
+              "text": " @notice Returns the amount of receipts in the \"Receipt Quarantine Queue\"."
+            },
+            "functionSelector": "a5ba1a55",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiptQueueLength",
+            "nameLocation": "6826:18:44",
+            "parameters": {
+              "id": 10040,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6844:2:44"
+            },
+            "returnParameters": {
+              "id": 10043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10042,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10044,
+                  "src": "6870:7:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10041,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6870:7:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6869:9:44"
+            },
+            "scope": 10053,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 10052,
+            "nodeType": "FunctionDefinition",
+            "src": "7152:89:44",
+            "nodes": [],
+            "documentation": {
+              "id": 10045,
+              "nodeType": "StructuredDocumentation",
+              "src": "6885:262:44",
+              "text": " @notice Returns the state with the highest known nonce\n submitted by any of the currently active Guards.\n @param origin        Domain of origin chain\n @return statePayload Raw payload with latest active Guard state for origin"
+            },
+            "functionSelector": "d17db53a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestState",
+            "nameLocation": "7161:14:44",
+            "parameters": {
+              "id": 10048,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10047,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "7183:6:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10052,
+                  "src": "7176:13:44",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10046,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7176:6:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7175:15:44"
+            },
+            "returnParameters": {
+              "id": 10051,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10050,
+                  "mutability": "mutable",
+                  "name": "statePayload",
+                  "nameLocation": "7227:12:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10052,
+                  "src": "7214:25:44",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10049,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7214:5:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7213:27:44"
+            },
+            "scope": 10053,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "InterfaceSummit",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          10053
+        ],
+        "name": "InterfaceSummit",
+        "nameLocation": "120:15:44",
+        "scope": 10054,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 44
+}

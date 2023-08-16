@@ -1,0 +1,236 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "paddedGasData",
+          "type": "uint256"
+        }
+      ],
+      "name": "GasDataUpdated",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"paddedGasData\",\"type\":\"uint256\"}],\"name\":\"GasDataUpdated\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"GasDataUpdated(uint32,uint256)\":{\"params\":{\"domain\":\"Domain of chain the gas data is for\",\"paddedGasData\":\"Padded encoded gas data\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"GasDataUpdated(uint32,uint256)\":{\"notice\":\"Emitted when gas data is updated for the domain\"}},\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the GasOracle contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/GasOracleEvents.sol\":\"GasOracleEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/GasOracleEvents.sol\":{\"keccak256\":\"0x35e5be60662b567f78c3e62e217237e73fe3008453723a788eec0a48df7527f8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e148158a9d87d7cb071b5772427fada2e89e7eb39227768877c3a830a8668477\",\"dweb:/ipfs/QmVyjz9yNAsPVbC8rDNjd6pAXYbXq2WBWSLrQwf9U5jzkd\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedGasData",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "GasDataUpdated",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/GasOracleEvents.sol": "GasOracleEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/GasOracleEvents.sol": {
+        "keccak256": "0x35e5be60662b567f78c3e62e217237e73fe3008453723a788eec0a48df7527f8",
+        "urls": [
+          "bzz-raw://e148158a9d87d7cb071b5772427fada2e89e7eb39227768877c3a830a8668477",
+          "dweb:/ipfs/QmVyjz9yNAsPVbC8rDNjd6pAXYbXq2WBWSLrQwf9U5jzkd"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/GasOracleEvents.sol",
+    "id": 3962,
+    "exportedSymbols": {
+      "GasOracleEvents": [
+        3961
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:391:17",
+    "nodes": [
+      {
+        "id": 3952,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:17",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 3961,
+        "nodeType": "ContractDefinition",
+        "src": "126:296:17",
+        "nodes": [
+          {
+            "id": 3960,
+            "nodeType": "EventDefinition",
+            "src": "361:59:17",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3954,
+              "nodeType": "StructuredDocumentation",
+              "src": "166:190:17",
+              "text": " @notice Emitted when gas data is updated for the domain\n @param domain        Domain of chain the gas data is for\n @param paddedGasData Padded encoded gas data"
+            },
+            "eventSelector": "ae7a6216b3de7722222303567564b3f11777a9665d278ef3762110de410e12b3",
+            "name": "GasDataUpdated",
+            "nameLocation": "367:14:17",
+            "parameters": {
+              "id": 3959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3956,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "389:6:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3960,
+                  "src": "382:13:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3955,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "382:6:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3958,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "paddedGasData",
+                  "nameLocation": "405:13:17",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3960,
+                  "src": "397:21:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "397:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "381:38:17"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "GasOracleEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 3953,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:69:17",
+          "text": "@notice A collection of events emitted by the GasOracle contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          3961
+        ],
+        "name": "GasOracleEvents",
+        "nameLocation": "144:15:17",
+        "scope": 3962,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 17
+}

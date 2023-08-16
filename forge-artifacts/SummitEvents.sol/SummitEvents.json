@@ -1,0 +1,277 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "actor",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tip",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipAwarded",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"actor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tip\",\"type\":\"uint256\"}],\"name\":\"TipAwarded\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"TipAwarded(address,uint32,uint256)\":{\"params\":{\"actor\":\"Actor address\",\"origin\":\"Domain where tips were originally paid\",\"tip\":\"Tip value, scaled down by TIPS_MULTIPLIER\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"TipAwarded(address,uint32,uint256)\":{\"notice\":\"Emitted when a tip is awarded to the actor, whether they are bonded or unbonded actor.\"}},\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the Summit contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/SummitEvents.sol\":\"SummitEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/SummitEvents.sol\":{\"keccak256\":\"0xe5069b8a4681622830714d8650130aea401c7228d8fe88e46e28466c08835f91\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://373a684ee42c029db52944caa695356a2208eba16acb4bbac0fa8d7905b6240b\",\"dweb:/ipfs/QmZPSeugLqsvHGwDtpAbYcC3qfqowMn19nrYCuWJQmi5pa\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "actor",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "tip",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "TipAwarded",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/SummitEvents.sol": "SummitEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/SummitEvents.sol": {
+        "keccak256": "0xe5069b8a4681622830714d8650130aea401c7228d8fe88e46e28466c08835f91",
+        "urls": [
+          "bzz-raw://373a684ee42c029db52944caa695356a2208eba16acb4bbac0fa8d7905b6240b",
+          "dweb:/ipfs/QmZPSeugLqsvHGwDtpAbYcC3qfqowMn19nrYCuWJQmi5pa"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/SummitEvents.sol",
+    "id": 4117,
+    "exportedSymbols": {
+      "SummitEvents": [
+        4116
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:476:23",
+    "nodes": [
+      {
+        "id": 4105,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 4116,
+        "nodeType": "ContractDefinition",
+        "src": "123:384:23",
+        "nodes": [
+          {
+            "id": 4115,
+            "nodeType": "EventDefinition",
+            "src": "445:60:23",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 4107,
+              "nodeType": "StructuredDocumentation",
+              "src": "160:280:23",
+              "text": " @notice Emitted when a tip is awarded to the actor, whether they are bonded or unbonded actor.\n @param actor     Actor address\n @param origin    Domain where tips were originally paid\n @param tip       Tip value, scaled down by TIPS_MULTIPLIER"
+            },
+            "eventSelector": "028eefe3e6e6c46784170a285345379538ad119d61613ffeae882dfe14498b9c",
+            "name": "TipAwarded",
+            "nameLocation": "451:10:23",
+            "parameters": {
+              "id": 4114,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4109,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "actor",
+                  "nameLocation": "470:5:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4115,
+                  "src": "462:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4108,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4111,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "484:6:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4115,
+                  "src": "477:13:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 4110,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "477:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4113,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tip",
+                  "nameLocation": "500:3:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4115,
+                  "src": "492:11:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4112,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "492:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:43:23"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "SummitEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 4106,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:66:23",
+          "text": "@notice A collection of events emitted by the Summit contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          4116
+        ],
+        "name": "SummitEvents",
+        "nameLocation": "141:12:23",
+        "scope": 4117,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 23
+}

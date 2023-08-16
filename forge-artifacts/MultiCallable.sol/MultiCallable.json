@@ -1,0 +1,1403 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "allowFailure",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiCallable.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "returnData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiCallable.Result[]",
+          "name": "callResults",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "multicall((bool,bytes)[])": "60fc8466"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"allowFailure\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"callData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiCallable.Call[]\",\"name\":\"calls\",\"type\":\"tuple[]\"}],\"name\":\"multicall\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"returnData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiCallable.Result[]\",\"name\":\"callResults\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"multicall((bool,bytes)[])\":{\"notice\":\"Aggregates a few calls to this contract into one multicall without modifying `msg.sender`.\"}},\"notice\":\"Collection of Multicall utilities. Fork of Multicall3: https://github.com/mds1/multicall/blob/master/src/Multicall3.sol\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/base/MultiCallable.sol\":\"MultiCallable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/base/MultiCallable.sol\":{\"keccak256\":\"0x9645f1629cdf8db803c40725f6b0ee165df64bfc142db4613efd385a88f13699\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cc99799fdd946c11c893b89dad922822c866d14bdecded86913948a146f71053\",\"dweb:/ipfs/QmZGRZuhU2w6pAStcaQ5NyzyeUn69nJCJd9a9NnjuBVLsn\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct MultiCallable.Call[]",
+              "name": "calls",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "allowFailure",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "callData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "multicall",
+          "outputs": [
+            {
+              "internalType": "struct MultiCallable.Result[]",
+              "name": "callResults",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "success",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "returnData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "multicall((bool,bytes)[])": {
+            "notice": "Aggregates a few calls to this contract into one multicall without modifying `msg.sender`."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/base/MultiCallable.sol": "MultiCallable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/base/MultiCallable.sol": {
+        "keccak256": "0x9645f1629cdf8db803c40725f6b0ee165df64bfc142db4613efd385a88f13699",
+        "urls": [
+          "bzz-raw://cc99799fdd946c11c893b89dad922822c866d14bdecded86913948a146f71053",
+          "dweb:/ipfs/QmZGRZuhU2w6pAStcaQ5NyzyeUn69nJCJd9a9NnjuBVLsn"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/base/MultiCallable.sol",
+    "id": 2942,
+    "exportedSymbols": {
+      "MultiCallable": [
+        2941
+      ],
+      "MulticallFailed": [
+        10334
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1865:6",
+    "nodes": [
+      {
+        "id": 2853,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:6",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 2855,
+        "nodeType": "ImportDirective",
+        "src": "57:51:6",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Errors.sol",
+        "file": "../libs/Errors.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2942,
+        "sourceUnit": 10335,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2854,
+              "name": "MulticallFailed",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10334,
+              "src": "65:15:6",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2941,
+        "nodeType": "ContractDefinition",
+        "src": "246:1650:6",
+        "nodes": [
+          {
+            "id": 2861,
+            "nodeType": "StructDefinition",
+            "src": "284:70:6",
+            "nodes": [],
+            "canonicalName": "MultiCallable.Call",
+            "members": [
+              {
+                "constant": false,
+                "id": 2858,
+                "mutability": "mutable",
+                "name": "allowFailure",
+                "nameLocation": "311:12:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 2861,
+                "src": "306:17:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2857,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "306:4:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2860,
+                "mutability": "mutable",
+                "name": "callData",
+                "nameLocation": "339:8:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 2861,
+                "src": "333:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 2859,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "333:5:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Call",
+            "nameLocation": "291:4:6",
+            "scope": 2941,
+            "visibility": "public"
+          },
+          {
+            "id": 2866,
+            "nodeType": "StructDefinition",
+            "src": "360:69:6",
+            "nodes": [],
+            "canonicalName": "MultiCallable.Result",
+            "members": [
+              {
+                "constant": false,
+                "id": 2863,
+                "mutability": "mutable",
+                "name": "success",
+                "nameLocation": "389:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 2866,
+                "src": "384:12:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2862,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "384:4:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2865,
+                "mutability": "mutable",
+                "name": "returnData",
+                "nameLocation": "412:10:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 2866,
+                "src": "406:16:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 2864,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "406:5:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Result",
+            "nameLocation": "367:6:6",
+            "scope": 2941,
+            "visibility": "public"
+          },
+          {
+            "id": 2940,
+            "nodeType": "FunctionDefinition",
+            "src": "542:1352:6",
+            "nodes": [],
+            "body": {
+              "id": 2939,
+              "nodeType": "Block",
+              "src": "631:1263:6",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    2879
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2879,
+                      "mutability": "mutable",
+                      "name": "amount",
+                      "nameLocation": "649:6:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 2939,
+                      "src": "641:14:6",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2878,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "641:7:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2882,
+                  "initialValue": {
+                    "expression": {
+                      "id": 2880,
+                      "name": "calls",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2871,
+                      "src": "658:5:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Call_$2861_calldata_ptr_$dyn_calldata_ptr",
+                        "typeString": "struct MultiCallable.Call calldata[] calldata"
+                      }
+                    },
+                    "id": 2881,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "664:6:6",
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "658:12:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "641:29:6"
+                },
+                {
+                  "expression": {
+                    "id": 2890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 2883,
+                      "name": "callResults",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2876,
+                      "src": "680:11:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Result_$2866_memory_ptr_$dyn_memory_ptr",
+                        "typeString": "struct MultiCallable.Result memory[] memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 2888,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2879,
+                          "src": "707:6:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 2887,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "694:12:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_Result_$2866_memory_ptr_$dyn_memory_ptr_$",
+                          "typeString": "function (uint256) pure returns (struct MultiCallable.Result memory[] memory)"
+                        },
+                        "typeName": {
+                          "baseType": {
+                            "id": 2885,
+                            "nodeType": "UserDefinedTypeName",
+                            "pathNode": {
+                              "id": 2884,
+                              "name": "Result",
+                              "nameLocations": [
+                                "698:6:6"
+                              ],
+                              "nodeType": "IdentifierPath",
+                              "referencedDeclaration": 2866,
+                              "src": "698:6:6"
+                            },
+                            "referencedDeclaration": 2866,
+                            "src": "698:6:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Result_$2866_storage_ptr",
+                              "typeString": "struct MultiCallable.Result"
+                            }
+                          },
+                          "id": 2886,
+                          "nodeType": "ArrayTypeName",
+                          "src": "698:8:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_Result_$2866_storage_$dyn_storage_ptr",
+                            "typeString": "struct MultiCallable.Result[]"
+                          }
+                        }
+                      },
+                      "id": 2889,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "694:20:6",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Result_$2866_memory_ptr_$dyn_memory_ptr",
+                        "typeString": "struct MultiCallable.Result memory[] memory"
+                      }
+                    },
+                    "src": "680:34:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Result_$2866_memory_ptr_$dyn_memory_ptr",
+                      "typeString": "struct MultiCallable.Result memory[] memory"
+                    }
+                  },
+                  "id": 2891,
+                  "nodeType": "ExpressionStatement",
+                  "src": "680:34:6"
+                },
+                {
+                  "assignments": [
+                    2894
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2894,
+                      "mutability": "mutable",
+                      "name": "call_",
+                      "nameLocation": "738:5:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 2939,
+                      "src": "724:19:6",
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Call_$2861_calldata_ptr",
+                        "typeString": "struct MultiCallable.Call"
+                      },
+                      "typeName": {
+                        "id": 2893,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 2892,
+                          "name": "Call",
+                          "nameLocations": [
+                            "724:4:6"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 2861,
+                          "src": "724:4:6"
+                        },
+                        "referencedDeclaration": 2861,
+                        "src": "724:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Call_$2861_storage_ptr",
+                          "typeString": "struct MultiCallable.Call"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2895,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "724:19:6"
+                },
+                {
+                  "body": {
+                    "id": 2937,
+                    "nodeType": "Block",
+                    "src": "786:1102:6",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 2907,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "id": 2903,
+                            "name": "call_",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2894,
+                            "src": "800:5:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Call_$2861_calldata_ptr",
+                              "typeString": "struct MultiCallable.Call calldata"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "baseExpression": {
+                              "id": 2904,
+                              "name": "calls",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2871,
+                              "src": "808:5:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Call_$2861_calldata_ptr_$dyn_calldata_ptr",
+                                "typeString": "struct MultiCallable.Call calldata[] calldata"
+                              }
+                            },
+                            "id": 2906,
+                            "indexExpression": {
+                              "id": 2905,
+                              "name": "i",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2897,
+                              "src": "814:1:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "808:8:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Call_$2861_calldata_ptr",
+                              "typeString": "struct MultiCallable.Call calldata"
+                            }
+                          },
+                          "src": "800:16:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Call_$2861_calldata_ptr",
+                            "typeString": "struct MultiCallable.Call calldata"
+                          }
+                        },
+                        "id": 2908,
+                        "nodeType": "ExpressionStatement",
+                        "src": "800:16:6"
+                      },
+                      {
+                        "assignments": [
+                          2911
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 2911,
+                            "mutability": "mutable",
+                            "name": "result",
+                            "nameLocation": "844:6:6",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 2937,
+                            "src": "830:20:6",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Result_$2866_memory_ptr",
+                              "typeString": "struct MultiCallable.Result"
+                            },
+                            "typeName": {
+                              "id": 2910,
+                              "nodeType": "UserDefinedTypeName",
+                              "pathNode": {
+                                "id": 2909,
+                                "name": "Result",
+                                "nameLocations": [
+                                  "830:6:6"
+                                ],
+                                "nodeType": "IdentifierPath",
+                                "referencedDeclaration": 2866,
+                                "src": "830:6:6"
+                              },
+                              "referencedDeclaration": 2866,
+                              "src": "830:6:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Result_$2866_storage_ptr",
+                                "typeString": "struct MultiCallable.Result"
+                              }
+                            },
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 2915,
+                        "initialValue": {
+                          "baseExpression": {
+                            "id": 2912,
+                            "name": "callResults",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2876,
+                            "src": "853:11:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Result_$2866_memory_ptr_$dyn_memory_ptr",
+                              "typeString": "struct MultiCallable.Result memory[] memory"
+                            }
+                          },
+                          "id": 2914,
+                          "indexExpression": {
+                            "id": 2913,
+                            "name": "i",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2897,
+                            "src": "865:1:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "853:14:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Result_$2866_memory_ptr",
+                            "typeString": "struct MultiCallable.Result memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "830:37:6"
+                      },
+                      {
+                        "expression": {
+                          "id": 2930,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "components": [
+                              {
+                                "expression": {
+                                  "id": 2916,
+                                  "name": "result",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 2911,
+                                  "src": "1165:6:6",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Result_$2866_memory_ptr",
+                                    "typeString": "struct MultiCallable.Result memory"
+                                  }
+                                },
+                                "id": 2918,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": true,
+                                "memberLocation": "1172:7:6",
+                                "memberName": "success",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 2863,
+                                "src": "1165:14:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 2919,
+                                  "name": "result",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 2911,
+                                  "src": "1181:6:6",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Result_$2866_memory_ptr",
+                                    "typeString": "struct MultiCallable.Result memory"
+                                  }
+                                },
+                                "id": 2920,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": true,
+                                "memberLocation": "1188:10:6",
+                                "memberName": "returnData",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 2865,
+                                "src": "1181:17:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes_memory_ptr",
+                                  "typeString": "bytes memory"
+                                }
+                              }
+                            ],
+                            "id": 2921,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "TupleExpression",
+                            "src": "1164:35:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                              "typeString": "tuple(bool,bytes memory)"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "arguments": [
+                              {
+                                "expression": {
+                                  "id": 2927,
+                                  "name": "call_",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 2894,
+                                  "src": "1229:5:6",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Call_$2861_calldata_ptr",
+                                    "typeString": "struct MultiCallable.Call calldata"
+                                  }
+                                },
+                                "id": 2928,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "1235:8:6",
+                                "memberName": "callData",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 2860,
+                                "src": "1229:14:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes_calldata_ptr",
+                                  "typeString": "bytes calldata"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes_calldata_ptr",
+                                  "typeString": "bytes calldata"
+                                }
+                              ],
+                              "expression": {
+                                "arguments": [
+                                  {
+                                    "id": 2924,
+                                    "name": "this",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": -28,
+                                    "src": "1210:4:6",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_contract$_MultiCallable_$2941",
+                                      "typeString": "contract MultiCallable"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_MultiCallable_$2941",
+                                      "typeString": "contract MultiCallable"
+                                    }
+                                  ],
+                                  "id": 2923,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "nodeType": "ElementaryTypeNameExpression",
+                                  "src": "1202:7:6",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_type$_t_address_$",
+                                    "typeString": "type(address)"
+                                  },
+                                  "typeName": {
+                                    "id": 2922,
+                                    "name": "address",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "1202:7:6",
+                                    "typeDescriptions": {}
+                                  }
+                                },
+                                "id": 2925,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "typeConversion",
+                                "lValueRequested": false,
+                                "nameLocations": [],
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "1202:13:6",
+                                "tryCall": false,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              },
+                              "id": 2926,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "1216:12:6",
+                              "memberName": "delegatecall",
+                              "nodeType": "MemberAccess",
+                              "src": "1202:26:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_baredelegatecall_nonpayable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                                "typeString": "function (bytes memory) returns (bool,bytes memory)"
+                              }
+                            },
+                            "id": 2929,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1202:42:6",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                              "typeString": "tuple(bool,bytes memory)"
+                            }
+                          },
+                          "src": "1164:80:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 2931,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1164:80:6"
+                      },
+                      {
+                        "AST": {
+                          "nodeType": "YulBlock",
+                          "src": "1327:492:6",
+                          "statements": [
+                            {
+                              "body": {
+                                "nodeType": "YulBlock",
+                                "src": "1554:251:6",
+                                "statements": [
+                                  {
+                                    "expression": {
+                                      "arguments": [
+                                        {
+                                          "kind": "number",
+                                          "nodeType": "YulLiteral",
+                                          "src": "1675:4:6",
+                                          "type": "",
+                                          "value": "0x00"
+                                        },
+                                        {
+                                          "kind": "number",
+                                          "nodeType": "YulLiteral",
+                                          "src": "1681:66:6",
+                                          "type": "",
+                                          "value": "0x4d6a232800000000000000000000000000000000000000000000000000000000"
+                                        }
+                                      ],
+                                      "functionName": {
+                                        "name": "mstore",
+                                        "nodeType": "YulIdentifier",
+                                        "src": "1668:6:6"
+                                      },
+                                      "nodeType": "YulFunctionCall",
+                                      "src": "1668:80:6"
+                                    },
+                                    "nodeType": "YulExpressionStatement",
+                                    "src": "1668:80:6"
+                                  },
+                                  {
+                                    "expression": {
+                                      "arguments": [
+                                        {
+                                          "kind": "number",
+                                          "nodeType": "YulLiteral",
+                                          "src": "1776:4:6",
+                                          "type": "",
+                                          "value": "0x00"
+                                        },
+                                        {
+                                          "kind": "number",
+                                          "nodeType": "YulLiteral",
+                                          "src": "1782:4:6",
+                                          "type": "",
+                                          "value": "0x04"
+                                        }
+                                      ],
+                                      "functionName": {
+                                        "name": "revert",
+                                        "nodeType": "YulIdentifier",
+                                        "src": "1769:6:6"
+                                      },
+                                      "nodeType": "YulFunctionCall",
+                                      "src": "1769:18:6"
+                                    },
+                                    "nodeType": "YulExpressionStatement",
+                                    "src": "1769:18:6"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "arguments": [
+                                  {
+                                    "arguments": [
+                                      {
+                                        "arguments": [
+                                          {
+                                            "name": "call_",
+                                            "nodeType": "YulIdentifier",
+                                            "src": "1530:5:6"
+                                          }
+                                        ],
+                                        "functionName": {
+                                          "name": "calldataload",
+                                          "nodeType": "YulIdentifier",
+                                          "src": "1517:12:6"
+                                        },
+                                        "nodeType": "YulFunctionCall",
+                                        "src": "1517:19:6"
+                                      },
+                                      {
+                                        "arguments": [
+                                          {
+                                            "name": "result",
+                                            "nodeType": "YulIdentifier",
+                                            "src": "1544:6:6"
+                                          }
+                                        ],
+                                        "functionName": {
+                                          "name": "mload",
+                                          "nodeType": "YulIdentifier",
+                                          "src": "1538:5:6"
+                                        },
+                                        "nodeType": "YulFunctionCall",
+                                        "src": "1538:13:6"
+                                      }
+                                    ],
+                                    "functionName": {
+                                      "name": "or",
+                                      "nodeType": "YulIdentifier",
+                                      "src": "1514:2:6"
+                                    },
+                                    "nodeType": "YulFunctionCall",
+                                    "src": "1514:38:6"
+                                  }
+                                ],
+                                "functionName": {
+                                  "name": "iszero",
+                                  "nodeType": "YulIdentifier",
+                                  "src": "1507:6:6"
+                                },
+                                "nodeType": "YulFunctionCall",
+                                "src": "1507:46:6"
+                              },
+                              "nodeType": "YulIf",
+                              "src": "1504:301:6"
+                            }
+                          ]
+                        },
+                        "evmVersion": "london",
+                        "externalReferences": [
+                          {
+                            "declaration": 2894,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "1530:5:6",
+                            "valueSize": 1
+                          },
+                          {
+                            "declaration": 2911,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "1544:6:6",
+                            "valueSize": 1
+                          }
+                        ],
+                        "id": 2932,
+                        "nodeType": "InlineAssembly",
+                        "src": "1318:501:6"
+                      },
+                      {
+                        "id": 2936,
+                        "nodeType": "UncheckedBlock",
+                        "src": "1832:46:6",
+                        "statements": [
+                          {
+                            "expression": {
+                              "id": 2934,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "UnaryOperation",
+                              "operator": "++",
+                              "prefix": true,
+                              "src": "1860:3:6",
+                              "subExpression": {
+                                "id": 2933,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2897,
+                                "src": "1862:1:6",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 2935,
+                            "nodeType": "ExpressionStatement",
+                            "src": "1860:3:6"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2902,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 2900,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2897,
+                      "src": "773:1:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "id": 2901,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2879,
+                      "src": "777:6:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "773:10:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2938,
+                  "initializationExpression": {
+                    "assignments": [
+                      2897
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 2897,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "766:1:6",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 2938,
+                        "src": "758:9:6",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 2896,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "758:7:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 2899,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 2898,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "770:1:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "758:13:6"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "753:1135:6"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2867,
+              "nodeType": "StructuredDocumentation",
+              "src": "435:102:6",
+              "text": "@notice Aggregates a few calls to this contract into one multicall without modifying `msg.sender`."
+            },
+            "functionSelector": "60fc8466",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "multicall",
+            "nameLocation": "551:9:6",
+            "parameters": {
+              "id": 2872,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2871,
+                  "mutability": "mutable",
+                  "name": "calls",
+                  "nameLocation": "577:5:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2940,
+                  "src": "561:21:6",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Call_$2861_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct MultiCallable.Call[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2869,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 2868,
+                        "name": "Call",
+                        "nameLocations": [
+                          "561:4:6"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 2861,
+                        "src": "561:4:6"
+                      },
+                      "referencedDeclaration": 2861,
+                      "src": "561:4:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Call_$2861_storage_ptr",
+                        "typeString": "struct MultiCallable.Call"
+                      }
+                    },
+                    "id": 2870,
+                    "nodeType": "ArrayTypeName",
+                    "src": "561:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Call_$2861_storage_$dyn_storage_ptr",
+                      "typeString": "struct MultiCallable.Call[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "560:23:6"
+            },
+            "returnParameters": {
+              "id": 2877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2876,
+                  "mutability": "mutable",
+                  "name": "callResults",
+                  "nameLocation": "618:11:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2940,
+                  "src": "602:27:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Result_$2866_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct MultiCallable.Result[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2874,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 2873,
+                        "name": "Result",
+                        "nameLocations": [
+                          "602:6:6"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 2866,
+                        "src": "602:6:6"
+                      },
+                      "referencedDeclaration": 2866,
+                      "src": "602:6:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Result_$2866_storage_ptr",
+                        "typeString": "struct MultiCallable.Result"
+                      }
+                    },
+                    "id": 2875,
+                    "nodeType": "ArrayTypeName",
+                    "src": "602:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Result_$2866_storage_$dyn_storage_ptr",
+                      "typeString": "struct MultiCallable.Result[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "601:29:6"
+            },
+            "scope": 2941,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "MultiCallable",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2856,
+          "nodeType": "StructuredDocumentation",
+          "src": "110:136:6",
+          "text": "@notice Collection of Multicall utilities. Fork of Multicall3:\n https://github.com/mds1/multicall/blob/master/src/Multicall3.sol"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          2941
+        ],
+        "name": "MultiCallable",
+        "nameLocation": "264:13:6",
+        "scope": 2942,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 6
+}

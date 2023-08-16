@@ -1,0 +1,2080 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "deleteMockReturnValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        }
+      ],
+      "name": "getAttestation",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "snapGas",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getGuardSnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "getLatestAgentState",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "notary",
+          "type": "address"
+        }
+      ],
+      "name": "getLatestNotaryAttestation",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "snapGas",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "getNotarySnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getNotarySnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getReturnValueAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getReturnValueBool",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getReturnValueBytes",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getReturnValueUint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getReturnValueUint32",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stateIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSnapshotProof",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "snapProof",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "isValidAttestation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValid",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMockReturnValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        }
+      ],
+      "name": "setMockReturnValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "value",
+          "type": "bytes"
+        }
+      ],
+      "name": "setMockReturnValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testBaseMock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testSnapshotHubMock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610b95806100206000396000f3fe608060405234801561001057600080fd5b50600436106101215760003560e01c8063b26406a0116100ad578063caecc6db11610071578063caecc6db1461025c578063e60f5f6a1461026a578063e8c12f801461027d578063f05b33511461028b578063f52307191461025c57600080fd5b8063b26406a0146101f7578063b78973d414610229578063b81442e014610246578063bf1aae261461024e578063cace200f146101f757600080fd5b8063504730ab116100f4578063504730ab146101b95780635980330d146101cf578063714141de146101e457806376fae198146101f9578063a23d9bae1461020157600080fd5b806302eef8dc14610126578063229b5b1e146101535780634289cf75146101765780634362fd1114610196575b600080fd5b61013c6101343660046106e3565b606080915091565b60405161014a9291906107da565b60405180910390f35b61016961016136600461081a565b606092915050565b60405161014a9190610846565b61017e61029e565b6040516001600160a01b03909116815260200161014a565b6101a96101a43660046106e3565b61035c565b604051901515815260200161014a565b6101c161036c565b60405190815260200161014a565b6101d761041f565b60405161014a919061088a565b6101f76101f23660046108a4565b6104b1565b005b6101a96104df565b61021a61020f3660046108bd565b506060906000908290565b60405161014a939291906108da565b610231610594565b60405163ffffffff909116815260200161014a565b6101f7610647565b61021a61020f36600461094b565b61013c6101343660046108a4565b6101f761027836600461094b565b610652565b6101d7610161366004610968565b6101f76102993660046106e3565b61066b565b60008080546102ac906109a1565b15905061035657600080546102c0906109a1565b80601f01602080910402602001604051908101604052809291908181526020018280546102ec906109a1565b80156103395780601f1061030e57610100808354040283529160200191610339565b820191906000526020600020905b81548152906001019060200180831161031c57829003601f168201915b505050505080602001905181019061035191906109db565b905090565b50600090565b60006103666104df565b92915050565b600080805461037a906109a1565b159050610356576000805461038e906109a1565b80601f01602080910402602001604051908101604052809291908181526020018280546103ba906109a1565b80156104075780601f106103dc57610100808354040283529160200191610407565b820191906000526020600020905b8154815290600101906020018083116103ea57829003601f168201915b505050505080602001905181019061035191906109f8565b60606000805461042e906109a1565b80601f016020809104026020016040519081016040528092919081815260200182805461045a906109a1565b80156104a75780601f1061047c576101008083540402835291602001916104a7565b820191906000526020600020905b81548152906001019060200180831161048a57829003601f168201915b5050505050905090565b6040805160208101839052015b604051602081830303815290604052600090816104db9190610a60565b5050565b60008080546104ed906109a1565b1590506103565760008054610501906109a1565b80601f016020809104026020016040519081016040528092919081815260200182805461052d906109a1565b801561057a5780601f1061054f5761010080835404028352916020019161057a565b820191906000526020600020905b81548152906001019060200180831161055d57829003601f168201915b50505050508060200190518101906103519190610b20565b565b60008080546105a2906109a1565b15905061035657600080546105b6906109a1565b80601f01602080910402602001604051908101604052809291908181526020018280546105e2906109a1565b801561062f5780601f106106045761010080835404028352916020019161062f565b820191906000526020600020905b81548152906001019060200180831161061257829003601f168201915b50505050508060200190518101906103519190610b42565b610592600080610677565b604080516001600160a01b0383166020820152016104be565b60006104db8282610a60565b508054610683906109a1565b6000825580601f10610693575050565b601f0160209004906000526020600020908101906106b191906106b4565b50565b5b808211156106c957600081556001016106b5565b5090565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156106f557600080fd5b813567ffffffffffffffff8082111561070d57600080fd5b818401915084601f83011261072157600080fd5b813581811115610733576107336106cd565b604051601f8201601f19908116603f0116810190838211818310171561075b5761075b6106cd565b8160405282815287602084870101111561077457600080fd5b826020860160208301376000928101602001929092525095945050505050565b6000815180845260005b818110156107ba5760208185018101518683018201520161079e565b506000602082860101526020601f19601f83011685010191505092915050565b6040815260006107ed6040830185610794565b82810360208401526107ff8185610794565b95945050505050565b63ffffffff811681146106b157600080fd5b6000806040838503121561082d57600080fd5b823561083881610808565b946020939093013593505050565b6020808252825182820181905260009190848201906040850190845b8181101561087e57835183529284019291840191600101610862565b50909695505050505050565b60208152600061089d6020830184610794565b9392505050565b6000602082840312156108b657600080fd5b5035919050565b6000602082840312156108cf57600080fd5b813561089d81610808565b6060815260006108ed6060830186610794565b6020838101869052838203604085015284518083528582019282019060005b818110156109285784518352938301939183019160010161090c565b509098975050505050505050565b6001600160a01b03811681146106b157600080fd5b60006020828403121561095d57600080fd5b813561089d81610936565b6000806040838503121561097b57600080fd5b823561098681610808565b9150602083013561099681610936565b809150509250929050565b600181811c908216806109b557607f821691505b6020821081036109d557634e487b7160e01b600052602260045260246000fd5b50919050565b6000602082840312156109ed57600080fd5b815161089d81610936565b600060208284031215610a0a57600080fd5b5051919050565b601f821115610a5b57600081815260208120601f850160051c81016020861015610a385750805b601f850160051c820191505b81811015610a5757828155600101610a44565b5050505b505050565b815167ffffffffffffffff811115610a7a57610a7a6106cd565b610a8e81610a8884546109a1565b84610a11565b602080601f831160018114610ac35760008415610aab5750858301515b600019600386901b1c1916600185901b178555610a57565b600085815260208120601f198616915b82811015610af257888601518255948401946001909101908401610ad3565b5085821015610b105787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b600060208284031215610b3257600080fd5b8151801515811461089d57600080fd5b600060208284031215610b5457600080fd5b815161089d8161080856fea264697066735822122043b3e433a352657a655452c3bbc5ee4fba82c81d256683c11070849de15dd60964736f6c63430008110033",
+    "sourceMap": "219:1376:140:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106101215760003560e01c8063b26406a0116100ad578063caecc6db11610071578063caecc6db1461025c578063e60f5f6a1461026a578063e8c12f801461027d578063f05b33511461028b578063f52307191461025c57600080fd5b8063b26406a0146101f7578063b78973d414610229578063b81442e014610246578063bf1aae261461024e578063cace200f146101f757600080fd5b8063504730ab116100f4578063504730ab146101b95780635980330d146101cf578063714141de146101e457806376fae198146101f9578063a23d9bae1461020157600080fd5b806302eef8dc14610126578063229b5b1e146101535780634289cf75146101765780634362fd1114610196575b600080fd5b61013c6101343660046106e3565b606080915091565b60405161014a9291906107da565b60405180910390f35b61016961016136600461081a565b606092915050565b60405161014a9190610846565b61017e61029e565b6040516001600160a01b03909116815260200161014a565b6101a96101a43660046106e3565b61035c565b604051901515815260200161014a565b6101c161036c565b60405190815260200161014a565b6101d761041f565b60405161014a919061088a565b6101f76101f23660046108a4565b6104b1565b005b6101a96104df565b61021a61020f3660046108bd565b506060906000908290565b60405161014a939291906108da565b610231610594565b60405163ffffffff909116815260200161014a565b6101f7610647565b61021a61020f36600461094b565b61013c6101343660046108a4565b6101f761027836600461094b565b610652565b6101d7610161366004610968565b6101f76102993660046106e3565b61066b565b60008080546102ac906109a1565b15905061035657600080546102c0906109a1565b80601f01602080910402602001604051908101604052809291908181526020018280546102ec906109a1565b80156103395780601f1061030e57610100808354040283529160200191610339565b820191906000526020600020905b81548152906001019060200180831161031c57829003601f168201915b505050505080602001905181019061035191906109db565b905090565b50600090565b60006103666104df565b92915050565b600080805461037a906109a1565b159050610356576000805461038e906109a1565b80601f01602080910402602001604051908101604052809291908181526020018280546103ba906109a1565b80156104075780601f106103dc57610100808354040283529160200191610407565b820191906000526020600020905b8154815290600101906020018083116103ea57829003601f168201915b505050505080602001905181019061035191906109f8565b60606000805461042e906109a1565b80601f016020809104026020016040519081016040528092919081815260200182805461045a906109a1565b80156104a75780601f1061047c576101008083540402835291602001916104a7565b820191906000526020600020905b81548152906001019060200180831161048a57829003601f168201915b5050505050905090565b6040805160208101839052015b604051602081830303815290604052600090816104db9190610a60565b5050565b60008080546104ed906109a1565b1590506103565760008054610501906109a1565b80601f016020809104026020016040519081016040528092919081815260200182805461052d906109a1565b801561057a5780601f1061054f5761010080835404028352916020019161057a565b820191906000526020600020905b81548152906001019060200180831161055d57829003601f168201915b50505050508060200190518101906103519190610b20565b565b60008080546105a2906109a1565b15905061035657600080546105b6906109a1565b80601f01602080910402602001604051908101604052809291908181526020018280546105e2906109a1565b801561062f5780601f106106045761010080835404028352916020019161062f565b820191906000526020600020905b81548152906001019060200180831161061257829003601f168201915b50505050508060200190518101906103519190610b42565b610592600080610677565b604080516001600160a01b0383166020820152016104be565b60006104db8282610a60565b508054610683906109a1565b6000825580601f10610693575050565b601f0160209004906000526020600020908101906106b191906106b4565b50565b5b808211156106c957600081556001016106b5565b5090565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156106f557600080fd5b813567ffffffffffffffff8082111561070d57600080fd5b818401915084601f83011261072157600080fd5b813581811115610733576107336106cd565b604051601f8201601f19908116603f0116810190838211818310171561075b5761075b6106cd565b8160405282815287602084870101111561077457600080fd5b826020860160208301376000928101602001929092525095945050505050565b6000815180845260005b818110156107ba5760208185018101518683018201520161079e565b506000602082860101526020601f19601f83011685010191505092915050565b6040815260006107ed6040830185610794565b82810360208401526107ff8185610794565b95945050505050565b63ffffffff811681146106b157600080fd5b6000806040838503121561082d57600080fd5b823561083881610808565b946020939093013593505050565b6020808252825182820181905260009190848201906040850190845b8181101561087e57835183529284019291840191600101610862565b50909695505050505050565b60208152600061089d6020830184610794565b9392505050565b6000602082840312156108b657600080fd5b5035919050565b6000602082840312156108cf57600080fd5b813561089d81610808565b6060815260006108ed6060830186610794565b6020838101869052838203604085015284518083528582019282019060005b818110156109285784518352938301939183019160010161090c565b509098975050505050505050565b6001600160a01b03811681146106b157600080fd5b60006020828403121561095d57600080fd5b813561089d81610936565b6000806040838503121561097b57600080fd5b823561098681610808565b9150602083013561099681610936565b809150509250929050565b600181811c908216806109b557607f821691505b6020821081036109d557634e487b7160e01b600052602260045260246000fd5b50919050565b6000602082840312156109ed57600080fd5b815161089d81610936565b600060208284031215610a0a57600080fd5b5051919050565b601f821115610a5b57600081815260208120601f850160051c81016020861015610a385750805b601f850160051c820191505b81811015610a5757828155600101610a44565b5050505b505050565b815167ffffffffffffffff811115610a7a57610a7a6106cd565b610a8e81610a8884546109a1565b84610a11565b602080601f831160018114610ac35760008415610aab5750858301515b600019600386901b1c1916600185901b178555610a57565b600085815260208120601f198616915b82811015610af257888601518255948401946001909101908401610ad3565b5085821015610b105787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b600060208284031215610b3257600080fd5b8151801515811461089d57600080fd5b600060208284031215610b5457600080fd5b815161089d8161080856fea264697066735822122043b3e433a352657a655452c3bbc5ee4fba82c81d256683c11070849de15dd60964736f6c63430008110033",
+    "sourceMap": "219:1376:140:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1312:159;;;;;;:::i;:::-;1411:24;1437:26;1312:159;;;;;;;;;;;;:::i;:::-;;;;;;;;1477:116;;;;;;:::i;:::-;1563:26;1477:116;;;;;;;;;;;;:::i;776:170:137:-;;;:::i;:::-;;;-1:-1:-1;;;;;3126:32:200;;;3108:51;;3096:2;3081:18;776:170:137;2962:203:200;406:123:140;;;;;;:::i;:::-;;:::i;:::-;;;3335:14:200;;3328:22;3310:41;;3298:2;3283:18;406:123:140;3170:187:200;1114:158:137;;;:::i;:::-;;;3508:25:200;;;3496:2;3481:18;1114:158:137;3362:177:200;664:106:137;;;:::i;:::-;;;;;;;:::i;338:105::-;;;;;;:::i;:::-;;:::i;:::-;;952:156;;;:::i;535:164:140:-;;;;;;:::i;:::-;-1:-1:-1;623:23:140;;648:17;;623:23;;535:164;;;;;;;;;;:::i;1278:158:137:-;;;:::i;:::-;;;5211:10:200;5199:23;;;5181:42;;5169:2;5154:18;1278:158:137;5037:192:200;250:82:137;;;:::i;822:175:140:-;;;;;;:::i;1003:148::-;;;;;;:::i;449:105:137:-;;;;;;:::i;:::-;;:::i;705:111:140:-;;;;;;:::i;560:98:137:-;;;;;;:::i;:::-;;:::i;776:170::-;830:7;856:16;:23;;;;;:::i;:::-;:28;;-1:-1:-1;856:83:137;;911:16;900:39;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;849:90;;776:170;:::o;856:83::-;-1:-1:-1;895:1:137;;776:170::o;406:123:140:-;471:12;502:20;:18;:20::i;:::-;495:27;406:123;-1:-1:-1;;406:123:140:o;1114:158:137:-;1165:7;1191:16;:23;;;;;:::i;:::-;:28;;-1:-1:-1;1191:74:137;;1237:16;1226:39;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;664:106::-;716:12;747:16;740:23;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;664:106;:::o;338:105::-;419:17;;;;;;3508:25:200;;;3481:18;419:17:137;;;;;;;;;;;;;400:16;:36;;;;;;:::i;:::-;;338:105;:::o;952:156::-;1003:4;1026:16;:23;;;;;:::i;:::-;:28;;-1:-1:-1;1026:75:137;;1076:16;1065:36;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;209:35::-;:::o;1278:158::-;1331:6;1356:16;:23;;;;;:::i;:::-;:28;;-1:-1:-1;1356:73:137;;1402:16;1391:38;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;250:82::-;302:23;309:16;;302:23;:::i;449:105::-;530:17;;;-1:-1:-1;;;;;3126:32:200;;530:17:137;;;3108:51:200;3081:18;530:17:137;2962:203:200;560:98:137;627:16;:24;646:5;627:16;:24;:::i;-1:-1:-1:-;;;;;;;:::i;:::-;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::o;:::-;;;;;;;;;;;;;;;;;;:::o;14:127:200:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:921;214:6;267:2;255:9;246:7;242:23;238:32;235:52;;;283:1;280;273:12;235:52;323:9;310:23;352:18;393:2;385:6;382:14;379:34;;;409:1;406;399:12;379:34;447:6;436:9;432:22;422:32;;492:7;485:4;481:2;477:13;473:27;463:55;;514:1;511;504:12;463:55;550:2;537:16;572:2;568;565:10;562:36;;;578:18;;:::i;:::-;653:2;647:9;621:2;707:13;;-1:-1:-1;;703:22:200;;;727:2;699:31;695:40;683:53;;;751:18;;;771:22;;;748:46;745:72;;;797:18;;:::i;:::-;837:10;833:2;826:22;872:2;864:6;857:18;912:7;907:2;902;898;894:11;890:20;887:33;884:53;;;933:1;930;923:12;884:53;989:2;984;980;976:11;971:2;963:6;959:15;946:46;1034:1;1012:15;;;1029:2;1008:24;1001:35;;;;-1:-1:-1;1016:6:200;146:921;-1:-1:-1;;;;;146:921:200:o;1072:422::-;1113:3;1151:5;1145:12;1178:6;1173:3;1166:19;1203:1;1213:162;1227:6;1224:1;1221:13;1213:162;;;1289:4;1345:13;;;1341:22;;1335:29;1317:11;;;1313:20;;1306:59;1242:12;1213:162;;;1217:3;1420:1;1413:4;1404:6;1399:3;1395:16;1391:27;1384:38;1483:4;1476:2;1472:7;1467:2;1459:6;1455:15;1451:29;1446:3;1442:39;1438:50;1431:57;;;1072:422;;;;:::o;1499:377::-;1692:2;1681:9;1674:21;1655:4;1718:44;1758:2;1747:9;1743:18;1735:6;1718:44;:::i;:::-;1810:9;1802:6;1798:22;1793:2;1782:9;1778:18;1771:50;1838:32;1863:6;1855;1838:32;:::i;:::-;1830:40;1499:377;-1:-1:-1;;;;;1499:377:200:o;1881:121::-;1966:10;1959:5;1955:22;1948:5;1945:33;1935:61;;1992:1;1989;1982:12;2007:313;2074:6;2082;2135:2;2123:9;2114:7;2110:23;2106:32;2103:52;;;2151:1;2148;2141:12;2103:52;2190:9;2177:23;2209:30;2233:5;2209:30;:::i;:::-;2258:5;2310:2;2295:18;;;;2282:32;;-1:-1:-1;;;2007:313:200:o;2325:632::-;2496:2;2548:21;;;2618:13;;2521:18;;;2640:22;;;2467:4;;2496:2;2719:15;;;;2693:2;2678:18;;;2467:4;2762:169;2776:6;2773:1;2770:13;2762:169;;;2837:13;;2825:26;;2906:15;;;;2871:12;;;;2798:1;2791:9;2762:169;;;-1:-1:-1;2948:3:200;;2325:632;-1:-1:-1;;;;;;2325:632:200:o;3544:217::-;3691:2;3680:9;3673:21;3654:4;3711:44;3751:2;3740:9;3736:18;3728:6;3711:44;:::i;:::-;3703:52;3544:217;-1:-1:-1;;;3544:217:200:o;3766:180::-;3825:6;3878:2;3866:9;3857:7;3853:23;3849:32;3846:52;;;3894:1;3891;3884:12;3846:52;-1:-1:-1;3917:23:200;;3766:180;-1:-1:-1;3766:180:200:o;3951:245::-;4009:6;4062:2;4050:9;4041:7;4037:23;4033:32;4030:52;;;4078:1;4075;4068:12;4030:52;4117:9;4104:23;4136:30;4160:5;4136:30;:::i;4201:831::-;4454:2;4443:9;4436:21;4417:4;4480:44;4520:2;4509:9;4505:18;4497:6;4480:44;:::i;:::-;4543:2;4561:18;;;4554:34;;;4624:22;;;4619:2;4604:18;;4597:50;4696:13;;4718:22;;;4794:15;;;;4756;;;-1:-1:-1;4837:169:200;4851:6;4848:1;4845:13;4837:169;;;4912:13;;4900:26;;4981:15;;;;4946:12;;;;4873:1;4866:9;4837:169;;;-1:-1:-1;5023:3:200;;4201:831;-1:-1:-1;;;;;;;;4201:831:200:o;5234:131::-;-1:-1:-1;;;;;5309:31:200;;5299:42;;5289:70;;5355:1;5352;5345:12;5370:247;5429:6;5482:2;5470:9;5461:7;5457:23;5453:32;5450:52;;;5498:1;5495;5488:12;5450:52;5537:9;5524:23;5556:31;5581:5;5556:31;:::i;5622:386::-;5689:6;5697;5750:2;5738:9;5729:7;5725:23;5721:32;5718:52;;;5766:1;5763;5756:12;5718:52;5805:9;5792:23;5824:30;5848:5;5824:30;:::i;:::-;5873:5;-1:-1:-1;5930:2:200;5915:18;;5902:32;5943:33;5902:32;5943:33;:::i;:::-;5995:7;5985:17;;;5622:386;;;;;:::o;6013:380::-;6092:1;6088:12;;;;6135;;;6156:61;;6210:4;6202:6;6198:17;6188:27;;6156:61;6263:2;6255:6;6252:14;6232:18;6229:38;6226:161;;6309:10;6304:3;6300:20;6297:1;6290:31;6344:4;6341:1;6334:15;6372:4;6369:1;6362:15;6226:161;;6013:380;;;:::o;6398:259::-;6476:6;6529:2;6517:9;6508:7;6504:23;6500:32;6497:52;;;6545:1;6542;6535:12;6497:52;6577:9;6571:16;6596:31;6621:5;6596:31;:::i;6662:184::-;6732:6;6785:2;6773:9;6764:7;6760:23;6756:32;6753:52;;;6801:1;6798;6791:12;6753:52;-1:-1:-1;6824:16:200;;6662:184;-1:-1:-1;6662:184:200:o;6976:544::-;7077:2;7072:3;7069:11;7066:448;;;7113:1;7138:5;7134:2;7127:17;7183:4;7179:2;7169:19;7253:2;7241:10;7237:19;7234:1;7230:27;7224:4;7220:38;7289:4;7277:10;7274:20;7271:47;;;-1:-1:-1;7312:4:200;7271:47;7367:2;7362:3;7358:12;7355:1;7351:20;7345:4;7341:31;7331:41;;7422:82;7440:2;7433:5;7430:13;7422:82;;;7485:17;;;7466:1;7455:13;7422:82;;;7426:3;;;7066:448;6976:544;;;:::o;7696:1348::-;7820:3;7814:10;7847:18;7839:6;7836:30;7833:56;;;7869:18;;:::i;:::-;7898:96;7987:6;7947:38;7979:4;7973:11;7947:38;:::i;:::-;7941:4;7898:96;:::i;:::-;8049:4;;8113:2;8102:14;;8130:1;8125:662;;;;8831:1;8848:6;8845:89;;;-1:-1:-1;8900:19:200;;;8894:26;8845:89;-1:-1:-1;;7653:1:200;7649:11;;;7645:24;7641:29;7631:40;7677:1;7673:11;;;7628:57;8947:81;;8095:943;;8125:662;6923:1;6916:14;;;6960:4;6947:18;;-1:-1:-1;;8161:20:200;;;8278:236;8292:7;8289:1;8286:14;8278:236;;;8381:19;;;8375:26;8360:42;;8473:27;;;;8441:1;8429:14;;;;8308:19;;8278:236;;;8282:3;8542:6;8533:7;8530:19;8527:201;;;8603:19;;;8597:26;-1:-1:-1;;8686:1:200;8682:14;;;8698:3;8678:24;8674:37;8670:42;8655:58;8640:74;;8527:201;-1:-1:-1;;;;;8774:1:200;8758:14;;;8754:22;8741:36;;-1:-1:-1;7696:1348:200:o;9049:277::-;9116:6;9169:2;9157:9;9148:7;9144:23;9140:32;9137:52;;;9185:1;9182;9175:12;9137:52;9217:9;9211:16;9270:5;9263:13;9256:21;9249:5;9246:32;9236:60;;9292:1;9289;9282:12;9331:249;9400:6;9453:2;9441:9;9432:7;9428:23;9424:32;9421:52;;;9469:1;9466;9459:12;9421:52;9501:9;9495:16;9520:30;9544:5;9520:30;:::i",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "deleteMockReturnValue()": "b81442e0",
+    "getAttestation(uint32)": "a23d9bae",
+    "getGuardSnapshot(uint256)": "caecc6db",
+    "getLatestAgentState(uint32,address)": "e8c12f80",
+    "getLatestNotaryAttestation(address)": "bf1aae26",
+    "getNotarySnapshot(bytes)": "02eef8dc",
+    "getNotarySnapshot(uint256)": "f5230719",
+    "getReturnValueAddress()": "4289cf75",
+    "getReturnValueBool()": "76fae198",
+    "getReturnValueBytes()": "5980330d",
+    "getReturnValueUint()": "504730ab",
+    "getReturnValueUint32()": "b78973d4",
+    "getSnapshotProof(uint32,uint256)": "229b5b1e",
+    "isValidAttestation(bytes)": "4362fd11",
+    "setMockReturnValue(address)": "e60f5f6a",
+    "setMockReturnValue(bytes)": "f05b3351",
+    "setMockReturnValue(uint256)": "714141de",
+    "testBaseMock()": "b26406a0",
+    "testSnapshotHubMock()": "cace200f"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"deleteMockReturnValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"}],\"name\":\"getAttestation\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"snapGas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getGuardSnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"getLatestAgentState\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"notary\",\"type\":\"address\"}],\"name\":\"getLatestNotaryAttestation\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"snapGas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"}],\"name\":\"getNotarySnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getNotarySnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReturnValueAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReturnValueBool\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReturnValueBytes\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReturnValueUint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReturnValueUint32\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"stateIndex\",\"type\":\"uint256\"}],\"name\":\"getSnapshotProof\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"snapProof\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"isValidAttestation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValid\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"setMockReturnValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"value\",\"type\":\"address\"}],\"name\":\"setMockReturnValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"value\",\"type\":\"bytes\"}],\"name\":\"setMockReturnValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testBaseMock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testSnapshotHubMock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getAttestation(uint32)\":{\"details\":\"Reverts if attestation with given nonce hasn't been created yet.\",\"params\":{\"attNonce\":\"Nonce for the attestation\"},\"returns\":{\"agentRoot\":\"   Agent root hash used for the attestation\",\"attPayload\":\"  Raw payload with formatted Attestation data\",\"snapGas\":\"     Snapshot gas data used for the attestation\"}},\"getGuardSnapshot(uint256)\":{\"details\":\"Reverts if snapshot with given index hasn't been accepted yet.\",\"params\":{\"index\":\"Snapshot index in the list of all Guard snapshots\"},\"returns\":{\"snapPayload\":\"     Raw payload with Guard snapshot\",\"snapSignature\":\"   Raw payload with Guard signature for snapshot\"}},\"getLatestAgentState(uint32,address)\":{\"params\":{\"agent\":\"Agent address\",\"origin\":\"Domain of origin chain\"},\"returns\":{\"statePayload\":\"Raw payload with agent's latest state for origin\"}},\"getLatestNotaryAttestation(address)\":{\"params\":{\"notary\":\"Notary address\"},\"returns\":{\"agentRoot\":\"   Agent root hash used for the attestation\",\"attPayload\":\"  Raw payload with formatted Attestation data\",\"snapGas\":\"     Snapshot gas data used for the attestation\"}},\"getNotarySnapshot(bytes)\":{\"details\":\"Reverts if any of these is true:  - Attestation payload is not properly formatted.  - Attestation is invalid (doesn't have a matching Notary snapshot).\",\"params\":{\"attPayload\":\"Raw payload with attestation data\"},\"returns\":{\"snapPayload\":\"     Raw payload with Notary snapshot\",\"snapSignature\":\"   Raw payload with Notary signature for snapshot\"}},\"getNotarySnapshot(uint256)\":{\"details\":\"Reverts if snapshot with given index hasn't been accepted yet.\",\"params\":{\"index\":\"Snapshot index in the list of all Notary snapshots\"},\"returns\":{\"snapPayload\":\"     Raw payload with Notary snapshot\",\"snapSignature\":\"   Raw payload with Notary signature for snapshot\"}},\"getSnapshotProof(uint32,uint256)\":{\"details\":\"Reverts if any of these is true:  - Attestation with given nonce hasn't been created yet.  - State index is out of range of snapshot list.\",\"params\":{\"attNonce\":\"Nonce for the attestation\",\"stateIndex\":\"Index of state in the attestation's snapshot\"},\"returns\":{\"snapProof\":\"   The snapshot proof\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getAttestation(uint32)\":{\"notice\":\"Returns saved attestation with the given nonce.\"},\"getGuardSnapshot(uint256)\":{\"notice\":\"Returns Guard snapshot from the list of all accepted Guard snapshots.\"},\"getLatestAgentState(uint32,address)\":{\"notice\":\"Returns the state with the highest known nonce submitted by a given Agent.\"},\"getLatestNotaryAttestation(address)\":{\"notice\":\"Returns latest saved attestation for a Notary.\"},\"getNotarySnapshot(bytes)\":{\"notice\":\"Returns Notary snapshot that was used for creating a given attestation.\"},\"getNotarySnapshot(uint256)\":{\"notice\":\"Returns Notary snapshot from the list of all accepted Guard snapshots.\"},\"getSnapshotProof(uint32,uint256)\":{\"notice\":\"Returns proof of inclusion of (root, origin) fields of a given snapshot's state into the Snapshot Merkle Tree for a given attestation.\"},\"testBaseMock()\":{\"notice\":\"Prevents this contract from being included in the coverage report\"},\"testSnapshotHubMock()\":{\"notice\":\"Prevents this contract from being included in the coverage report\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/mocks/hubs/SnapshotHubMock.t.sol\":\"SnapshotHubMock\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/ISnapshotHub.sol\":{\"keccak256\":\"0x3640a263eb4af25646250affc0fe8c666df03e11fa36da4823363b46a878160b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fafb6b8f21c1a392b8d2f1f0a380bfe48bef18862f9519f69fe23e29e03b55ad\",\"dweb:/ipfs/Qmakg3WLAB1r7SyVnP8Db2ofzsV4RmsPDzk6wf3PS35kcX\"]},\"test/mocks/base/BaseMock.t.sol\":{\"keccak256\":\"0x5d0ddef55a6d63ce25175fd2cefc00b9030e8f7247600220e67a33c3982b9697\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://96928ffa43cb650c3c594fa2d1459f2f44eea1f52fb988011a638e80b255d986\",\"dweb:/ipfs/QmXpFxAzvt9jaD4BsKGLJnBdHF1m4uvfB1iKt94mr3ryCJ\"]},\"test/mocks/hubs/SnapshotHubMock.t.sol\":{\"keccak256\":\"0x3bd89d154ad63a5bbf3d79180bbbb5dd37ac602ebe7230749a269994cd0e0252\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e5d2a54f6f85a4463e89f7283c6b19b47a3bf710f24fb1ca8af929a1d0d7b961\",\"dweb:/ipfs/QmTaPz6oEzA3EgHoetvgZhqSR4pXPXbj4bcybnJ9qxNkj2\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deleteMockReturnValue"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAttestation",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "snapGas",
+              "type": "uint256[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getGuardSnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLatestAgentState",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "notary",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLatestNotaryAttestation",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "snapGas",
+              "type": "uint256[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getNotarySnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getNotarySnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReturnValueAddress",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReturnValueBool",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReturnValueBytes",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReturnValueUint",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getReturnValueUint32",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "stateIndex",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getSnapshotProof",
+          "outputs": [
+            {
+              "internalType": "bytes32[]",
+              "name": "snapProof",
+              "type": "bytes32[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isValidAttestation",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "isValid",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMockReturnValue"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "value",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMockReturnValue"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "value",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMockReturnValue"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testBaseMock"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testSnapshotHubMock"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getAttestation(uint32)": {
+            "details": "Reverts if attestation with given nonce hasn't been created yet.",
+            "params": {
+              "attNonce": "Nonce for the attestation"
+            },
+            "returns": {
+              "agentRoot": "   Agent root hash used for the attestation",
+              "attPayload": "  Raw payload with formatted Attestation data",
+              "snapGas": "     Snapshot gas data used for the attestation"
+            }
+          },
+          "getGuardSnapshot(uint256)": {
+            "details": "Reverts if snapshot with given index hasn't been accepted yet.",
+            "params": {
+              "index": "Snapshot index in the list of all Guard snapshots"
+            },
+            "returns": {
+              "snapPayload": "     Raw payload with Guard snapshot",
+              "snapSignature": "   Raw payload with Guard signature for snapshot"
+            }
+          },
+          "getLatestAgentState(uint32,address)": {
+            "params": {
+              "agent": "Agent address",
+              "origin": "Domain of origin chain"
+            },
+            "returns": {
+              "statePayload": "Raw payload with agent's latest state for origin"
+            }
+          },
+          "getLatestNotaryAttestation(address)": {
+            "params": {
+              "notary": "Notary address"
+            },
+            "returns": {
+              "agentRoot": "   Agent root hash used for the attestation",
+              "attPayload": "  Raw payload with formatted Attestation data",
+              "snapGas": "     Snapshot gas data used for the attestation"
+            }
+          },
+          "getNotarySnapshot(bytes)": {
+            "details": "Reverts if any of these is true:  - Attestation payload is not properly formatted.  - Attestation is invalid (doesn't have a matching Notary snapshot).",
+            "params": {
+              "attPayload": "Raw payload with attestation data"
+            },
+            "returns": {
+              "snapPayload": "     Raw payload with Notary snapshot",
+              "snapSignature": "   Raw payload with Notary signature for snapshot"
+            }
+          },
+          "getNotarySnapshot(uint256)": {
+            "details": "Reverts if snapshot with given index hasn't been accepted yet.",
+            "params": {
+              "index": "Snapshot index in the list of all Notary snapshots"
+            },
+            "returns": {
+              "snapPayload": "     Raw payload with Notary snapshot",
+              "snapSignature": "   Raw payload with Notary signature for snapshot"
+            }
+          },
+          "getSnapshotProof(uint32,uint256)": {
+            "details": "Reverts if any of these is true:  - Attestation with given nonce hasn't been created yet.  - State index is out of range of snapshot list.",
+            "params": {
+              "attNonce": "Nonce for the attestation",
+              "stateIndex": "Index of state in the attestation's snapshot"
+            },
+            "returns": {
+              "snapProof": "   The snapshot proof"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getAttestation(uint32)": {
+            "notice": "Returns saved attestation with the given nonce."
+          },
+          "getGuardSnapshot(uint256)": {
+            "notice": "Returns Guard snapshot from the list of all accepted Guard snapshots."
+          },
+          "getLatestAgentState(uint32,address)": {
+            "notice": "Returns the state with the highest known nonce submitted by a given Agent."
+          },
+          "getLatestNotaryAttestation(address)": {
+            "notice": "Returns latest saved attestation for a Notary."
+          },
+          "getNotarySnapshot(bytes)": {
+            "notice": "Returns Notary snapshot that was used for creating a given attestation."
+          },
+          "getNotarySnapshot(uint256)": {
+            "notice": "Returns Notary snapshot from the list of all accepted Guard snapshots."
+          },
+          "getSnapshotProof(uint32,uint256)": {
+            "notice": "Returns proof of inclusion of (root, origin) fields of a given snapshot's state into the Snapshot Merkle Tree for a given attestation."
+          },
+          "testBaseMock()": {
+            "notice": "Prevents this contract from being included in the coverage report"
+          },
+          "testSnapshotHubMock()": {
+            "notice": "Prevents this contract from being included in the coverage report"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/mocks/hubs/SnapshotHubMock.t.sol": "SnapshotHubMock"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/ISnapshotHub.sol": {
+        "keccak256": "0x3640a263eb4af25646250affc0fe8c666df03e11fa36da4823363b46a878160b",
+        "urls": [
+          "bzz-raw://fafb6b8f21c1a392b8d2f1f0a380bfe48bef18862f9519f69fe23e29e03b55ad",
+          "dweb:/ipfs/Qmakg3WLAB1r7SyVnP8Db2ofzsV4RmsPDzk6wf3PS35kcX"
+        ],
+        "license": "MIT"
+      },
+      "test/mocks/base/BaseMock.t.sol": {
+        "keccak256": "0x5d0ddef55a6d63ce25175fd2cefc00b9030e8f7247600220e67a33c3982b9697",
+        "urls": [
+          "bzz-raw://96928ffa43cb650c3c594fa2d1459f2f44eea1f52fb988011a638e80b255d986",
+          "dweb:/ipfs/QmXpFxAzvt9jaD4BsKGLJnBdHF1m4uvfB1iKt94mr3ryCJ"
+        ],
+        "license": "MIT"
+      },
+      "test/mocks/hubs/SnapshotHubMock.t.sol": {
+        "keccak256": "0x3bd89d154ad63a5bbf3d79180bbbb5dd37ac602ebe7230749a269994cd0e0252",
+        "urls": [
+          "bzz-raw://e5d2a54f6f85a4463e89f7283c6b19b47a3bf710f24fb1ca8af929a1d0d7b961",
+          "dweb:/ipfs/QmTaPz6oEzA3EgHoetvgZhqSR4pXPXbj4bcybnJ9qxNkj2"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/mocks/hubs/SnapshotHubMock.t.sol",
+    "id": 59221,
+    "exportedSymbols": {
+      "BaseMock": [
+        59016
+      ],
+      "ISnapshotHub": [
+        9341
+      ],
+      "SnapshotHubMock": [
+        59220
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1564:140",
+    "nodes": [
+      {
+        "id": 59118,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:140",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 59120,
+        "nodeType": "ImportDirective",
+        "src": "57:76:140",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/ISnapshotHub.sol",
+        "file": "../../../contracts/interfaces/ISnapshotHub.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 59221,
+        "sourceUnit": 9342,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 59119,
+              "name": "ISnapshotHub",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9341,
+              "src": "65:12:140",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 59122,
+        "nodeType": "ImportDirective",
+        "src": "134:48:140",
+        "nodes": [],
+        "absolutePath": "test/mocks/base/BaseMock.t.sol",
+        "file": "../base/BaseMock.t.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 59221,
+        "sourceUnit": 59017,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 59121,
+              "name": "BaseMock",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 59016,
+              "src": "142:8:140",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 59220,
+        "nodeType": "ContractDefinition",
+        "src": "219:1376:140",
+        "nodes": [
+          {
+            "id": 59131,
+            "nodeType": "FunctionDefinition",
+            "src": "358:42:140",
+            "nodes": [],
+            "body": {
+              "id": 59130,
+              "nodeType": "Block",
+              "src": "398:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "documentation": {
+              "id": 59127,
+              "nodeType": "StructuredDocumentation",
+              "src": "276:77:140",
+              "text": "@notice Prevents this contract from being included in the coverage report"
+            },
+            "functionSelector": "cace200f",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testSnapshotHubMock",
+            "nameLocation": "367:19:140",
+            "parameters": {
+              "id": 59128,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "386:2:140"
+            },
+            "returnParameters": {
+              "id": 59129,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "398:0:140"
+            },
+            "scope": 59220,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59142,
+            "nodeType": "FunctionDefinition",
+            "src": "406:123:140",
+            "nodes": [],
+            "body": {
+              "id": 59141,
+              "nodeType": "Block",
+              "src": "485:44:140",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 59138,
+                      "name": "getReturnValueBool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 58975,
+                      "src": "502:18:140",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
+                        "typeString": "function () view returns (bool)"
+                      }
+                    },
+                    "id": 59139,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "502:20:140",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 59137,
+                  "id": 59140,
+                  "nodeType": "Return",
+                  "src": "495:27:140"
+                }
+              ]
+            },
+            "baseFunctions": [
+              9263
+            ],
+            "functionSelector": "4362fd11",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidAttestation",
+            "nameLocation": "415:18:140",
+            "parameters": {
+              "id": 59134,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59133,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59142,
+                  "src": "434:12:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59132,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "434:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "433:14:140"
+            },
+            "returnParameters": {
+              "id": 59137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59136,
+                  "mutability": "mutable",
+                  "name": "isValid",
+                  "nameLocation": "476:7:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59142,
+                  "src": "471:12:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 59135,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "471:4:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "470:14:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59155,
+            "nodeType": "FunctionDefinition",
+            "src": "535:164:140",
+            "nodes": [],
+            "body": {
+              "id": 59154,
+              "nodeType": "Block",
+              "src": "697:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9276
+            ],
+            "functionSelector": "a23d9bae",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAttestation",
+            "nameLocation": "544:14:140",
+            "parameters": {
+              "id": 59145,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59144,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "566:8:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59155,
+                  "src": "559:15:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 59143,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "559:6:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "558:17:140"
+            },
+            "returnParameters": {
+              "id": 59153,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59147,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "636:10:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59155,
+                  "src": "623:23:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59146,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "623:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59149,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "656:9:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59155,
+                  "src": "648:17:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 59148,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:7:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59152,
+                  "mutability": "mutable",
+                  "name": "snapGas",
+                  "nameLocation": "684:7:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59155,
+                  "src": "667:24:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 59150,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "667:7:140",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 59151,
+                    "nodeType": "ArrayTypeName",
+                    "src": "667:9:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "622:70:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59165,
+            "nodeType": "FunctionDefinition",
+            "src": "705:111:140",
+            "nodes": [],
+            "body": {
+              "id": 59164,
+              "nodeType": "Block",
+              "src": "814:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9286
+            ],
+            "functionSelector": "e8c12f80",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestAgentState",
+            "nameLocation": "714:19:140",
+            "parameters": {
+              "id": 59160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59157,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "741:6:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59165,
+                  "src": "734:13:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 59156,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "734:6:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59159,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "757:5:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59165,
+                  "src": "749:13:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59158,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "749:7:140",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "733:30:140"
+            },
+            "returnParameters": {
+              "id": 59163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59162,
+                  "mutability": "mutable",
+                  "name": "statePayload",
+                  "nameLocation": "800:12:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59165,
+                  "src": "787:25:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59161,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "787:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "786:27:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59178,
+            "nodeType": "FunctionDefinition",
+            "src": "822:175:140",
+            "nodes": [],
+            "body": {
+              "id": 59177,
+              "nodeType": "Block",
+              "src": "995:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9299
+            ],
+            "functionSelector": "bf1aae26",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestNotaryAttestation",
+            "nameLocation": "831:26:140",
+            "parameters": {
+              "id": 59168,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59167,
+                  "mutability": "mutable",
+                  "name": "notary",
+                  "nameLocation": "866:6:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59178,
+                  "src": "858:14:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59166,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "858:7:140",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "857:16:140"
+            },
+            "returnParameters": {
+              "id": 59176,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59170,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "934:10:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59178,
+                  "src": "921:23:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59169,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "921:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59172,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "954:9:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59178,
+                  "src": "946:17:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 59171,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "946:7:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59175,
+                  "mutability": "mutable",
+                  "name": "snapGas",
+                  "nameLocation": "982:7:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59178,
+                  "src": "965:24:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 59173,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "965:7:140",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 59174,
+                    "nodeType": "ArrayTypeName",
+                    "src": "965:9:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "920:70:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59188,
+            "nodeType": "FunctionDefinition",
+            "src": "1003:148:140",
+            "nodes": [],
+            "body": {
+              "id": 59187,
+              "nodeType": "Block",
+              "src": "1149:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9309
+            ],
+            "functionSelector": "caecc6db",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGuardSnapshot",
+            "nameLocation": "1012:16:140",
+            "parameters": {
+              "id": 59181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59180,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "1037:5:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59188,
+                  "src": "1029:13:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59179,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1029:7:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1028:15:140"
+            },
+            "returnParameters": {
+              "id": 59186,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59183,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "1104:11:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59188,
+                  "src": "1091:24:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59182,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1091:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59185,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "1130:13:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59188,
+                  "src": "1117:26:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59184,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1117:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1090:54:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59198,
+            "nodeType": "FunctionDefinition",
+            "src": "1157:149:140",
+            "nodes": [],
+            "body": {
+              "id": 59197,
+              "nodeType": "Block",
+              "src": "1304:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9319
+            ],
+            "functionSelector": "f5230719",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNotarySnapshot",
+            "nameLocation": "1166:17:140",
+            "parameters": {
+              "id": 59191,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59190,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "1192:5:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59198,
+                  "src": "1184:13:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59189,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1184:7:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1183:15:140"
+            },
+            "returnParameters": {
+              "id": 59196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59193,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "1259:11:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59198,
+                  "src": "1246:24:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59192,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1246:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59195,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "1285:13:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59198,
+                  "src": "1272:26:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59194,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1272:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1245:54:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59208,
+            "nodeType": "FunctionDefinition",
+            "src": "1312:159:140",
+            "nodes": [],
+            "body": {
+              "id": 59207,
+              "nodeType": "Block",
+              "src": "1469:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9329
+            ],
+            "functionSelector": "02eef8dc",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNotarySnapshot",
+            "nameLocation": "1321:17:140",
+            "parameters": {
+              "id": 59201,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59200,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "1352:10:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59208,
+                  "src": "1339:23:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59199,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1339:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1338:25:140"
+            },
+            "returnParameters": {
+              "id": 59206,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59203,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "1424:11:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59208,
+                  "src": "1411:24:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59202,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1411:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59205,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "1450:13:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59208,
+                  "src": "1437:26:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59204,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1437:5:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1410:54:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59219,
+            "nodeType": "FunctionDefinition",
+            "src": "1477:116:140",
+            "nodes": [],
+            "body": {
+              "id": 59218,
+              "nodeType": "Block",
+              "src": "1591:2:140",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9340
+            ],
+            "functionSelector": "229b5b1e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSnapshotProof",
+            "nameLocation": "1486:16:140",
+            "parameters": {
+              "id": 59213,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59210,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "1510:8:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59219,
+                  "src": "1503:15:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 59209,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1503:6:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59212,
+                  "mutability": "mutable",
+                  "name": "stateIndex",
+                  "nameLocation": "1528:10:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59219,
+                  "src": "1520:18:140",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59211,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1520:7:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1502:37:140"
+            },
+            "returnParameters": {
+              "id": 59217,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59216,
+                  "mutability": "mutable",
+                  "name": "snapProof",
+                  "nameLocation": "1580:9:140",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59219,
+                  "src": "1563:26:140",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 59214,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1563:7:140",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 59215,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1563:9:140",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1562:28:140"
+            },
+            "scope": 59220,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 59123,
+              "name": "BaseMock",
+              "nameLocations": [
+                "247:8:140"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 59016,
+              "src": "247:8:140"
+            },
+            "id": 59124,
+            "nodeType": "InheritanceSpecifier",
+            "src": "247:8:140"
+          },
+          {
+            "baseName": {
+              "id": 59125,
+              "name": "ISnapshotHub",
+              "nameLocations": [
+                "257:12:140"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 9341,
+              "src": "257:12:140"
+            },
+            "id": 59126,
+            "nodeType": "InheritanceSpecifier",
+            "src": "257:12:140"
+          }
+        ],
+        "canonicalName": "SnapshotHubMock",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          59220,
+          9341,
+          59016
+        ],
+        "name": "SnapshotHubMock",
+        "nameLocation": "228:15:140",
+        "scope": 59221,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 140
+}

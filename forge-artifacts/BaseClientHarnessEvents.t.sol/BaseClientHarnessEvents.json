@@ -1,0 +1,344 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "msgValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "version",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "content",
+          "type": "bytes"
+        }
+      ],
+      "name": "BaseMessageReceived",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"msgValue\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"version\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"content\",\"type\":\"bytes\"}],\"name\":\"BaseMessageReceived\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/events/BaseClientHarnessEvents.t.sol\":\"BaseClientHarnessEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"test/harnesses/events/BaseClientHarnessEvents.t.sol\":{\"keccak256\":\"0xbbe298578bcd74722a758cb405679cd3e5433ded2af5dc693da77593fcbba306\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://593bb5eebb02635cccff84277e60d92b71625d945cf5ceb5e399b488c87a8499\",\"dweb:/ipfs/QmeZGgasXRksPxiz8NHR3advUuzA3wbdd9S2d6t7gVkzK2\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "msgValue",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint32",
+              "name": "version",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "content",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "BaseMessageReceived",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/harnesses/events/BaseClientHarnessEvents.t.sol": "BaseClientHarnessEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "test/harnesses/events/BaseClientHarnessEvents.t.sol": {
+        "keccak256": "0xbbe298578bcd74722a758cb405679cd3e5433ded2af5dc693da77593fcbba306",
+        "urls": [
+          "bzz-raw://593bb5eebb02635cccff84277e60d92b71625d945cf5ceb5e399b488c87a8499",
+          "dweb:/ipfs/QmeZGgasXRksPxiz8NHR3advUuzA3wbdd9S2d6t7gVkzK2"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/harnesses/events/BaseClientHarnessEvents.t.sol",
+    "id": 54971,
+    "exportedSymbols": {
+      "BaseClientHarnessEvents": [
+        54970
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:180:112",
+    "nodes": [
+      {
+        "id": 54957,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:112",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 54970,
+        "nodeType": "ContractDefinition",
+        "src": "57:154:112",
+        "nodes": [
+          {
+            "id": 54969,
+            "nodeType": "EventDefinition",
+            "src": "105:104:112",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "1fefc9e08633323857fc5f53df333beeb6c3058161f8b7ef71a22b0f4f9da4b0",
+            "name": "BaseMessageReceived",
+            "nameLocation": "111:19:112",
+            "parameters": {
+              "id": 54968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 54959,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "msgValue",
+                  "nameLocation": "139:8:112",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54969,
+                  "src": "131:16:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 54958,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "131:7:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54961,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "156:6:112",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54969,
+                  "src": "149:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 54960,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:6:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54963,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "171:5:112",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54969,
+                  "src": "164:12:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 54962,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:6:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54965,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "185:7:112",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54969,
+                  "src": "178:14:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 54964,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "178:6:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54967,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "content",
+                  "nameLocation": "200:7:112",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54969,
+                  "src": "194:13:112",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 54966,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:5:112",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "130:78:112"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "BaseClientHarnessEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          54970
+        ],
+        "name": "BaseClientHarnessEvents",
+        "nameLocation": "75:23:112",
+        "scope": 54971,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 112
+}

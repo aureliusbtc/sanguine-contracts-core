@@ -1,0 +1,1150 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "agentManager",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "agentStatus",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct AgentStatus",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAgent",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct AgentStatus",
+          "name": "status",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "inbox",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "guardIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "notaryIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "openDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "slashedIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "rivalIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "resolveDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testAgentSecuredMock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610266806100206000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063611692181161005b57806361169218146101065780637622f78d14610118578063a2155c3414610106578063fb0e722b1461011857600080fd5b806328f3fac9146100825780632de5aaf7146100c75780634a4a26a214610104575b600080fd5b6100b161009036600461012c565b50604080516060810182526000808252602082018190529181019190915290565b6040516100be919061019f565b60405180910390f35b6100f66100d53660046101b3565b60408051606081018252600080825260208201819052918101829052915091565b6040516100be9291906101cc565b005b6101046101143660046101fd565b5050565b604051600081526020016100be565b919050565b60006020828403121561013e57600080fd5b81356001600160a01b038116811461015557600080fd5b9392505050565b80516006811061017c57634e487b7160e01b600052602160045260246000fd5b825260208181015163ffffffff9081169184019190915260409182015116910152565b606081016101ad828461015c565b92915050565b6000602082840312156101c557600080fd5b5035919050565b6001600160a01b038316815260808101610155602083018461015c565b803563ffffffff8116811461012757600080fd5b6000806040838503121561021057600080fd5b610219836101e9565b9150610227602084016101e9565b9050925092905056fea264697066735822122076e85bce9a4ba3c00aeea6240dd960ba04502c639ea2d12628319bc5a7db7e9b64736f6c63430008110033",
+    "sourceMap": "150:648:136:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063611692181161005b57806361169218146101065780637622f78d14610118578063a2155c3414610106578063fb0e722b1461011857600080fd5b806328f3fac9146100825780632de5aaf7146100c75780634a4a26a214610104575b600080fd5b6100b161009036600461012c565b50604080516060810182526000808252602082018190529181019190915290565b6040516100be919061019f565b60405180910390f35b6100f66100d53660046101b3565b60408051606081018252600080825260208201819052918101829052915091565b6040516100be9291906101cc565b005b6101046101143660046101fd565b5050565b604051600081526020016100be565b919050565b60006020828403121561013e57600080fd5b81356001600160a01b038116811461015557600080fd5b9392505050565b80516006811061017c57634e487b7160e01b600052602160045260246000fd5b825260208181015163ffffffff9081169184019190915260409182015116910152565b606081016101ad828461015c565b92915050565b6000602082840312156101c557600080fd5b5035919050565b6001600160a01b038316815260808101610155602083018461015c565b803563ffffffff8116811461012757600080fd5b6000806040838503121561021057600080fd5b610219836101e9565b9150610227602084016101e9565b9050925092905056fea264697066735822122076e85bce9a4ba3c00aeea6240dd960ba04502c639ea2d12628319bc5a7db7e9b64736f6c63430008110033",
+    "sourceMap": "150:648:136:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;609:81;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;609:81:136;;;;;;;;:::i;:::-;;;;;;;;696:100;;;;;;:::i;:::-;-1:-1:-1;;;;;;;;752:13:136;-1:-1:-1;;;;;;;;;;;;;;;696:100:136;;;;;;;;;;;;:::i;281:43::-;;407:75;;;;;;:::i;:::-;;;;488:58;;;535:7;2296:51:200;;2284:2;2269:18;488:58:136;2150:203:200;668:18:136;609:81;;;:::o;14:286:200:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;168:23;;-1:-1:-1;;;;;220:31:200;;210:42;;200:70;;266:1;263;256:12;200:70;289:5;14:286;-1:-1:-1;;;14:286:200:o;437:466::-;518:5;512:12;550:1;546:2;543:9;533:140;;595:10;590:3;586:20;583:1;576:31;630:4;627:1;620:15;658:4;655:1;648:15;533:140;682:15;;743:4;732:16;;;726:23;768:10;810:21;;;794:14;;;787:45;;;;885:4;874:16;;;868:23;864:32;848:14;;841:56;437:466::o;908:260::-;1102:2;1087:18;;1114:48;1091:9;1144:6;1114:48;:::i;:::-;908:260;;;;:::o;1173:180::-;1232:6;1285:2;1273:9;1264:7;1260:23;1256:32;1253:52;;;1301:1;1298;1291:12;1253:52;-1:-1:-1;1324:23:200;;1173:180;-1:-1:-1;1173:180:200:o;1358:358::-;-1:-1:-1;;;;;1611:32:200;;1593:51;;1580:3;1565:19;;1653:57;1706:2;1691:18;;1683:6;1653:57;:::i;1721:163::-;1788:20;;1848:10;1837:22;;1827:33;;1817:61;;1874:1;1871;1864:12;1889:256;1955:6;1963;2016:2;2004:9;1995:7;1991:23;1987:32;1984:52;;;2032:1;2029;2022:12;1984:52;2055:28;2073:9;2055:28;:::i;:::-;2045:38;;2102:37;2135:2;2124:9;2120:18;2102:37;:::i;:::-;2092:47;;1889:256;;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "agentManager()": "7622f78d",
+    "agentStatus(address)": "28f3fac9",
+    "getAgent(uint256)": "2de5aaf7",
+    "inbox()": "fb0e722b",
+    "openDispute(uint32,uint32)": "a2155c34",
+    "resolveDispute(uint32,uint32)": "61169218",
+    "testAgentSecuredMock()": "4a4a26a2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"agentManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"agentStatus\",\"outputs\":[{\"components\":[{\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"index\",\"type\":\"uint32\"}],\"internalType\":\"struct AgentStatus\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getAgent\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"index\",\"type\":\"uint32\"}],\"internalType\":\"struct AgentStatus\",\"name\":\"status\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"inbox\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"guardIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"notaryIndex\",\"type\":\"uint32\"}],\"name\":\"openDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"slashedIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"rivalIndex\",\"type\":\"uint32\"}],\"name\":\"resolveDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testAgentSecuredMock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"agentStatus(address)\":{\"details\":\"Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud, but their status is not updated to Slashed yet.\",\"params\":{\"agent\":\"Agent address\"},\"returns\":{\"_0\":\"Status for the given agent: (flag, domain, index).\"}},\"getAgent(uint256)\":{\"details\":\"Will return empty values if agent with given index doesn't exist.\",\"params\":{\"index\":\"Agent index in the Agent Merkle Tree\"},\"returns\":{\"agent\":\"   Agent address\",\"status\":\"  Status for the given agent: (flag, domain, index)\"}},\"inbox()\":{\"details\":\"Inbox passes verified agent statements to `IAgentSecured` contract.\"},\"openDispute(uint32,uint32)\":{\"params\":{\"guardIndex\":\"Index of the Guard in the Agent Merkle Tree\",\"notaryIndex\":\"Index of the Notary in the Agent Merkle Tree\"}},\"resolveDispute(uint32,uint32)\":{\"params\":{\"rivalIndex\":\"Index of the their Dispute Rival in the Agent Merkle Tree\",\"slashedIndex\":\"Index of the slashed agent in the Agent Merkle Tree\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"agentManager()\":{\"notice\":\"Returns the address of the local AgentManager contract, which is treated as the \\\"source of truth\\\" for agent statuses.\"},\"agentStatus(address)\":{\"notice\":\"Returns (flag, domain, index) for a given agent. See Structures.sol for details.\"},\"getAgent(uint256)\":{\"notice\":\"Returns agent address and their current status for a given agent index.\"},\"inbox()\":{\"notice\":\"Returns the address of the local Inbox contract, which is treated as the \\\"source of truth\\\" for agent-signed statements.\"},\"openDispute(uint32,uint32)\":{\"notice\":\"Local AgentManager should call this function to indicate that a dispute between a Guard and a Notary has been opened.\"},\"resolveDispute(uint32,uint32)\":{\"notice\":\"Local AgentManager should call this function to indicate that a dispute has been resolved due to one of the agents being slashed. > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute.\"},\"testAgentSecuredMock()\":{\"notice\":\"Prevents this contract from being included in the coverage report\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/mocks/base/AgentSecuredMock.t.sol\":\"AgentSecuredMock\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IAgentSecured.sol\":{\"keccak256\":\"0x9a7efecf8fe37cc8245e3b0e3f5d6d6ee056cdd97ccb5631ff6347bdfc9fc889\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7877d223162a76d3fe75490069719b3a4f14cd66fc42bfa915f2813390b7d2aa\",\"dweb:/ipfs/QmZhE1rnffA9bbtkNAwVk6iitMPk14gHbK56mdeHQEPhxj\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]},\"test/mocks/base/AgentSecuredMock.t.sol\":{\"keccak256\":\"0x7c74b961b7d06d65138f35d638b68be02046565479f09606bf099da0093eba36\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5faa5048684a4685809fec66813899f0c55f47ec27b39c7b0440c2083cd34e4c\",\"dweb:/ipfs/QmfL3CxnjPXHnD137ERbyLMTuAfJsJa3k7yft7VqYGdvqf\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentManager",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentStatus",
+          "outputs": [
+            {
+              "internalType": "struct AgentStatus",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum AgentFlag",
+                  "name": "flag",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "domain",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "index",
+                  "type": "uint32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAgent",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "struct AgentStatus",
+              "name": "status",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum AgentFlag",
+                  "name": "flag",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "domain",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "index",
+                  "type": "uint32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "inbox",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "guardIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "notaryIndex",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "openDispute"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "slashedIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "rivalIndex",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "resolveDispute"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testAgentSecuredMock"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "agentStatus(address)": {
+            "details": "Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud, but their status is not updated to Slashed yet.",
+            "params": {
+              "agent": "Agent address"
+            },
+            "returns": {
+              "_0": "Status for the given agent: (flag, domain, index)."
+            }
+          },
+          "getAgent(uint256)": {
+            "details": "Will return empty values if agent with given index doesn't exist.",
+            "params": {
+              "index": "Agent index in the Agent Merkle Tree"
+            },
+            "returns": {
+              "agent": "   Agent address",
+              "status": "  Status for the given agent: (flag, domain, index)"
+            }
+          },
+          "inbox()": {
+            "details": "Inbox passes verified agent statements to `IAgentSecured` contract."
+          },
+          "openDispute(uint32,uint32)": {
+            "params": {
+              "guardIndex": "Index of the Guard in the Agent Merkle Tree",
+              "notaryIndex": "Index of the Notary in the Agent Merkle Tree"
+            }
+          },
+          "resolveDispute(uint32,uint32)": {
+            "params": {
+              "rivalIndex": "Index of the their Dispute Rival in the Agent Merkle Tree",
+              "slashedIndex": "Index of the slashed agent in the Agent Merkle Tree"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "agentManager()": {
+            "notice": "Returns the address of the local AgentManager contract, which is treated as the \"source of truth\" for agent statuses."
+          },
+          "agentStatus(address)": {
+            "notice": "Returns (flag, domain, index) for a given agent. See Structures.sol for details."
+          },
+          "getAgent(uint256)": {
+            "notice": "Returns agent address and their current status for a given agent index."
+          },
+          "inbox()": {
+            "notice": "Returns the address of the local Inbox contract, which is treated as the \"source of truth\" for agent-signed statements."
+          },
+          "openDispute(uint32,uint32)": {
+            "notice": "Local AgentManager should call this function to indicate that a dispute between a Guard and a Notary has been opened."
+          },
+          "resolveDispute(uint32,uint32)": {
+            "notice": "Local AgentManager should call this function to indicate that a dispute has been resolved due to one of the agents being slashed. > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute."
+          },
+          "testAgentSecuredMock()": {
+            "notice": "Prevents this contract from being included in the coverage report"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/mocks/base/AgentSecuredMock.t.sol": "AgentSecuredMock"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IAgentSecured.sol": {
+        "keccak256": "0x9a7efecf8fe37cc8245e3b0e3f5d6d6ee056cdd97ccb5631ff6347bdfc9fc889",
+        "urls": [
+          "bzz-raw://7877d223162a76d3fe75490069719b3a4f14cd66fc42bfa915f2813390b7d2aa",
+          "dweb:/ipfs/QmZhE1rnffA9bbtkNAwVk6iitMPk14gHbK56mdeHQEPhxj"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      },
+      "test/mocks/base/AgentSecuredMock.t.sol": {
+        "keccak256": "0x7c74b961b7d06d65138f35d638b68be02046565479f09606bf099da0093eba36",
+        "urls": [
+          "bzz-raw://5faa5048684a4685809fec66813899f0c55f47ec27b39c7b0440c2083cd34e4c",
+          "dweb:/ipfs/QmfL3CxnjPXHnD137ERbyLMTuAfJsJa3k7yft7VqYGdvqf"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/mocks/base/AgentSecuredMock.t.sol",
+    "id": 58873,
+    "exportedSymbols": {
+      "AgentSecuredMock": [
+        58872
+      ],
+      "AgentStatus": [
+        10357
+      ],
+      "IAgentSecured": [
+        9180
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:767:136",
+    "nodes": [
+      {
+        "id": 58813,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:136",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 58816,
+        "nodeType": "ImportDirective",
+        "src": "57:91:136",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IAgentSecured.sol",
+        "file": "../../../contracts/interfaces/IAgentSecured.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 58873,
+        "sourceUnit": 9181,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 58814,
+              "name": "AgentStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10357,
+              "src": "65:11:136",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 58815,
+              "name": "IAgentSecured",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9180,
+              "src": "78:13:136",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 58872,
+        "nodeType": "ContractDefinition",
+        "src": "150:648:136",
+        "nodes": [
+          {
+            "id": 58823,
+            "nodeType": "FunctionDefinition",
+            "src": "281:43:136",
+            "nodes": [],
+            "body": {
+              "id": 58822,
+              "nodeType": "Block",
+              "src": "322:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "documentation": {
+              "id": 58819,
+              "nodeType": "StructuredDocumentation",
+              "src": "199:77:136",
+              "text": "@notice Prevents this contract from being included in the coverage report"
+            },
+            "functionSelector": "4a4a26a2",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testAgentSecuredMock",
+            "nameLocation": "290:20:136",
+            "parameters": {
+              "id": 58820,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "310:2:136"
+            },
+            "returnParameters": {
+              "id": 58821,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "322:0:136"
+            },
+            "scope": 58872,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 58831,
+            "nodeType": "FunctionDefinition",
+            "src": "330:71:136",
+            "nodes": [],
+            "body": {
+              "id": 58830,
+              "nodeType": "Block",
+              "src": "399:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9139
+            ],
+            "functionSelector": "a2155c34",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "openDispute",
+            "nameLocation": "339:11:136",
+            "parameters": {
+              "id": 58828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58825,
+                  "mutability": "mutable",
+                  "name": "guardIndex",
+                  "nameLocation": "358:10:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58831,
+                  "src": "351:17:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 58824,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:6:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58827,
+                  "mutability": "mutable",
+                  "name": "notaryIndex",
+                  "nameLocation": "377:11:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58831,
+                  "src": "370:18:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 58826,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:6:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "350:39:136"
+            },
+            "returnParameters": {
+              "id": 58829,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "399:0:136"
+            },
+            "scope": 58872,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 58839,
+            "nodeType": "FunctionDefinition",
+            "src": "407:75:136",
+            "nodes": [],
+            "body": {
+              "id": 58838,
+              "nodeType": "Block",
+              "src": "480:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9147
+            ],
+            "functionSelector": "61169218",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "resolveDispute",
+            "nameLocation": "416:14:136",
+            "parameters": {
+              "id": 58836,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58833,
+                  "mutability": "mutable",
+                  "name": "slashedIndex",
+                  "nameLocation": "438:12:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58839,
+                  "src": "431:19:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 58832,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:6:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58835,
+                  "mutability": "mutable",
+                  "name": "rivalIndex",
+                  "nameLocation": "459:10:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58839,
+                  "src": "452:17:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 58834,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:6:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "430:40:136"
+            },
+            "returnParameters": {
+              "id": 58837,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "480:0:136"
+            },
+            "scope": 58872,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 58845,
+            "nodeType": "FunctionDefinition",
+            "src": "488:58:136",
+            "nodes": [],
+            "body": {
+              "id": 58844,
+              "nodeType": "Block",
+              "src": "544:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9153
+            ],
+            "functionSelector": "7622f78d",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "agentManager",
+            "nameLocation": "497:12:136",
+            "parameters": {
+              "id": 58840,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "509:2:136"
+            },
+            "returnParameters": {
+              "id": 58843,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58842,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58845,
+                  "src": "535:7:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 58841,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "535:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "534:9:136"
+            },
+            "scope": 58872,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 58851,
+            "nodeType": "FunctionDefinition",
+            "src": "552:51:136",
+            "nodes": [],
+            "body": {
+              "id": 58850,
+              "nodeType": "Block",
+              "src": "601:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9159
+            ],
+            "functionSelector": "fb0e722b",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "inbox",
+            "nameLocation": "561:5:136",
+            "parameters": {
+              "id": 58846,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "566:2:136"
+            },
+            "returnParameters": {
+              "id": 58849,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58848,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58851,
+                  "src": "592:7:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 58847,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "592:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "591:9:136"
+            },
+            "scope": 58872,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 58860,
+            "nodeType": "FunctionDefinition",
+            "src": "609:81:136",
+            "nodes": [],
+            "body": {
+              "id": 58859,
+              "nodeType": "Block",
+              "src": "688:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9168
+            ],
+            "functionSelector": "28f3fac9",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "agentStatus",
+            "nameLocation": "618:11:136",
+            "parameters": {
+              "id": 58854,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58853,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "638:5:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58860,
+                  "src": "630:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 58852,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "629:15:136"
+            },
+            "returnParameters": {
+              "id": 58858,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58857,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58860,
+                  "src": "668:18:136",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 58856,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 58855,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "668:11:136"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "668:11:136"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "668:11:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "667:20:136"
+            },
+            "scope": 58872,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 58871,
+            "nodeType": "FunctionDefinition",
+            "src": "696:100:136",
+            "nodes": [],
+            "body": {
+              "id": 58870,
+              "nodeType": "Block",
+              "src": "794:2:136",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9179
+            ],
+            "functionSelector": "2de5aaf7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAgent",
+            "nameLocation": "705:8:136",
+            "parameters": {
+              "id": 58863,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58862,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "722:5:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58871,
+                  "src": "714:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58861,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "714:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "713:15:136"
+            },
+            "returnParameters": {
+              "id": 58869,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58865,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "760:5:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58871,
+                  "src": "752:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 58864,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "752:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58868,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "786:6:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58871,
+                  "src": "767:25:136",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 58867,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 58866,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "767:11:136"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "767:11:136"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "767:11:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "751:42:136"
+            },
+            "scope": 58872,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 58817,
+              "name": "IAgentSecured",
+              "nameLocations": [
+                "179:13:136"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 9180,
+              "src": "179:13:136"
+            },
+            "id": 58818,
+            "nodeType": "InheritanceSpecifier",
+            "src": "179:13:136"
+          }
+        ],
+        "canonicalName": "AgentSecuredMock",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          58872,
+          9180
+        ],
+        "name": "AgentSecuredMock",
+        "nameLocation": "159:16:136",
+        "scope": 58873,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 136
+}

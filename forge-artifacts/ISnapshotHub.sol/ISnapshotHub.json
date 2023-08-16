@@ -1,0 +1,1613 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        }
+      ],
+      "name": "getAttestation",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "snapGas",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getGuardSnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "getLatestAgentState",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "statePayload",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "notary",
+          "type": "address"
+        }
+      ],
+      "name": "getLatestNotaryAttestation",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "snapGas",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "getNotarySnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getNotarySnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stateIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSnapshotProof",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "snapProof",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "isValidAttestation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValid",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getAttestation(uint32)": "a23d9bae",
+    "getGuardSnapshot(uint256)": "caecc6db",
+    "getLatestAgentState(uint32,address)": "e8c12f80",
+    "getLatestNotaryAttestation(address)": "bf1aae26",
+    "getNotarySnapshot(bytes)": "02eef8dc",
+    "getNotarySnapshot(uint256)": "f5230719",
+    "getSnapshotProof(uint32,uint256)": "229b5b1e",
+    "isValidAttestation(bytes)": "4362fd11"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"}],\"name\":\"getAttestation\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"snapGas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getGuardSnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"getLatestAgentState\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"statePayload\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"notary\",\"type\":\"address\"}],\"name\":\"getLatestNotaryAttestation\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"snapGas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"}],\"name\":\"getNotarySnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getNotarySnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"stateIndex\",\"type\":\"uint256\"}],\"name\":\"getSnapshotProof\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"snapProof\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"}],\"name\":\"isValidAttestation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValid\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getAttestation(uint32)\":{\"details\":\"Reverts if attestation with given nonce hasn't been created yet.\",\"params\":{\"attNonce\":\"Nonce for the attestation\"},\"returns\":{\"agentRoot\":\"   Agent root hash used for the attestation\",\"attPayload\":\"  Raw payload with formatted Attestation data\",\"snapGas\":\"     Snapshot gas data used for the attestation\"}},\"getGuardSnapshot(uint256)\":{\"details\":\"Reverts if snapshot with given index hasn't been accepted yet.\",\"params\":{\"index\":\"Snapshot index in the list of all Guard snapshots\"},\"returns\":{\"snapPayload\":\"     Raw payload with Guard snapshot\",\"snapSignature\":\"   Raw payload with Guard signature for snapshot\"}},\"getLatestAgentState(uint32,address)\":{\"params\":{\"agent\":\"Agent address\",\"origin\":\"Domain of origin chain\"},\"returns\":{\"statePayload\":\"Raw payload with agent's latest state for origin\"}},\"getLatestNotaryAttestation(address)\":{\"params\":{\"notary\":\"Notary address\"},\"returns\":{\"agentRoot\":\"   Agent root hash used for the attestation\",\"attPayload\":\"  Raw payload with formatted Attestation data\",\"snapGas\":\"     Snapshot gas data used for the attestation\"}},\"getNotarySnapshot(bytes)\":{\"details\":\"Reverts if any of these is true:  - Attestation payload is not properly formatted.  - Attestation is invalid (doesn't have a matching Notary snapshot).\",\"params\":{\"attPayload\":\"Raw payload with attestation data\"},\"returns\":{\"snapPayload\":\"     Raw payload with Notary snapshot\",\"snapSignature\":\"   Raw payload with Notary signature for snapshot\"}},\"getNotarySnapshot(uint256)\":{\"details\":\"Reverts if snapshot with given index hasn't been accepted yet.\",\"params\":{\"index\":\"Snapshot index in the list of all Notary snapshots\"},\"returns\":{\"snapPayload\":\"     Raw payload with Notary snapshot\",\"snapSignature\":\"   Raw payload with Notary signature for snapshot\"}},\"getSnapshotProof(uint32,uint256)\":{\"details\":\"Reverts if any of these is true:  - Attestation with given nonce hasn't been created yet.  - State index is out of range of snapshot list.\",\"params\":{\"attNonce\":\"Nonce for the attestation\",\"stateIndex\":\"Index of state in the attestation's snapshot\"},\"returns\":{\"snapProof\":\"   The snapshot proof\"}},\"isValidAttestation(bytes)\":{\"details\":\"Will revert if any of these is true:  - Attestation payload is not properly formatted.\",\"params\":{\"attPayload\":\"Raw payload with attestation data\"},\"returns\":{\"isValid\":\"     Whether the provided attestation is valid\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getAttestation(uint32)\":{\"notice\":\"Returns saved attestation with the given nonce.\"},\"getGuardSnapshot(uint256)\":{\"notice\":\"Returns Guard snapshot from the list of all accepted Guard snapshots.\"},\"getLatestAgentState(uint32,address)\":{\"notice\":\"Returns the state with the highest known nonce submitted by a given Agent.\"},\"getLatestNotaryAttestation(address)\":{\"notice\":\"Returns latest saved attestation for a Notary.\"},\"getNotarySnapshot(bytes)\":{\"notice\":\"Returns Notary snapshot that was used for creating a given attestation.\"},\"getNotarySnapshot(uint256)\":{\"notice\":\"Returns Notary snapshot from the list of all accepted Guard snapshots.\"},\"getSnapshotProof(uint32,uint256)\":{\"notice\":\"Returns proof of inclusion of (root, origin) fields of a given snapshot's state into the Snapshot Merkle Tree for a given attestation.\"},\"isValidAttestation(bytes)\":{\"notice\":\"Check that a given attestation is valid: matches the historical attestation derived from an accepted Notary snapshot.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/ISnapshotHub.sol\":\"ISnapshotHub\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/ISnapshotHub.sol\":{\"keccak256\":\"0x3640a263eb4af25646250affc0fe8c666df03e11fa36da4823363b46a878160b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fafb6b8f21c1a392b8d2f1f0a380bfe48bef18862f9519f69fe23e29e03b55ad\",\"dweb:/ipfs/Qmakg3WLAB1r7SyVnP8Db2ofzsV4RmsPDzk6wf3PS35kcX\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAttestation",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "snapGas",
+              "type": "uint256[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getGuardSnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLatestAgentState",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "statePayload",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "notary",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLatestNotaryAttestation",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "snapGas",
+              "type": "uint256[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getNotarySnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getNotarySnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "stateIndex",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getSnapshotProof",
+          "outputs": [
+            {
+              "internalType": "bytes32[]",
+              "name": "snapProof",
+              "type": "bytes32[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isValidAttestation",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "isValid",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getAttestation(uint32)": {
+            "details": "Reverts if attestation with given nonce hasn't been created yet.",
+            "params": {
+              "attNonce": "Nonce for the attestation"
+            },
+            "returns": {
+              "agentRoot": "   Agent root hash used for the attestation",
+              "attPayload": "  Raw payload with formatted Attestation data",
+              "snapGas": "     Snapshot gas data used for the attestation"
+            }
+          },
+          "getGuardSnapshot(uint256)": {
+            "details": "Reverts if snapshot with given index hasn't been accepted yet.",
+            "params": {
+              "index": "Snapshot index in the list of all Guard snapshots"
+            },
+            "returns": {
+              "snapPayload": "     Raw payload with Guard snapshot",
+              "snapSignature": "   Raw payload with Guard signature for snapshot"
+            }
+          },
+          "getLatestAgentState(uint32,address)": {
+            "params": {
+              "agent": "Agent address",
+              "origin": "Domain of origin chain"
+            },
+            "returns": {
+              "statePayload": "Raw payload with agent's latest state for origin"
+            }
+          },
+          "getLatestNotaryAttestation(address)": {
+            "params": {
+              "notary": "Notary address"
+            },
+            "returns": {
+              "agentRoot": "   Agent root hash used for the attestation",
+              "attPayload": "  Raw payload with formatted Attestation data",
+              "snapGas": "     Snapshot gas data used for the attestation"
+            }
+          },
+          "getNotarySnapshot(bytes)": {
+            "details": "Reverts if any of these is true:  - Attestation payload is not properly formatted.  - Attestation is invalid (doesn't have a matching Notary snapshot).",
+            "params": {
+              "attPayload": "Raw payload with attestation data"
+            },
+            "returns": {
+              "snapPayload": "     Raw payload with Notary snapshot",
+              "snapSignature": "   Raw payload with Notary signature for snapshot"
+            }
+          },
+          "getNotarySnapshot(uint256)": {
+            "details": "Reverts if snapshot with given index hasn't been accepted yet.",
+            "params": {
+              "index": "Snapshot index in the list of all Notary snapshots"
+            },
+            "returns": {
+              "snapPayload": "     Raw payload with Notary snapshot",
+              "snapSignature": "   Raw payload with Notary signature for snapshot"
+            }
+          },
+          "getSnapshotProof(uint32,uint256)": {
+            "details": "Reverts if any of these is true:  - Attestation with given nonce hasn't been created yet.  - State index is out of range of snapshot list.",
+            "params": {
+              "attNonce": "Nonce for the attestation",
+              "stateIndex": "Index of state in the attestation's snapshot"
+            },
+            "returns": {
+              "snapProof": "   The snapshot proof"
+            }
+          },
+          "isValidAttestation(bytes)": {
+            "details": "Will revert if any of these is true:  - Attestation payload is not properly formatted.",
+            "params": {
+              "attPayload": "Raw payload with attestation data"
+            },
+            "returns": {
+              "isValid": "     Whether the provided attestation is valid"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getAttestation(uint32)": {
+            "notice": "Returns saved attestation with the given nonce."
+          },
+          "getGuardSnapshot(uint256)": {
+            "notice": "Returns Guard snapshot from the list of all accepted Guard snapshots."
+          },
+          "getLatestAgentState(uint32,address)": {
+            "notice": "Returns the state with the highest known nonce submitted by a given Agent."
+          },
+          "getLatestNotaryAttestation(address)": {
+            "notice": "Returns latest saved attestation for a Notary."
+          },
+          "getNotarySnapshot(bytes)": {
+            "notice": "Returns Notary snapshot that was used for creating a given attestation."
+          },
+          "getNotarySnapshot(uint256)": {
+            "notice": "Returns Notary snapshot from the list of all accepted Guard snapshots."
+          },
+          "getSnapshotProof(uint32,uint256)": {
+            "notice": "Returns proof of inclusion of (root, origin) fields of a given snapshot's state into the Snapshot Merkle Tree for a given attestation."
+          },
+          "isValidAttestation(bytes)": {
+            "notice": "Check that a given attestation is valid: matches the historical attestation derived from an accepted Notary snapshot."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/ISnapshotHub.sol": "ISnapshotHub"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/ISnapshotHub.sol": {
+        "keccak256": "0x3640a263eb4af25646250affc0fe8c666df03e11fa36da4823363b46a878160b",
+        "urls": [
+          "bzz-raw://fafb6b8f21c1a392b8d2f1f0a380bfe48bef18862f9519f69fe23e29e03b55ad",
+          "dweb:/ipfs/Qmakg3WLAB1r7SyVnP8Db2ofzsV4RmsPDzk6wf3PS35kcX"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/ISnapshotHub.sol",
+    "id": 9342,
+    "exportedSymbols": {
+      "ISnapshotHub": [
+        9341
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:4409:34",
+    "nodes": [
+      {
+        "id": 9255,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:34",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9341,
+        "nodeType": "ContractDefinition",
+        "src": "57:4383:34",
+        "nodes": [
+          {
+            "id": 9263,
+            "nodeType": "FunctionDefinition",
+            "src": "480:90:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9256,
+              "nodeType": "StructuredDocumentation",
+              "src": "86:389:34",
+              "text": " @notice Check that a given attestation is valid: matches the historical attestation\n derived from an accepted Notary snapshot.\n @dev Will revert if any of these is true:\n  - Attestation payload is not properly formatted.\n @param attPayload    Raw payload with attestation data\n @return isValid      Whether the provided attestation is valid"
+            },
+            "functionSelector": "4362fd11",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidAttestation",
+            "nameLocation": "489:18:34",
+            "parameters": {
+              "id": 9259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9258,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "521:10:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9263,
+                  "src": "508:23:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9257,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "508:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "507:25:34"
+            },
+            "returnParameters": {
+              "id": 9262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9261,
+                  "mutability": "mutable",
+                  "name": "isValid",
+                  "nameLocation": "561:7:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9263,
+                  "src": "556:12:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9260,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "556:4:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "555:14:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9276,
+            "nodeType": "FunctionDefinition",
+            "src": "998:158:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9264,
+              "nodeType": "StructuredDocumentation",
+              "src": "576:417:34",
+              "text": " @notice Returns saved attestation with the given nonce.\n @dev Reverts if attestation with given nonce hasn't been created yet.\n @param attNonce      Nonce for the attestation\n @return attPayload   Raw payload with formatted Attestation data\n @return agentRoot    Agent root hash used for the attestation\n @return snapGas      Snapshot gas data used for the attestation"
+            },
+            "functionSelector": "a23d9bae",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAttestation",
+            "nameLocation": "1007:14:34",
+            "parameters": {
+              "id": 9267,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9266,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "1029:8:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9276,
+                  "src": "1022:15:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9265,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1022:6:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1021:17:34"
+            },
+            "returnParameters": {
+              "id": 9275,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9269,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "1099:10:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9276,
+                  "src": "1086:23:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9268,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1086:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9271,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "1119:9:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9276,
+                  "src": "1111:17:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9270,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1111:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9274,
+                  "mutability": "mutable",
+                  "name": "snapGas",
+                  "nameLocation": "1147:7:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9276,
+                  "src": "1130:24:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9272,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1130:7:34",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 9273,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1130:9:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1085:70:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9286,
+            "nodeType": "FunctionDefinition",
+            "src": "1438:109:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9277,
+              "nodeType": "StructuredDocumentation",
+              "src": "1162:271:34",
+              "text": " @notice Returns the state with the highest known nonce submitted by a given Agent.\n @param origin        Domain of origin chain\n @param agent         Agent address\n @return statePayload Raw payload with agent's latest state for origin"
+            },
+            "functionSelector": "e8c12f80",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestAgentState",
+            "nameLocation": "1447:19:34",
+            "parameters": {
+              "id": 9282,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9279,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "1474:6:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9286,
+                  "src": "1467:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9278,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1467:6:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9281,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "1490:5:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9286,
+                  "src": "1482:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9280,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1482:7:34",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1466:30:34"
+            },
+            "returnParameters": {
+              "id": 9285,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9284,
+                  "mutability": "mutable",
+                  "name": "statePayload",
+                  "nameLocation": "1533:12:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9286,
+                  "src": "1520:25:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9283,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1520:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1519:27:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9299,
+            "nodeType": "FunctionDefinition",
+            "src": "1886:169:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9287,
+              "nodeType": "StructuredDocumentation",
+              "src": "1553:328:34",
+              "text": " @notice Returns latest saved attestation for a Notary.\n @param notary        Notary address\n @return attPayload   Raw payload with formatted Attestation data\n @return agentRoot    Agent root hash used for the attestation\n @return snapGas      Snapshot gas data used for the attestation"
+            },
+            "functionSelector": "bf1aae26",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestNotaryAttestation",
+            "nameLocation": "1895:26:34",
+            "parameters": {
+              "id": 9290,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9289,
+                  "mutability": "mutable",
+                  "name": "notary",
+                  "nameLocation": "1930:6:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9299,
+                  "src": "1922:14:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9288,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1922:7:34",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1921:16:34"
+            },
+            "returnParameters": {
+              "id": 9298,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9292,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "1998:10:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9299,
+                  "src": "1985:23:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9291,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1985:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9294,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "2018:9:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9299,
+                  "src": "2010:17:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9293,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2010:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9297,
+                  "mutability": "mutable",
+                  "name": "snapGas",
+                  "nameLocation": "2046:7:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9299,
+                  "src": "2029:24:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9295,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2029:7:34",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 9296,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2029:9:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1984:70:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9309,
+            "nodeType": "FunctionDefinition",
+            "src": "2461:142:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9300,
+              "nodeType": "StructuredDocumentation",
+              "src": "2061:395:34",
+              "text": " @notice Returns Guard snapshot from the list of all accepted Guard snapshots.\n @dev Reverts if snapshot with given index hasn't been accepted yet.\n @param index             Snapshot index in the list of all Guard snapshots\n @return snapPayload      Raw payload with Guard snapshot\n @return snapSignature    Raw payload with Guard signature for snapshot"
+            },
+            "functionSelector": "caecc6db",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGuardSnapshot",
+            "nameLocation": "2470:16:34",
+            "parameters": {
+              "id": 9303,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9302,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "2495:5:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9309,
+                  "src": "2487:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9301,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2487:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2486:15:34"
+            },
+            "returnParameters": {
+              "id": 9308,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9305,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "2562:11:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9309,
+                  "src": "2549:24:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9304,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2549:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9307,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "2588:13:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9309,
+                  "src": "2575:26:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9306,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2575:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2548:54:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9319,
+            "nodeType": "FunctionDefinition",
+            "src": "3013:143:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9310,
+              "nodeType": "StructuredDocumentation",
+              "src": "2609:399:34",
+              "text": " @notice Returns Notary snapshot from the list of all accepted Guard snapshots.\n @dev Reverts if snapshot with given index hasn't been accepted yet.\n @param index             Snapshot index in the list of all Notary snapshots\n @return snapPayload      Raw payload with Notary snapshot\n @return snapSignature    Raw payload with Notary signature for snapshot"
+            },
+            "functionSelector": "f5230719",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNotarySnapshot",
+            "nameLocation": "3022:17:34",
+            "parameters": {
+              "id": 9313,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9312,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "3048:5:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9319,
+                  "src": "3040:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9311,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3040:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3039:15:34"
+            },
+            "returnParameters": {
+              "id": 9318,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9315,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "3115:11:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9319,
+                  "src": "3102:24:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9314,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3102:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9317,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "3141:13:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9319,
+                  "src": "3128:26:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9316,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3128:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3101:54:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9329,
+            "nodeType": "FunctionDefinition",
+            "src": "3653:153:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9320,
+              "nodeType": "StructuredDocumentation",
+              "src": "3162:486:34",
+              "text": " @notice Returns Notary snapshot that was used for creating a given attestation.\n @dev Reverts if any of these is true:\n  - Attestation payload is not properly formatted.\n  - Attestation is invalid (doesn't have a matching Notary snapshot).\n @param attPayload        Raw payload with attestation data\n @return snapPayload      Raw payload with Notary snapshot\n @return snapSignature    Raw payload with Notary signature for snapshot"
+            },
+            "functionSelector": "02eef8dc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getNotarySnapshot",
+            "nameLocation": "3662:17:34",
+            "parameters": {
+              "id": 9323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9322,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "3693:10:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9329,
+                  "src": "3680:23:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9321,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3680:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3679:25:34"
+            },
+            "returnParameters": {
+              "id": 9328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9325,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "3765:11:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9329,
+                  "src": "3752:24:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9324,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3752:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9327,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "3791:13:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9329,
+                  "src": "3778:26:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9326,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3778:5:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3751:54:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9340,
+            "nodeType": "FunctionDefinition",
+            "src": "4324:114:34",
+            "nodes": [],
+            "documentation": {
+              "id": 9330,
+              "nodeType": "StructuredDocumentation",
+              "src": "3812:507:34",
+              "text": " @notice Returns proof of inclusion of (root, origin) fields of a given snapshot's state\n into the Snapshot Merkle Tree for a given attestation.\n @dev Reverts if any of these is true:\n  - Attestation with given nonce hasn't been created yet.\n  - State index is out of range of snapshot list.\n @param attNonce      Nonce for the attestation\n @param stateIndex    Index of state in the attestation's snapshot\n @return snapProof    The snapshot proof"
+            },
+            "functionSelector": "229b5b1e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSnapshotProof",
+            "nameLocation": "4333:16:34",
+            "parameters": {
+              "id": 9335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9332,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "4357:8:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9340,
+                  "src": "4350:15:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9331,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4350:6:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9334,
+                  "mutability": "mutable",
+                  "name": "stateIndex",
+                  "nameLocation": "4375:10:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9340,
+                  "src": "4367:18:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9333,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4367:7:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4349:37:34"
+            },
+            "returnParameters": {
+              "id": 9339,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9338,
+                  "mutability": "mutable",
+                  "name": "snapProof",
+                  "nameLocation": "4427:9:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9340,
+                  "src": "4410:26:34",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9336,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4410:7:34",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9337,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4410:9:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4409:28:34"
+            },
+            "scope": 9341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISnapshotHub",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9341
+        ],
+        "name": "ISnapshotHub",
+        "nameLocation": "67:12:34",
+        "scope": 9342,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 34
+}

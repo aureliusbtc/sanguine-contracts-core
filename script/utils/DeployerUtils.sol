@@ -6,6 +6,9 @@ import {console, Script, stdJson} from "forge-std/Script.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 import {Address} from "@openzeppelin/contracts/utils/Address.sol";
 
+import {CREATE3Factory} from "../../contracts/create3/CREATE3Factory.sol";
+
+
 interface ICreate3Factory {
     function deploy(bytes32 salt, bytes memory creationCode) external payable returns (address deployed);
 
@@ -24,7 +27,8 @@ contract DeployerUtils is Script {
     string private constant DEPLOY_CONFIGS = "script/configs/";
 
     // TODO: this is only deployed on 7 chains, deploy our own factory for prod deployments
-    ICreate3Factory internal constant FACTORY = ICreate3Factory(0x9fBB3DF7C40Da2e5A0dE984fFE2CCB7C47cd0ABf);
+    // ICreate3Factory internal constant FACTORY = ICreate3Factory(0x9fBB3DF7C40Da2e5A0dE984fFE2CCB7C47cd0ABf);
+    CREATE3Factory internal FACTORY;
 
     /// @dev Whether the script will be broadcasted or not
     bool internal isBroadcasted = false;
@@ -68,6 +72,11 @@ contract DeployerUtils is Script {
             broadcasterAddress = vm.addr(broadcasterPK);
             console.log("Deployer address: %s", broadcasterAddress);
             console.log("Deployer balance: %s", _fromWei(broadcasterAddress.balance));
+        }
+        if (!Address.isContract(address(FACTORY))) {
+            vm.startBroadcast(broadcasterPK);
+            FACTORY = new CREATE3Factory();
+            vm.stopBroadcast();
         }
     }
 

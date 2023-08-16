@@ -1,0 +1,995 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "msgPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "originProof",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "snapProof",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stateIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint64",
+          "name": "gasLimit",
+          "type": "uint64"
+        }
+      ],
+      "name": "execute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "snapRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getAttestationNonce",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "isValidReceipt",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValid",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "messageReceipt",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "messageStatus",
+      "outputs": [
+        {
+          "internalType": "enum MessageStatus",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "execute(bytes,bytes32[],bytes32[],uint256,uint64)": "32ff14d2",
+    "getAttestationNonce(bytes32)": "4f127567",
+    "isValidReceipt(bytes)": "e2f006f7",
+    "messageReceipt(bytes32)": "daa74a9e",
+    "messageStatus(bytes32)": "3c6cf473"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"msgPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes32[]\",\"name\":\"originProof\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes32[]\",\"name\":\"snapProof\",\"type\":\"bytes32[]\"},{\"internalType\":\"uint256\",\"name\":\"stateIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"gasLimit\",\"type\":\"uint64\"}],\"name\":\"execute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"snapRoot\",\"type\":\"bytes32\"}],\"name\":\"getAttestationNonce\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"}],\"name\":\"isValidReceipt\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValid\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"}],\"name\":\"messageReceipt\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"}],\"name\":\"messageStatus\",\"outputs\":[{\"internalType\":\"enum MessageStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"execute(bytes,bytes32[],bytes32[],uint256,uint64)\":{\"details\":\"Will revert if any of these is true:  - Message payload is not properly formatted.  - Snapshot root (reconstructed from message hash and proofs) is unknown  - Snapshot root is known, but was submitted by an inactive Notary  - Snapshot root is known, but optimistic period for a message hasn't passed  - Provided gas limit is lower than the one requested in the message  - Recipient doesn't implement a `handle` method (refer to IMessageRecipient.sol)  - Recipient reverted upon receiving a message Note: refer to libs/memory/State.sol for details about Origin State's sub-leafs.\",\"params\":{\"gasLimit\":\"Gas limit for message execution\",\"msgPayload\":\"Raw payload with a formatted message to execute\",\"originProof\":\"Proof of inclusion of message in the Origin Merkle Tree\",\"snapProof\":\"Proof of inclusion of Origin State's Left Leaf into Snapshot Merkle Tree\",\"stateIndex\":\"Index of Origin State in the Snapshot\"}},\"getAttestationNonce(bytes32)\":{\"details\":\"Will return 0 if the root is unknown.\"},\"isValidReceipt(bytes)\":{\"details\":\"Will revert if any of these is true:  - Receipt payload is not properly formatted.  - Receipt signer is not an active Notary.  - Receipt destination chain does not refer to this chain.\",\"params\":{\"rcptPayload\":\"Raw payload with Receipt data\"},\"returns\":{\"isValid\":\"         Whether the requested receipt is valid.\"}},\"messageReceipt(bytes32)\":{\"details\":\"Notaries could derive the tips, and the tips proof using the message payload, and submit the signed receipt with the proof of tips to `Summit` in order to initiate tips distribution.\",\"params\":{\"messageHash\":\"Hash of the message payload\"},\"returns\":{\"data\":\"            Formatted payload with the message execution receipt\"}},\"messageStatus(bytes32)\":{\"params\":{\"messageHash\":\"Hash of the message payload\"},\"returns\":{\"status\":\"          Message execution status\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"execute(bytes,bytes32[],bytes32[],uint256,uint64)\":{\"notice\":\"Attempts to prove inclusion of message into one of Snapshot Merkle Trees, previously submitted to this contract in a form of a signed Attestation. Proven message is immediately executed by passing its contents to the specified recipient.\"},\"getAttestationNonce(bytes32)\":{\"notice\":\"Returns attestation nonce for a given snapshot root.\"},\"isValidReceipt(bytes)\":{\"notice\":\"Checks the validity of the unsigned message receipt.\"},\"messageReceipt(bytes32)\":{\"notice\":\"Returns a formatted payload with the message receipt.\"},\"messageStatus(bytes32)\":{\"notice\":\"Returns message execution status: None/Failed/Success.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IExecutionHub.sol\":\"IExecutionHub\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IExecutionHub.sol\":{\"keccak256\":\"0x98f6ff39ecb926b480474d122350d753ca18358ca4d18d36d1850ec7af7ae6f0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36485341a0ed70b0f151b258124f6a0db003f5d37af22b8bea65b8d5249a252d\",\"dweb:/ipfs/QmfBEDFSGwnSjTyv2AZuuUDjrqWRvacyCx46dXegioWMDL\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "msgPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "originProof",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "bytes32[]",
+              "name": "snapProof",
+              "type": "bytes32[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "stateIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64",
+              "name": "gasLimit",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "execute"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "snapRoot",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAttestationNonce",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isValidReceipt",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "isValid",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "messageReceipt",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "messageStatus",
+          "outputs": [
+            {
+              "internalType": "enum MessageStatus",
+              "name": "status",
+              "type": "uint8"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "execute(bytes,bytes32[],bytes32[],uint256,uint64)": {
+            "details": "Will revert if any of these is true:  - Message payload is not properly formatted.  - Snapshot root (reconstructed from message hash and proofs) is unknown  - Snapshot root is known, but was submitted by an inactive Notary  - Snapshot root is known, but optimistic period for a message hasn't passed  - Provided gas limit is lower than the one requested in the message  - Recipient doesn't implement a `handle` method (refer to IMessageRecipient.sol)  - Recipient reverted upon receiving a message Note: refer to libs/memory/State.sol for details about Origin State's sub-leafs.",
+            "params": {
+              "gasLimit": "Gas limit for message execution",
+              "msgPayload": "Raw payload with a formatted message to execute",
+              "originProof": "Proof of inclusion of message in the Origin Merkle Tree",
+              "snapProof": "Proof of inclusion of Origin State's Left Leaf into Snapshot Merkle Tree",
+              "stateIndex": "Index of Origin State in the Snapshot"
+            }
+          },
+          "getAttestationNonce(bytes32)": {
+            "details": "Will return 0 if the root is unknown."
+          },
+          "isValidReceipt(bytes)": {
+            "details": "Will revert if any of these is true:  - Receipt payload is not properly formatted.  - Receipt signer is not an active Notary.  - Receipt destination chain does not refer to this chain.",
+            "params": {
+              "rcptPayload": "Raw payload with Receipt data"
+            },
+            "returns": {
+              "isValid": "         Whether the requested receipt is valid."
+            }
+          },
+          "messageReceipt(bytes32)": {
+            "details": "Notaries could derive the tips, and the tips proof using the message payload, and submit the signed receipt with the proof of tips to `Summit` in order to initiate tips distribution.",
+            "params": {
+              "messageHash": "Hash of the message payload"
+            },
+            "returns": {
+              "data": "            Formatted payload with the message execution receipt"
+            }
+          },
+          "messageStatus(bytes32)": {
+            "params": {
+              "messageHash": "Hash of the message payload"
+            },
+            "returns": {
+              "status": "          Message execution status"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "execute(bytes,bytes32[],bytes32[],uint256,uint64)": {
+            "notice": "Attempts to prove inclusion of message into one of Snapshot Merkle Trees, previously submitted to this contract in a form of a signed Attestation. Proven message is immediately executed by passing its contents to the specified recipient."
+          },
+          "getAttestationNonce(bytes32)": {
+            "notice": "Returns attestation nonce for a given snapshot root."
+          },
+          "isValidReceipt(bytes)": {
+            "notice": "Checks the validity of the unsigned message receipt."
+          },
+          "messageReceipt(bytes32)": {
+            "notice": "Returns a formatted payload with the message receipt."
+          },
+          "messageStatus(bytes32)": {
+            "notice": "Returns message execution status: None/Failed/Success."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IExecutionHub.sol": "IExecutionHub"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IExecutionHub.sol": {
+        "keccak256": "0x98f6ff39ecb926b480474d122350d753ca18358ca4d18d36d1850ec7af7ae6f0",
+        "urls": [
+          "bzz-raw://36485341a0ed70b0f151b258124f6a0db003f5d37af22b8bea65b8d5249a252d",
+          "dweb:/ipfs/QmfBEDFSGwnSjTyv2AZuuUDjrqWRvacyCx46dXegioWMDL"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IExecutionHub.sol",
+    "id": 9235,
+    "exportedSymbols": {
+      "IExecutionHub": [
+        9234
+      ],
+      "MessageStatus": [
+        10376
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3539:32",
+    "nodes": [
+      {
+        "id": 9182,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:32",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9184,
+        "nodeType": "ImportDirective",
+        "src": "57:53:32",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Structures.sol",
+        "file": "../libs/Structures.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 9235,
+        "sourceUnit": 10474,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 9183,
+              "name": "MessageStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10376,
+              "src": "65:13:32",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 9234,
+        "nodeType": "ContractDefinition",
+        "src": "112:3458:32",
+        "nodes": [
+          {
+            "id": 9200,
+            "nodeType": "FunctionDefinition",
+            "src": "1459:196:32",
+            "nodes": [],
+            "documentation": {
+              "id": 9185,
+              "nodeType": "StructuredDocumentation",
+              "src": "142:1312:32",
+              "text": " @notice Attempts to prove inclusion of message into one of Snapshot Merkle Trees,\n previously submitted to this contract in a form of a signed Attestation.\n Proven message is immediately executed by passing its contents to the specified recipient.\n @dev Will revert if any of these is true:\n  - Message payload is not properly formatted.\n  - Snapshot root (reconstructed from message hash and proofs) is unknown\n  - Snapshot root is known, but was submitted by an inactive Notary\n  - Snapshot root is known, but optimistic period for a message hasn't passed\n  - Provided gas limit is lower than the one requested in the message\n  - Recipient doesn't implement a `handle` method (refer to IMessageRecipient.sol)\n  - Recipient reverted upon receiving a message\n Note: refer to libs/memory/State.sol for details about Origin State's sub-leafs.\n @param msgPayload    Raw payload with a formatted message to execute\n @param originProof   Proof of inclusion of message in the Origin Merkle Tree\n @param snapProof     Proof of inclusion of Origin State's Left Leaf into Snapshot Merkle Tree\n @param stateIndex    Index of Origin State in the Snapshot\n @param gasLimit      Gas limit for message execution"
+            },
+            "functionSelector": "32ff14d2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nameLocation": "1468:7:32",
+            "parameters": {
+              "id": 9198,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9187,
+                  "mutability": "mutable",
+                  "name": "msgPayload",
+                  "nameLocation": "1498:10:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9200,
+                  "src": "1485:23:32",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9186,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1485:5:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9190,
+                  "mutability": "mutable",
+                  "name": "originProof",
+                  "nameLocation": "1537:11:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9200,
+                  "src": "1518:30:32",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_calldata_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9188,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1518:7:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9189,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1518:9:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9193,
+                  "mutability": "mutable",
+                  "name": "snapProof",
+                  "nameLocation": "1577:9:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9200,
+                  "src": "1558:28:32",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_calldata_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9191,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1558:7:32",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 9192,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1558:9:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9195,
+                  "mutability": "mutable",
+                  "name": "stateIndex",
+                  "nameLocation": "1604:10:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9200,
+                  "src": "1596:18:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9194,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1596:7:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9197,
+                  "mutability": "mutable",
+                  "name": "gasLimit",
+                  "nameLocation": "1631:8:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9200,
+                  "src": "1624:15:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 9196,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1624:6:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1475:170:32"
+            },
+            "returnParameters": {
+              "id": 9199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1654:0:32"
+            },
+            "scope": 9234,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9208,
+            "nodeType": "FunctionDefinition",
+            "src": "2129:87:32",
+            "nodes": [],
+            "documentation": {
+              "id": 9201,
+              "nodeType": "StructuredDocumentation",
+              "src": "1995:129:32",
+              "text": " @notice Returns attestation nonce for a given snapshot root.\n @dev Will return 0 if the root is unknown."
+            },
+            "functionSelector": "4f127567",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAttestationNonce",
+            "nameLocation": "2138:19:32",
+            "parameters": {
+              "id": 9204,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9203,
+                  "mutability": "mutable",
+                  "name": "snapRoot",
+                  "nameLocation": "2166:8:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9208,
+                  "src": "2158:16:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9202,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2158:7:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2157:18:32"
+            },
+            "returnParameters": {
+              "id": 9207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9206,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "2206:8:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9208,
+                  "src": "2199:15:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9205,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2199:6:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2198:17:32"
+            },
+            "scope": 9234,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9216,
+            "nodeType": "FunctionDefinition",
+            "src": "2658:87:32",
+            "nodes": [],
+            "documentation": {
+              "id": 9209,
+              "nodeType": "StructuredDocumentation",
+              "src": "2222:431:32",
+              "text": " @notice Checks the validity of the unsigned message receipt.\n @dev Will revert if any of these is true:\n  - Receipt payload is not properly formatted.\n  - Receipt signer is not an active Notary.\n  - Receipt destination chain does not refer to this chain.\n @param rcptPayload       Raw payload with Receipt data\n @return isValid          Whether the requested receipt is valid."
+            },
+            "functionSelector": "e2f006f7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isValidReceipt",
+            "nameLocation": "2667:14:32",
+            "parameters": {
+              "id": 9212,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9211,
+                  "mutability": "mutable",
+                  "name": "rcptPayload",
+                  "nameLocation": "2695:11:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "2682:24:32",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9210,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2682:5:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2681:26:32"
+            },
+            "returnParameters": {
+              "id": 9215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9214,
+                  "mutability": "mutable",
+                  "name": "isValid",
+                  "nameLocation": "2736:7:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "2731:12:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9213,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2731:4:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2730:14:32"
+            },
+            "scope": 9234,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9225,
+            "nodeType": "FunctionDefinition",
+            "src": "2954:89:32",
+            "nodes": [],
+            "documentation": {
+              "id": 9217,
+              "nodeType": "StructuredDocumentation",
+              "src": "2751:198:32",
+              "text": " @notice Returns message execution status: None/Failed/Success.\n @param messageHash       Hash of the message payload\n @return status           Message execution status"
+            },
+            "functionSelector": "3c6cf473",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageStatus",
+            "nameLocation": "2963:13:32",
+            "parameters": {
+              "id": 9220,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9219,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "2985:11:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9225,
+                  "src": "2977:19:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9218,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2977:7:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2976:21:32"
+            },
+            "returnParameters": {
+              "id": 9224,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9223,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "3035:6:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9225,
+                  "src": "3021:20:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_MessageStatus_$10376",
+                    "typeString": "enum MessageStatus"
+                  },
+                  "typeName": {
+                    "id": 9222,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 9221,
+                      "name": "MessageStatus",
+                      "nameLocations": [
+                        "3021:13:32"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10376,
+                      "src": "3021:13:32"
+                    },
+                    "referencedDeclaration": 10376,
+                    "src": "3021:13:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_MessageStatus_$10376",
+                      "typeString": "enum MessageStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3020:22:32"
+            },
+            "scope": 9234,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9233,
+            "nodeType": "FunctionDefinition",
+            "src": "3481:87:32",
+            "nodes": [],
+            "documentation": {
+              "id": 9226,
+              "nodeType": "StructuredDocumentation",
+              "src": "3049:427:32",
+              "text": " @notice Returns a formatted payload with the message receipt.\n @dev Notaries could derive the tips, and the tips proof using the message payload, and submit\n the signed receipt with the proof of tips to `Summit` in order to initiate tips distribution.\n @param messageHash       Hash of the message payload\n @return data             Formatted payload with the message execution receipt"
+            },
+            "functionSelector": "daa74a9e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageReceipt",
+            "nameLocation": "3490:14:32",
+            "parameters": {
+              "id": 9229,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9228,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "3513:11:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9233,
+                  "src": "3505:19:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9227,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3505:7:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3504:21:32"
+            },
+            "returnParameters": {
+              "id": 9232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9231,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "3562:4:32",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9233,
+                  "src": "3549:17:32",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9230,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3549:5:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3548:19:32"
+            },
+            "scope": 9234,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IExecutionHub",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9234
+        ],
+        "name": "IExecutionHub",
+        "nameLocation": "122:13:32",
+        "scope": 9235,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 32
+}

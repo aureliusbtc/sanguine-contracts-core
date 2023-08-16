@@ -1,0 +1,1492 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "contracts/libs/Errors.sol",
+    "id": 10335,
+    "exportedSymbols": {
+      "AgentCantBeAdded": [
+        10268
+      ],
+      "AgentNotActive": [
+        10270
+      ],
+      "AgentNotActiveNorUnstaking": [
+        10272
+      ],
+      "AgentNotFraudulent": [
+        10274
+      ],
+      "AgentNotGuard": [
+        10264
+      ],
+      "AgentNotNotary": [
+        10266
+      ],
+      "AgentNotUnstaking": [
+        10276
+      ],
+      "AgentUnknown": [
+        10278
+      ],
+      "AlreadyExecuted": [
+        10294
+      ],
+      "AlreadyFailed": [
+        10296
+      ],
+      "BaseClientOptimisticPeriod": [
+        10254
+      ],
+      "CallerNotAgentManager": [
+        10174
+      ],
+      "CallerNotDestination": [
+        10176
+      ],
+      "CallerNotInbox": [
+        10178
+      ],
+      "CallerNotSummit": [
+        10180
+      ],
+      "ContentLengthTooBig": [
+        10306
+      ],
+      "DisputeAlreadyResolved": [
+        10280
+      ],
+      "DisputeNotOpened": [
+        10282
+      ],
+      "DisputeNotStuck": [
+        10284
+      ],
+      "DuplicatedSnapshotRoot": [
+        10298
+      ],
+      "EthTransferFailed": [
+        10308
+      ],
+      "FlagOutOfRange": [
+        10214
+      ],
+      "GasLimitTooLow": [
+        10302
+      ],
+      "GasSuppliedTooLow": [
+        10304
+      ],
+      "GuardInDispute": [
+        10286
+      ],
+      "IncorrectAgentDomain": [
+        10184
+      ],
+      "IncorrectAgentIndex": [
+        10186
+      ],
+      "IncorrectAgentProof": [
+        10188
+      ],
+      "IncorrectAttestation": [
+        10182
+      ],
+      "IncorrectDataHash": [
+        10190
+      ],
+      "IncorrectDestinationDomain": [
+        10192
+      ],
+      "IncorrectMagicValue": [
+        10300
+      ],
+      "IncorrectNonce": [
+        10208
+      ],
+      "IncorrectOriginDomain": [
+        10194
+      ],
+      "IncorrectRecipient": [
+        10212
+      ],
+      "IncorrectSender": [
+        10210
+      ],
+      "IncorrectSnapshotProof": [
+        10196
+      ],
+      "IncorrectSnapshotRoot": [
+        10198
+      ],
+      "IncorrectState": [
+        10200
+      ],
+      "IncorrectStatesAmount": [
+        10202
+      ],
+      "IncorrectTipsProof": [
+        10204
+      ],
+      "IncorrectVersionLength": [
+        10206
+      ],
+      "IndexOutOfRange": [
+        10216
+      ],
+      "IndexedTooMuch": [
+        10324
+      ],
+      "InsufficientEthBalance": [
+        10310
+      ],
+      "LeafNotProven": [
+        10246
+      ],
+      "LocalGasDataNotSet": [
+        10312
+      ],
+      "MerkleTreeFull": [
+        10248
+      ],
+      "MessageOptimisticPeriod": [
+        10256
+      ],
+      "MulticallFailed": [
+        10334
+      ],
+      "MustBeSynapseDomain": [
+        10290
+      ],
+      "NonceOutOfRange": [
+        10218
+      ],
+      "NotEnoughLeafs": [
+        10250
+      ],
+      "NotaryInDispute": [
+        10288
+      ],
+      "OccupiedMemory": [
+        10328
+      ],
+      "OutdatedNonce": [
+        10220
+      ],
+      "PrecompileOutOfGas": [
+        10332
+      ],
+      "RemoteGasDataNotSet": [
+        10314
+      ],
+      "SlashAgentOptimisticPeriod": [
+        10258
+      ],
+      "SynapseDomainForbidden": [
+        10292
+      ],
+      "TipsClaimMoreThanEarned": [
+        10316
+      ],
+      "TipsClaimZero": [
+        10318
+      ],
+      "TipsOverflow": [
+        10320
+      ],
+      "TipsValueTooLow": [
+        10322
+      ],
+      "TreeHeightTooLow": [
+        10252
+      ],
+      "UnallocatedMemory": [
+        10330
+      ],
+      "UnformattedAttestation": [
+        10222
+      ],
+      "UnformattedAttestationReport": [
+        10224
+      ],
+      "UnformattedBaseMessage": [
+        10226
+      ],
+      "UnformattedCallData": [
+        10228
+      ],
+      "UnformattedCallDataPrefix": [
+        10230
+      ],
+      "UnformattedMessage": [
+        10232
+      ],
+      "UnformattedReceipt": [
+        10234
+      ],
+      "UnformattedReceiptReport": [
+        10236
+      ],
+      "UnformattedSignature": [
+        10238
+      ],
+      "UnformattedSnapshot": [
+        10240
+      ],
+      "UnformattedState": [
+        10242
+      ],
+      "UnformattedStateReport": [
+        10244
+      ],
+      "ViewOverrun": [
+        10326
+      ],
+      "WithdrawTipsOptimisticPeriod": [
+        10260
+      ],
+      "ZeroProofMaturity": [
+        10262
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:4626:46",
+    "nodes": [
+      {
+        "id": 10172,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:46",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 10174,
+        "nodeType": "ErrorDefinition",
+        "src": "261:30:46",
+        "nodes": [],
+        "errorSelector": "f79626c6",
+        "name": "CallerNotAgentManager",
+        "nameLocation": "267:21:46",
+        "parameters": {
+          "id": 10173,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "288:2:46"
+        }
+      },
+      {
+        "id": 10176,
+        "nodeType": "ErrorDefinition",
+        "src": "292:29:46",
+        "nodes": [],
+        "errorSelector": "6efcc49f",
+        "name": "CallerNotDestination",
+        "nameLocation": "298:20:46",
+        "parameters": {
+          "id": 10175,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "318:2:46"
+        }
+      },
+      {
+        "id": 10178,
+        "nodeType": "ErrorDefinition",
+        "src": "322:23:46",
+        "nodes": [],
+        "errorSelector": "dbc2fa85",
+        "name": "CallerNotInbox",
+        "nameLocation": "328:14:46",
+        "parameters": {
+          "id": 10177,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "342:2:46"
+        }
+      },
+      {
+        "id": 10180,
+        "nodeType": "ErrorDefinition",
+        "src": "346:24:46",
+        "nodes": [],
+        "errorSelector": "c9c49ce6",
+        "name": "CallerNotSummit",
+        "nameLocation": "352:15:46",
+        "parameters": {
+          "id": 10179,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "367:2:46"
+        }
+      },
+      {
+        "id": 10182,
+        "nodeType": "ErrorDefinition",
+        "src": "576:29:46",
+        "nodes": [],
+        "errorSelector": "d6ab3b21",
+        "name": "IncorrectAttestation",
+        "nameLocation": "582:20:46",
+        "parameters": {
+          "id": 10181,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "602:2:46"
+        }
+      },
+      {
+        "id": 10184,
+        "nodeType": "ErrorDefinition",
+        "src": "606:29:46",
+        "nodes": [],
+        "errorSelector": "1612d2ee",
+        "name": "IncorrectAgentDomain",
+        "nameLocation": "612:20:46",
+        "parameters": {
+          "id": 10183,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "632:2:46"
+        }
+      },
+      {
+        "id": 10186,
+        "nodeType": "ErrorDefinition",
+        "src": "636:28:46",
+        "nodes": [],
+        "errorSelector": "4ae22ee4",
+        "name": "IncorrectAgentIndex",
+        "nameLocation": "642:19:46",
+        "parameters": {
+          "id": 10185,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "661:2:46"
+        }
+      },
+      {
+        "id": 10188,
+        "nodeType": "ErrorDefinition",
+        "src": "665:28:46",
+        "nodes": [],
+        "errorSelector": "4cc472e7",
+        "name": "IncorrectAgentProof",
+        "nameLocation": "671:19:46",
+        "parameters": {
+          "id": 10187,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "690:2:46"
+        }
+      },
+      {
+        "id": 10190,
+        "nodeType": "ErrorDefinition",
+        "src": "694:26:46",
+        "nodes": [],
+        "errorSelector": "184fb2df",
+        "name": "IncorrectDataHash",
+        "nameLocation": "700:17:46",
+        "parameters": {
+          "id": 10189,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "717:2:46"
+        }
+      },
+      {
+        "id": 10192,
+        "nodeType": "ErrorDefinition",
+        "src": "721:35:46",
+        "nodes": [],
+        "errorSelector": "a752c232",
+        "name": "IncorrectDestinationDomain",
+        "nameLocation": "727:26:46",
+        "parameters": {
+          "id": 10191,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "753:2:46"
+        }
+      },
+      {
+        "id": 10194,
+        "nodeType": "ErrorDefinition",
+        "src": "757:30:46",
+        "nodes": [],
+        "errorSelector": "3eeb1dd4",
+        "name": "IncorrectOriginDomain",
+        "nameLocation": "763:21:46",
+        "parameters": {
+          "id": 10193,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "784:2:46"
+        }
+      },
+      {
+        "id": 10196,
+        "nodeType": "ErrorDefinition",
+        "src": "788:31:46",
+        "nodes": [],
+        "errorSelector": "e6ef47cc",
+        "name": "IncorrectSnapshotProof",
+        "nameLocation": "794:22:46",
+        "parameters": {
+          "id": 10195,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "816:2:46"
+        }
+      },
+      {
+        "id": 10198,
+        "nodeType": "ErrorDefinition",
+        "src": "820:30:46",
+        "nodes": [],
+        "errorSelector": "2546f9ea",
+        "name": "IncorrectSnapshotRoot",
+        "nameLocation": "826:21:46",
+        "parameters": {
+          "id": 10197,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "847:2:46"
+        }
+      },
+      {
+        "id": 10200,
+        "nodeType": "ErrorDefinition",
+        "src": "851:23:46",
+        "nodes": [],
+        "errorSelector": "508c9390",
+        "name": "IncorrectState",
+        "nameLocation": "857:14:46",
+        "parameters": {
+          "id": 10199,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "871:2:46"
+        }
+      },
+      {
+        "id": 10202,
+        "nodeType": "ErrorDefinition",
+        "src": "875:30:46",
+        "nodes": [],
+        "errorSelector": "ed98da66",
+        "name": "IncorrectStatesAmount",
+        "nameLocation": "881:21:46",
+        "parameters": {
+          "id": 10201,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "902:2:46"
+        }
+      },
+      {
+        "id": 10204,
+        "nodeType": "ErrorDefinition",
+        "src": "906:27:46",
+        "nodes": [],
+        "errorSelector": "d681cbdc",
+        "name": "IncorrectTipsProof",
+        "nameLocation": "912:18:46",
+        "parameters": {
+          "id": 10203,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "930:2:46"
+        }
+      },
+      {
+        "id": 10206,
+        "nodeType": "ErrorDefinition",
+        "src": "934:31:46",
+        "nodes": [],
+        "errorSelector": "b475a12d",
+        "name": "IncorrectVersionLength",
+        "nameLocation": "940:22:46",
+        "parameters": {
+          "id": 10205,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "962:2:46"
+        }
+      },
+      {
+        "id": 10208,
+        "nodeType": "ErrorDefinition",
+        "src": "967:23:46",
+        "nodes": [],
+        "errorSelector": "674d8d88",
+        "name": "IncorrectNonce",
+        "nameLocation": "973:14:46",
+        "parameters": {
+          "id": 10207,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "987:2:46"
+        }
+      },
+      {
+        "id": 10210,
+        "nodeType": "ErrorDefinition",
+        "src": "991:24:46",
+        "nodes": [],
+        "errorSelector": "7d1c29f3",
+        "name": "IncorrectSender",
+        "nameLocation": "997:15:46",
+        "parameters": {
+          "id": 10209,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1012:2:46"
+        }
+      },
+      {
+        "id": 10212,
+        "nodeType": "ErrorDefinition",
+        "src": "1016:27:46",
+        "nodes": [],
+        "errorSelector": "519bdea7",
+        "name": "IncorrectRecipient",
+        "nameLocation": "1022:18:46",
+        "parameters": {
+          "id": 10211,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1040:2:46"
+        }
+      },
+      {
+        "id": 10214,
+        "nodeType": "ErrorDefinition",
+        "src": "1045:23:46",
+        "nodes": [],
+        "errorSelector": "58ebbfbe",
+        "name": "FlagOutOfRange",
+        "nameLocation": "1051:14:46",
+        "parameters": {
+          "id": 10213,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1065:2:46"
+        }
+      },
+      {
+        "id": 10216,
+        "nodeType": "ErrorDefinition",
+        "src": "1069:24:46",
+        "nodes": [],
+        "errorSelector": "1390f2a1",
+        "name": "IndexOutOfRange",
+        "nameLocation": "1075:15:46",
+        "parameters": {
+          "id": 10215,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1090:2:46"
+        }
+      },
+      {
+        "id": 10218,
+        "nodeType": "ErrorDefinition",
+        "src": "1094:24:46",
+        "nodes": [],
+        "errorSelector": "dad9fe33",
+        "name": "NonceOutOfRange",
+        "nameLocation": "1100:15:46",
+        "parameters": {
+          "id": 10217,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1115:2:46"
+        }
+      },
+      {
+        "id": 10220,
+        "nodeType": "ErrorDefinition",
+        "src": "1120:22:46",
+        "nodes": [],
+        "errorSelector": "7b7fd2c2",
+        "name": "OutdatedNonce",
+        "nameLocation": "1126:13:46",
+        "parameters": {
+          "id": 10219,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1139:2:46"
+        }
+      },
+      {
+        "id": 10222,
+        "nodeType": "ErrorDefinition",
+        "src": "1144:31:46",
+        "nodes": [],
+        "errorSelector": "eb92662c",
+        "name": "UnformattedAttestation",
+        "nameLocation": "1150:22:46",
+        "parameters": {
+          "id": 10221,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1172:2:46"
+        }
+      },
+      {
+        "id": 10224,
+        "nodeType": "ErrorDefinition",
+        "src": "1176:37:46",
+        "nodes": [],
+        "errorSelector": "ec540dad",
+        "name": "UnformattedAttestationReport",
+        "nameLocation": "1182:28:46",
+        "parameters": {
+          "id": 10223,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1210:2:46"
+        }
+      },
+      {
+        "id": 10226,
+        "nodeType": "ErrorDefinition",
+        "src": "1214:31:46",
+        "nodes": [],
+        "errorSelector": "35c196ef",
+        "name": "UnformattedBaseMessage",
+        "nameLocation": "1220:22:46",
+        "parameters": {
+          "id": 10225,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1242:2:46"
+        }
+      },
+      {
+        "id": 10228,
+        "nodeType": "ErrorDefinition",
+        "src": "1246:28:46",
+        "nodes": [],
+        "errorSelector": "9d463628",
+        "name": "UnformattedCallData",
+        "nameLocation": "1252:19:46",
+        "parameters": {
+          "id": 10227,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1271:2:46"
+        }
+      },
+      {
+        "id": 10230,
+        "nodeType": "ErrorDefinition",
+        "src": "1275:34:46",
+        "nodes": [],
+        "errorSelector": "d49e9d18",
+        "name": "UnformattedCallDataPrefix",
+        "nameLocation": "1281:25:46",
+        "parameters": {
+          "id": 10229,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1306:2:46"
+        }
+      },
+      {
+        "id": 10232,
+        "nodeType": "ErrorDefinition",
+        "src": "1310:27:46",
+        "nodes": [],
+        "errorSelector": "d082b2a9",
+        "name": "UnformattedMessage",
+        "nameLocation": "1316:18:46",
+        "parameters": {
+          "id": 10231,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1334:2:46"
+        }
+      },
+      {
+        "id": 10234,
+        "nodeType": "ErrorDefinition",
+        "src": "1338:27:46",
+        "nodes": [],
+        "errorSelector": "76b4e13c",
+        "name": "UnformattedReceipt",
+        "nameLocation": "1344:18:46",
+        "parameters": {
+          "id": 10233,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1362:2:46"
+        }
+      },
+      {
+        "id": 10236,
+        "nodeType": "ErrorDefinition",
+        "src": "1366:33:46",
+        "nodes": [],
+        "errorSelector": "af284056",
+        "name": "UnformattedReceiptReport",
+        "nameLocation": "1372:24:46",
+        "parameters": {
+          "id": 10235,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1396:2:46"
+        }
+      },
+      {
+        "id": 10238,
+        "nodeType": "ErrorDefinition",
+        "src": "1400:29:46",
+        "nodes": [],
+        "errorSelector": "2dcad0d8",
+        "name": "UnformattedSignature",
+        "nameLocation": "1406:20:46",
+        "parameters": {
+          "id": 10237,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1426:2:46"
+        }
+      },
+      {
+        "id": 10240,
+        "nodeType": "ErrorDefinition",
+        "src": "1430:28:46",
+        "nodes": [],
+        "errorSelector": "b963c35a",
+        "name": "UnformattedSnapshot",
+        "nameLocation": "1436:19:46",
+        "parameters": {
+          "id": 10239,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1455:2:46"
+        }
+      },
+      {
+        "id": 10242,
+        "nodeType": "ErrorDefinition",
+        "src": "1459:25:46",
+        "nodes": [],
+        "errorSelector": "6ba041c4",
+        "name": "UnformattedState",
+        "nameLocation": "1465:16:46",
+        "parameters": {
+          "id": 10241,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1481:2:46"
+        }
+      },
+      {
+        "id": 10244,
+        "nodeType": "ErrorDefinition",
+        "src": "1485:31:46",
+        "nodes": [],
+        "errorSelector": "9deb2882",
+        "name": "UnformattedStateReport",
+        "nameLocation": "1491:22:46",
+        "parameters": {
+          "id": 10243,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1513:2:46"
+        }
+      },
+      {
+        "id": 10246,
+        "nodeType": "ErrorDefinition",
+        "src": "1726:22:46",
+        "nodes": [],
+        "errorSelector": "18b00be2",
+        "name": "LeafNotProven",
+        "nameLocation": "1732:13:46",
+        "parameters": {
+          "id": 10245,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1745:2:46"
+        }
+      },
+      {
+        "id": 10248,
+        "nodeType": "ErrorDefinition",
+        "src": "1749:23:46",
+        "nodes": [],
+        "errorSelector": "ef5ccf66",
+        "name": "MerkleTreeFull",
+        "nameLocation": "1755:14:46",
+        "parameters": {
+          "id": 10247,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1769:2:46"
+        }
+      },
+      {
+        "id": 10250,
+        "nodeType": "ErrorDefinition",
+        "src": "1773:23:46",
+        "nodes": [],
+        "errorSelector": "8397c2ad",
+        "name": "NotEnoughLeafs",
+        "nameLocation": "1779:14:46",
+        "parameters": {
+          "id": 10249,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1793:2:46"
+        }
+      },
+      {
+        "id": 10252,
+        "nodeType": "ErrorDefinition",
+        "src": "1797:25:46",
+        "nodes": [],
+        "errorSelector": "c5360feb",
+        "name": "TreeHeightTooLow",
+        "nameLocation": "1803:16:46",
+        "parameters": {
+          "id": 10251,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "1819:2:46"
+        }
+      },
+      {
+        "id": 10254,
+        "nodeType": "ErrorDefinition",
+        "src": "2022:35:46",
+        "nodes": [],
+        "errorSelector": "48083d55",
+        "name": "BaseClientOptimisticPeriod",
+        "nameLocation": "2028:26:46",
+        "parameters": {
+          "id": 10253,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2054:2:46"
+        }
+      },
+      {
+        "id": 10256,
+        "nodeType": "ErrorDefinition",
+        "src": "2058:32:46",
+        "nodes": [],
+        "errorSelector": "5e5728e8",
+        "name": "MessageOptimisticPeriod",
+        "nameLocation": "2064:23:46",
+        "parameters": {
+          "id": 10255,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2087:2:46"
+        }
+      },
+      {
+        "id": 10258,
+        "nodeType": "ErrorDefinition",
+        "src": "2091:35:46",
+        "nodes": [],
+        "errorSelector": "a8928dd0",
+        "name": "SlashAgentOptimisticPeriod",
+        "nameLocation": "2097:26:46",
+        "parameters": {
+          "id": 10257,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2123:2:46"
+        }
+      },
+      {
+        "id": 10260,
+        "nodeType": "ErrorDefinition",
+        "src": "2127:37:46",
+        "nodes": [],
+        "errorSelector": "df5728f3",
+        "name": "WithdrawTipsOptimisticPeriod",
+        "nameLocation": "2133:28:46",
+        "parameters": {
+          "id": 10259,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2161:2:46"
+        }
+      },
+      {
+        "id": 10262,
+        "nodeType": "ErrorDefinition",
+        "src": "2165:26:46",
+        "nodes": [],
+        "errorSelector": "dce28ace",
+        "name": "ZeroProofMaturity",
+        "nameLocation": "2171:17:46",
+        "parameters": {
+          "id": 10261,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2188:2:46"
+        }
+      },
+      {
+        "id": 10264,
+        "nodeType": "ErrorDefinition",
+        "src": "2399:22:46",
+        "nodes": [],
+        "errorSelector": "70488f8b",
+        "name": "AgentNotGuard",
+        "nameLocation": "2405:13:46",
+        "parameters": {
+          "id": 10263,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2418:2:46"
+        }
+      },
+      {
+        "id": 10266,
+        "nodeType": "ErrorDefinition",
+        "src": "2422:23:46",
+        "nodes": [],
+        "errorSelector": "a998e1ca",
+        "name": "AgentNotNotary",
+        "nameLocation": "2428:14:46",
+        "parameters": {
+          "id": 10265,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2442:2:46"
+        }
+      },
+      {
+        "id": 10268,
+        "nodeType": "ErrorDefinition",
+        "src": "2447:25:46",
+        "nodes": [],
+        "errorSelector": "86511bd9",
+        "name": "AgentCantBeAdded",
+        "nameLocation": "2453:16:46",
+        "parameters": {
+          "id": 10267,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2469:2:46"
+        }
+      },
+      {
+        "id": 10270,
+        "nodeType": "ErrorDefinition",
+        "src": "2473:23:46",
+        "nodes": [],
+        "errorSelector": "486fcee2",
+        "name": "AgentNotActive",
+        "nameLocation": "2479:14:46",
+        "parameters": {
+          "id": 10269,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2493:2:46"
+        }
+      },
+      {
+        "id": 10272,
+        "nodeType": "ErrorDefinition",
+        "src": "2497:35:46",
+        "nodes": [],
+        "errorSelector": "ec3d0d85",
+        "name": "AgentNotActiveNorUnstaking",
+        "nameLocation": "2503:26:46",
+        "parameters": {
+          "id": 10271,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2529:2:46"
+        }
+      },
+      {
+        "id": 10274,
+        "nodeType": "ErrorDefinition",
+        "src": "2533:27:46",
+        "nodes": [],
+        "errorSelector": "0a069037",
+        "name": "AgentNotFraudulent",
+        "nameLocation": "2539:18:46",
+        "parameters": {
+          "id": 10273,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2557:2:46"
+        }
+      },
+      {
+        "id": 10276,
+        "nodeType": "ErrorDefinition",
+        "src": "2561:26:46",
+        "nodes": [],
+        "errorSelector": "e637af94",
+        "name": "AgentNotUnstaking",
+        "nameLocation": "2567:17:46",
+        "parameters": {
+          "id": 10275,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2584:2:46"
+        }
+      },
+      {
+        "id": 10278,
+        "nodeType": "ErrorDefinition",
+        "src": "2588:21:46",
+        "nodes": [],
+        "errorSelector": "dc449cb7",
+        "name": "AgentUnknown",
+        "nameLocation": "2594:12:46",
+        "parameters": {
+          "id": 10277,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2606:2:46"
+        }
+      },
+      {
+        "id": 10280,
+        "nodeType": "ErrorDefinition",
+        "src": "2611:31:46",
+        "nodes": [],
+        "errorSelector": "f10068b5",
+        "name": "DisputeAlreadyResolved",
+        "nameLocation": "2617:22:46",
+        "parameters": {
+          "id": 10279,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2639:2:46"
+        }
+      },
+      {
+        "id": 10282,
+        "nodeType": "ErrorDefinition",
+        "src": "2643:25:46",
+        "nodes": [],
+        "errorSelector": "b3a71fa2",
+        "name": "DisputeNotOpened",
+        "nameLocation": "2649:16:46",
+        "parameters": {
+          "id": 10281,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2665:2:46"
+        }
+      },
+      {
+        "id": 10284,
+        "nodeType": "ErrorDefinition",
+        "src": "2669:24:46",
+        "nodes": [],
+        "errorSelector": "6fdc56c0",
+        "name": "DisputeNotStuck",
+        "nameLocation": "2675:15:46",
+        "parameters": {
+          "id": 10283,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2690:2:46"
+        }
+      },
+      {
+        "id": 10286,
+        "nodeType": "ErrorDefinition",
+        "src": "2694:23:46",
+        "nodes": [],
+        "errorSelector": "d9d49b4c",
+        "name": "GuardInDispute",
+        "nameLocation": "2700:14:46",
+        "parameters": {
+          "id": 10285,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2714:2:46"
+        }
+      },
+      {
+        "id": 10288,
+        "nodeType": "ErrorDefinition",
+        "src": "2718:24:46",
+        "nodes": [],
+        "errorSelector": "68930143",
+        "name": "NotaryInDispute",
+        "nameLocation": "2724:15:46",
+        "parameters": {
+          "id": 10287,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2739:2:46"
+        }
+      },
+      {
+        "id": 10290,
+        "nodeType": "ErrorDefinition",
+        "src": "2744:28:46",
+        "nodes": [],
+        "errorSelector": "2b3a807f",
+        "name": "MustBeSynapseDomain",
+        "nameLocation": "2750:19:46",
+        "parameters": {
+          "id": 10289,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2769:2:46"
+        }
+      },
+      {
+        "id": 10292,
+        "nodeType": "ErrorDefinition",
+        "src": "2773:31:46",
+        "nodes": [],
+        "errorSelector": "f2b2faa0",
+        "name": "SynapseDomainForbidden",
+        "nameLocation": "2779:22:46",
+        "parameters": {
+          "id": 10291,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "2801:2:46"
+        }
+      },
+      {
+        "id": 10294,
+        "nodeType": "ErrorDefinition",
+        "src": "3016:24:46",
+        "nodes": [],
+        "errorSelector": "0dc10197",
+        "name": "AlreadyExecuted",
+        "nameLocation": "3022:15:46",
+        "parameters": {
+          "id": 10293,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3037:2:46"
+        }
+      },
+      {
+        "id": 10296,
+        "nodeType": "ErrorDefinition",
+        "src": "3041:22:46",
+        "nodes": [],
+        "errorSelector": "589a41b7",
+        "name": "AlreadyFailed",
+        "nameLocation": "3047:13:46",
+        "parameters": {
+          "id": 10295,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3060:2:46"
+        }
+      },
+      {
+        "id": 10298,
+        "nodeType": "ErrorDefinition",
+        "src": "3064:31:46",
+        "nodes": [],
+        "errorSelector": "a7897129",
+        "name": "DuplicatedSnapshotRoot",
+        "nameLocation": "3070:22:46",
+        "parameters": {
+          "id": 10297,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3092:2:46"
+        }
+      },
+      {
+        "id": 10300,
+        "nodeType": "ErrorDefinition",
+        "src": "3096:28:46",
+        "nodes": [],
+        "errorSelector": "f8b42218",
+        "name": "IncorrectMagicValue",
+        "nameLocation": "3102:19:46",
+        "parameters": {
+          "id": 10299,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3121:2:46"
+        }
+      },
+      {
+        "id": 10302,
+        "nodeType": "ErrorDefinition",
+        "src": "3125:23:46",
+        "nodes": [],
+        "errorSelector": "ed43c3a6",
+        "name": "GasLimitTooLow",
+        "nameLocation": "3131:14:46",
+        "parameters": {
+          "id": 10301,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3145:2:46"
+        }
+      },
+      {
+        "id": 10304,
+        "nodeType": "ErrorDefinition",
+        "src": "3149:26:46",
+        "nodes": [],
+        "errorSelector": "aa6c8985",
+        "name": "GasSuppliedTooLow",
+        "nameLocation": "3155:17:46",
+        "parameters": {
+          "id": 10303,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3172:2:46"
+        }
+      },
+      {
+        "id": 10306,
+        "nodeType": "ErrorDefinition",
+        "src": "3397:28:46",
+        "nodes": [],
+        "errorSelector": "b974c302",
+        "name": "ContentLengthTooBig",
+        "nameLocation": "3403:19:46",
+        "parameters": {
+          "id": 10305,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3422:2:46"
+        }
+      },
+      {
+        "id": 10308,
+        "nodeType": "ErrorDefinition",
+        "src": "3426:26:46",
+        "nodes": [],
+        "errorSelector": "6d963f88",
+        "name": "EthTransferFailed",
+        "nameLocation": "3432:17:46",
+        "parameters": {
+          "id": 10307,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3449:2:46"
+        }
+      },
+      {
+        "id": 10310,
+        "nodeType": "ErrorDefinition",
+        "src": "3453:31:46",
+        "nodes": [],
+        "errorSelector": "b6d6e7d6",
+        "name": "InsufficientEthBalance",
+        "nameLocation": "3459:22:46",
+        "parameters": {
+          "id": 10309,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3481:2:46"
+        }
+      },
+      {
+        "id": 10312,
+        "nodeType": "ErrorDefinition",
+        "src": "3698:27:46",
+        "nodes": [],
+        "errorSelector": "682c1574",
+        "name": "LocalGasDataNotSet",
+        "nameLocation": "3704:18:46",
+        "parameters": {
+          "id": 10311,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3722:2:46"
+        }
+      },
+      {
+        "id": 10314,
+        "nodeType": "ErrorDefinition",
+        "src": "3726:28:46",
+        "nodes": [],
+        "errorSelector": "0ffb7397",
+        "name": "RemoteGasDataNotSet",
+        "nameLocation": "3732:19:46",
+        "parameters": {
+          "id": 10313,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "3751:2:46"
+        }
+      },
+      {
+        "id": 10316,
+        "nodeType": "ErrorDefinition",
+        "src": "3980:32:46",
+        "nodes": [],
+        "errorSelector": "31bf27dd",
+        "name": "TipsClaimMoreThanEarned",
+        "nameLocation": "3986:23:46",
+        "parameters": {
+          "id": 10315,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4009:2:46"
+        }
+      },
+      {
+        "id": 10318,
+        "nodeType": "ErrorDefinition",
+        "src": "4013:22:46",
+        "nodes": [],
+        "errorSelector": "911f19ba",
+        "name": "TipsClaimZero",
+        "nameLocation": "4019:13:46",
+        "parameters": {
+          "id": 10317,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4032:2:46"
+        }
+      },
+      {
+        "id": 10320,
+        "nodeType": "ErrorDefinition",
+        "src": "4036:21:46",
+        "nodes": [],
+        "errorSelector": "1b438b33",
+        "name": "TipsOverflow",
+        "nameLocation": "4042:12:46",
+        "parameters": {
+          "id": 10319,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4054:2:46"
+        }
+      },
+      {
+        "id": 10322,
+        "nodeType": "ErrorDefinition",
+        "src": "4058:24:46",
+        "nodes": [],
+        "errorSelector": "429726c1",
+        "name": "TipsValueTooLow",
+        "nameLocation": "4064:15:46",
+        "parameters": {
+          "id": 10321,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4079:2:46"
+        }
+      },
+      {
+        "id": 10324,
+        "nodeType": "ErrorDefinition",
+        "src": "4294:23:46",
+        "nodes": [],
+        "errorSelector": "31d784a8",
+        "name": "IndexedTooMuch",
+        "nameLocation": "4300:14:46",
+        "parameters": {
+          "id": 10323,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4314:2:46"
+        }
+      },
+      {
+        "id": 10326,
+        "nodeType": "ErrorDefinition",
+        "src": "4318:20:46",
+        "nodes": [],
+        "errorSelector": "a3b99ded",
+        "name": "ViewOverrun",
+        "nameLocation": "4324:11:46",
+        "parameters": {
+          "id": 10325,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4335:2:46"
+        }
+      },
+      {
+        "id": 10328,
+        "nodeType": "ErrorDefinition",
+        "src": "4339:23:46",
+        "nodes": [],
+        "errorSelector": "4b2a158c",
+        "name": "OccupiedMemory",
+        "nameLocation": "4345:14:46",
+        "parameters": {
+          "id": 10327,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4359:2:46"
+        }
+      },
+      {
+        "id": 10330,
+        "nodeType": "ErrorDefinition",
+        "src": "4363:26:46",
+        "nodes": [],
+        "errorSelector": "10bef386",
+        "name": "UnallocatedMemory",
+        "nameLocation": "4369:17:46",
+        "parameters": {
+          "id": 10329,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4386:2:46"
+        }
+      },
+      {
+        "id": 10332,
+        "nodeType": "ErrorDefinition",
+        "src": "4390:27:46",
+        "nodes": [],
+        "errorSelector": "7c7d772f",
+        "name": "PrecompileOutOfGas",
+        "nameLocation": "4396:18:46",
+        "parameters": {
+          "id": 10331,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4414:2:46"
+        }
+      },
+      {
+        "id": 10334,
+        "nodeType": "ErrorDefinition",
+        "src": "4633:24:46",
+        "nodes": [],
+        "errorSelector": "4d6a2328",
+        "name": "MulticallFailed",
+        "nameLocation": "4639:15:46",
+        "parameters": {
+          "id": 10333,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "4654:2:46"
+        }
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 46
+}

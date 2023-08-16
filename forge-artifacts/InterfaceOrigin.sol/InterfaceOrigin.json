@@ -1,0 +1,1051 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "paddedRequest",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "contentLength",
+          "type": "uint256"
+        }
+      ],
+      "name": "getMinimumTipsValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "tipsValue",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "recipient",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "optimisticPeriod",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "paddedRequest",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "content",
+          "type": "bytes"
+        }
+      ],
+      "name": "sendBaseMessage",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "messageNonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "destination",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "optimisticPeriod",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "payload",
+          "type": "bytes"
+        }
+      ],
+      "name": "sendManagerMessage",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "messageNonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawTips",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getMinimumTipsValue(uint32,uint256,uint256)": "4fc6ad85",
+    "sendBaseMessage(uint32,bytes32,uint32,uint256,bytes)": "873661bd",
+    "sendManagerMessage(uint32,uint32,bytes)": "a1c702a7",
+    "withdrawTips(address,uint256)": "4e04e7a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"paddedRequest\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"contentLength\",\"type\":\"uint256\"}],\"name\":\"getMinimumTipsValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tipsValue\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"internalType\":\"bytes32\",\"name\":\"recipient\",\"type\":\"bytes32\"},{\"internalType\":\"uint32\",\"name\":\"optimisticPeriod\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"paddedRequest\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"content\",\"type\":\"bytes\"}],\"name\":\"sendBaseMessage\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"messageNonce\",\"type\":\"uint32\"},{\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"destination\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"optimisticPeriod\",\"type\":\"uint32\"},{\"internalType\":\"bytes\",\"name\":\"payload\",\"type\":\"bytes\"}],\"name\":\"sendManagerMessage\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"messageNonce\",\"type\":\"uint32\"},{\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawTips\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getMinimumTipsValue(uint32,uint256,uint256)\":{\"details\":\"Using at least `tipsValue` as `msg.value` for `sendBaseMessage()` will guarantee that the message will be accepted.\",\"params\":{\"contentLength\":\"The length of the message content\",\"destination\":\"Domain of destination chain\",\"paddedRequest\":\"Padded encoded message execution request on destination chain\"},\"returns\":{\"tipsValue\":\"       Minimum tips value for a message to be accepted\"}},\"sendBaseMessage(uint32,bytes32,uint32,uint256,bytes)\":{\"details\":\"Recipient has to conform to IMessageRecipient interface, otherwise message won't be delivered.\",\"params\":{\"content\":\"Raw bytes content of message\",\"destination\":\"Domain of destination chain\",\"optimisticPeriod\":\"Optimistic period for message execution on destination chain\",\"paddedRequest\":\"Padded encoded message execution request on destination chain\",\"recipient\":\"Address of recipient on destination chain as bytes32\"},\"returns\":{\"messageHash\":\"         Hash of the sent message\",\"messageNonce\":\"        Nonce of the sent message\"}},\"sendManagerMessage(uint32,uint32,bytes)\":{\"details\":\"This could only be called by AgentManager, which takes care of encoding the calldata payload. Note: (msgOrigin, proofMaturity) security args will be added to payload on the destination chain so that the AgentManager could verify where the Manager Message came from and how mature is the proof. Note: function is not payable, as no tips are required for sending a manager message.\",\"params\":{\"destination\":\"Domain of destination chain\",\"optimisticPeriod\":\"Optimistic period for message execution on destination chain\",\"payload\":\"Payload for calling AgentManager on destination chain (with extra security args)\"}},\"withdrawTips(address,uint256)\":{\"details\":\"Could only be called by a local AgentManager.\",\"params\":{\"amount\":\"Tips value to withdraw\",\"recipient\":\"Address to withdraw tips to\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getMinimumTipsValue(uint32,uint256,uint256)\":{\"notice\":\"Returns the minimum tips value for sending a message to a given destination.\"},\"sendBaseMessage(uint32,bytes32,uint32,uint256,bytes)\":{\"notice\":\"Send a message to the recipient located on destination domain.\"},\"sendManagerMessage(uint32,uint32,bytes)\":{\"notice\":\"Send a manager message to the destination domain.\"},\"withdrawTips(address,uint256)\":{\"notice\":\"Withdraws locked base message tips to the recipient.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/InterfaceOrigin.sol\":\"InterfaceOrigin\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/InterfaceOrigin.sol\":{\"keccak256\":\"0xe2c7feb15991348e274a413ee7e24c4cc4e2225c851924955ad2f025c8b5c42f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://314cdd9daf29e9d6ed288e02be302487cce6c0ca89805e5e8f6d78fb150c6ea6\",\"dweb:/ipfs/QmP6vY22Cpf45a3eDR6hPBnDDqCPcu4cRXJhH7W41ohkD6\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedRequest",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "contentLength",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getMinimumTipsValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "tipsValue",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "recipient",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "optimisticPeriod",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedRequest",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "content",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "sendBaseMessage",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "messageNonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "destination",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "optimisticPeriod",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "payload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "sendManagerMessage",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "messageNonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawTips"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getMinimumTipsValue(uint32,uint256,uint256)": {
+            "details": "Using at least `tipsValue` as `msg.value` for `sendBaseMessage()` will guarantee that the message will be accepted.",
+            "params": {
+              "contentLength": "The length of the message content",
+              "destination": "Domain of destination chain",
+              "paddedRequest": "Padded encoded message execution request on destination chain"
+            },
+            "returns": {
+              "tipsValue": "       Minimum tips value for a message to be accepted"
+            }
+          },
+          "sendBaseMessage(uint32,bytes32,uint32,uint256,bytes)": {
+            "details": "Recipient has to conform to IMessageRecipient interface, otherwise message won't be delivered.",
+            "params": {
+              "content": "Raw bytes content of message",
+              "destination": "Domain of destination chain",
+              "optimisticPeriod": "Optimistic period for message execution on destination chain",
+              "paddedRequest": "Padded encoded message execution request on destination chain",
+              "recipient": "Address of recipient on destination chain as bytes32"
+            },
+            "returns": {
+              "messageHash": "         Hash of the sent message",
+              "messageNonce": "        Nonce of the sent message"
+            }
+          },
+          "sendManagerMessage(uint32,uint32,bytes)": {
+            "details": "This could only be called by AgentManager, which takes care of encoding the calldata payload. Note: (msgOrigin, proofMaturity) security args will be added to payload on the destination chain so that the AgentManager could verify where the Manager Message came from and how mature is the proof. Note: function is not payable, as no tips are required for sending a manager message.",
+            "params": {
+              "destination": "Domain of destination chain",
+              "optimisticPeriod": "Optimistic period for message execution on destination chain",
+              "payload": "Payload for calling AgentManager on destination chain (with extra security args)"
+            }
+          },
+          "withdrawTips(address,uint256)": {
+            "details": "Could only be called by a local AgentManager.",
+            "params": {
+              "amount": "Tips value to withdraw",
+              "recipient": "Address to withdraw tips to"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getMinimumTipsValue(uint32,uint256,uint256)": {
+            "notice": "Returns the minimum tips value for sending a message to a given destination."
+          },
+          "sendBaseMessage(uint32,bytes32,uint32,uint256,bytes)": {
+            "notice": "Send a message to the recipient located on destination domain."
+          },
+          "sendManagerMessage(uint32,uint32,bytes)": {
+            "notice": "Send a manager message to the destination domain."
+          },
+          "withdrawTips(address,uint256)": {
+            "notice": "Withdraws locked base message tips to the recipient."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/InterfaceOrigin.sol": "InterfaceOrigin"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/InterfaceOrigin.sol": {
+        "keccak256": "0xe2c7feb15991348e274a413ee7e24c4cc4e2225c851924955ad2f025c8b5c42f",
+        "urls": [
+          "bzz-raw://314cdd9daf29e9d6ed288e02be302487cce6c0ca89805e5e8f6d78fb150c6ea6",
+          "dweb:/ipfs/QmP6vY22Cpf45a3eDR6hPBnDDqCPcu4cRXJhH7W41ohkD6"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/InterfaceOrigin.sol",
+    "id": 9967,
+    "exportedSymbols": {
+      "InterfaceOrigin": [
+        9966
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:4001:43",
+    "nodes": [
+      {
+        "id": 9913,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:43",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9966,
+        "nodeType": "ContractDefinition",
+        "src": "57:3975:43",
+        "nodes": [
+          {
+            "id": 9931,
+            "nodeType": "FunctionDefinition",
+            "src": "1144:248:43",
+            "nodes": [],
+            "documentation": {
+              "id": 9914,
+              "nodeType": "StructuredDocumentation",
+              "src": "407:732:43",
+              "text": " @notice Send a message to the recipient located on destination domain.\n @dev Recipient has to conform to IMessageRecipient interface, otherwise message won't be delivered.\n @param destination           Domain of destination chain\n @param recipient             Address of recipient on destination chain as bytes32\n @param optimisticPeriod      Optimistic period for message execution on destination chain\n @param paddedRequest         Padded encoded message execution request on destination chain\n @param content               Raw bytes content of message\n @return messageNonce         Nonce of the sent message\n @return messageHash          Hash of the sent message"
+            },
+            "functionSelector": "873661bd",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sendBaseMessage",
+            "nameLocation": "1153:15:43",
+            "parameters": {
+              "id": 9925,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9916,
+                  "mutability": "mutable",
+                  "name": "destination",
+                  "nameLocation": "1185:11:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1178:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9915,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1178:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9918,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "1214:9:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1206:17:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9917,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1206:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9920,
+                  "mutability": "mutable",
+                  "name": "optimisticPeriod",
+                  "nameLocation": "1240:16:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1233:23:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9919,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1233:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9922,
+                  "mutability": "mutable",
+                  "name": "paddedRequest",
+                  "nameLocation": "1274:13:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1266:21:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9921,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1266:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9924,
+                  "mutability": "mutable",
+                  "name": "content",
+                  "nameLocation": "1310:7:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1297:20:43",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9923,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1297:5:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1168:155:43"
+            },
+            "returnParameters": {
+              "id": 9930,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9927,
+                  "mutability": "mutable",
+                  "name": "messageNonce",
+                  "nameLocation": "1357:12:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1350:19:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9926,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1350:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9929,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "1379:11:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9931,
+                  "src": "1371:19:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9928,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1371:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1349:42:43"
+            },
+            "scope": 9966,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9945,
+            "nodeType": "FunctionDefinition",
+            "src": "2170:171:43",
+            "nodes": [],
+            "documentation": {
+              "id": 9932,
+              "nodeType": "StructuredDocumentation",
+              "src": "1398:767:43",
+              "text": " @notice Send a manager message to the destination domain.\n @dev This could only be called by AgentManager, which takes care of encoding the calldata payload.\n Note: (msgOrigin, proofMaturity) security args will be added to payload on the destination chain\n so that the AgentManager could verify where the Manager Message came from and how mature is the proof.\n Note: function is not payable, as no tips are required for sending a manager message.\n @param destination           Domain of destination chain\n @param optimisticPeriod      Optimistic period for message execution on destination chain\n @param payload               Payload for calling AgentManager on destination chain (with extra security args)"
+            },
+            "functionSelector": "a1c702a7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sendManagerMessage",
+            "nameLocation": "2179:18:43",
+            "parameters": {
+              "id": 9939,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9934,
+                  "mutability": "mutable",
+                  "name": "destination",
+                  "nameLocation": "2205:11:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9945,
+                  "src": "2198:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9933,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2198:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9936,
+                  "mutability": "mutable",
+                  "name": "optimisticPeriod",
+                  "nameLocation": "2225:16:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9945,
+                  "src": "2218:23:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9935,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2218:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9938,
+                  "mutability": "mutable",
+                  "name": "payload",
+                  "nameLocation": "2256:7:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9945,
+                  "src": "2243:20:43",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9937,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2243:5:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2197:67:43"
+            },
+            "returnParameters": {
+              "id": 9944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9941,
+                  "mutability": "mutable",
+                  "name": "messageNonce",
+                  "nameLocation": "2306:12:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9945,
+                  "src": "2299:19:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9940,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2299:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9943,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "2328:11:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9945,
+                  "src": "2320:19:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9942,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2320:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2298:42:43"
+            },
+            "scope": 9966,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9953,
+            "nodeType": "FunctionDefinition",
+            "src": "2920:66:43",
+            "nodes": [],
+            "documentation": {
+              "id": 9946,
+              "nodeType": "StructuredDocumentation",
+              "src": "2671:244:43",
+              "text": " @notice Withdraws locked base message tips to the recipient.\n @dev Could only be called by a local AgentManager.\n @param recipient     Address to withdraw tips to\n @param amount        Tips value to withdraw"
+            },
+            "functionSelector": "4e04e7a7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawTips",
+            "nameLocation": "2929:12:43",
+            "parameters": {
+              "id": 9951,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9948,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "2950:9:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9953,
+                  "src": "2942:17:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9947,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2942:7:43",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9950,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2969:6:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9953,
+                  "src": "2961:14:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9949,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2961:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2941:35:43"
+            },
+            "returnParameters": {
+              "id": 9952,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2985:0:43"
+            },
+            "scope": 9966,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9965,
+            "nodeType": "FunctionDefinition",
+            "src": "3869:161:43",
+            "nodes": [],
+            "documentation": {
+              "id": 9954,
+              "nodeType": "StructuredDocumentation",
+              "src": "3326:538:43",
+              "text": " @notice Returns the minimum tips value for sending a message to a given destination.\n @dev Using at least `tipsValue` as `msg.value` for `sendBaseMessage()`\n will guarantee that the message will be accepted.\n @param destination       Domain of destination chain\n @param paddedRequest     Padded encoded message execution request on destination chain\n @param contentLength     The length of the message content\n @return tipsValue        Minimum tips value for a message to be accepted"
+            },
+            "functionSelector": "4fc6ad85",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMinimumTipsValue",
+            "nameLocation": "3878:19:43",
+            "parameters": {
+              "id": 9961,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9956,
+                  "mutability": "mutable",
+                  "name": "destination",
+                  "nameLocation": "3905:11:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9965,
+                  "src": "3898:18:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9955,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3898:6:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9958,
+                  "mutability": "mutable",
+                  "name": "paddedRequest",
+                  "nameLocation": "3926:13:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9965,
+                  "src": "3918:21:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3918:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9960,
+                  "mutability": "mutable",
+                  "name": "contentLength",
+                  "nameLocation": "3949:13:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9965,
+                  "src": "3941:21:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9959,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3941:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3897:66:43"
+            },
+            "returnParameters": {
+              "id": 9964,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9963,
+                  "mutability": "mutable",
+                  "name": "tipsValue",
+                  "nameLocation": "4019:9:43",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9965,
+                  "src": "4011:17:43",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9962,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4011:7:43",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4010:19:43"
+            },
+            "scope": 9966,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "InterfaceOrigin",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9966
+        ],
+        "name": "InterfaceOrigin",
+        "nameLocation": "67:15:43",
+        "scope": 9967,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 43
+}

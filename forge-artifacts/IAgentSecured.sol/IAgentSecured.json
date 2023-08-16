@@ -1,0 +1,1028 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "agentManager",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "agentStatus",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct AgentStatus",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAgent",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct AgentStatus",
+          "name": "status",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "inbox",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "guardIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "notaryIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "openDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "slashedIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "rivalIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "resolveDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "agentManager()": "7622f78d",
+    "agentStatus(address)": "28f3fac9",
+    "getAgent(uint256)": "2de5aaf7",
+    "inbox()": "fb0e722b",
+    "openDispute(uint32,uint32)": "a2155c34",
+    "resolveDispute(uint32,uint32)": "61169218"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"agentManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"agentStatus\",\"outputs\":[{\"components\":[{\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"index\",\"type\":\"uint32\"}],\"internalType\":\"struct AgentStatus\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getAgent\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"index\",\"type\":\"uint32\"}],\"internalType\":\"struct AgentStatus\",\"name\":\"status\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"inbox\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"guardIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"notaryIndex\",\"type\":\"uint32\"}],\"name\":\"openDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"slashedIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"rivalIndex\",\"type\":\"uint32\"}],\"name\":\"resolveDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"agentStatus(address)\":{\"details\":\"Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud, but their status is not updated to Slashed yet.\",\"params\":{\"agent\":\"Agent address\"},\"returns\":{\"_0\":\"Status for the given agent: (flag, domain, index).\"}},\"getAgent(uint256)\":{\"details\":\"Will return empty values if agent with given index doesn't exist.\",\"params\":{\"index\":\"Agent index in the Agent Merkle Tree\"},\"returns\":{\"agent\":\"   Agent address\",\"status\":\"  Status for the given agent: (flag, domain, index)\"}},\"inbox()\":{\"details\":\"Inbox passes verified agent statements to `IAgentSecured` contract.\"},\"openDispute(uint32,uint32)\":{\"params\":{\"guardIndex\":\"Index of the Guard in the Agent Merkle Tree\",\"notaryIndex\":\"Index of the Notary in the Agent Merkle Tree\"}},\"resolveDispute(uint32,uint32)\":{\"params\":{\"rivalIndex\":\"Index of the their Dispute Rival in the Agent Merkle Tree\",\"slashedIndex\":\"Index of the slashed agent in the Agent Merkle Tree\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"agentManager()\":{\"notice\":\"Returns the address of the local AgentManager contract, which is treated as the \\\"source of truth\\\" for agent statuses.\"},\"agentStatus(address)\":{\"notice\":\"Returns (flag, domain, index) for a given agent. See Structures.sol for details.\"},\"getAgent(uint256)\":{\"notice\":\"Returns agent address and their current status for a given agent index.\"},\"inbox()\":{\"notice\":\"Returns the address of the local Inbox contract, which is treated as the \\\"source of truth\\\" for agent-signed statements.\"},\"openDispute(uint32,uint32)\":{\"notice\":\"Local AgentManager should call this function to indicate that a dispute between a Guard and a Notary has been opened.\"},\"resolveDispute(uint32,uint32)\":{\"notice\":\"Local AgentManager should call this function to indicate that a dispute has been resolved due to one of the agents being slashed. > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/IAgentSecured.sol\":\"IAgentSecured\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IAgentSecured.sol\":{\"keccak256\":\"0x9a7efecf8fe37cc8245e3b0e3f5d6d6ee056cdd97ccb5631ff6347bdfc9fc889\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7877d223162a76d3fe75490069719b3a4f14cd66fc42bfa915f2813390b7d2aa\",\"dweb:/ipfs/QmZhE1rnffA9bbtkNAwVk6iitMPk14gHbK56mdeHQEPhxj\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentManager",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentStatus",
+          "outputs": [
+            {
+              "internalType": "struct AgentStatus",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum AgentFlag",
+                  "name": "flag",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "domain",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "index",
+                  "type": "uint32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAgent",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "struct AgentStatus",
+              "name": "status",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum AgentFlag",
+                  "name": "flag",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "domain",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "index",
+                  "type": "uint32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "inbox",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "guardIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "notaryIndex",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "openDispute"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "slashedIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "rivalIndex",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "resolveDispute"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "agentStatus(address)": {
+            "details": "Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud, but their status is not updated to Slashed yet.",
+            "params": {
+              "agent": "Agent address"
+            },
+            "returns": {
+              "_0": "Status for the given agent: (flag, domain, index)."
+            }
+          },
+          "getAgent(uint256)": {
+            "details": "Will return empty values if agent with given index doesn't exist.",
+            "params": {
+              "index": "Agent index in the Agent Merkle Tree"
+            },
+            "returns": {
+              "agent": "   Agent address",
+              "status": "  Status for the given agent: (flag, domain, index)"
+            }
+          },
+          "inbox()": {
+            "details": "Inbox passes verified agent statements to `IAgentSecured` contract."
+          },
+          "openDispute(uint32,uint32)": {
+            "params": {
+              "guardIndex": "Index of the Guard in the Agent Merkle Tree",
+              "notaryIndex": "Index of the Notary in the Agent Merkle Tree"
+            }
+          },
+          "resolveDispute(uint32,uint32)": {
+            "params": {
+              "rivalIndex": "Index of the their Dispute Rival in the Agent Merkle Tree",
+              "slashedIndex": "Index of the slashed agent in the Agent Merkle Tree"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "agentManager()": {
+            "notice": "Returns the address of the local AgentManager contract, which is treated as the \"source of truth\" for agent statuses."
+          },
+          "agentStatus(address)": {
+            "notice": "Returns (flag, domain, index) for a given agent. See Structures.sol for details."
+          },
+          "getAgent(uint256)": {
+            "notice": "Returns agent address and their current status for a given agent index."
+          },
+          "inbox()": {
+            "notice": "Returns the address of the local Inbox contract, which is treated as the \"source of truth\" for agent-signed statements."
+          },
+          "openDispute(uint32,uint32)": {
+            "notice": "Local AgentManager should call this function to indicate that a dispute between a Guard and a Notary has been opened."
+          },
+          "resolveDispute(uint32,uint32)": {
+            "notice": "Local AgentManager should call this function to indicate that a dispute has been resolved due to one of the agents being slashed. > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/IAgentSecured.sol": "IAgentSecured"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IAgentSecured.sol": {
+        "keccak256": "0x9a7efecf8fe37cc8245e3b0e3f5d6d6ee056cdd97ccb5631ff6347bdfc9fc889",
+        "urls": [
+          "bzz-raw://7877d223162a76d3fe75490069719b3a4f14cd66fc42bfa915f2813390b7d2aa",
+          "dweb:/ipfs/QmZhE1rnffA9bbtkNAwVk6iitMPk14gHbK56mdeHQEPhxj"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/IAgentSecured.sol",
+    "id": 9181,
+    "exportedSymbols": {
+      "AgentStatus": [
+        10357
+      ],
+      "IAgentSecured": [
+        9180
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2738:31",
+    "nodes": [
+      {
+        "id": 9129,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:31",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9131,
+        "nodeType": "ImportDirective",
+        "src": "57:51:31",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Structures.sol",
+        "file": "../libs/Structures.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 9181,
+        "sourceUnit": 10474,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 9130,
+              "name": "AgentStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10357,
+              "src": "65:11:31",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 9180,
+        "nodeType": "ContractDefinition",
+        "src": "110:2659:31",
+        "nodes": [
+          {
+            "id": 9139,
+            "nodeType": "FunctionDefinition",
+            "src": "441:69:31",
+            "nodes": [],
+            "documentation": {
+              "id": 9132,
+              "nodeType": "StructuredDocumentation",
+              "src": "140:296:31",
+              "text": " @notice Local AgentManager should call this function to indicate that a dispute\n between a Guard and a Notary has been opened.\n @param guardIndex    Index of the Guard in the Agent Merkle Tree\n @param notaryIndex   Index of the Notary in the Agent Merkle Tree"
+            },
+            "functionSelector": "a2155c34",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "openDispute",
+            "nameLocation": "450:11:31",
+            "parameters": {
+              "id": 9137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9134,
+                  "mutability": "mutable",
+                  "name": "guardIndex",
+                  "nameLocation": "469:10:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9139,
+                  "src": "462:17:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9133,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9136,
+                  "mutability": "mutable",
+                  "name": "notaryIndex",
+                  "nameLocation": "488:11:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9139,
+                  "src": "481:18:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9135,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "481:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:39:31"
+            },
+            "returnParameters": {
+              "id": 9138,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "509:0:31"
+            },
+            "scope": 9180,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9147,
+            "nodeType": "FunctionDefinition",
+            "src": "931:73:31",
+            "nodes": [],
+            "documentation": {
+              "id": 9140,
+              "nodeType": "StructuredDocumentation",
+              "src": "516:410:31",
+              "text": " @notice Local AgentManager should call this function to indicate that a dispute\n has been resolved due to one of the agents being slashed.\n > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute.\n @param slashedIndex  Index of the slashed agent in the Agent Merkle Tree\n @param rivalIndex    Index of the their Dispute Rival in the Agent Merkle Tree"
+            },
+            "functionSelector": "61169218",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "resolveDispute",
+            "nameLocation": "940:14:31",
+            "parameters": {
+              "id": 9145,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9142,
+                  "mutability": "mutable",
+                  "name": "slashedIndex",
+                  "nameLocation": "962:12:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9147,
+                  "src": "955:19:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9141,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9144,
+                  "mutability": "mutable",
+                  "name": "rivalIndex",
+                  "nameLocation": "983:10:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9147,
+                  "src": "976:17:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9143,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "976:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:40:31"
+            },
+            "returnParameters": {
+              "id": 9146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1003:0:31"
+            },
+            "scope": 9180,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9153,
+            "nodeType": "FunctionDefinition",
+            "src": "1500:56:31",
+            "nodes": [],
+            "documentation": {
+              "id": 9148,
+              "nodeType": "StructuredDocumentation",
+              "src": "1344:151:31",
+              "text": " @notice Returns the address of the local AgentManager contract, which is treated as\n the \"source of truth\" for agent statuses."
+            },
+            "functionSelector": "7622f78d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "agentManager",
+            "nameLocation": "1509:12:31",
+            "parameters": {
+              "id": 9149,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1521:2:31"
+            },
+            "returnParameters": {
+              "id": 9152,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9151,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9153,
+                  "src": "1547:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9150,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1547:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1546:9:31"
+            },
+            "scope": 9180,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9159,
+            "nodeType": "FunctionDefinition",
+            "src": "1800:49:31",
+            "nodes": [],
+            "documentation": {
+              "id": 9154,
+              "nodeType": "StructuredDocumentation",
+              "src": "1562:233:31",
+              "text": " @notice Returns the address of the local Inbox contract, which is treated as\n the \"source of truth\" for agent-signed statements.\n @dev Inbox passes verified agent statements to `IAgentSecured` contract."
+            },
+            "functionSelector": "fb0e722b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "inbox",
+            "nameLocation": "1809:5:31",
+            "parameters": {
+              "id": 9155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1814:2:31"
+            },
+            "returnParameters": {
+              "id": 9158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9157,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9159,
+                  "src": "1840:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9156,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1840:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1839:9:31"
+            },
+            "scope": 9180,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9168,
+            "nodeType": "FunctionDefinition",
+            "src": "2230:79:31",
+            "nodes": [],
+            "documentation": {
+              "id": 9160,
+              "nodeType": "StructuredDocumentation",
+              "src": "1855:370:31",
+              "text": " @notice Returns (flag, domain, index) for a given agent. See Structures.sol for details.\n @dev Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud,\n but their status is not updated to Slashed yet.\n @param agent     Agent address\n @return          Status for the given agent: (flag, domain, index)."
+            },
+            "functionSelector": "28f3fac9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "agentStatus",
+            "nameLocation": "2239:11:31",
+            "parameters": {
+              "id": 9163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9162,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "2259:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9168,
+                  "src": "2251:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9161,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2251:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2250:15:31"
+            },
+            "returnParameters": {
+              "id": 9167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9166,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9168,
+                  "src": "2289:18:31",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 9165,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 9164,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "2289:11:31"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "2289:11:31"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "2289:11:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2288:20:31"
+            },
+            "scope": 9180,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9179,
+            "nodeType": "FunctionDefinition",
+            "src": "2669:98:31",
+            "nodes": [],
+            "documentation": {
+              "id": 9169,
+              "nodeType": "StructuredDocumentation",
+              "src": "2315:349:31",
+              "text": " @notice Returns agent address and their current status for a given agent index.\n @dev Will return empty values if agent with given index doesn't exist.\n @param index     Agent index in the Agent Merkle Tree\n @return agent    Agent address\n @return status   Status for the given agent: (flag, domain, index)"
+            },
+            "functionSelector": "2de5aaf7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAgent",
+            "nameLocation": "2678:8:31",
+            "parameters": {
+              "id": 9172,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9171,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "2695:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9179,
+                  "src": "2687:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9170,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2687:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2686:15:31"
+            },
+            "returnParameters": {
+              "id": 9178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9174,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "2733:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9179,
+                  "src": "2725:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9173,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2725:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9177,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "2759:6:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9179,
+                  "src": "2740:25:31",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 9176,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 9175,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "2740:11:31"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "2740:11:31"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "2740:11:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2724:42:31"
+            },
+            "scope": 9180,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAgentSecured",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9180
+        ],
+        "name": "IAgentSecured",
+        "nameLocation": "120:13:31",
+        "scope": 9181,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 31
+}

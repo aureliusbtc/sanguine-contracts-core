@@ -1,0 +1,743 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "attSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidAttestation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "arPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "arSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "InvalidAttestationReport",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "notary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "rcptSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "ReceiptAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "domain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "SnapshotAccepted",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"attSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidAttestation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"arPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"arSignature\",\"type\":\"bytes\"}],\"name\":\"InvalidAttestationReport\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"notary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"rcptSignature\",\"type\":\"bytes\"}],\"name\":\"ReceiptAccepted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"name\":\"SnapshotAccepted\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"InvalidAttestation(bytes,bytes)\":{\"params\":{\"attPayload\":\"Raw payload with Attestation data\",\"attSignature\":\"Notary signature for the attestation\"}},\"InvalidAttestationReport(bytes,bytes)\":{\"params\":{\"arPayload\":\"Raw payload with report data\",\"arSignature\":\"Guard signature for the report\"}},\"ReceiptAccepted(uint32,address,bytes,bytes)\":{\"params\":{\"domain\":\"Domain where the signed Notary is active\",\"notary\":\"Notary who signed the attestation\",\"rcptPayload\":\"Raw payload with receipt data\",\"rcptSignature\":\"Notary signature for the receipt\"}},\"SnapshotAccepted(uint32,address,bytes,bytes)\":{\"params\":{\"agent\":\"Agent who signed the snapshot\",\"domain\":\"Domain where the signed Agent is active (ZERO for Guards)\",\"snapPayload\":\"Raw payload with snapshot data\",\"snapSignature\":\"Agent signature for the snapshot\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"InvalidAttestation(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid attestation is submitted.\"},\"InvalidAttestationReport(bytes,bytes)\":{\"notice\":\"Emitted when a proof of invalid attestation report is submitted.\"},\"ReceiptAccepted(uint32,address,bytes,bytes)\":{\"notice\":\"Emitted when a snapshot is accepted by the Summit contract.\"},\"SnapshotAccepted(uint32,address,bytes,bytes)\":{\"notice\":\"Emitted when a snapshot is accepted by the Summit contract.\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/InboxEvents.sol\":\"InboxEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/InboxEvents.sol\":{\"keccak256\":\"0x4e834b480f9fba7e803fdce5e22f55a2c4e78a8198a0e34e2bb741e9c998299b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://56c46f45e8e395fae57202449cf8d0786416360906447c400f740cacefd90425\",\"dweb:/ipfs/QmWZLaJAz1ZJuoas3x1NhDtGyAVWCHuzbA8bASXV5Va4Y3\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "attSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidAttestation",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "arPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "arSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "InvalidAttestationReport",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "notary",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ReceiptAccepted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SnapshotAccepted",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/InboxEvents.sol": "InboxEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/InboxEvents.sol": {
+        "keccak256": "0x4e834b480f9fba7e803fdce5e22f55a2c4e78a8198a0e34e2bb741e9c998299b",
+        "urls": [
+          "bzz-raw://56c46f45e8e395fae57202449cf8d0786416360906447c400f740cacefd90425",
+          "dweb:/ipfs/QmWZLaJAz1ZJuoas3x1NhDtGyAVWCHuzbA8bASXV5Va4Y3"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/InboxEvents.sol",
+    "id": 4001,
+    "exportedSymbols": {
+      "InboxEvents": [
+        4000
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1538:18",
+    "nodes": [
+      {
+        "id": 3963,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:18",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 4000,
+        "nodeType": "ContractDefinition",
+        "src": "57:1512:18",
+        "nodes": [
+          {
+            "id": 3974,
+            "nodeType": "EventDefinition",
+            "src": "448:109:18",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3964,
+              "nodeType": "StructuredDocumentation",
+              "src": "93:350:18",
+              "text": " @notice Emitted when a snapshot is accepted by the Summit contract.\n @param domain        Domain where the signed Agent is active (ZERO for Guards)\n @param agent         Agent who signed the snapshot\n @param snapPayload   Raw payload with snapshot data\n @param snapSignature Agent signature for the snapshot"
+            },
+            "eventSelector": "5ca3d740e03650b41813a4b418830f6ba39700ae010fe8c4d1bca0e8676b9c56",
+            "name": "SnapshotAccepted",
+            "nameLocation": "454:16:18",
+            "parameters": {
+              "id": 3973,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3966,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "486:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3974,
+                  "src": "471:21:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3965,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "471:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3968,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "510:5:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3974,
+                  "src": "494:21:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3967,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3970,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "523:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3974,
+                  "src": "517:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3969,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "517:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3972,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "542:13:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3974,
+                  "src": "536:19:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3971,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "470:86:18"
+            }
+          },
+          {
+            "id": 3985,
+            "nodeType": "EventDefinition",
+            "src": "904:93:18",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3975,
+              "nodeType": "StructuredDocumentation",
+              "src": "563:336:18",
+              "text": " @notice Emitted when a snapshot is accepted by the Summit contract.\n @param domain        Domain where the signed Notary is active\n @param notary        Notary who signed the attestation\n @param rcptPayload   Raw payload with receipt data\n @param rcptSignature Notary signature for the receipt"
+            },
+            "eventSelector": "9377955fede38ca63bc09f7b3fae7dd349934c78c058963a6d3c05d4eed04112",
+            "name": "ReceiptAccepted",
+            "nameLocation": "910:15:18",
+            "parameters": {
+              "id": 3984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3977,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "domain",
+                  "nameLocation": "933:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3985,
+                  "src": "926:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3976,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "926:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3979,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "notary",
+                  "nameLocation": "949:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3985,
+                  "src": "941:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3978,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "941:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3981,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "rcptPayload",
+                  "nameLocation": "963:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3985,
+                  "src": "957:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3980,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "957:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3983,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "rcptSignature",
+                  "nameLocation": "982:13:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3985,
+                  "src": "976:19:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3982,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "976:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "925:71:18"
+            }
+          },
+          {
+            "id": 3992,
+            "nodeType": "EventDefinition",
+            "src": "1219:63:18",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3986,
+              "nodeType": "StructuredDocumentation",
+              "src": "1003:211:18",
+              "text": " @notice Emitted when a proof of invalid attestation is submitted.\n @param attPayload    Raw payload with Attestation data\n @param attSignature  Notary signature for the attestation"
+            },
+            "eventSelector": "5ce497fe75d0d52e5ee139d2cd651d0ff00692a94d7052cb37faef5592d74b2b",
+            "name": "InvalidAttestation",
+            "nameLocation": "1225:18:18",
+            "parameters": {
+              "id": 3991,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3988,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "1250:10:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3992,
+                  "src": "1244:16:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3987,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1244:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3990,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "attSignature",
+                  "nameLocation": "1268:12:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3992,
+                  "src": "1262:18:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3989,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1262:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1243:38:18"
+            }
+          },
+          {
+            "id": 3999,
+            "nodeType": "EventDefinition",
+            "src": "1500:67:18",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3993,
+              "nodeType": "StructuredDocumentation",
+              "src": "1288:207:18",
+              "text": " @notice Emitted when a proof of invalid attestation report is submitted.\n @param arPayload     Raw payload with report data\n @param arSignature   Guard signature for the report"
+            },
+            "eventSelector": "6f83f9b71f5c687c7dd205d520001d4e5adc1f16e4e2ee5b798c720d643e5a9e",
+            "name": "InvalidAttestationReport",
+            "nameLocation": "1506:24:18",
+            "parameters": {
+              "id": 3998,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3995,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "arPayload",
+                  "nameLocation": "1537:9:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3999,
+                  "src": "1531:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3994,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1531:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3997,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "arSignature",
+                  "nameLocation": "1554:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3999,
+                  "src": "1548:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3996,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1548:5:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1530:36:18"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "InboxEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          4000
+        ],
+        "name": "InboxEvents",
+        "nameLocation": "75:11:18",
+        "scope": 4001,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 18
+}

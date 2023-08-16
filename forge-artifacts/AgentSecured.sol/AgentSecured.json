@@ -1,0 +1,3387 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CallerNotAgentManager",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "IncorrectVersionLength",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "agentManager",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        }
+      ],
+      "name": "agentStatus",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct AgentStatus",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAgent",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "agent",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "enum AgentFlag",
+              "name": "flag",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "domain",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "index",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct AgentStatus",
+          "name": "status",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "inbox",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "localDomain",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "allowFailure",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiCallable.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "returnData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiCallable.Result[]",
+          "name": "callResults",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "guardIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "notaryIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "openDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "slashedIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "honestIndex",
+          "type": "uint32"
+        }
+      ],
+      "name": "resolveDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "versionString",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "agentManager()": "7622f78d",
+    "agentStatus(address)": "28f3fac9",
+    "getAgent(uint256)": "2de5aaf7",
+    "inbox()": "fb0e722b",
+    "localDomain()": "8d3638f4",
+    "multicall((bool,bytes)[])": "60fc8466",
+    "openDispute(uint32,uint32)": "a2155c34",
+    "owner()": "8da5cb5b",
+    "renounceOwnership()": "715018a6",
+    "resolveDispute(uint32,uint32)": "61169218",
+    "transferOwnership(address)": "f2fde38b",
+    "version()": "54fd4d50"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"CallerNotAgentManager\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"IncorrectVersionLength\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"agentManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"}],\"name\":\"agentStatus\",\"outputs\":[{\"components\":[{\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"index\",\"type\":\"uint32\"}],\"internalType\":\"struct AgentStatus\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getAgent\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"agent\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"enum AgentFlag\",\"name\":\"flag\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"domain\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"index\",\"type\":\"uint32\"}],\"internalType\":\"struct AgentStatus\",\"name\":\"status\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"inbox\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"localDomain\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"allowFailure\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"callData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiCallable.Call[]\",\"name\":\"calls\",\"type\":\"tuple[]\"}],\"name\":\"multicall\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"returnData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiCallable.Result[]\",\"name\":\"callResults\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"guardIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"notaryIndex\",\"type\":\"uint32\"}],\"name\":\"openDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"slashedIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"honestIndex\",\"type\":\"uint32\"}],\"name\":\"resolveDispute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"versionString\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"agentStatus(address)\":{\"details\":\"Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud, but their status is not updated to Slashed yet.\",\"params\":{\"agent\":\"Agent address\"},\"returns\":{\"_0\":\"Status for the given agent: (flag, domain, index).\"}},\"getAgent(uint256)\":{\"details\":\"Will return empty values if agent with given index doesn't exist.\",\"params\":{\"index\":\"Agent index in the Agent Merkle Tree\"},\"returns\":{\"agent\":\"   Agent address\",\"status\":\"  Status for the given agent: (flag, domain, index)\"}},\"openDispute(uint32,uint32)\":{\"params\":{\"guardIndex\":\"Index of the Guard in the Agent Merkle Tree\",\"notaryIndex\":\"Index of the Notary in the Agent Merkle Tree\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Should be impossible to renounce ownership; we override OpenZeppelin OwnableUpgradeable's implementation of renounceOwnership to make it a no-op\"},\"resolveDispute(uint32,uint32)\":{\"params\":{\"rivalIndex\":\"Index of the their Dispute Rival in the Agent Merkle Tree\",\"slashedIndex\":\"Index of the slashed agent in the Agent Merkle Tree\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"__GAP\":{\"details\":\"gap for upgrade safety\"},\"inbox\":{\"details\":\"Inbox passes verified agent statements to `IAgentSecured` contract.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"agentManager()\":{\"notice\":\"Returns the address of the local AgentManager contract, which is treated as the \\\"source of truth\\\" for agent statuses.\"},\"agentStatus(address)\":{\"notice\":\"Returns (flag, domain, index) for a given agent. See Structures.sol for details.\"},\"getAgent(uint256)\":{\"notice\":\"Returns agent address and their current status for a given agent index.\"},\"inbox()\":{\"notice\":\"Returns the address of the local Inbox contract, which is treated as the \\\"source of truth\\\" for agent-signed statements.\"},\"localDomain()\":{\"notice\":\"Domain of the local chain, set once upon contract creation\"},\"multicall((bool,bytes)[])\":{\"notice\":\"Aggregates a few calls to this contract into one multicall without modifying `msg.sender`.\"},\"openDispute(uint32,uint32)\":{\"notice\":\"Local AgentManager should call this function to indicate that a dispute between a Guard and a Notary has been opened.\"},\"resolveDispute(uint32,uint32)\":{\"notice\":\"Local AgentManager should call this function to indicate that a dispute has been resolved due to one of the agents being slashed. > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute.\"}},\"notice\":\"Base contract for messaging contracts that are secured by the agent manager. `AgentSecured` relies on `AgentManager` to provide the following functionality: - Keep track of agents and their statuses. - Pass agent-signed statements that were verified by the agent manager. - These statements are considered valid indefinitely, unless the agent is disputed. - Disputes are opened and resolved by the agent manager. > `AgentSecured` implementation should never use statements signed by agents that are disputed.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/base/AgentSecured.sol\":\"AgentSecured\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/base/AgentSecured.sol\":{\"keccak256\":\"0x93c65ab6126b6595c10f6c0ec8f647ec7d79e69383d31d2701cac4549e5f80ac\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6cf22c7957416a633d725b5286ee760ae67b219f36ca16ad5d031cdd0f382de5\",\"dweb:/ipfs/QmXQTNUfBoKicvS6thm6eBWEUe2k2bv1TaXHaPg51FM1h5\"]},\"contracts/base/MessagingBase.sol\":{\"keccak256\":\"0x01a7e9d9a5547e90d2efc4478485c7fc308a870d596a47d2b59383eaf2a02dd1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2a5ab808e51515e2a8d2efccb3f9d89054c2fc7e9cb5f44514b734a097d8c114\",\"dweb:/ipfs/QmUJ1E1MXy1H2Nb8xCGA7hpsTMNF3CXNoU11qGyd5M8498\"]},\"contracts/base/MultiCallable.sol\":{\"keccak256\":\"0x9645f1629cdf8db803c40725f6b0ee165df64bfc142db4613efd385a88f13699\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cc99799fdd946c11c893b89dad922822c866d14bdecded86913948a146f71053\",\"dweb:/ipfs/QmZGRZuhU2w6pAStcaQ5NyzyeUn69nJCJd9a9NnjuBVLsn\"]},\"contracts/base/Version.sol\":{\"keccak256\":\"0x63131bbdb149a0c83685da246afc0faa71d1009a20154b1f39650cef4369fe84\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://21f001efca9d0550162dd1154f5b1d977c85a703e6df883103638ae0fe65af9b\",\"dweb:/ipfs/QmX3BfuJ3yKxWFXphq6RcKcGrja1v5xJQ1fFCwRQvGV8u8\"]},\"contracts/interfaces/IAgentManager.sol\":{\"keccak256\":\"0xc6fded8bc39cdb24e2bc038ba9b0ae168ad42fb15ed9d5883b89940b4e970a10\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://898f25a9d1f375ab7e5dc7cd791263934b50d3b0a44dc29a4c914578a1b06339\",\"dweb:/ipfs/QmXi3CVhvWpGxVvmw4n7UvEoX2bD2ZD2rg4oZhYETYWJ3a\"]},\"contracts/interfaces/IAgentSecured.sol\":{\"keccak256\":\"0x9a7efecf8fe37cc8245e3b0e3f5d6d6ee056cdd97ccb5631ff6347bdfc9fc889\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7877d223162a76d3fe75490069719b3a4f14cd66fc42bfa915f2813390b7d2aa\",\"dweb:/ipfs/QmZhE1rnffA9bbtkNAwVk6iitMPk14gHbK56mdeHQEPhxj\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/Structures.sol\":{\"keccak256\":\"0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71\",\"dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy\"]},\"node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7\",\"dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh\"]},\"node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8\",\"dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz\"]},\"node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f\",\"dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4\"]},\"node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "CallerNotAgentManager"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "IncorrectVersionLength"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentManager",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "agentStatus",
+          "outputs": [
+            {
+              "internalType": "struct AgentStatus",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum AgentFlag",
+                  "name": "flag",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "domain",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "index",
+                  "type": "uint32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getAgent",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "agent",
+              "type": "address"
+            },
+            {
+              "internalType": "struct AgentStatus",
+              "name": "status",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "enum AgentFlag",
+                  "name": "flag",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "domain",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "index",
+                  "type": "uint32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "inbox",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "localDomain",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct MultiCallable.Call[]",
+              "name": "calls",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "allowFailure",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "callData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "multicall",
+          "outputs": [
+            {
+              "internalType": "struct MultiCallable.Result[]",
+              "name": "callResults",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "success",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "returnData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "guardIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "notaryIndex",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "openDispute"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "renounceOwnership"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "slashedIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "honestIndex",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "resolveDispute"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "version",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "versionString",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "agentStatus(address)": {
+            "details": "Will return AgentFlag.Fraudulent for agents that have been proven to commit fraud, but their status is not updated to Slashed yet.",
+            "params": {
+              "agent": "Agent address"
+            },
+            "returns": {
+              "_0": "Status for the given agent: (flag, domain, index)."
+            }
+          },
+          "getAgent(uint256)": {
+            "details": "Will return empty values if agent with given index doesn't exist.",
+            "params": {
+              "index": "Agent index in the Agent Merkle Tree"
+            },
+            "returns": {
+              "agent": "   Agent address",
+              "status": "  Status for the given agent: (flag, domain, index)"
+            }
+          },
+          "openDispute(uint32,uint32)": {
+            "params": {
+              "guardIndex": "Index of the Guard in the Agent Merkle Tree",
+              "notaryIndex": "Index of the Notary in the Agent Merkle Tree"
+            }
+          },
+          "owner()": {
+            "details": "Returns the address of the current owner."
+          },
+          "renounceOwnership()": {
+            "details": "Should be impossible to renounce ownership; we override OpenZeppelin OwnableUpgradeable's implementation of renounceOwnership to make it a no-op"
+          },
+          "resolveDispute(uint32,uint32)": {
+            "params": {
+              "rivalIndex": "Index of the their Dispute Rival in the Agent Merkle Tree",
+              "slashedIndex": "Index of the slashed agent in the Agent Merkle Tree"
+            }
+          },
+          "transferOwnership(address)": {
+            "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "agentManager()": {
+            "notice": "Returns the address of the local AgentManager contract, which is treated as the \"source of truth\" for agent statuses."
+          },
+          "agentStatus(address)": {
+            "notice": "Returns (flag, domain, index) for a given agent. See Structures.sol for details."
+          },
+          "getAgent(uint256)": {
+            "notice": "Returns agent address and their current status for a given agent index."
+          },
+          "inbox()": {
+            "notice": "Returns the address of the local Inbox contract, which is treated as the \"source of truth\" for agent-signed statements."
+          },
+          "localDomain()": {
+            "notice": "Domain of the local chain, set once upon contract creation"
+          },
+          "multicall((bool,bytes)[])": {
+            "notice": "Aggregates a few calls to this contract into one multicall without modifying `msg.sender`."
+          },
+          "openDispute(uint32,uint32)": {
+            "notice": "Local AgentManager should call this function to indicate that a dispute between a Guard and a Notary has been opened."
+          },
+          "resolveDispute(uint32,uint32)": {
+            "notice": "Local AgentManager should call this function to indicate that a dispute has been resolved due to one of the agents being slashed. > `rivalIndex` will be ZERO, if the slashed agent was not in the Dispute."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/base/AgentSecured.sol": "AgentSecured"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/base/AgentSecured.sol": {
+        "keccak256": "0x93c65ab6126b6595c10f6c0ec8f647ec7d79e69383d31d2701cac4549e5f80ac",
+        "urls": [
+          "bzz-raw://6cf22c7957416a633d725b5286ee760ae67b219f36ca16ad5d031cdd0f382de5",
+          "dweb:/ipfs/QmXQTNUfBoKicvS6thm6eBWEUe2k2bv1TaXHaPg51FM1h5"
+        ],
+        "license": "MIT"
+      },
+      "contracts/base/MessagingBase.sol": {
+        "keccak256": "0x01a7e9d9a5547e90d2efc4478485c7fc308a870d596a47d2b59383eaf2a02dd1",
+        "urls": [
+          "bzz-raw://2a5ab808e51515e2a8d2efccb3f9d89054c2fc7e9cb5f44514b734a097d8c114",
+          "dweb:/ipfs/QmUJ1E1MXy1H2Nb8xCGA7hpsTMNF3CXNoU11qGyd5M8498"
+        ],
+        "license": "MIT"
+      },
+      "contracts/base/MultiCallable.sol": {
+        "keccak256": "0x9645f1629cdf8db803c40725f6b0ee165df64bfc142db4613efd385a88f13699",
+        "urls": [
+          "bzz-raw://cc99799fdd946c11c893b89dad922822c866d14bdecded86913948a146f71053",
+          "dweb:/ipfs/QmZGRZuhU2w6pAStcaQ5NyzyeUn69nJCJd9a9NnjuBVLsn"
+        ],
+        "license": "MIT"
+      },
+      "contracts/base/Version.sol": {
+        "keccak256": "0x63131bbdb149a0c83685da246afc0faa71d1009a20154b1f39650cef4369fe84",
+        "urls": [
+          "bzz-raw://21f001efca9d0550162dd1154f5b1d977c85a703e6df883103638ae0fe65af9b",
+          "dweb:/ipfs/QmX3BfuJ3yKxWFXphq6RcKcGrja1v5xJQ1fFCwRQvGV8u8"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IAgentManager.sol": {
+        "keccak256": "0xc6fded8bc39cdb24e2bc038ba9b0ae168ad42fb15ed9d5883b89940b4e970a10",
+        "urls": [
+          "bzz-raw://898f25a9d1f375ab7e5dc7cd791263934b50d3b0a44dc29a4c914578a1b06339",
+          "dweb:/ipfs/QmXi3CVhvWpGxVvmw4n7UvEoX2bD2ZD2rg4oZhYETYWJ3a"
+        ],
+        "license": "MIT"
+      },
+      "contracts/interfaces/IAgentSecured.sol": {
+        "keccak256": "0x9a7efecf8fe37cc8245e3b0e3f5d6d6ee056cdd97ccb5631ff6347bdfc9fc889",
+        "urls": [
+          "bzz-raw://7877d223162a76d3fe75490069719b3a4f14cd66fc42bfa915f2813390b7d2aa",
+          "dweb:/ipfs/QmZhE1rnffA9bbtkNAwVk6iitMPk14gHbK56mdeHQEPhxj"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Structures.sol": {
+        "keccak256": "0x3eaa63f5d9aac514328111e8fdd037dc6fdb18af7541a8287deeacd2e44f7137",
+        "urls": [
+          "bzz-raw://633619910c74a0685ef2993a2e7cc44088929121a15c8a9fc26c9bbadffbda71",
+          "dweb:/ipfs/QmZceJv6UntiMWW4JZHbmytLsqXshbuav8yoiritksvqqy"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+        "keccak256": "0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34",
+        "urls": [
+          "bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7",
+          "dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+        "keccak256": "0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba",
+        "urls": [
+          "bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8",
+          "dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+        "keccak256": "0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d",
+        "urls": [
+          "bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f",
+          "dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+        "urls": [
+          "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+          "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/base/AgentSecured.sol",
+    "id": 2805,
+    "exportedSymbols": {
+      "AgentSecured": [
+        2804
+      ],
+      "AgentStatus": [
+        10357
+      ],
+      "CallerNotAgentManager": [
+        10174
+      ],
+      "CallerNotInbox": [
+        10178
+      ],
+      "DisputeFlag": [
+        10365
+      ],
+      "IAgentManager": [
+        9127
+      ],
+      "IAgentSecured": [
+        9180
+      ],
+      "MessagingBase": [
+        2851
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:5355:4",
+    "nodes": [
+      {
+        "id": 2588,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:4",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 2591,
+        "nodeType": "ImportDirective",
+        "src": "258:73:4",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Errors.sol",
+        "file": "../libs/Errors.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2805,
+        "sourceUnit": 10335,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2589,
+              "name": "CallerNotAgentManager",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10174,
+              "src": "266:21:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 2590,
+              "name": "CallerNotInbox",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10178,
+              "src": "289:14:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2594,
+        "nodeType": "ImportDirective",
+        "src": "332:64:4",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Structures.sol",
+        "file": "../libs/Structures.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2805,
+        "sourceUnit": 10474,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2592,
+              "name": "AgentStatus",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10357,
+              "src": "340:11:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 2593,
+              "name": "DisputeFlag",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10365,
+              "src": "353:11:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2596,
+        "nodeType": "ImportDirective",
+        "src": "596:62:4",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IAgentManager.sol",
+        "file": "../interfaces/IAgentManager.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2805,
+        "sourceUnit": 9128,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2595,
+              "name": "IAgentManager",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9127,
+              "src": "604:13:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2598,
+        "nodeType": "ImportDirective",
+        "src": "659:62:4",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IAgentSecured.sol",
+        "file": "../interfaces/IAgentSecured.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2805,
+        "sourceUnit": 9181,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2597,
+              "name": "IAgentSecured",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9180,
+              "src": "667:13:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2600,
+        "nodeType": "ImportDirective",
+        "src": "722:50:4",
+        "nodes": [],
+        "absolutePath": "contracts/base/MessagingBase.sol",
+        "file": "./MessagingBase.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2805,
+        "sourceUnit": 2852,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2599,
+              "name": "MessagingBase",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2851,
+              "src": "730:13:4",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2804,
+        "nodeType": "ContractDefinition",
+        "src": "1320:4066:4",
+        "nodes": [
+          {
+            "id": 2608,
+            "nodeType": "VariableDeclaration",
+            "src": "1747:37:4",
+            "nodes": [],
+            "baseFunctions": [
+              9153
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 2606,
+              "nodeType": "StructuredDocumentation",
+              "src": "1713:29:4",
+              "text": "@inheritdoc IAgentSecured"
+            },
+            "functionSelector": "7622f78d",
+            "mutability": "immutable",
+            "name": "agentManager",
+            "nameLocation": "1772:12:4",
+            "scope": 2804,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2607,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1747:7:4",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 2611,
+            "nodeType": "VariableDeclaration",
+            "src": "1825:30:4",
+            "nodes": [],
+            "baseFunctions": [
+              9159
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 2609,
+              "nodeType": "StructuredDocumentation",
+              "src": "1791:29:4",
+              "text": "@inheritdoc IAgentSecured"
+            },
+            "functionSelector": "fb0e722b",
+            "mutability": "immutable",
+            "name": "inbox",
+            "nameLocation": "1850:5:4",
+            "scope": 2804,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2610,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1825:7:4",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 2616,
+            "nodeType": "VariableDeclaration",
+            "src": "2257:49:4",
+            "nodes": [],
+            "constant": false,
+            "mutability": "mutable",
+            "name": "_disputes",
+            "nameLocation": "2297:9:4",
+            "scope": 2804,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+              "typeString": "mapping(uint32 => enum DisputeFlag)"
+            },
+            "typeName": {
+              "id": 2615,
+              "keyType": {
+                "id": 2612,
+                "name": "uint32",
+                "nodeType": "ElementaryTypeName",
+                "src": "2265:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2257:30:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+                "typeString": "mapping(uint32 => enum DisputeFlag)"
+              },
+              "valueType": {
+                "id": 2614,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 2613,
+                  "name": "DisputeFlag",
+                  "nameLocations": [
+                    "2275:11:4"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 10365,
+                  "src": "2275:11:4"
+                },
+                "referencedDeclaration": 10365,
+                "src": "2275:11:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                  "typeString": "enum DisputeFlag"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 2621,
+            "nodeType": "VariableDeclaration",
+            "src": "2349:25:4",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 2617,
+              "nodeType": "StructuredDocumentation",
+              "src": "2313:31:4",
+              "text": "@dev gap for upgrade safety"
+            },
+            "mutability": "mutable",
+            "name": "__GAP",
+            "nameLocation": "2369:5:4",
+            "scope": 2804,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2618,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "2349:7:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 2620,
+              "length": {
+                "hexValue": "3439",
+                "id": 2619,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "2357:2:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "2349:11:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 2633,
+            "nodeType": "ModifierDefinition",
+            "src": "2424:118:4",
+            "nodes": [],
+            "body": {
+              "id": 2632,
+              "nodeType": "Block",
+              "src": "2452:90:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 2626,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 2623,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "2466:3:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 2624,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2470:6:4",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "2466:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "id": 2625,
+                      "name": "agentManager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2608,
+                      "src": "2480:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2466:26:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2630,
+                  "nodeType": "IfStatement",
+                  "src": "2462:62:4",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2627,
+                        "name": "CallerNotAgentManager",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10174,
+                        "src": "2501:21:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2628,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2501:23:4",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2629,
+                    "nodeType": "RevertStatement",
+                    "src": "2494:30:4"
+                  }
+                },
+                {
+                  "id": 2631,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "2534:1:4"
+                }
+              ]
+            },
+            "name": "onlyAgentManager",
+            "nameLocation": "2433:16:4",
+            "parameters": {
+              "id": 2622,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2449:2:4"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2645,
+            "nodeType": "ModifierDefinition",
+            "src": "2548:97:4",
+            "nodes": [],
+            "body": {
+              "id": 2644,
+              "nodeType": "Block",
+              "src": "2569:76:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 2638,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 2635,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "2583:3:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 2636,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2587:6:4",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "2583:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "id": 2637,
+                      "name": "inbox",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2611,
+                      "src": "2597:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2583:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2642,
+                  "nodeType": "IfStatement",
+                  "src": "2579:48:4",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2639,
+                        "name": "CallerNotInbox",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10178,
+                        "src": "2611:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2640,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2611:16:4",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2641,
+                    "nodeType": "RevertStatement",
+                    "src": "2604:23:4"
+                  }
+                },
+                {
+                  "id": 2643,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "2637:1:4"
+                }
+              ]
+            },
+            "name": "onlyInbox",
+            "nameLocation": "2557:9:4",
+            "parameters": {
+              "id": 2634,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2566:2:4"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2669,
+            "nodeType": "FunctionDefinition",
+            "src": "2651:215:4",
+            "nodes": [],
+            "body": {
+              "id": 2668,
+              "nodeType": "Block",
+              "src": "2797:69:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2662,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 2660,
+                      "name": "agentManager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2608,
+                      "src": "2807:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 2661,
+                      "name": "agentManager_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2651,
+                      "src": "2822:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2807:28:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2663,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2807:28:4"
+                },
+                {
+                  "expression": {
+                    "id": 2666,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 2664,
+                      "name": "inbox",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2611,
+                      "src": "2845:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 2665,
+                      "name": "inbox_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2653,
+                      "src": "2853:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2845:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2667,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2845:14:4"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 2656,
+                    "name": "version_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2647,
+                    "src": "2769:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "id": 2657,
+                    "name": "localDomain_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2649,
+                    "src": "2779:12:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  }
+                ],
+                "id": 2658,
+                "kind": "baseConstructorSpecifier",
+                "modifierName": {
+                  "id": 2655,
+                  "name": "MessagingBase",
+                  "nameLocations": [
+                    "2755:13:4"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2851,
+                  "src": "2755:13:4"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2755:37:4"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 2654,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2647,
+                  "mutability": "mutable",
+                  "name": "version_",
+                  "nameLocation": "2677:8:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2669,
+                  "src": "2663:22:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2646,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2663:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2649,
+                  "mutability": "mutable",
+                  "name": "localDomain_",
+                  "nameLocation": "2694:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2669,
+                  "src": "2687:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2648,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2687:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2651,
+                  "mutability": "mutable",
+                  "name": "agentManager_",
+                  "nameLocation": "2716:13:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2669,
+                  "src": "2708:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2650,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2708:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2653,
+                  "mutability": "mutable",
+                  "name": "inbox_",
+                  "nameLocation": "2739:6:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2669,
+                  "src": "2731:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2652,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2731:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2662:84:4"
+            },
+            "returnParameters": {
+              "id": 2659,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2797:0:4"
+            },
+            "scope": 2804,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2694,
+            "nodeType": "FunctionDefinition",
+            "src": "3214:200:4",
+            "nodes": [],
+            "body": {
+              "id": 2693,
+              "nodeType": "Block",
+              "src": "3300:114:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2684,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 2679,
+                        "name": "_disputes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2616,
+                        "src": "3310:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "mapping(uint32 => enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2681,
+                      "indexExpression": {
+                        "id": 2680,
+                        "name": "guardIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2672,
+                        "src": "3320:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3310:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 2682,
+                        "name": "DisputeFlag",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10365,
+                        "src": "3334:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "type(enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2683,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "3346:7:4",
+                      "memberName": "Pending",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10363,
+                      "src": "3334:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "src": "3310:43:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                      "typeString": "enum DisputeFlag"
+                    }
+                  },
+                  "id": 2685,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3310:43:4"
+                },
+                {
+                  "expression": {
+                    "id": 2691,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 2686,
+                        "name": "_disputes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2616,
+                        "src": "3363:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "mapping(uint32 => enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2688,
+                      "indexExpression": {
+                        "id": 2687,
+                        "name": "notaryIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2674,
+                        "src": "3373:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3363:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 2689,
+                        "name": "DisputeFlag",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10365,
+                        "src": "3388:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "type(enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2690,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "3400:7:4",
+                      "memberName": "Pending",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10363,
+                      "src": "3388:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "src": "3363:44:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                      "typeString": "enum DisputeFlag"
+                    }
+                  },
+                  "id": 2692,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3363:44:4"
+                }
+              ]
+            },
+            "baseFunctions": [
+              9139
+            ],
+            "documentation": {
+              "id": 2670,
+              "nodeType": "StructuredDocumentation",
+              "src": "3180:29:4",
+              "text": "@inheritdoc IAgentSecured"
+            },
+            "functionSelector": "a2155c34",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 2677,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 2676,
+                  "name": "onlyAgentManager",
+                  "nameLocations": [
+                    "3283:16:4"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2633,
+                  "src": "3283:16:4"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "3283:16:4"
+              }
+            ],
+            "name": "openDispute",
+            "nameLocation": "3223:11:4",
+            "parameters": {
+              "id": 2675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2672,
+                  "mutability": "mutable",
+                  "name": "guardIndex",
+                  "nameLocation": "3242:10:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2694,
+                  "src": "3235:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2671,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3235:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2674,
+                  "mutability": "mutable",
+                  "name": "notaryIndex",
+                  "nameLocation": "3261:11:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2694,
+                  "src": "3254:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2673,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3254:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3234:39:4"
+            },
+            "returnParameters": {
+              "id": 2678,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3300:0:4"
+            },
+            "scope": 2804,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2721,
+            "nodeType": "FunctionDefinition",
+            "src": "3454:214:4",
+            "nodes": [],
+            "body": {
+              "id": 2720,
+              "nodeType": "Block",
+              "src": "3545:123:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2709,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 2704,
+                        "name": "_disputes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2616,
+                        "src": "3555:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "mapping(uint32 => enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2706,
+                      "indexExpression": {
+                        "id": 2705,
+                        "name": "slashedIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2697,
+                        "src": "3565:12:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "3555:23:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 2707,
+                        "name": "DisputeFlag",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10365,
+                        "src": "3581:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "type(enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2708,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "3593:7:4",
+                      "memberName": "Slashed",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10364,
+                      "src": "3581:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "src": "3555:45:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                      "typeString": "enum DisputeFlag"
+                    }
+                  },
+                  "id": 2710,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3555:45:4"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    },
+                    "id": 2713,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 2711,
+                      "name": "honestIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2699,
+                      "src": "3614:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 2712,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "3629:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "3614:16:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2719,
+                  "nodeType": "IfStatement",
+                  "src": "3610:51:4",
+                  "trueBody": {
+                    "expression": {
+                      "id": 2717,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "delete",
+                      "prefix": true,
+                      "src": "3632:29:4",
+                      "subExpression": {
+                        "baseExpression": {
+                          "id": 2714,
+                          "name": "_disputes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2616,
+                          "src": "3639:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+                            "typeString": "mapping(uint32 => enum DisputeFlag)"
+                          }
+                        },
+                        "id": 2716,
+                        "indexExpression": {
+                          "id": 2715,
+                          "name": "honestIndex",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2699,
+                          "src": "3649:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint32",
+                            "typeString": "uint32"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": true,
+                        "nodeType": "IndexAccess",
+                        "src": "3639:22:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                          "typeString": "enum DisputeFlag"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2718,
+                    "nodeType": "ExpressionStatement",
+                    "src": "3632:29:4"
+                  }
+                }
+              ]
+            },
+            "baseFunctions": [
+              9147
+            ],
+            "documentation": {
+              "id": 2695,
+              "nodeType": "StructuredDocumentation",
+              "src": "3420:29:4",
+              "text": "@inheritdoc IAgentSecured"
+            },
+            "functionSelector": "61169218",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 2702,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 2701,
+                  "name": "onlyAgentManager",
+                  "nameLocations": [
+                    "3528:16:4"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2633,
+                  "src": "3528:16:4"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "3528:16:4"
+              }
+            ],
+            "name": "resolveDispute",
+            "nameLocation": "3463:14:4",
+            "parameters": {
+              "id": 2700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2697,
+                  "mutability": "mutable",
+                  "name": "slashedIndex",
+                  "nameLocation": "3485:12:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2721,
+                  "src": "3478:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2696,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3478:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2699,
+                  "mutability": "mutable",
+                  "name": "honestIndex",
+                  "nameLocation": "3506:11:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2721,
+                  "src": "3499:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2698,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3499:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3477:41:4"
+            },
+            "returnParameters": {
+              "id": 2703,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3545:0:4"
+            },
+            "scope": 2804,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2735,
+            "nodeType": "FunctionDefinition",
+            "src": "4042:122:4",
+            "nodes": [],
+            "body": {
+              "id": 2734,
+              "nodeType": "Block",
+              "src": "4121:43:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 2731,
+                        "name": "agent",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2724,
+                        "src": "4151:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 2730,
+                      "name": "_agentStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2768,
+                      "src": "4138:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_struct$_AgentStatus_$10357_memory_ptr_$",
+                        "typeString": "function (address) view returns (struct AgentStatus memory)"
+                      }
+                    },
+                    "id": 2732,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4138:19:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                      "typeString": "struct AgentStatus memory"
+                    }
+                  },
+                  "functionReturnParameters": 2729,
+                  "id": 2733,
+                  "nodeType": "Return",
+                  "src": "4131:26:4"
+                }
+              ]
+            },
+            "baseFunctions": [
+              9168
+            ],
+            "documentation": {
+              "id": 2722,
+              "nodeType": "StructuredDocumentation",
+              "src": "4008:29:4",
+              "text": "@inheritdoc IAgentSecured"
+            },
+            "functionSelector": "28f3fac9",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "agentStatus",
+            "nameLocation": "4051:11:4",
+            "parameters": {
+              "id": 2725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2724,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "4071:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2735,
+                  "src": "4063:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2723,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4063:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4062:15:4"
+            },
+            "returnParameters": {
+              "id": 2729,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2728,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2735,
+                  "src": "4101:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 2727,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2726,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "4101:11:4"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "4101:11:4"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "4101:11:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4100:20:4"
+            },
+            "scope": 2804,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2751,
+            "nodeType": "FunctionDefinition",
+            "src": "4204:138:4",
+            "nodes": [],
+            "body": {
+              "id": 2750,
+              "nodeType": "Block",
+              "src": "4302:40:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 2747,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2738,
+                        "src": "4329:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 2746,
+                      "name": "_getAgent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2787,
+                      "src": "4319:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$_t_struct$_AgentStatus_$10357_memory_ptr_$",
+                        "typeString": "function (uint256) view returns (address,struct AgentStatus memory)"
+                      }
+                    },
+                    "id": 2748,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4319:16:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_struct$_AgentStatus_$10357_memory_ptr_$",
+                      "typeString": "tuple(address,struct AgentStatus memory)"
+                    }
+                  },
+                  "functionReturnParameters": 2745,
+                  "id": 2749,
+                  "nodeType": "Return",
+                  "src": "4312:23:4"
+                }
+              ]
+            },
+            "baseFunctions": [
+              9179
+            ],
+            "documentation": {
+              "id": 2736,
+              "nodeType": "StructuredDocumentation",
+              "src": "4170:29:4",
+              "text": "@inheritdoc IAgentSecured"
+            },
+            "functionSelector": "2de5aaf7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAgent",
+            "nameLocation": "4213:8:4",
+            "parameters": {
+              "id": 2739,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2738,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "4230:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2751,
+                  "src": "4222:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2737,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4222:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4221:15:4"
+            },
+            "returnParameters": {
+              "id": 2745,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2741,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "4268:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2751,
+                  "src": "4260:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2740,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4260:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2744,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "4294:6:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2751,
+                  "src": "4275:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 2743,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2742,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "4275:11:4"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "4275:11:4"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "4275:11:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4259:42:4"
+            },
+            "scope": 2804,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2768,
+            "nodeType": "FunctionDefinition",
+            "src": "4735:150:4",
+            "nodes": [],
+            "body": {
+              "id": 2767,
+              "nodeType": "Block",
+              "src": "4815:70:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 2764,
+                        "name": "agent",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2754,
+                        "src": "4872:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 2761,
+                            "name": "agentManager",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2608,
+                            "src": "4846:12:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 2760,
+                          "name": "IAgentManager",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9127,
+                          "src": "4832:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IAgentManager_$9127_$",
+                            "typeString": "type(contract IAgentManager)"
+                          }
+                        },
+                        "id": 2762,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "4832:27:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IAgentManager_$9127",
+                          "typeString": "contract IAgentManager"
+                        }
+                      },
+                      "id": 2763,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "4860:11:4",
+                      "memberName": "agentStatus",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9076,
+                      "src": "4832:39:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_struct$_AgentStatus_$10357_memory_ptr_$",
+                        "typeString": "function (address) view external returns (struct AgentStatus memory)"
+                      }
+                    },
+                    "id": 2765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4832:46:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                      "typeString": "struct AgentStatus memory"
+                    }
+                  },
+                  "functionReturnParameters": 2759,
+                  "id": 2766,
+                  "nodeType": "Return",
+                  "src": "4825:53:4"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2752,
+              "nodeType": "StructuredDocumentation",
+              "src": "4664:66:4",
+              "text": "@dev Returns status of the given agent: (flag, domain, index)."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_agentStatus",
+            "nameLocation": "4744:12:4",
+            "parameters": {
+              "id": 2755,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2754,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "4765:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2768,
+                  "src": "4757:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2753,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4757:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4756:15:4"
+            },
+            "returnParameters": {
+              "id": 2759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2758,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2768,
+                  "src": "4795:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 2757,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2756,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "4795:11:4"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "4795:11:4"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "4795:11:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4794:20:4"
+            },
+            "scope": 2804,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2787,
+            "nodeType": "FunctionDefinition",
+            "src": "5006:166:4",
+            "nodes": [],
+            "body": {
+              "id": 2786,
+              "nodeType": "Block",
+              "src": "5105:67:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 2783,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2771,
+                        "src": "5159:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 2780,
+                            "name": "agentManager",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2608,
+                            "src": "5136:12:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 2779,
+                          "name": "IAgentManager",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9127,
+                          "src": "5122:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IAgentManager_$9127_$",
+                            "typeString": "type(contract IAgentManager)"
+                          }
+                        },
+                        "id": 2781,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "5122:27:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IAgentManager_$9127",
+                          "typeString": "contract IAgentManager"
+                        }
+                      },
+                      "id": 2782,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "5150:8:4",
+                      "memberName": "getAgent",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9087,
+                      "src": "5122:36:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_address_$_t_struct$_AgentStatus_$10357_memory_ptr_$",
+                        "typeString": "function (uint256) view external returns (address,struct AgentStatus memory)"
+                      }
+                    },
+                    "id": 2784,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5122:43:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_struct$_AgentStatus_$10357_memory_ptr_$",
+                      "typeString": "tuple(address,struct AgentStatus memory)"
+                    }
+                  },
+                  "functionReturnParameters": 2778,
+                  "id": 2785,
+                  "nodeType": "Return",
+                  "src": "5115:50:4"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2769,
+              "nodeType": "StructuredDocumentation",
+              "src": "4891:110:4",
+              "text": "@dev Returns agent and their status for a given agent index. Returns zero values for non existing indexes."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getAgent",
+            "nameLocation": "5015:9:4",
+            "parameters": {
+              "id": 2772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2771,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "5033:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2787,
+                  "src": "5025:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2770,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5025:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5024:15:4"
+            },
+            "returnParameters": {
+              "id": 2778,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2774,
+                  "mutability": "mutable",
+                  "name": "agent",
+                  "nameLocation": "5071:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2787,
+                  "src": "5063:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5063:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2777,
+                  "mutability": "mutable",
+                  "name": "status",
+                  "nameLocation": "5097:6:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2787,
+                  "src": "5078:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AgentStatus_$10357_memory_ptr",
+                    "typeString": "struct AgentStatus"
+                  },
+                  "typeName": {
+                    "id": 2776,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2775,
+                      "name": "AgentStatus",
+                      "nameLocations": [
+                        "5078:11:4"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10357,
+                      "src": "5078:11:4"
+                    },
+                    "referencedDeclaration": 10357,
+                    "src": "5078:11:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AgentStatus_$10357_storage_ptr",
+                      "typeString": "struct AgentStatus"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5062:42:4"
+            },
+            "scope": 2804,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2803,
+            "nodeType": "FunctionDefinition",
+            "src": "5249:135:4",
+            "nodes": [],
+            "body": {
+              "id": 2802,
+              "nodeType": "Block",
+              "src": "5319:65:4",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                      "typeString": "enum DisputeFlag"
+                    },
+                    "id": 2800,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "baseExpression": {
+                        "id": 2795,
+                        "name": "_disputes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2616,
+                        "src": "5336:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint32_$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "mapping(uint32 => enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2797,
+                      "indexExpression": {
+                        "id": 2796,
+                        "name": "agentIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2790,
+                        "src": "5346:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "5336:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 2798,
+                        "name": "DisputeFlag",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10365,
+                        "src": "5361:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_DisputeFlag_$10365_$",
+                          "typeString": "type(enum DisputeFlag)"
+                        }
+                      },
+                      "id": 2799,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "5373:4:4",
+                      "memberName": "None",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10362,
+                      "src": "5361:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_DisputeFlag_$10365",
+                        "typeString": "enum DisputeFlag"
+                      }
+                    },
+                    "src": "5336:41:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 2794,
+                  "id": 2801,
+                  "nodeType": "Return",
+                  "src": "5329:48:4"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2788,
+              "nodeType": "StructuredDocumentation",
+              "src": "5178:66:4",
+              "text": "@dev Checks if the agent with the given index is in a dispute."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_isInDispute",
+            "nameLocation": "5258:12:4",
+            "parameters": {
+              "id": 2791,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2790,
+                  "mutability": "mutable",
+                  "name": "agentIndex",
+                  "nameLocation": "5278:10:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2803,
+                  "src": "5271:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2789,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5271:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5270:19:4"
+            },
+            "returnParameters": {
+              "id": 2794,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2793,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2803,
+                  "src": "5313:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2792,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5313:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5312:6:4"
+            },
+            "scope": 2804,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2602,
+              "name": "MessagingBase",
+              "nameLocations": [
+                "1354:13:4"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2851,
+              "src": "1354:13:4"
+            },
+            "id": 2603,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1354:13:4"
+          },
+          {
+            "baseName": {
+              "id": 2604,
+              "name": "IAgentSecured",
+              "nameLocations": [
+                "1369:13:4"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 9180,
+              "src": "1369:13:4"
+            },
+            "id": 2605,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1369:13:4"
+          }
+        ],
+        "canonicalName": "AgentSecured",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2601,
+          "nodeType": "StructuredDocumentation",
+          "src": "774:545:4",
+          "text": " @notice Base contract for messaging contracts that are secured by the agent manager.\n `AgentSecured` relies on `AgentManager` to provide the following functionality:\n - Keep track of agents and their statuses.\n - Pass agent-signed statements that were verified by the agent manager.\n - These statements are considered valid indefinitely, unless the agent is disputed.\n - Disputes are opened and resolved by the agent manager.\n > `AgentSecured` implementation should never use statements signed by agents that are disputed."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          2804,
+          9180,
+          2851,
+          46691,
+          47177,
+          46833,
+          3004,
+          2941
+        ],
+        "name": "AgentSecured",
+        "nameLocation": "1338:12:4",
+        "scope": 2805,
+        "usedErrors": [
+          10174,
+          10206
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 4
+}

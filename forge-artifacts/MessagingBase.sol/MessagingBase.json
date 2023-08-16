@@ -1,0 +1,940 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "IncorrectVersionLength",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "localDomain",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "allowFailure",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "callData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiCallable.Call[]",
+          "name": "calls",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "returnData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct MultiCallable.Result[]",
+          "name": "callResults",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "versionString",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "localDomain()": "8d3638f4",
+    "multicall((bool,bytes)[])": "60fc8466",
+    "owner()": "8da5cb5b",
+    "renounceOwnership()": "715018a6",
+    "transferOwnership(address)": "f2fde38b",
+    "version()": "54fd4d50"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"IncorrectVersionLength\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"localDomain\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"allowFailure\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"callData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiCallable.Call[]\",\"name\":\"calls\",\"type\":\"tuple[]\"}],\"name\":\"multicall\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"returnData\",\"type\":\"bytes\"}],\"internalType\":\"struct MultiCallable.Result[]\",\"name\":\"callResults\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"versionString\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Should be impossible to renounce ownership; we override OpenZeppelin OwnableUpgradeable's implementation of renounceOwnership to make it a no-op\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"__GAP\":{\"details\":\"gap for upgrade safety\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"localDomain()\":{\"notice\":\"Domain of the local chain, set once upon contract creation\"},\"multicall((bool,bytes)[])\":{\"notice\":\"Aggregates a few calls to this contract into one multicall without modifying `msg.sender`.\"}},\"notice\":\"Base contract for all messaging contracts. - Provides context on the local chain's domain. - Provides ownership functionality. - Will be providing pausing functionality when it is implemented.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/base/MessagingBase.sol\":\"MessagingBase\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/base/MessagingBase.sol\":{\"keccak256\":\"0x01a7e9d9a5547e90d2efc4478485c7fc308a870d596a47d2b59383eaf2a02dd1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2a5ab808e51515e2a8d2efccb3f9d89054c2fc7e9cb5f44514b734a097d8c114\",\"dweb:/ipfs/QmUJ1E1MXy1H2Nb8xCGA7hpsTMNF3CXNoU11qGyd5M8498\"]},\"contracts/base/MultiCallable.sol\":{\"keccak256\":\"0x9645f1629cdf8db803c40725f6b0ee165df64bfc142db4613efd385a88f13699\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cc99799fdd946c11c893b89dad922822c866d14bdecded86913948a146f71053\",\"dweb:/ipfs/QmZGRZuhU2w6pAStcaQ5NyzyeUn69nJCJd9a9NnjuBVLsn\"]},\"contracts/base/Version.sol\":{\"keccak256\":\"0x63131bbdb149a0c83685da246afc0faa71d1009a20154b1f39650cef4369fe84\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://21f001efca9d0550162dd1154f5b1d977c85a703e6df883103638ae0fe65af9b\",\"dweb:/ipfs/QmX3BfuJ3yKxWFXphq6RcKcGrja1v5xJQ1fFCwRQvGV8u8\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7\",\"dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh\"]},\"node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8\",\"dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz\"]},\"node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f\",\"dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4\"]},\"node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "IncorrectVersionLength"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "localDomain",
+          "outputs": [
+            {
+              "internalType": "uint32",
+              "name": "",
+              "type": "uint32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct MultiCallable.Call[]",
+              "name": "calls",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "allowFailure",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "callData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "multicall",
+          "outputs": [
+            {
+              "internalType": "struct MultiCallable.Result[]",
+              "name": "callResults",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "bool",
+                  "name": "success",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "returnData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "renounceOwnership"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "version",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "versionString",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "owner()": {
+            "details": "Returns the address of the current owner."
+          },
+          "renounceOwnership()": {
+            "details": "Should be impossible to renounce ownership; we override OpenZeppelin OwnableUpgradeable's implementation of renounceOwnership to make it a no-op"
+          },
+          "transferOwnership(address)": {
+            "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "localDomain()": {
+            "notice": "Domain of the local chain, set once upon contract creation"
+          },
+          "multicall((bool,bytes)[])": {
+            "notice": "Aggregates a few calls to this contract into one multicall without modifying `msg.sender`."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/base/MessagingBase.sol": "MessagingBase"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/base/MessagingBase.sol": {
+        "keccak256": "0x01a7e9d9a5547e90d2efc4478485c7fc308a870d596a47d2b59383eaf2a02dd1",
+        "urls": [
+          "bzz-raw://2a5ab808e51515e2a8d2efccb3f9d89054c2fc7e9cb5f44514b734a097d8c114",
+          "dweb:/ipfs/QmUJ1E1MXy1H2Nb8xCGA7hpsTMNF3CXNoU11qGyd5M8498"
+        ],
+        "license": "MIT"
+      },
+      "contracts/base/MultiCallable.sol": {
+        "keccak256": "0x9645f1629cdf8db803c40725f6b0ee165df64bfc142db4613efd385a88f13699",
+        "urls": [
+          "bzz-raw://cc99799fdd946c11c893b89dad922822c866d14bdecded86913948a146f71053",
+          "dweb:/ipfs/QmZGRZuhU2w6pAStcaQ5NyzyeUn69nJCJd9a9NnjuBVLsn"
+        ],
+        "license": "MIT"
+      },
+      "contracts/base/Version.sol": {
+        "keccak256": "0x63131bbdb149a0c83685da246afc0faa71d1009a20154b1f39650cef4369fe84",
+        "urls": [
+          "bzz-raw://21f001efca9d0550162dd1154f5b1d977c85a703e6df883103638ae0fe65af9b",
+          "dweb:/ipfs/QmX3BfuJ3yKxWFXphq6RcKcGrja1v5xJQ1fFCwRQvGV8u8"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+        "keccak256": "0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34",
+        "urls": [
+          "bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7",
+          "dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+        "keccak256": "0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba",
+        "urls": [
+          "bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8",
+          "dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+        "keccak256": "0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d",
+        "urls": [
+          "bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f",
+          "dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+        "urls": [
+          "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+          "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/base/MessagingBase.sol",
+    "id": 2852,
+    "exportedSymbols": {
+      "MessagingBase": [
+        2851
+      ],
+      "MultiCallable": [
+        2941
+      ],
+      "OwnableUpgradeable": [
+        46691
+      ],
+      "Versioned": [
+        3004
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2251:5",
+    "nodes": [
+      {
+        "id": 2806,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:5",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 2808,
+        "nodeType": "ImportDirective",
+        "src": "256:50:5",
+        "nodes": [],
+        "absolutePath": "contracts/base/MultiCallable.sol",
+        "file": "./MultiCallable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2852,
+        "sourceUnit": 2942,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2807,
+              "name": "MultiCallable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2941,
+              "src": "264:13:5",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2810,
+        "nodeType": "ImportDirective",
+        "src": "307:40:5",
+        "nodes": [],
+        "absolutePath": "contracts/base/Version.sol",
+        "file": "./Version.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2852,
+        "sourceUnit": 3005,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2809,
+              "name": "Versioned",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3004,
+              "src": "315:9:5",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2812,
+        "nodeType": "ImportDirective",
+        "src": "547:101:5",
+        "nodes": [],
+        "absolutePath": "node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 2852,
+        "sourceUnit": 46692,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 2811,
+              "name": "OwnableUpgradeable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 46691,
+              "src": "555:18:5",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 2851,
+        "nodeType": "ContractDefinition",
+        "src": "871:1411:5",
+        "nodes": [
+          {
+            "id": 2822,
+            "nodeType": "VariableDeclaration",
+            "src": "1356:35:5",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 2820,
+              "nodeType": "StructuredDocumentation",
+              "src": "1281:70:5",
+              "text": "@notice Domain of the local chain, set once upon contract creation"
+            },
+            "functionSelector": "8d3638f4",
+            "mutability": "immutable",
+            "name": "localDomain",
+            "nameLocation": "1380:11:5",
+            "scope": 2851,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint32",
+              "typeString": "uint32"
+            },
+            "typeName": {
+              "id": 2821,
+              "name": "uint32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1356:6:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint32",
+                "typeString": "uint32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 2827,
+            "nodeType": "VariableDeclaration",
+            "src": "1764:25:5",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 2823,
+              "nodeType": "StructuredDocumentation",
+              "src": "1728:31:5",
+              "text": "@dev gap for upgrade safety"
+            },
+            "mutability": "mutable",
+            "name": "__GAP",
+            "nameLocation": "1784:5:5",
+            "scope": 2851,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$50_storage",
+              "typeString": "uint256[50]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2824,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1764:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 2826,
+              "length": {
+                "hexValue": "3530",
+                "id": 2825,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1772:2:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_50_by_1",
+                  "typeString": "int_const 50"
+                },
+                "value": "50"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "1764:11:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$50_storage_ptr",
+                "typeString": "uint256[50]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 2842,
+            "nodeType": "FunctionDefinition",
+            "src": "1839:120:5",
+            "nodes": [],
+            "body": {
+              "id": 2841,
+              "nodeType": "Block",
+              "src": "1916:43:5",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2839,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 2837,
+                      "name": "localDomain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2822,
+                      "src": "1926:11:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 2838,
+                      "name": "localDomain_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2831,
+                      "src": "1940:12:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "src": "1926:26:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "id": 2840,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1926:26:5"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 2834,
+                    "name": "version_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2829,
+                    "src": "1906:8:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 2835,
+                "kind": "baseConstructorSpecifier",
+                "modifierName": {
+                  "id": 2833,
+                  "name": "Versioned",
+                  "nameLocations": [
+                    "1896:9:5"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 3004,
+                  "src": "1896:9:5"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1896:19:5"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 2832,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2829,
+                  "mutability": "mutable",
+                  "name": "version_",
+                  "nameLocation": "1865:8:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2842,
+                  "src": "1851:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2828,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1851:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2831,
+                  "mutability": "mutable",
+                  "name": "localDomain_",
+                  "nameLocation": "1882:12:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2842,
+                  "src": "1875:19:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2830,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1875:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1850:45:5"
+            },
+            "returnParameters": {
+              "id": 2836,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1916:0:5"
+            },
+            "scope": 2851,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2850,
+            "nodeType": "FunctionDefinition",
+            "src": "2184:57:5",
+            "nodes": [],
+            "body": {
+              "id": 2849,
+              "nodeType": "Block",
+              "src": "2239:2:5",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              46642
+            ],
+            "documentation": {
+              "id": 2843,
+              "nodeType": "StructuredDocumentation",
+              "src": "1997:182:5",
+              "text": " @dev Should be impossible to renounce ownership;\n we override OpenZeppelin OwnableUpgradeable's\n implementation of renounceOwnership to make it a no-op"
+            },
+            "functionSelector": "715018a6",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 2847,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 2846,
+                  "name": "onlyOwner",
+                  "nameLocations": [
+                    "2229:9:5"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 46628,
+                  "src": "2229:9:5"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2229:9:5"
+              }
+            ],
+            "name": "renounceOwnership",
+            "nameLocation": "2193:17:5",
+            "overrides": {
+              "id": 2845,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "2220:8:5"
+            },
+            "parameters": {
+              "id": 2844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2210:2:5"
+            },
+            "returnParameters": {
+              "id": 2848,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2239:0:5"
+            },
+            "scope": 2851,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2814,
+              "name": "MultiCallable",
+              "nameLocations": [
+                "906:13:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2941,
+              "src": "906:13:5"
+            },
+            "id": 2815,
+            "nodeType": "InheritanceSpecifier",
+            "src": "906:13:5"
+          },
+          {
+            "baseName": {
+              "id": 2816,
+              "name": "Versioned",
+              "nameLocations": [
+                "921:9:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3004,
+              "src": "921:9:5"
+            },
+            "id": 2817,
+            "nodeType": "InheritanceSpecifier",
+            "src": "921:9:5"
+          },
+          {
+            "baseName": {
+              "id": 2818,
+              "name": "OwnableUpgradeable",
+              "nameLocations": [
+                "932:18:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 46691,
+              "src": "932:18:5"
+            },
+            "id": 2819,
+            "nodeType": "InheritanceSpecifier",
+            "src": "932:18:5"
+          }
+        ],
+        "canonicalName": "MessagingBase",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2813,
+          "nodeType": "StructuredDocumentation",
+          "src": "650:220:5",
+          "text": " @notice Base contract for all messaging contracts.\n - Provides context on the local chain's domain.\n - Provides ownership functionality.\n - Will be providing pausing functionality when it is implemented."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          2851,
+          46691,
+          47177,
+          46833,
+          3004,
+          2941
+        ],
+        "name": "MessagingBase",
+        "nameLocation": "889:13:5",
+        "scope": 2852,
+        "usedErrors": [
+          10206
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 5
+}

@@ -1,0 +1,798 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "compress",
+      "outputs": [
+        {
+          "internalType": "Number",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Number",
+          "name": "number",
+          "type": "uint16"
+        }
+      ],
+      "name": "decompress",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "mostSignificantBit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061022e806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80631600b6e01461004657806358cd50f414610071578063e6bcbc6514610092575b600080fd5b6100596100543660046101bb565b6100a5565b60405161ffff90911681526020015b60405180910390f35b61008461007f3660046101d4565b6100b6565b604051908152602001610068565b6100846100a03660046101bb565b6100c1565b60006100b0826100cc565b92915050565b60006100b082610113565b60006100b08261013f565b6000806100d88361013f565b905060088110156100f75761ff00600884901b1660ff175b9392505050565b600719810161ff0084821c60081b1660ff821617949350505050565b600060ff600883901c81169080841690819003610131575092915050565b610100909101901b92915050565b60016fffffffffffffffffffffffffffffffff821160071b91821c67ffffffffffffffff811160061b90811c63ffffffff811160051b90811c61ffff811160041b90811c60ff8111600390811b91821c600f811160021b90811c918211871b91821c969096119490961792909217171791909117919091171790565b6000602082840312156101cd57600080fd5b5035919050565b6000602082840312156101e657600080fd5b813561ffff811681146100f057600080fdfea264697066735822122070ac992faded917b633472a55a96d9426fe107f09e5d080c7d8c6c3bc77bc73864736f6c63430008110033",
+    "sourceMap": "210:529:126:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80631600b6e01461004657806358cd50f414610071578063e6bcbc6514610092575b600080fd5b6100596100543660046101bb565b6100a5565b60405161ffff90911681526020015b60405180910390f35b61008461007f3660046101d4565b6100b6565b604051908152602001610068565b6100846100a03660046101bb565b6100c1565b60006100b0826100cc565b92915050565b60006100b082610113565b60006100b08261013f565b6000806100d88361013f565b905060088110156100f75761ff00600884901b1660ff175b9392505050565b600719810161ff0084821c60081b1660ff821617949350505050565b600060ff600883901c81169080841690819003610131575092915050565b610100909101901b92915050565b60016fffffffffffffffffffffffffffffffff821160071b91821c67ffffffffffffffff811160061b90811c63ffffffff811160051b90811c61ffff811160041b90811c60ff8111600390811b91821c600f811160021b90811c918211871b91821c969096119490961792909217171791909117919091171790565b6000602082840312156101cd57600080fd5b5035919050565b6000602082840312156101e657600080fd5b813561ffff811681146100f057600080fdfea264697066735822122070ac992faded917b633472a55a96d9426fe107f09e5d080c7d8c6c3bc77bc73864736f6c63430008110033",
+    "sourceMap": "210:529:126:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;373:111;;;;;;:::i;:::-;;:::i;:::-;;;402:6:200;390:19;;;372:38;;360:2;345:18;373:111:126;;;;;;;;490:117;;;;;;:::i;:::-;;:::i;:::-;;;873:25:200;;;861:2;846:18;490:117:126;727:177:200;613:124:126;;;;;;:::i;:::-;;:::i;373:111::-;427:6;452:25;471:5;452:18;:25::i;:::-;445:32;373:111;-1:-1:-1;;373:111:126:o;490:117::-;546:7;572:28;593:6;572:20;:28::i;613:124::-;673:7;699:31;728:1;699:28;:31::i;1512:961:61:-;1568:6;1649:11;1663:25;1682:5;1663:18;:25::i;:::-;1649:39;;1883:1;1877:3;:7;1873:594;;;5659:34;1009:1;5659:34;;;;2021:4;5659:53;1999:27;1992:34;1512:961;-1:-1:-1;;;1512:961:61:o;1873:594::-;-1:-1:-1;;2186:7:61;;5659:34;2406:17;;;1009:1;5659:34;;5696:16;;;5659:53;2385:57;1512:961;-1:-1:-1;;;;1512:961:61:o;2649:512::-;2707:13;2802:39;1009:1;2802:39;;;;;;2926:47;;;;2987:16;;;2983:172;;-1:-1:-1;3026:8:61;2649:512;-1:-1:-1;;2649:512:61:o;2983:172::-;3101:3;:14;;;3100:30;;;2649:512;-1:-1:-1;;2649:512:61:o;3269:2218::-;5243:1;3760:34;3754:41;;3751:1;3747:49;3975:9;;;4249:18;4243:25;;4240:1;4236:33;4287:9;;;4460:10;4454:17;;4451:1;4447:25;4490:9;;;4663:6;4657:13;;4654:1;4650:21;4689:9;;;4861:4;4855:11;;4852:1;4848:19;;;4885:9;;;5057:3;5051:10;;5048:1;5044:18;5080:9;;;5246:10;;;5239:18;;5275:9;;;5431:10;;;;4316;;;;4519;;;;4718;4914;5109;;;;5304;;;;5461;;3269:2218::o;14:180:200:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:200;;14:180;-1:-1:-1;14:180:200:o;421:301::-;508:6;561:2;549:9;540:7;536:23;532:32;529:52;;;577:1;574;567:12;529:52;616:9;603:23;666:6;659:5;655:18;648:5;645:29;635:57;;688:1;685;678:12",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "compress(uint256)": "1600b6e0",
+    "decompress(uint16)": "58cd50f4",
+    "mostSignificantBit(uint256)": "e6bcbc65"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"compress\",\"outputs\":[{\"internalType\":\"Number\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Number\",\"name\":\"number\",\"type\":\"uint16\"}],\"name\":\"decompress\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"mostSignificantBit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Exposes NumberLib methods for testing against golang.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/libs/stack/NumberHarness.t.sol\":\"NumberHarness\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/stack/Number.sol\":{\"keccak256\":\"0xe4e0d66268eb69304cda001a3e03242e9f4af8680830c92b3d6ebe83e96acb96\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f70c28a10a2d34849614ff51c74f8c6107093b4d01eb865b2ab0d4efe9294cfd\",\"dweb:/ipfs/QmQbXCnHfPJjdNCK1UuQ2ShNan6H7j5s9DLS4HygQ5wfP5\"]},\"test/harnesses/libs/stack/NumberHarness.t.sol\":{\"keccak256\":\"0xf92f9464c6853b752aebf7b19c98518c924f0f3df27bfee010be41a2c03dc328\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e47747d2eae005c566322374d53475d3eeab00759f9f1e28ca5d91737c5532a5\",\"dweb:/ipfs/QmSeWuQTukth6muLSowD5yhdCbnSNZfFWDvbqhLzLKUGMe\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "compress",
+          "outputs": [
+            {
+              "internalType": "Number",
+              "name": "",
+              "type": "uint16"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "Number",
+              "name": "number",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "decompress",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "x",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "mostSignificantBit",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/harnesses/libs/stack/NumberHarness.t.sol": "NumberHarness"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/libs/stack/Number.sol": {
+        "keccak256": "0xe4e0d66268eb69304cda001a3e03242e9f4af8680830c92b3d6ebe83e96acb96",
+        "urls": [
+          "bzz-raw://f70c28a10a2d34849614ff51c74f8c6107093b4d01eb865b2ab0d4efe9294cfd",
+          "dweb:/ipfs/QmQbXCnHfPJjdNCK1UuQ2ShNan6H7j5s9DLS4HygQ5wfP5"
+        ],
+        "license": "MIT"
+      },
+      "test/harnesses/libs/stack/NumberHarness.t.sol": {
+        "keccak256": "0xf92f9464c6853b752aebf7b19c98518c924f0f3df27bfee010be41a2c03dc328",
+        "urls": [
+          "bzz-raw://e47747d2eae005c566322374d53475d3eeab00759f9f1e28ca5d91737c5532a5",
+          "dweb:/ipfs/QmSeWuQTukth6muLSowD5yhdCbnSNZfFWDvbqhLzLKUGMe"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/harnesses/libs/stack/NumberHarness.t.sol",
+    "id": 57991,
+    "exportedSymbols": {
+      "Number": [
+        15268
+      ],
+      "NumberHarness": [
+        57990
+      ],
+      "NumberLib": [
+        15438
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:708:126",
+    "nodes": [
+      {
+        "id": 57944,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:126",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 57947,
+        "nodeType": "ImportDirective",
+        "src": "57:78:126",
+        "nodes": [],
+        "absolutePath": "contracts/libs/stack/Number.sol",
+        "file": "../../../../contracts/libs/stack/Number.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 57991,
+        "sourceUnit": 15439,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 57945,
+              "name": "Number",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 15268,
+              "src": "65:6:126",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 57946,
+              "name": "NumberLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 15438,
+              "src": "73:9:126",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 57990,
+        "nodeType": "ContractDefinition",
+        "src": "210:529:126",
+        "nodes": [
+          {
+            "id": 57962,
+            "nodeType": "FunctionDefinition",
+            "src": "373:111:126",
+            "nodes": [],
+            "body": {
+              "id": 57961,
+              "nodeType": "Block",
+              "src": "435:49:126",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 57958,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57950,
+                        "src": "471:5:126",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57956,
+                        "name": "NumberLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15438,
+                        "src": "452:9:126",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_NumberLib_$15438_$",
+                          "typeString": "type(library NumberLib)"
+                        }
+                      },
+                      "id": 57957,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "462:8:126",
+                      "memberName": "compress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15347,
+                      "src": "452:18:126",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Number_$15268_$",
+                        "typeString": "function (uint256) pure returns (Number)"
+                      }
+                    },
+                    "id": 57959,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "452:25:126",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "functionReturnParameters": 57955,
+                  "id": 57960,
+                  "nodeType": "Return",
+                  "src": "445:32:126"
+                }
+              ]
+            },
+            "functionSelector": "1600b6e0",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "compress",
+            "nameLocation": "382:8:126",
+            "parameters": {
+              "id": 57951,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57950,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "399:5:126",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57962,
+                  "src": "391:13:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57949,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "391:7:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "390:15:126"
+            },
+            "returnParameters": {
+              "id": 57955,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57954,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57962,
+                  "src": "427:6:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57953,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57952,
+                      "name": "Number",
+                      "nameLocations": [
+                        "427:6:126"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "427:6:126"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "427:6:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "426:8:126"
+            },
+            "scope": 57990,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57976,
+            "nodeType": "FunctionDefinition",
+            "src": "490:117:126",
+            "nodes": [],
+            "body": {
+              "id": 57975,
+              "nodeType": "Block",
+              "src": "555:52:126",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 57972,
+                        "name": "number",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57965,
+                        "src": "593:6:126",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                          "typeString": "Number"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57970,
+                        "name": "NumberLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15438,
+                        "src": "572:9:126",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_NumberLib_$15438_$",
+                          "typeString": "type(library NumberLib)"
+                        }
+                      },
+                      "id": 57971,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "582:10:126",
+                      "memberName": "decompress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15393,
+                      "src": "572:20:126",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Number_$15268_$returns$_t_uint256_$",
+                        "typeString": "function (Number) pure returns (uint256)"
+                      }
+                    },
+                    "id": 57973,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "572:28:126",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 57969,
+                  "id": 57974,
+                  "nodeType": "Return",
+                  "src": "565:35:126"
+                }
+              ]
+            },
+            "functionSelector": "58cd50f4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decompress",
+            "nameLocation": "499:10:126",
+            "parameters": {
+              "id": 57966,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57965,
+                  "mutability": "mutable",
+                  "name": "number",
+                  "nameLocation": "517:6:126",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57976,
+                  "src": "510:13:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                    "typeString": "Number"
+                  },
+                  "typeName": {
+                    "id": 57964,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 57963,
+                      "name": "Number",
+                      "nameLocations": [
+                        "510:6:126"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 15268,
+                      "src": "510:6:126"
+                    },
+                    "referencedDeclaration": 15268,
+                    "src": "510:6:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Number_$15268",
+                      "typeString": "Number"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "509:15:126"
+            },
+            "returnParameters": {
+              "id": 57969,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57968,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57976,
+                  "src": "546:7:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57967,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "546:7:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "545:9:126"
+            },
+            "scope": 57990,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 57989,
+            "nodeType": "FunctionDefinition",
+            "src": "613:124:126",
+            "nodes": [],
+            "body": {
+              "id": 57988,
+              "nodeType": "Block",
+              "src": "682:55:126",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 57985,
+                        "name": "x",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 57978,
+                        "src": "728:1:126",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 57983,
+                        "name": "NumberLib",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15438,
+                        "src": "699:9:126",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_NumberLib_$15438_$",
+                          "typeString": "type(library NumberLib)"
+                        }
+                      },
+                      "id": 57984,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "709:18:126",
+                      "memberName": "mostSignificantBit",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15410,
+                      "src": "699:28:126",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 57986,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "699:31:126",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 57982,
+                  "id": 57987,
+                  "nodeType": "Return",
+                  "src": "692:38:126"
+                }
+              ]
+            },
+            "functionSelector": "e6bcbc65",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mostSignificantBit",
+            "nameLocation": "622:18:126",
+            "parameters": {
+              "id": 57979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57978,
+                  "mutability": "mutable",
+                  "name": "x",
+                  "nameLocation": "649:1:126",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57989,
+                  "src": "641:9:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57977,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "641:7:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "640:11:126"
+            },
+            "returnParameters": {
+              "id": 57982,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57981,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 57989,
+                  "src": "673:7:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57980,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "673:7:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "672:9:126"
+            },
+            "scope": 57990,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "NumberHarness",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 57948,
+          "nodeType": "StructuredDocumentation",
+          "src": "137:72:126",
+          "text": " @notice Exposes NumberLib methods for testing against golang."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          57990
+        ],
+        "name": "NumberHarness",
+        "nameLocation": "219:13:126",
+        "scope": 57991,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 126
+}

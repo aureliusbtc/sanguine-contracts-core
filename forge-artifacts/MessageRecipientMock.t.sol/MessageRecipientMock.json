@@ -1,0 +1,519 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "origin",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "sender",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "proofMaturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32",
+          "name": "version",
+          "type": "uint32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "content",
+          "type": "bytes"
+        }
+      ],
+      "name": "receiveBaseMessage",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testMessageRecipientMock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506101ac806100206000396000f3fe6080604052600436106100295760003560e01c8063032f287e1461002e578063056b256e14610046575b600080fd5b61004461003c366004610081565b505050505050565b005b34801561004457600080fd5b803563ffffffff8116811461006657600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b60008060008060008060c0878903121561009a57600080fd5b6100a387610052565b95506100b160208801610052565b945060408701359350606087013592506100cd60808801610052565b915060a087013567ffffffffffffffff808211156100ea57600080fd5b818901915089601f8301126100fe57600080fd5b8135818111156101105761011061006b565b604051601f8201601f19908116603f011681019083821181831017156101385761013861006b565b816040528281528c602084870101111561015157600080fd5b826020860160208301376000602084830101528095505050505050929550929550929556fea2646970667358221220318b64e453d95ea56dbeb41abb8526caee60fdc27536e697ef2e92f16ccab1ca64736f6c63430008110033",
+    "sourceMap": "180:401:138:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052600436106100295760003560e01c8063032f287e1461002e578063056b256e14610046575b600080fd5b61004461003c366004610081565b505050505050565b005b34801561004457600080fd5b803563ffffffff8116811461006657600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b60008060008060008060c0878903121561009a57600080fd5b6100a387610052565b95506100b160208801610052565b945060408701359350606087013592506100cd60808801610052565b915060a087013567ffffffffffffffff808211156100ea57600080fd5b818901915089601f8301126100fe57600080fd5b8135818111156101105761011061006b565b604051601f8201601f19908116603f011681019083821181831017156101385761013861006b565b816040528281528c602084870101111561015157600080fd5b826020860160208301376000602084830101528095505050505050929550929550929556fea2646970667358221220318b64e453d95ea56dbeb41abb8526caee60fdc27536e697ef2e92f16ccab1ca64736f6c63430008110033",
+    "sourceMap": "180:401:138:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;372:207;;;;;;:::i;:::-;;;;;;;;;;319:47;;;;;;;;;14:163:200;81:20;;141:10;130:22;;120:33;;110:61;;167:1;164;157:12;110:61;14:163;;;:::o;182:127::-;243:10;238:3;234:20;231:1;224:31;274:4;271:1;264:15;298:4;295:1;288:15;314:1276;424:6;432;440;448;456;464;517:3;505:9;496:7;492:23;488:33;485:53;;;534:1;531;524:12;485:53;557:28;575:9;557:28;:::i;:::-;547:38;;604:37;637:2;626:9;622:18;604:37;:::i;:::-;594:47;;688:2;677:9;673:18;660:32;650:42;;739:2;728:9;724:18;711:32;701:42;;762:38;795:3;784:9;780:19;762:38;:::i;:::-;752:48;;851:3;840:9;836:19;823:33;875:18;916:2;908:6;905:14;902:34;;;932:1;929;922:12;902:34;970:6;959:9;955:22;945:32;;1015:7;1008:4;1004:2;1000:13;996:27;986:55;;1037:1;1034;1027:12;986:55;1073:2;1060:16;1095:2;1091;1088:10;1085:36;;;1101:18;;:::i;:::-;1176:2;1170:9;1144:2;1230:13;;-1:-1:-1;;1226:22:200;;;1250:2;1222:31;1218:40;1206:53;;;1274:18;;;1294:22;;;1271:46;1268:72;;;1320:18;;:::i;:::-;1360:10;1356:2;1349:22;1395:2;1387:6;1380:18;1435:7;1430:2;1425;1421;1417:11;1413:20;1410:33;1407:53;;;1456:1;1453;1446:12;1407:53;1512:2;1507;1503;1499:11;1494:2;1486:6;1482:15;1469:46;1557:1;1552:2;1547;1539:6;1535:15;1531:24;1524:35;1578:6;1568:16;;;;;;;314:1276;;;;;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)": "032f287e",
+    "testMessageRecipientMock()": "056b256e"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"origin\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"nonce\",\"type\":\"uint32\"},{\"internalType\":\"bytes32\",\"name\":\"sender\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"proofMaturity\",\"type\":\"uint256\"},{\"internalType\":\"uint32\",\"name\":\"version\",\"type\":\"uint32\"},{\"internalType\":\"bytes\",\"name\":\"content\",\"type\":\"bytes\"}],\"name\":\"receiveBaseMessage\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testMessageRecipientMock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)\":{\"details\":\"Message recipient needs to ensure that merkle proof for the message is at least as old as the optimistic period that the recipient is using. Note: as this point it is checked that the \\\"message optimistic period\\\" has passed, however the period value itself could be anything, and thus could differ from the one that the recipient would like to enforce.\",\"params\":{\"content\":\"Raw bytes content of message\",\"nonce\":\"Message nonce on the origin domain\",\"origin\":\"Domain where message originated\",\"proofMaturity\":\"Message's merkle proof age in seconds\",\"sender\":\"Sender address on origin chain\",\"version\":\"Message version specified by sender\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)\":{\"notice\":\"Message recipient needs to implement this function in order to receive cross-chain messages.\"},\"testMessageRecipientMock()\":{\"notice\":\"Prevents this contract from being included in the coverage report\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/mocks/client/MessageRecipientMock.t.sol\":\"MessageRecipientMock\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/IMessageRecipient.sol\":{\"keccak256\":\"0x342bc1cf70e5a37e6a14d871297e845120608412d1be5dcd2657fc0dae5ebbde\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6d8b93ab4b2d4e85b0dcb62cf0beeaa0289aebc7b3dbc3fb9cad9e82639cbc5e\",\"dweb:/ipfs/QmRHr2Dqr6tcFWZ7osKisaGg6QZtvwGrncchYjJ1UYWWVx\"]},\"test/mocks/client/MessageRecipientMock.t.sol\":{\"keccak256\":\"0x48a0f852e43b7c5eab716fd921c3693dc46274320c1bc1c78602e7fc7772b575\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://16fd1ae4649a22a03aa72f879d0e650456775e3a339b05d5b90333c07e932324\",\"dweb:/ipfs/QmeVXj5KRDLbmZ8Q22YXbekLQrWP3U7GJxykwVkkyvDmMn\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "origin",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "sender",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "proofMaturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint32",
+              "name": "version",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "content",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "receiveBaseMessage"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "testMessageRecipientMock"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)": {
+            "details": "Message recipient needs to ensure that merkle proof for the message is at least as old as the optimistic period that the recipient is using. Note: as this point it is checked that the \"message optimistic period\" has passed, however the period value itself could be anything, and thus could differ from the one that the recipient would like to enforce.",
+            "params": {
+              "content": "Raw bytes content of message",
+              "nonce": "Message nonce on the origin domain",
+              "origin": "Domain where message originated",
+              "proofMaturity": "Message's merkle proof age in seconds",
+              "sender": "Sender address on origin chain",
+              "version": "Message version specified by sender"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "receiveBaseMessage(uint32,uint32,bytes32,uint256,uint32,bytes)": {
+            "notice": "Message recipient needs to implement this function in order to receive cross-chain messages."
+          },
+          "testMessageRecipientMock()": {
+            "notice": "Prevents this contract from being included in the coverage report"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/mocks/client/MessageRecipientMock.t.sol": "MessageRecipientMock"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/IMessageRecipient.sol": {
+        "keccak256": "0x342bc1cf70e5a37e6a14d871297e845120608412d1be5dcd2657fc0dae5ebbde",
+        "urls": [
+          "bzz-raw://6d8b93ab4b2d4e85b0dcb62cf0beeaa0289aebc7b3dbc3fb9cad9e82639cbc5e",
+          "dweb:/ipfs/QmRHr2Dqr6tcFWZ7osKisaGg6QZtvwGrncchYjJ1UYWWVx"
+        ],
+        "license": "MIT"
+      },
+      "test/mocks/client/MessageRecipientMock.t.sol": {
+        "keccak256": "0x48a0f852e43b7c5eab716fd921c3693dc46274320c1bc1c78602e7fc7772b575",
+        "urls": [
+          "bzz-raw://16fd1ae4649a22a03aa72f879d0e650456775e3a339b05d5b90333c07e932324",
+          "dweb:/ipfs/QmeVXj5KRDLbmZ8Q22YXbekLQrWP3U7GJxykwVkkyvDmMn"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/mocks/client/MessageRecipientMock.t.sol",
+    "id": 59045,
+    "exportedSymbols": {
+      "IMessageRecipient": [
+        9253
+      ],
+      "MessageRecipientMock": [
+        59044
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:550:138",
+    "nodes": [
+      {
+        "id": 59018,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:138",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 59020,
+        "nodeType": "ImportDirective",
+        "src": "57:86:138",
+        "nodes": [],
+        "absolutePath": "contracts/interfaces/IMessageRecipient.sol",
+        "file": "../../../contracts/interfaces/IMessageRecipient.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 59045,
+        "sourceUnit": 9254,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 59019,
+              "name": "IMessageRecipient",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 9253,
+              "src": "65:17:138",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 59044,
+        "nodeType": "ContractDefinition",
+        "src": "180:401:138",
+        "nodes": [
+          {
+            "id": 59027,
+            "nodeType": "FunctionDefinition",
+            "src": "319:47:138",
+            "nodes": [],
+            "body": {
+              "id": 59026,
+              "nodeType": "Block",
+              "src": "364:2:138",
+              "nodes": [],
+              "statements": []
+            },
+            "documentation": {
+              "id": 59023,
+              "nodeType": "StructuredDocumentation",
+              "src": "237:77:138",
+              "text": "@notice Prevents this contract from being included in the coverage report"
+            },
+            "functionSelector": "056b256e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testMessageRecipientMock",
+            "nameLocation": "328:24:138",
+            "parameters": {
+              "id": 59024,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "352:2:138"
+            },
+            "returnParameters": {
+              "id": 59025,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:0:138"
+            },
+            "scope": 59044,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 59043,
+            "nodeType": "FunctionDefinition",
+            "src": "372:207:138",
+            "nodes": [],
+            "body": {
+              "id": 59042,
+              "nodeType": "Block",
+              "src": "577:2:138",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              9252
+            ],
+            "functionSelector": "032f287e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveBaseMessage",
+            "nameLocation": "381:18:138",
+            "parameters": {
+              "id": 59040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59029,
+                  "mutability": "mutable",
+                  "name": "origin",
+                  "nameLocation": "416:6:138",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59043,
+                  "src": "409:13:138",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 59028,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "409:6:138",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59031,
+                  "mutability": "mutable",
+                  "name": "nonce",
+                  "nameLocation": "439:5:138",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59043,
+                  "src": "432:12:138",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 59030,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "432:6:138",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59033,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "462:6:138",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59043,
+                  "src": "454:14:138",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 59032,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "454:7:138",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59035,
+                  "mutability": "mutable",
+                  "name": "proofMaturity",
+                  "nameLocation": "486:13:138",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59043,
+                  "src": "478:21:138",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59034,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "478:7:138",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59037,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "516:7:138",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59043,
+                  "src": "509:14:138",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 59036,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "509:6:138",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 59039,
+                  "mutability": "mutable",
+                  "name": "content",
+                  "nameLocation": "546:7:138",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59043,
+                  "src": "533:20:138",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 59038,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "533:5:138",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:160:138"
+            },
+            "returnParameters": {
+              "id": 59041,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "577:0:138"
+            },
+            "scope": 59044,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 59021,
+              "name": "IMessageRecipient",
+              "nameLocations": [
+                "213:17:138"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 9253,
+              "src": "213:17:138"
+            },
+            "id": 59022,
+            "nodeType": "InheritanceSpecifier",
+            "src": "213:17:138"
+          }
+        ],
+        "canonicalName": "MessageRecipientMock",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          59044,
+          9253
+        ],
+        "name": "MessageRecipientMock",
+        "nameLocation": "189:20:138",
+        "scope": 59045,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 138
+}

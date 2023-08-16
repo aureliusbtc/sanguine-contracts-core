@@ -1,0 +1,393 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "remoteDomain",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "name": "Executed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "messageHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "paddedTips",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipsRecorded",
+      "type": "event"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"remoteDomain\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"name\":\"Executed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"messageHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"TipsRecorded\",\"type\":\"event\"}],\"devdoc\":{\"events\":{\"Executed(uint32,bytes32,bool)\":{\"params\":{\"messageHash\":\"The keccak256 hash of the message that was executed\",\"remoteDomain\":\"Remote domain where message originated\",\"success\":\"Whether the message was executed successfully\"}},\"TipsRecorded(bytes32,uint256)\":{\"params\":{\"messageHash\":\"The keccak256 hash of the message that was executed\",\"paddedTips\":\"Padded encoded paid tips information\"}}},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"events\":{\"Executed(uint32,bytes32,bool)\":{\"notice\":\"Emitted when message is executed.\"},\"TipsRecorded(bytes32,uint256)\":{\"notice\":\"Emitted when message tips are recorded.\"}},\"kind\":\"user\",\"methods\":{},\"notice\":\"A collection of events emitted by the ExecutionHub contract\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/events/ExecutionHubEvents.sol\":\"ExecutionHubEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/events/ExecutionHubEvents.sol\":{\"keccak256\":\"0x17d62c5bc175a1bd90a12d78c25a28ef196f79f4c22ecd16822ee3bf347263d9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://664fe255227dbc3958404e4019559038281f8bebdb7c0ee3f36abeb82ffbfbf0\",\"dweb:/ipfs/QmbvQ4ms13D8xHSamrnhtJ1qZtRuEjwLT2kcNf34vA1h9L\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "remoteDomain",
+              "type": "uint32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "bool",
+              "name": "success",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Executed",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageHash",
+              "type": "bytes32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedTips",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "TipsRecorded",
+          "anonymous": false
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/events/ExecutionHubEvents.sol": "ExecutionHubEvents"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/events/ExecutionHubEvents.sol": {
+        "keccak256": "0x17d62c5bc175a1bd90a12d78c25a28ef196f79f4c22ecd16822ee3bf347263d9",
+        "urls": [
+          "bzz-raw://664fe255227dbc3958404e4019559038281f8bebdb7c0ee3f36abeb82ffbfbf0",
+          "dweb:/ipfs/QmbvQ4ms13D8xHSamrnhtJ1qZtRuEjwLT2kcNf34vA1h9L"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/events/ExecutionHubEvents.sol",
+    "id": 3951,
+    "exportedSymbols": {
+      "ExecutionHubEvents": [
+        3950
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:798:16",
+    "nodes": [
+      {
+        "id": 3932,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:16",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 3950,
+        "nodeType": "ContractDefinition",
+        "src": "129:700:16",
+        "nodes": [
+          {
+            "id": 3942,
+            "nodeType": "EventDefinition",
+            "src": "458:87:16",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3934,
+              "nodeType": "StructuredDocumentation",
+              "src": "172:281:16",
+              "text": " @notice Emitted when message is executed.\n @param remoteDomain  Remote domain where message originated\n @param messageHash   The keccak256 hash of the message that was executed\n @param success       Whether the message was executed successfully"
+            },
+            "eventSelector": "39c48fd1b2185b07007abc7904a8cdf782cfe449fd0e9bba1c2223a691e15f0b",
+            "name": "Executed",
+            "nameLocation": "464:8:16",
+            "parameters": {
+              "id": 3941,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3936,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "remoteDomain",
+                  "nameLocation": "488:12:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3942,
+                  "src": "473:27:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 3935,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3938,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "518:11:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3942,
+                  "src": "502:27:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3937,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "502:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3940,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "success",
+                  "nameLocation": "536:7:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3942,
+                  "src": "531:12:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3939,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "531:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "472:72:16"
+            }
+          },
+          {
+            "id": 3949,
+            "nodeType": "EventDefinition",
+            "src": "767:60:16",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 3943,
+              "nodeType": "StructuredDocumentation",
+              "src": "551:211:16",
+              "text": " @notice Emitted when message tips are recorded.\n @param messageHash   The keccak256 hash of the message that was executed\n @param paddedTips    Padded encoded paid tips information"
+            },
+            "eventSelector": "22bd0cccf7173839e6f30c797b419921d48a23b0732d0b120c600a49247d3016",
+            "name": "TipsRecorded",
+            "nameLocation": "773:12:16",
+            "parameters": {
+              "id": 3948,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3945,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "messageHash",
+                  "nameLocation": "794:11:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3949,
+                  "src": "786:19:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3944,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "786:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3947,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "paddedTips",
+                  "nameLocation": "815:10:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3949,
+                  "src": "807:18:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3946,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "807:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "785:41:16"
+            }
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "ExecutionHubEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 3933,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:72:16",
+          "text": "@notice A collection of events emitted by the ExecutionHub contract"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          3950
+        ],
+        "name": "ExecutionHubEvents",
+        "nameLocation": "147:18:16",
+        "scope": 3951,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 16
+}

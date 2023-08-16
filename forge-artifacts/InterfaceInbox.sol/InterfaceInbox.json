@@ -1,0 +1,1499 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "attNotaryIndex",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "attNonce",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "paddedTips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        }
+      ],
+      "name": "passReceipt",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "wasAccepted",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "rcptSignature",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "paddedTips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "headerHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "bodyHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "submitReceipt",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "wasAccepted",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "rcptPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "rcptSignature",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "rrSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "submitReceiptReport",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "wasAccepted",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "snapPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "snapSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "submitSnapshot",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "agentRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "snapGas",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "attSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyAttestation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValidAttestation",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "attPayload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "arSignature",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyAttestationReport",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isValidReport",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "passReceipt(uint32,uint32,uint256,bytes)": "6b47b3bc",
+    "submitReceipt(bytes,bytes,uint256,bytes32,bytes32)": "b2a4b455",
+    "submitReceiptReport(bytes,bytes,bytes)": "89246503",
+    "submitSnapshot(bytes,bytes)": "4bb73ea5",
+    "verifyAttestation(bytes,bytes)": "0ca77473",
+    "verifyAttestationReport(bytes,bytes)": "31e8df5a"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"attNotaryIndex\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"attNonce\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"}],\"name\":\"passReceipt\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"wasAccepted\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"rcptSignature\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"headerHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"bodyHash\",\"type\":\"bytes32\"}],\"name\":\"submitReceipt\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"wasAccepted\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"rcptPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"rcptSignature\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"rrSignature\",\"type\":\"bytes\"}],\"name\":\"submitReceiptReport\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"wasAccepted\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"snapPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"snapSignature\",\"type\":\"bytes\"}],\"name\":\"submitSnapshot\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"agentRoot\",\"type\":\"bytes32\"},{\"internalType\":\"uint256[]\",\"name\":\"snapGas\",\"type\":\"uint256[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"attSignature\",\"type\":\"bytes\"}],\"name\":\"verifyAttestation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValidAttestation\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"attPayload\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"arSignature\",\"type\":\"bytes\"}],\"name\":\"verifyAttestationReport\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isValidReport\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"passReceipt(uint32,uint32,uint256,bytes)\":{\"details\":\"If a receipt is not accepted, any of the Notaries can submit it later using `submitReceipt`.\",\"params\":{\"attNonce\":\"Nonce of the attestation used for proving the executed message\",\"attNotaryIndex\":\"Index of the Notary who signed the attestation\",\"paddedTips\":\"Tips for the message execution\",\"rcptPayload\":\"Raw payload with message execution receipt\"},\"returns\":{\"wasAccepted\":\"     Whether the receipt was accepted\"}},\"submitReceipt(bytes,bytes,uint256,bytes32,bytes32)\":{\"params\":{\"bodyHash\":\"Hash of the message body excluding the tips\",\"headerHash\":\"Hash of the message header\",\"paddedTips\":\"Tips for the message execution\",\"rcptPayload\":\"Raw payload with receipt data\",\"rcptSignature\":\"Notary signature for the receipt\"},\"returns\":{\"wasAccepted\":\"     Whether the receipt was accepted\"}},\"submitReceiptReport(bytes,bytes,bytes)\":{\"params\":{\"rcptPayload\":\"Raw payload with Receipt data that Guard reports as invalid\",\"rcptSignature\":\"Notary signature for the reported receipt\",\"rrSignature\":\"Guard signature for the report\"},\"returns\":{\"wasAccepted\":\"     Whether the Report was accepted (resulting in Dispute between the agents)\"}},\"submitSnapshot(bytes,bytes)\":{\"details\":\"Notary will need to provide both `agentRoot` and `snapGas` when submitting an attestation on the remote chain (the attestation contains only their merged hash). These are returned by this function, and could be also obtained by calling `getAttestation(nonce)` or `getLatestNotaryAttestation(notary)`.\",\"params\":{\"snapPayload\":\"Raw payload with snapshot data\",\"snapSignature\":\"Agent signature for the snapshot\"},\"returns\":{\"agentRoot\":\"       Current root of the Agent Merkle Tree (zero, if a Guard snapshot was submitted)\",\"attPayload\":\"      Raw payload with data for attestation derived from Notary snapshot.                          Empty payload, if a Guard snapshot was submitted.\",\"snapGas\":\"         Gas data for each chain in the snapshot                          Empty list, if a Guard snapshot was submitted.\"}},\"verifyAttestation(bytes,bytes)\":{\"params\":{\"attPayload\":\"Raw payload with Attestation data\",\"attSignature\":\"Notary signature for the attestation\"},\"returns\":{\"isValidAttestation\":\"  Whether the provided attestation is valid.                              Notary is slashed, if return value is FALSE.\"}},\"verifyAttestationReport(bytes,bytes)\":{\"params\":{\"arSignature\":\"Guard signature for the report\",\"attPayload\":\"Raw payload with Attestation data that Guard reports as invalid\"},\"returns\":{\"isValidReport\":\"   Whether the provided report is valid.                          Guard is slashed, if return value is FALSE.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"passReceipt(uint32,uint32,uint256,bytes)\":{\"notice\":\"Passes the message execution receipt from Destination to the Summit contract to save. > Will revert if any of these is true: > - Called by anyone other than Destination.\"},\"submitReceipt(bytes,bytes,uint256,bytes32,bytes32)\":{\"notice\":\"Accepts a receipt signed by a Notary and passes it to Summit contract to save. > Receipt is a statement about message execution status on the remote chain. - This will distribute the message tips across the off-chain actors once the receipt optimistic period is over. > Will revert if any of these is true: > - Receipt payload is not properly formatted. > - Receipt signer is not an active Notary. > - Receipt signer is in Dispute. > - Receipt's snapshot root is unknown. > - Provided tips could not be proven against the message hash.\"},\"submitReceiptReport(bytes,bytes,bytes)\":{\"notice\":\"Accepts a Guard's receipt report signature, as well as Notary signature for the reported Receipt. > ReceiptReport is a Guard statement saying \\\"Reported receipt is invalid\\\". - This results in an opened Dispute between the Guard and the Notary. - Note: Guard could (but doesn't have to) form a ReceiptReport and use receipt signature from `verifyReceipt()` successful call that led to Notary being slashed in Summit on Synapse Chain. > Will revert if any of these is true: > - Receipt payload is not properly formatted. > - Receipt Report signer is not an active Guard. > - Receipt signer is not an active Notary.\"},\"submitSnapshot(bytes,bytes)\":{\"notice\":\"Accepts a snapshot signed by a Guard or a Notary and passes it to Summit contract to save. > Snapshot is a list of states for a set of Origin contracts residing on any of the chains. - Guard-signed snapshots: all the states in the snapshot become available for Notary signing. - Notary-signed snapshots: Snapshot Merkle Root is saved for valid snapshots, i.e. snapshots which are only using states previously submitted by any of the Guards. - Notary doesn't have to use states submitted by a single Guard in their snapshot. - Notary could then proceed to sign the attestation for their submitted snapshot. > Will revert if any of these is true: > - Snapshot payload is not properly formatted. > - Snapshot signer is not an active Agent. > - Agent snapshot contains a state with a nonce smaller or equal then they have previously submitted. > - Notary snapshot contains a state that hasn't been previously submitted by any of the Guards. > - Note: Agent will NOT be slashed for submitting such a snapshot.\"},\"verifyAttestation(bytes,bytes)\":{\"notice\":\"Verifies an attestation signed by a Notary.  - Does nothing, if the attestation is valid (was submitted by this Notary as a snapshot).  - Slashes the Notary, if the attestation is invalid. > Will revert if any of these is true: > - Attestation payload is not properly formatted. > - Attestation signer is not an active Notary.\"},\"verifyAttestationReport(bytes,bytes)\":{\"notice\":\"Verifies a Guard's attestation report signature.  - Does nothing, if the report is valid (if the reported attestation is invalid).  - Slashes the Guard, if the report is invalid (if the reported attestation is valid). > Will revert if any of these is true: > - Attestation payload is not properly formatted. > - Attestation Report signer is not an active Guard.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/interfaces/InterfaceInbox.sol\":\"InterfaceInbox\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/interfaces/InterfaceInbox.sol\":{\"keccak256\":\"0x86dbe24a32f5d09a9620f37f9af69710ba54703edd66ace3ba90e8335ef77246\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb9d7a21b3108cc86013aef80ba9a7e4a91aa8af6dd71aca5d47d26e85d213b0\",\"dweb:/ipfs/QmS2om4PmNgHJkVP92hwoHvBngH9HwmwZJnVMHhqeVj5ZY\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "attNotaryIndex",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "attNonce",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedTips",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "passReceipt",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "wasAccepted",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptSignature",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "paddedTips",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "headerHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "bodyHash",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "submitReceipt",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "wasAccepted",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "rcptPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "rcptSignature",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "rrSignature",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "submitReceiptReport",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "wasAccepted",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "snapPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "snapSignature",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "submitSnapshot",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentRoot",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "snapGas",
+              "type": "uint256[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "attSignature",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "verifyAttestation",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "isValidAttestation",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "attPayload",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "arSignature",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "verifyAttestationReport",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "isValidReport",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "passReceipt(uint32,uint32,uint256,bytes)": {
+            "details": "If a receipt is not accepted, any of the Notaries can submit it later using `submitReceipt`.",
+            "params": {
+              "attNonce": "Nonce of the attestation used for proving the executed message",
+              "attNotaryIndex": "Index of the Notary who signed the attestation",
+              "paddedTips": "Tips for the message execution",
+              "rcptPayload": "Raw payload with message execution receipt"
+            },
+            "returns": {
+              "wasAccepted": "     Whether the receipt was accepted"
+            }
+          },
+          "submitReceipt(bytes,bytes,uint256,bytes32,bytes32)": {
+            "params": {
+              "bodyHash": "Hash of the message body excluding the tips",
+              "headerHash": "Hash of the message header",
+              "paddedTips": "Tips for the message execution",
+              "rcptPayload": "Raw payload with receipt data",
+              "rcptSignature": "Notary signature for the receipt"
+            },
+            "returns": {
+              "wasAccepted": "     Whether the receipt was accepted"
+            }
+          },
+          "submitReceiptReport(bytes,bytes,bytes)": {
+            "params": {
+              "rcptPayload": "Raw payload with Receipt data that Guard reports as invalid",
+              "rcptSignature": "Notary signature for the reported receipt",
+              "rrSignature": "Guard signature for the report"
+            },
+            "returns": {
+              "wasAccepted": "     Whether the Report was accepted (resulting in Dispute between the agents)"
+            }
+          },
+          "submitSnapshot(bytes,bytes)": {
+            "details": "Notary will need to provide both `agentRoot` and `snapGas` when submitting an attestation on the remote chain (the attestation contains only their merged hash). These are returned by this function, and could be also obtained by calling `getAttestation(nonce)` or `getLatestNotaryAttestation(notary)`.",
+            "params": {
+              "snapPayload": "Raw payload with snapshot data",
+              "snapSignature": "Agent signature for the snapshot"
+            },
+            "returns": {
+              "agentRoot": "       Current root of the Agent Merkle Tree (zero, if a Guard snapshot was submitted)",
+              "attPayload": "      Raw payload with data for attestation derived from Notary snapshot.                          Empty payload, if a Guard snapshot was submitted.",
+              "snapGas": "         Gas data for each chain in the snapshot                          Empty list, if a Guard snapshot was submitted."
+            }
+          },
+          "verifyAttestation(bytes,bytes)": {
+            "params": {
+              "attPayload": "Raw payload with Attestation data",
+              "attSignature": "Notary signature for the attestation"
+            },
+            "returns": {
+              "isValidAttestation": "  Whether the provided attestation is valid.                              Notary is slashed, if return value is FALSE."
+            }
+          },
+          "verifyAttestationReport(bytes,bytes)": {
+            "params": {
+              "arSignature": "Guard signature for the report",
+              "attPayload": "Raw payload with Attestation data that Guard reports as invalid"
+            },
+            "returns": {
+              "isValidReport": "   Whether the provided report is valid.                          Guard is slashed, if return value is FALSE."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "passReceipt(uint32,uint32,uint256,bytes)": {
+            "notice": "Passes the message execution receipt from Destination to the Summit contract to save. > Will revert if any of these is true: > - Called by anyone other than Destination."
+          },
+          "submitReceipt(bytes,bytes,uint256,bytes32,bytes32)": {
+            "notice": "Accepts a receipt signed by a Notary and passes it to Summit contract to save. > Receipt is a statement about message execution status on the remote chain. - This will distribute the message tips across the off-chain actors once the receipt optimistic period is over. > Will revert if any of these is true: > - Receipt payload is not properly formatted. > - Receipt signer is not an active Notary. > - Receipt signer is in Dispute. > - Receipt's snapshot root is unknown. > - Provided tips could not be proven against the message hash."
+          },
+          "submitReceiptReport(bytes,bytes,bytes)": {
+            "notice": "Accepts a Guard's receipt report signature, as well as Notary signature for the reported Receipt. > ReceiptReport is a Guard statement saying \"Reported receipt is invalid\". - This results in an opened Dispute between the Guard and the Notary. - Note: Guard could (but doesn't have to) form a ReceiptReport and use receipt signature from `verifyReceipt()` successful call that led to Notary being slashed in Summit on Synapse Chain. > Will revert if any of these is true: > - Receipt payload is not properly formatted. > - Receipt Report signer is not an active Guard. > - Receipt signer is not an active Notary."
+          },
+          "submitSnapshot(bytes,bytes)": {
+            "notice": "Accepts a snapshot signed by a Guard or a Notary and passes it to Summit contract to save. > Snapshot is a list of states for a set of Origin contracts residing on any of the chains. - Guard-signed snapshots: all the states in the snapshot become available for Notary signing. - Notary-signed snapshots: Snapshot Merkle Root is saved for valid snapshots, i.e. snapshots which are only using states previously submitted by any of the Guards. - Notary doesn't have to use states submitted by a single Guard in their snapshot. - Notary could then proceed to sign the attestation for their submitted snapshot. > Will revert if any of these is true: > - Snapshot payload is not properly formatted. > - Snapshot signer is not an active Agent. > - Agent snapshot contains a state with a nonce smaller or equal then they have previously submitted. > - Notary snapshot contains a state that hasn't been previously submitted by any of the Guards. > - Note: Agent will NOT be slashed for submitting such a snapshot."
+          },
+          "verifyAttestation(bytes,bytes)": {
+            "notice": "Verifies an attestation signed by a Notary.  - Does nothing, if the attestation is valid (was submitted by this Notary as a snapshot).  - Slashes the Notary, if the attestation is invalid. > Will revert if any of these is true: > - Attestation payload is not properly formatted. > - Attestation signer is not an active Notary."
+          },
+          "verifyAttestationReport(bytes,bytes)": {
+            "notice": "Verifies a Guard's attestation report signature.  - Does nothing, if the report is valid (if the reported attestation is invalid).  - Slashes the Guard, if the report is invalid (if the reported attestation is valid). > Will revert if any of these is true: > - Attestation payload is not properly formatted. > - Attestation Report signer is not an active Guard."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/interfaces/InterfaceInbox.sol": "InterfaceInbox"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/interfaces/InterfaceInbox.sol": {
+        "keccak256": "0x86dbe24a32f5d09a9620f37f9af69710ba54703edd66ace3ba90e8335ef77246",
+        "urls": [
+          "bzz-raw://fb9d7a21b3108cc86013aef80ba9a7e4a91aa8af6dd71aca5d47d26e85d213b0",
+          "dweb:/ipfs/QmS2om4PmNgHJkVP92hwoHvBngH9HwmwZJnVMHhqeVj5ZY"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/interfaces/InterfaceInbox.sol",
+    "id": 9845,
+    "exportedSymbols": {
+      "InterfaceInbox": [
+        9844
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:7872:40",
+    "nodes": [
+      {
+        "id": 9766,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:40",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 9844,
+        "nodeType": "ContractDefinition",
+        "src": "57:7846:40",
+        "nodes": [
+          {
+            "id": 9781,
+            "nodeType": "FunctionDefinition",
+            "src": "2406:182:40",
+            "nodes": [],
+            "documentation": {
+              "id": 9767,
+              "nodeType": "StructuredDocumentation",
+              "src": "386:2015:40",
+              "text": " @notice Accepts a snapshot signed by a Guard or a Notary and passes it to Summit contract to save.\n > Snapshot is a list of states for a set of Origin contracts residing on any of the chains.\n - Guard-signed snapshots: all the states in the snapshot become available for Notary signing.\n - Notary-signed snapshots: Snapshot Merkle Root is saved for valid snapshots, i.e.\n snapshots which are only using states previously submitted by any of the Guards.\n - Notary doesn't have to use states submitted by a single Guard in their snapshot.\n - Notary could then proceed to sign the attestation for their submitted snapshot.\n > Will revert if any of these is true:\n > - Snapshot payload is not properly formatted.\n > - Snapshot signer is not an active Agent.\n > - Agent snapshot contains a state with a nonce smaller or equal then they have previously submitted.\n > - Notary snapshot contains a state that hasn't been previously submitted by any of the Guards.\n > - Note: Agent will NOT be slashed for submitting such a snapshot.\n @dev Notary will need to provide both `agentRoot` and `snapGas` when submitting an attestation on\n the remote chain (the attestation contains only their merged hash). These are returned by this function,\n and could be also obtained by calling `getAttestation(nonce)` or `getLatestNotaryAttestation(notary)`.\n @param snapPayload       Raw payload with snapshot data\n @param snapSignature     Agent signature for the snapshot\n @return attPayload       Raw payload with data for attestation derived from Notary snapshot.\n                          Empty payload, if a Guard snapshot was submitted.\n @return agentRoot        Current root of the Agent Merkle Tree (zero, if a Guard snapshot was submitted)\n @return snapGas          Gas data for each chain in the snapshot\n                          Empty list, if a Guard snapshot was submitted."
+            },
+            "functionSelector": "4bb73ea5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitSnapshot",
+            "nameLocation": "2415:14:40",
+            "parameters": {
+              "id": 9772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9769,
+                  "mutability": "mutable",
+                  "name": "snapPayload",
+                  "nameLocation": "2443:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9781,
+                  "src": "2430:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9768,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2430:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9771,
+                  "mutability": "mutable",
+                  "name": "snapSignature",
+                  "nameLocation": "2469:13:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9781,
+                  "src": "2456:26:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9770,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2456:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2429:54:40"
+            },
+            "returnParameters": {
+              "id": 9780,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9774,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "2531:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9781,
+                  "src": "2518:23:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9773,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2518:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9776,
+                  "mutability": "mutable",
+                  "name": "agentRoot",
+                  "nameLocation": "2551:9:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9781,
+                  "src": "2543:17:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9775,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2543:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9779,
+                  "mutability": "mutable",
+                  "name": "snapGas",
+                  "nameLocation": "2579:7:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9781,
+                  "src": "2562:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9777,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2562:7:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 9778,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2562:9:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2517:70:40"
+            },
+            "scope": 9844,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9797,
+            "nodeType": "FunctionDefinition",
+            "src": "3607:217:40",
+            "nodes": [],
+            "documentation": {
+              "id": 9782,
+              "nodeType": "StructuredDocumentation",
+              "src": "2594:1008:40",
+              "text": " @notice Accepts a receipt signed by a Notary and passes it to Summit contract to save.\n > Receipt is a statement about message execution status on the remote chain.\n - This will distribute the message tips across the off-chain actors once the receipt optimistic period is over.\n > Will revert if any of these is true:\n > - Receipt payload is not properly formatted.\n > - Receipt signer is not an active Notary.\n > - Receipt signer is in Dispute.\n > - Receipt's snapshot root is unknown.\n > - Provided tips could not be proven against the message hash.\n @param rcptPayload       Raw payload with receipt data\n @param rcptSignature     Notary signature for the receipt\n @param paddedTips        Tips for the message execution\n @param headerHash        Hash of the message header\n @param bodyHash          Hash of the message body excluding the tips\n @return wasAccepted      Whether the receipt was accepted"
+            },
+            "functionSelector": "b2a4b455",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitReceipt",
+            "nameLocation": "3616:13:40",
+            "parameters": {
+              "id": 9793,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9784,
+                  "mutability": "mutable",
+                  "name": "rcptPayload",
+                  "nameLocation": "3652:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9797,
+                  "src": "3639:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9783,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3639:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9786,
+                  "mutability": "mutable",
+                  "name": "rcptSignature",
+                  "nameLocation": "3686:13:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9797,
+                  "src": "3673:26:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9785,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3673:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9788,
+                  "mutability": "mutable",
+                  "name": "paddedTips",
+                  "nameLocation": "3717:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9797,
+                  "src": "3709:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9787,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3709:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9790,
+                  "mutability": "mutable",
+                  "name": "headerHash",
+                  "nameLocation": "3745:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9797,
+                  "src": "3737:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9789,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3737:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9792,
+                  "mutability": "mutable",
+                  "name": "bodyHash",
+                  "nameLocation": "3773:8:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9797,
+                  "src": "3765:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 9791,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3765:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3629:158:40"
+            },
+            "returnParameters": {
+              "id": 9796,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9795,
+                  "mutability": "mutable",
+                  "name": "wasAccepted",
+                  "nameLocation": "3811:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9797,
+                  "src": "3806:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9794,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3806:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3805:18:40"
+            },
+            "scope": 9844,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9809,
+            "nodeType": "FunctionDefinition",
+            "src": "4871:161:40",
+            "nodes": [],
+            "documentation": {
+              "id": 9798,
+              "nodeType": "StructuredDocumentation",
+              "src": "3830:1036:40",
+              "text": " @notice Accepts a Guard's receipt report signature, as well as Notary signature\n for the reported Receipt.\n > ReceiptReport is a Guard statement saying \"Reported receipt is invalid\".\n - This results in an opened Dispute between the Guard and the Notary.\n - Note: Guard could (but doesn't have to) form a ReceiptReport and use receipt signature from\n `verifyReceipt()` successful call that led to Notary being slashed in Summit on Synapse Chain.\n > Will revert if any of these is true:\n > - Receipt payload is not properly formatted.\n > - Receipt Report signer is not an active Guard.\n > - Receipt signer is not an active Notary.\n @param rcptPayload       Raw payload with Receipt data that Guard reports as invalid\n @param rcptSignature     Notary signature for the reported receipt\n @param rrSignature       Guard signature for the report\n @return wasAccepted      Whether the Report was accepted (resulting in Dispute between the agents)"
+            },
+            "functionSelector": "89246503",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitReceiptReport",
+            "nameLocation": "4880:19:40",
+            "parameters": {
+              "id": 9805,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9800,
+                  "mutability": "mutable",
+                  "name": "rcptPayload",
+                  "nameLocation": "4913:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9809,
+                  "src": "4900:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9799,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4900:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9802,
+                  "mutability": "mutable",
+                  "name": "rcptSignature",
+                  "nameLocation": "4939:13:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9809,
+                  "src": "4926:26:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9801,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4926:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9804,
+                  "mutability": "mutable",
+                  "name": "rrSignature",
+                  "nameLocation": "4967:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9809,
+                  "src": "4954:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9803,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4954:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4899:80:40"
+            },
+            "returnParameters": {
+              "id": 9808,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9807,
+                  "mutability": "mutable",
+                  "name": "wasAccepted",
+                  "nameLocation": "5019:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9809,
+                  "src": "5014:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9806,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5014:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5013:18:40"
+            },
+            "scope": 9844,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9823,
+            "nodeType": "FunctionDefinition",
+            "src": "5735:159:40",
+            "nodes": [],
+            "documentation": {
+              "id": 9810,
+              "nodeType": "StructuredDocumentation",
+              "src": "5038:692:40",
+              "text": " @notice Passes the message execution receipt from Destination to the Summit contract to save.\n > Will revert if any of these is true:\n > - Called by anyone other than Destination.\n @dev If a receipt is not accepted, any of the Notaries can submit it later using `submitReceipt`.\n @param attNotaryIndex    Index of the Notary who signed the attestation\n @param attNonce          Nonce of the attestation used for proving the executed message\n @param paddedTips        Tips for the message execution\n @param rcptPayload       Raw payload with message execution receipt\n @return wasAccepted      Whether the receipt was accepted"
+            },
+            "functionSelector": "6b47b3bc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "passReceipt",
+            "nameLocation": "5744:11:40",
+            "parameters": {
+              "id": 9819,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9812,
+                  "mutability": "mutable",
+                  "name": "attNotaryIndex",
+                  "nameLocation": "5763:14:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9823,
+                  "src": "5756:21:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9811,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5756:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9814,
+                  "mutability": "mutable",
+                  "name": "attNonce",
+                  "nameLocation": "5786:8:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9823,
+                  "src": "5779:15:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 9813,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5779:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9816,
+                  "mutability": "mutable",
+                  "name": "paddedTips",
+                  "nameLocation": "5804:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9823,
+                  "src": "5796:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9815,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5796:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9818,
+                  "mutability": "mutable",
+                  "name": "rcptPayload",
+                  "nameLocation": "5829:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9823,
+                  "src": "5816:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9817,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5816:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5755:86:40"
+            },
+            "returnParameters": {
+              "id": 9822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9821,
+                  "mutability": "mutable",
+                  "name": "wasAccepted",
+                  "nameLocation": "5881:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9823,
+                  "src": "5876:16:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9820,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5876:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5875:18:40"
+            },
+            "scope": 9844,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9833,
+            "nodeType": "FunctionDefinition",
+            "src": "6886:138:40",
+            "nodes": [],
+            "documentation": {
+              "id": 9824,
+              "nodeType": "StructuredDocumentation",
+              "src": "6198:683:40",
+              "text": " @notice Verifies an attestation signed by a Notary.\n  - Does nothing, if the attestation is valid (was submitted by this Notary as a snapshot).\n  - Slashes the Notary, if the attestation is invalid.\n > Will revert if any of these is true:\n > - Attestation payload is not properly formatted.\n > - Attestation signer is not an active Notary.\n @param attPayload        Raw payload with Attestation data\n @param attSignature      Notary signature for the attestation\n @return isValidAttestation   Whether the provided attestation is valid.\n                              Notary is slashed, if return value is FALSE."
+            },
+            "functionSelector": "0ca77473",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyAttestation",
+            "nameLocation": "6895:17:40",
+            "parameters": {
+              "id": 9829,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9826,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "6926:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9833,
+                  "src": "6913:23:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9825,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6913:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9828,
+                  "mutability": "mutable",
+                  "name": "attSignature",
+                  "nameLocation": "6951:12:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9833,
+                  "src": "6938:25:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9827,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6938:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6912:52:40"
+            },
+            "returnParameters": {
+              "id": 9832,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9831,
+                  "mutability": "mutable",
+                  "name": "isValidAttestation",
+                  "nameLocation": "7004:18:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9833,
+                  "src": "6999:23:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9830,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6999:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6998:25:40"
+            },
+            "scope": 9844,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 9843,
+            "nodeType": "FunctionDefinition",
+            "src": "7763:138:40",
+            "nodes": [],
+            "documentation": {
+              "id": 9834,
+              "nodeType": "StructuredDocumentation",
+              "src": "7030:728:40",
+              "text": " @notice Verifies a Guard's attestation report signature.\n  - Does nothing, if the report is valid (if the reported attestation is invalid).\n  - Slashes the Guard, if the report is invalid (if the reported attestation is valid).\n > Will revert if any of these is true:\n > - Attestation payload is not properly formatted.\n > - Attestation Report signer is not an active Guard.\n @param attPayload        Raw payload with Attestation data that Guard reports as invalid\n @param arSignature       Guard signature for the report\n @return isValidReport    Whether the provided report is valid.\n                          Guard is slashed, if return value is FALSE."
+            },
+            "functionSelector": "31e8df5a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyAttestationReport",
+            "nameLocation": "7772:23:40",
+            "parameters": {
+              "id": 9839,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9836,
+                  "mutability": "mutable",
+                  "name": "attPayload",
+                  "nameLocation": "7809:10:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9843,
+                  "src": "7796:23:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9835,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7796:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9838,
+                  "mutability": "mutable",
+                  "name": "arSignature",
+                  "nameLocation": "7834:11:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9843,
+                  "src": "7821:24:40",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9837,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7821:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7795:51:40"
+            },
+            "returnParameters": {
+              "id": 9842,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9841,
+                  "mutability": "mutable",
+                  "name": "isValidReport",
+                  "nameLocation": "7886:13:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9843,
+                  "src": "7881:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9840,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7881:4:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7880:20:40"
+            },
+            "scope": 9844,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "InterfaceInbox",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9844
+        ],
+        "name": "InterfaceInbox",
+        "nameLocation": "67:14:40",
+        "scope": 9845,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 40
+}

@@ -1,0 +1,3908 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220e06ba0445ae2922a92f02da78de78fde515e4fece6e8c1fcdd2790b84dc005ec64736f6c63430008110033",
+    "sourceMap": "3577:5238:49:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;3577:5238:49;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220e06ba0445ae2922a92f02da78de78fde515e4fece6e8c1fcdd2790b84dc005ec64736f6c63430008110033",
+    "sourceMap": "3577:5238:49:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Attestation could be signed by a Notary and submitted to `Destination` in order to use if for proving messages coming from origin chains that the initial snapshot refers to.\",\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"OFFSET_SNAP_ROOT\":{\"details\":\"The variables below are not supposed to be used outside of the library directly.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"# Attestation Attestation structure represents the \\\"Snapshot Merkle Tree\\\" created from every Notary snapshot accepted by the Summit contract. Attestation includes\\\" the root of the \\\"Snapshot Merkle Tree\\\", as well as additional metadata. ## Steps for creation of \\\"Snapshot Merkle Tree\\\": 1. The list of hashes is composed for states in the Notary snapshot. 2. The list is padded with zero values until its length is 2**SNAPSHOT_TREE_HEIGHT. 3. Values from the list are used as leafs and the merkle tree is constructed. ## Differences between a State and Attestation Similar to Origin, every derived Notary's \\\"Snapshot Merkle Root\\\" is saved in Summit contract. The main difference is that Origin contract itself is keeping track of an incremental merkle tree, by inserting the hash of the sent message and calculating the new \\\"Origin Merkle Root\\\". While Summit relies on Guards and Notaries to provide snapshot data, which is used to calculate the \\\"Snapshot Merkle Root\\\". - Origin's State is \\\"state of Origin Merkle Tree after N-th message was sent\\\". - Summit's Attestation is \\\"data for the N-th accepted Notary Snapshot\\\" + \\\"agent merkle root at the time snapshot was submitted\\\" + \\\"attestation metadata\\\". ## Attestation validity - Attestation is considered \\\"valid\\\" in Summit contract, if it matches the N-th (nonce) snapshot submitted by Notaries, as well as the historical agent merkle root. - Attestation is considered \\\"valid\\\" in Origin contract, if its underlying Snapshot is \\\"valid\\\". - This means that a snapshot could be \\\"valid\\\" in Summit contract and \\\"invalid\\\" in Origin, if the underlying snapshot is invalid (i.e. one of the states in the list is invalid). - The opposite could also be true. If a perfectly valid snapshot was never submitted to Summit, its attestation would be valid in Origin, but invalid in Summit (it was never accepted, so the metadata would be incorrect). - Attestation is considered \\\"globally valid\\\", if it is valid in the Summit and all the Origin contracts. # Memory layout of Attestation fields | Position   | Field       | Type    | Bytes | Description                                                    | | ---------- | ----------- | ------- | ----- | -------------------------------------------------------------- | | [000..032) | snapRoot    | bytes32 | 32    | Root for \\\"Snapshot Merkle Tree\\\" created from a Notary snapshot | | [032..064) | dataHash    | bytes32 | 32    | Agent Root and SnapGasHash combined into a single hash         | | [064..068) | nonce       | uint32  | 4     | Total amount of all accepted Notary snapshots                  | | [068..073) | blockNumber | uint40  | 5     | Block when this Notary snapshot was accepted in Summit         | | [073..078) | timestamp   | uint40  | 5     | Time when this Notary snapshot was accepted in Summit          |\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/libs/memory/Attestation.sol\":\"AttestationLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/Constants.sol\":{\"keccak256\":\"0x00f447e219d27f9a864847f8038c4bac16f59e2fb37c5c0de1b554d48d41ba48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c3b8452f969900c9ffbfae74dd73d076d9eace7e2448015b6c46ca8dd4d4402\",\"dweb:/ipfs/QmXGya3YqdmTXNdzTs1ZLMXJZnfJb49Sw5soXhjHbq8qnk\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/memory/Attestation.sol\":{\"keccak256\":\"0x83b58e2d80cc7139b8996c51c5e9015f34e833e73b92036b53a1af6641e2b699\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1a097c82542ba977de931c6331a9b01a39ef2e46b8916414a6f4f550bc59c113\",\"dweb:/ipfs/QmYRHMoPXzrnx86rZnHAEiFxqM5poEs6wyZinLLTEfwZH3\"]},\"contracts/libs/memory/MemView.sol\":{\"keccak256\":\"0x95dd48e50e353b59fadce29f22f02629c91bd3b5e07c0efa588bd7c808536587\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4347457c5338192aca52c237c7f588d15a4f541482cd44b0632c59f36f9558eb\",\"dweb:/ipfs/QmXn1sKY7nVNrgKtbtE9PaMHFKBadyg73fs2jhw4Navyb1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=node_modules/@openzeppelin/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "hardhat/=node_modules/hardhat/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "contracts/libs/memory/Attestation.sol": "AttestationLib"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "contracts/libs/Constants.sol": {
+        "keccak256": "0x00f447e219d27f9a864847f8038c4bac16f59e2fb37c5c0de1b554d48d41ba48",
+        "urls": [
+          "bzz-raw://8c3b8452f969900c9ffbfae74dd73d076d9eace7e2448015b6c46ca8dd4d4402",
+          "dweb:/ipfs/QmXGya3YqdmTXNdzTs1ZLMXJZnfJb49Sw5soXhjHbq8qnk"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/Errors.sol": {
+        "keccak256": "0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011",
+        "urls": [
+          "bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b",
+          "dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/memory/Attestation.sol": {
+        "keccak256": "0x83b58e2d80cc7139b8996c51c5e9015f34e833e73b92036b53a1af6641e2b699",
+        "urls": [
+          "bzz-raw://1a097c82542ba977de931c6331a9b01a39ef2e46b8916414a6f4f550bc59c113",
+          "dweb:/ipfs/QmYRHMoPXzrnx86rZnHAEiFxqM5poEs6wyZinLLTEfwZH3"
+        ],
+        "license": "MIT"
+      },
+      "contracts/libs/memory/MemView.sol": {
+        "keccak256": "0x95dd48e50e353b59fadce29f22f02629c91bd3b5e07c0efa588bd7c808536587",
+        "urls": [
+          "bzz-raw://4347457c5338192aca52c237c7f588d15a4f541482cd44b0632c59f36f9558eb",
+          "dweb:/ipfs/QmXn1sKY7nVNrgKtbtE9PaMHFKBadyg73fs2jhw4Navyb1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "contracts/libs/memory/Attestation.sol",
+    "id": 10810,
+    "exportedSymbols": {
+      "ATTESTATION_INVALID_SALT": [
+        10127
+      ],
+      "ATTESTATION_LENGTH": [
+        10071
+      ],
+      "ATTESTATION_VALID_SALT": [
+        10122
+      ],
+      "Attestation": [
+        10527
+      ],
+      "AttestationLib": [
+        10809
+      ],
+      "MemView": [
+        11573
+      ],
+      "MemViewLib": [
+        12265
+      ],
+      "UnformattedAttestation": [
+        10222
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:8784:49",
+    "nodes": [
+      {
+        "id": 10516,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:49",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 10519,
+        "nodeType": "ImportDirective",
+        "src": "57:50:49",
+        "nodes": [],
+        "absolutePath": "contracts/libs/memory/MemView.sol",
+        "file": "./MemView.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 10810,
+        "sourceUnit": 12266,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 10517,
+              "name": "MemView",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 11573,
+              "src": "65:7:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10518,
+              "name": "MemViewLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 12265,
+              "src": "74:10:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10523,
+        "nodeType": "ImportDirective",
+        "src": "108:102:49",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Constants.sol",
+        "file": "../Constants.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 10810,
+        "sourceUnit": 10171,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 10520,
+              "name": "ATTESTATION_LENGTH",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10071,
+              "src": "116:18:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10521,
+              "name": "ATTESTATION_VALID_SALT",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10122,
+              "src": "136:22:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 10522,
+              "name": "ATTESTATION_INVALID_SALT",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10127,
+              "src": "160:24:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10525,
+        "nodeType": "ImportDirective",
+        "src": "211:53:49",
+        "nodes": [],
+        "absolutePath": "contracts/libs/Errors.sol",
+        "file": "../Errors.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 10810,
+        "sourceUnit": 10335,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 10524,
+              "name": "UnformattedAttestation",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 10222,
+              "src": "219:22:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 10527,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "337:28:49",
+        "nodes": [],
+        "canonicalName": "Attestation",
+        "name": "Attestation",
+        "nameLocation": "342:11:49",
+        "underlyingType": {
+          "id": 10526,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "357:7:49",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        }
+      },
+      {
+        "id": 10531,
+        "nodeType": "UsingForDirective",
+        "src": "367:44:49",
+        "nodes": [],
+        "global": true,
+        "libraryName": {
+          "id": 10528,
+          "name": "AttestationLib",
+          "nameLocations": [
+            "373:14:49"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 10809,
+          "src": "373:14:49"
+        },
+        "typeName": {
+          "id": 10530,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 10529,
+            "name": "Attestation",
+            "nameLocations": [
+              "392:11:49"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 10527,
+            "src": "392:11:49"
+          },
+          "referencedDeclaration": 10527,
+          "src": "392:11:49",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+            "typeString": "Attestation"
+          }
+        }
+      },
+      {
+        "id": 10809,
+        "nodeType": "ContractDefinition",
+        "src": "3577:5238:49",
+        "nodes": [
+          {
+            "id": 10535,
+            "nodeType": "UsingForDirective",
+            "src": "3606:27:49",
+            "nodes": [],
+            "global": false,
+            "libraryName": {
+              "id": 10533,
+              "name": "MemViewLib",
+              "nameLocations": [
+                "3612:10:49"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 12265,
+              "src": "3612:10:49"
+            },
+            "typeName": {
+              "id": 10534,
+              "name": "bytes",
+              "nodeType": "ElementaryTypeName",
+              "src": "3627:5:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_storage_ptr",
+                "typeString": "bytes"
+              }
+            }
+          },
+          {
+            "id": 10539,
+            "nodeType": "VariableDeclaration",
+            "src": "3779:45:49",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 10536,
+              "nodeType": "StructuredDocumentation",
+              "src": "3685:89:49",
+              "text": "@dev The variables below are not supposed to be used outside of the library directly."
+            },
+            "mutability": "constant",
+            "name": "OFFSET_SNAP_ROOT",
+            "nameLocation": "3804:16:49",
+            "scope": 10809,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10537,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "3779:7:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "30",
+              "id": 10538,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3823:1:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 10542,
+            "nodeType": "VariableDeclaration",
+            "src": "3830:46:49",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "OFFSET_DATA_HASH",
+            "nameLocation": "3855:16:49",
+            "scope": 10809,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10540,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "3830:7:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "3332",
+              "id": 10541,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3874:2:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_32_by_1",
+                "typeString": "int_const 32"
+              },
+              "value": "32"
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 10545,
+            "nodeType": "VariableDeclaration",
+            "src": "3882:42:49",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "OFFSET_NONCE",
+            "nameLocation": "3907:12:49",
+            "scope": 10809,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10543,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "3882:7:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "3634",
+              "id": 10544,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3922:2:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_64_by_1",
+                "typeString": "int_const 64"
+              },
+              "value": "64"
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 10548,
+            "nodeType": "VariableDeclaration",
+            "src": "3930:49:49",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "OFFSET_BLOCK_NUMBER",
+            "nameLocation": "3955:19:49",
+            "scope": 10809,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10546,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "3930:7:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "3638",
+              "id": 10547,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3977:2:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_68_by_1",
+                "typeString": "int_const 68"
+              },
+              "value": "68"
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 10551,
+            "nodeType": "VariableDeclaration",
+            "src": "3985:46:49",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "OFFSET_TIMESTAMP",
+            "nameLocation": "4010:16:49",
+            "scope": 10809,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10549,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "3985:7:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "3733",
+              "id": 10550,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "4029:2:49",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_73_by_1",
+                "typeString": "int_const 73"
+              },
+              "value": "73"
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 10577,
+            "nodeType": "FunctionDefinition",
+            "src": "4838:299:49",
+            "nodes": [],
+            "body": {
+              "id": 10576,
+              "nodeType": "Block",
+              "src": "5041:96:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 10569,
+                        "name": "snapRoot_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10554,
+                        "src": "5075:9:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 10570,
+                        "name": "dataHash_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10556,
+                        "src": "5086:9:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 10571,
+                        "name": "nonce_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10558,
+                        "src": "5097:6:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        }
+                      },
+                      {
+                        "id": 10572,
+                        "name": "blockNumber_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10560,
+                        "src": "5105:12:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint40",
+                          "typeString": "uint40"
+                        }
+                      },
+                      {
+                        "id": 10573,
+                        "name": "timestamp_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10562,
+                        "src": "5119:10:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint40",
+                          "typeString": "uint40"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_uint32",
+                          "typeString": "uint32"
+                        },
+                        {
+                          "typeIdentifier": "t_uint40",
+                          "typeString": "uint40"
+                        },
+                        {
+                          "typeIdentifier": "t_uint40",
+                          "typeString": "uint40"
+                        }
+                      ],
+                      "expression": {
+                        "id": 10567,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "5058:3:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 10568,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "5062:12:49",
+                      "memberName": "encodePacked",
+                      "nodeType": "MemberAccess",
+                      "src": "5058:16:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function () pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 10574,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5058:72:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "functionReturnParameters": 10566,
+                  "id": 10575,
+                  "nodeType": "Return",
+                  "src": "5051:79:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10552,
+              "nodeType": "StructuredDocumentation",
+              "src": "4360:473:49",
+              "text": " @notice Returns a formatted Attestation payload with provided fields.\n @param snapRoot_     Snapshot merkle tree's root\n @param dataHash_     Agent Root and SnapGasHash combined into a single hash\n @param nonce_        Attestation Nonce\n @param blockNumber_  Block number when attestation was created in Summit\n @param timestamp_    Block timestamp when attestation was created in Summit\n @return Formatted attestation"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "formatAttestation",
+            "nameLocation": "4847:17:49",
+            "parameters": {
+              "id": 10563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10554,
+                  "mutability": "mutable",
+                  "name": "snapRoot_",
+                  "nameLocation": "4882:9:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10577,
+                  "src": "4874:17:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10553,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4874:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10556,
+                  "mutability": "mutable",
+                  "name": "dataHash_",
+                  "nameLocation": "4909:9:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10577,
+                  "src": "4901:17:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10555,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4901:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10558,
+                  "mutability": "mutable",
+                  "name": "nonce_",
+                  "nameLocation": "4935:6:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10577,
+                  "src": "4928:13:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10557,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4928:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10560,
+                  "mutability": "mutable",
+                  "name": "blockNumber_",
+                  "nameLocation": "4958:12:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10577,
+                  "src": "4951:19:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 10559,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4951:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10562,
+                  "mutability": "mutable",
+                  "name": "timestamp_",
+                  "nameLocation": "4987:10:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10577,
+                  "src": "4980:17:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 10561,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4980:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4864:139:49"
+            },
+            "returnParameters": {
+              "id": 10566,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10565,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10577,
+                  "src": "5027:12:49",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10564,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5027:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5026:14:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10593,
+            "nodeType": "FunctionDefinition",
+            "src": "5288:141:49",
+            "nodes": [],
+            "body": {
+              "id": 10592,
+              "nodeType": "Block",
+              "src": "5373:56:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 10587,
+                            "name": "payload",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10580,
+                            "src": "5408:7:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes_memory_ptr",
+                              "typeString": "bytes memory"
+                            }
+                          },
+                          "id": 10588,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "5416:3:49",
+                          "memberName": "ref",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 11634,
+                          "src": "5408:11:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_bytes_memory_ptr_$",
+                            "typeString": "function (bytes memory) pure returns (MemView)"
+                          }
+                        },
+                        "id": 10589,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "5408:13:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                          "typeString": "MemView"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                          "typeString": "MemView"
+                        }
+                      ],
+                      "id": 10586,
+                      "name": "castToAttestation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        10593,
+                        10620
+                      ],
+                      "referencedDeclaration": 10620,
+                      "src": "5390:17:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$returns$_t_userDefinedValueType$_Attestation_$10527_$",
+                        "typeString": "function (MemView) pure returns (Attestation)"
+                      }
+                    },
+                    "id": 10590,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5390:32:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "functionReturnParameters": 10585,
+                  "id": 10591,
+                  "nodeType": "Return",
+                  "src": "5383:39:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10578,
+              "nodeType": "StructuredDocumentation",
+              "src": "5143:140:49",
+              "text": " @notice Returns an Attestation view over the given payload.\n @dev Will revert if the payload is not an attestation."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "castToAttestation",
+            "nameLocation": "5297:17:49",
+            "parameters": {
+              "id": 10581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10580,
+                  "mutability": "mutable",
+                  "name": "payload",
+                  "nameLocation": "5328:7:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10593,
+                  "src": "5315:20:49",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10579,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5315:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5314:22:49"
+            },
+            "returnParameters": {
+              "id": 10585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10584,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10593,
+                  "src": "5360:11:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10583,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10582,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "5360:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "5360:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "5360:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5359:13:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10620,
+            "nodeType": "FunctionDefinition",
+            "src": "5581:215:49",
+            "nodes": [],
+            "body": {
+              "id": 10619,
+              "nodeType": "Block",
+              "src": "5661:135:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "id": 10606,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "5675:23:49",
+                    "subExpression": {
+                      "arguments": [
+                        {
+                          "id": 10604,
+                          "name": "memView",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10597,
+                          "src": "5690:7:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                            "typeString": "MemView"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                            "typeString": "MemView"
+                          }
+                        ],
+                        "id": 10603,
+                        "name": "isAttestation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10636,
+                        "src": "5676:13:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$returns$_t_bool_$",
+                          "typeString": "function (MemView) pure returns (bool)"
+                        }
+                      },
+                      "id": 10605,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "5676:22:49",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 10610,
+                  "nodeType": "IfStatement",
+                  "src": "5671:60:49",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 10607,
+                        "name": "UnformattedAttestation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10222,
+                        "src": "5707:22:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 10608,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "5707:24:49",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 10609,
+                    "nodeType": "RevertStatement",
+                    "src": "5700:31:49"
+                  }
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 10615,
+                            "name": "memView",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10597,
+                            "src": "5780:7:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                              "typeString": "MemView"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                              "typeString": "MemView"
+                            }
+                          ],
+                          "expression": {
+                            "id": 10613,
+                            "name": "MemView",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11573,
+                            "src": "5765:7:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_userDefinedValueType$_MemView_$11573_$",
+                              "typeString": "type(MemView)"
+                            }
+                          },
+                          "id": 10614,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "5773:6:49",
+                          "memberName": "unwrap",
+                          "nodeType": "MemberAccess",
+                          "src": "5765:14:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_unwrap_pure$_t_userDefinedValueType$_MemView_$11573_$returns$_t_uint256_$",
+                            "typeString": "function (MemView) pure returns (uint256)"
+                          }
+                        },
+                        "id": 10616,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "5765:23:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 10611,
+                        "name": "Attestation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10527,
+                        "src": "5748:11:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_userDefinedValueType$_Attestation_$10527_$",
+                          "typeString": "type(Attestation)"
+                        }
+                      },
+                      "id": 10612,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "5760:4:49",
+                      "memberName": "wrap",
+                      "nodeType": "MemberAccess",
+                      "src": "5748:16:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_Attestation_$10527_$",
+                        "typeString": "function (uint256) pure returns (Attestation)"
+                      }
+                    },
+                    "id": 10617,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5748:41:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "functionReturnParameters": 10602,
+                  "id": 10618,
+                  "nodeType": "Return",
+                  "src": "5741:48:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10594,
+              "nodeType": "StructuredDocumentation",
+              "src": "5435:141:49",
+              "text": " @notice Casts a memory view to an Attestation view.\n @dev Will revert if the memory view is not over an attestation."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "castToAttestation",
+            "nameLocation": "5590:17:49",
+            "parameters": {
+              "id": 10598,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10597,
+                  "mutability": "mutable",
+                  "name": "memView",
+                  "nameLocation": "5616:7:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10620,
+                  "src": "5608:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                    "typeString": "MemView"
+                  },
+                  "typeName": {
+                    "id": 10596,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10595,
+                      "name": "MemView",
+                      "nameLocations": [
+                        "5608:7:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11573,
+                      "src": "5608:7:49"
+                    },
+                    "referencedDeclaration": 11573,
+                    "src": "5608:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                      "typeString": "MemView"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5607:17:49"
+            },
+            "returnParameters": {
+              "id": 10602,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10601,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10620,
+                  "src": "5648:11:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10600,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10599,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "5648:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "5648:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "5648:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5647:13:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10636,
+            "nodeType": "FunctionDefinition",
+            "src": "5868:128:49",
+            "nodes": [],
+            "body": {
+              "id": 10635,
+              "nodeType": "Block",
+              "src": "5937:59:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 10633,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "id": 10629,
+                          "name": "memView",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10624,
+                          "src": "5954:7:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                            "typeString": "MemView"
+                          }
+                        },
+                        "id": 10630,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "5962:3:49",
+                        "memberName": "len",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 11749,
+                        "src": "5954:11:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$returns$_t_uint256_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                          "typeString": "function (MemView) pure returns (uint256)"
+                        }
+                      },
+                      "id": 10631,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "5954:13:49",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "id": 10632,
+                      "name": "ATTESTATION_LENGTH",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10071,
+                      "src": "5971:18:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "5954:35:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 10628,
+                  "id": 10634,
+                  "nodeType": "Return",
+                  "src": "5947:42:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10621,
+              "nodeType": "StructuredDocumentation",
+              "src": "5802:61:49",
+              "text": "@notice Checks that a payload is a formatted Attestation."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAttestation",
+            "nameLocation": "5877:13:49",
+            "parameters": {
+              "id": 10625,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10624,
+                  "mutability": "mutable",
+                  "name": "memView",
+                  "nameLocation": "5899:7:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10636,
+                  "src": "5891:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                    "typeString": "MemView"
+                  },
+                  "typeName": {
+                    "id": 10623,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10622,
+                      "name": "MemView",
+                      "nameLocations": [
+                        "5891:7:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11573,
+                      "src": "5891:7:49"
+                    },
+                    "referencedDeclaration": 11573,
+                    "src": "5891:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                      "typeString": "MemView"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5890:17:49"
+            },
+            "returnParameters": {
+              "id": 10628,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10627,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10636,
+                  "src": "5931:4:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10626,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5931:4:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5930:6:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10653,
+            "nodeType": "FunctionDefinition",
+            "src": "6142:223:49",
+            "nodes": [],
+            "body": {
+              "id": 10652,
+              "nodeType": "Block",
+              "src": "6210:155:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 10649,
+                        "name": "ATTESTATION_VALID_SALT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10122,
+                        "src": "6335:22:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 10645,
+                            "name": "att",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10640,
+                            "src": "6309:3:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                              "typeString": "Attestation"
+                            }
+                          },
+                          "id": 10646,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "6313:6:49",
+                          "memberName": "unwrap",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 10689,
+                          "src": "6309:10:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                            "typeString": "function (Attestation) pure returns (MemView)"
+                          }
+                        },
+                        "id": 10647,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "6309:12:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                          "typeString": "MemView"
+                        }
+                      },
+                      "id": 10648,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "6322:12:49",
+                      "memberName": "keccakSalted",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11850,
+                      "src": "6309:25:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_bytes32_$returns$_t_bytes32_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                        "typeString": "function (MemView,bytes32) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 10650,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "6309:49:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 10644,
+                  "id": 10651,
+                  "nodeType": "Return",
+                  "src": "6302:56:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10637,
+              "nodeType": "StructuredDocumentation",
+              "src": "6002:135:49",
+              "text": "@notice Returns the hash of an Attestation, that could be later signed by a Notary to signal\n that the attestation is valid."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hashValid",
+            "nameLocation": "6151:9:49",
+            "parameters": {
+              "id": 10641,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10640,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "6173:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10653,
+                  "src": "6161:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10639,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10638,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "6161:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "6161:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "6161:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6160:17:49"
+            },
+            "returnParameters": {
+              "id": 10644,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10643,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10653,
+                  "src": "6201:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10642,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6201:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6200:9:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10670,
+            "nodeType": "FunctionDefinition",
+            "src": "6512:234:49",
+            "nodes": [],
+            "body": {
+              "id": 10669,
+              "nodeType": "Block",
+              "src": "6582:164:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 10666,
+                        "name": "ATTESTATION_INVALID_SALT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10127,
+                        "src": "6714:24:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 10662,
+                            "name": "att",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10657,
+                            "src": "6688:3:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                              "typeString": "Attestation"
+                            }
+                          },
+                          "id": 10663,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "6692:6:49",
+                          "memberName": "unwrap",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 10689,
+                          "src": "6688:10:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                            "typeString": "function (Attestation) pure returns (MemView)"
+                          }
+                        },
+                        "id": 10664,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "6688:12:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                          "typeString": "MemView"
+                        }
+                      },
+                      "id": 10665,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "6701:12:49",
+                      "memberName": "keccakSalted",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11850,
+                      "src": "6688:25:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_bytes32_$returns$_t_bytes32_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                        "typeString": "function (MemView,bytes32) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 10667,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "6688:51:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 10661,
+                  "id": 10668,
+                  "nodeType": "Return",
+                  "src": "6681:58:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10654,
+              "nodeType": "StructuredDocumentation",
+              "src": "6371:136:49",
+              "text": "@notice Returns the hash of an Attestation, that could be later signed by a Guard to signal\n that the attestation is invalid."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hashInvalid",
+            "nameLocation": "6521:11:49",
+            "parameters": {
+              "id": 10658,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10657,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "6545:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10670,
+                  "src": "6533:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10656,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10655,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "6533:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "6533:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "6533:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6532:17:49"
+            },
+            "returnParameters": {
+              "id": 10661,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10660,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10670,
+                  "src": "6573:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10659,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6573:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6572:9:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10689,
+            "nodeType": "FunctionDefinition",
+            "src": "6812:126:49",
+            "nodes": [],
+            "body": {
+              "id": 10688,
+              "nodeType": "Block",
+              "src": "6877:61:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 10684,
+                            "name": "att",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10674,
+                            "src": "6926:3:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                              "typeString": "Attestation"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                              "typeString": "Attestation"
+                            }
+                          ],
+                          "expression": {
+                            "id": 10682,
+                            "name": "Attestation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10527,
+                            "src": "6907:11:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_userDefinedValueType$_Attestation_$10527_$",
+                              "typeString": "type(Attestation)"
+                            }
+                          },
+                          "id": 10683,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "6919:6:49",
+                          "memberName": "unwrap",
+                          "nodeType": "MemberAccess",
+                          "src": "6907:18:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_unwrap_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_uint256_$",
+                            "typeString": "function (Attestation) pure returns (uint256)"
+                          }
+                        },
+                        "id": 10685,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "6907:23:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 10680,
+                        "name": "MemView",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11573,
+                        "src": "6894:7:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_userDefinedValueType$_MemView_$11573_$",
+                          "typeString": "type(MemView)"
+                        }
+                      },
+                      "id": 10681,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "6902:4:49",
+                      "memberName": "wrap",
+                      "nodeType": "MemberAccess",
+                      "src": "6894:12:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_MemView_$11573_$",
+                        "typeString": "function (uint256) pure returns (MemView)"
+                      }
+                    },
+                    "id": 10686,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "6894:37:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                      "typeString": "MemView"
+                    }
+                  },
+                  "functionReturnParameters": 10679,
+                  "id": 10687,
+                  "nodeType": "Return",
+                  "src": "6887:44:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10671,
+              "nodeType": "StructuredDocumentation",
+              "src": "6752:55:49",
+              "text": "@notice Convenience shortcut for unwrapping a view."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unwrap",
+            "nameLocation": "6821:6:49",
+            "parameters": {
+              "id": 10675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10674,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "6840:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10689,
+                  "src": "6828:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10673,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10672,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "6828:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "6828:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "6828:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6827:17:49"
+            },
+            "returnParameters": {
+              "id": 10679,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10678,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10689,
+                  "src": "6868:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                    "typeString": "MemView"
+                  },
+                  "typeName": {
+                    "id": 10677,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10676,
+                      "name": "MemView",
+                      "nameLocations": [
+                        "6868:7:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11573,
+                      "src": "6868:7:49"
+                    },
+                    "referencedDeclaration": 11573,
+                    "src": "6868:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                      "typeString": "MemView"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6867:9:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10707,
+            "nodeType": "FunctionDefinition",
+            "src": "7339:149:49",
+            "nodes": [],
+            "body": {
+              "id": 10706,
+              "nodeType": "Block",
+              "src": "7406:82:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 10702,
+                        "name": "OFFSET_SNAP_ROOT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10539,
+                        "src": "7451:16:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "3332",
+                        "id": 10703,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "7477:2:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_32_by_1",
+                          "typeString": "int_const 32"
+                        },
+                        "value": "32"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_32_by_1",
+                          "typeString": "int_const 32"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 10698,
+                            "name": "att",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10693,
+                            "src": "7423:3:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                              "typeString": "Attestation"
+                            }
+                          },
+                          "id": 10699,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "7427:6:49",
+                          "memberName": "unwrap",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 10689,
+                          "src": "7423:10:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                            "typeString": "function (Attestation) pure returns (MemView)"
+                          }
+                        },
+                        "id": 10700,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "7423:12:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                          "typeString": "MemView"
+                        }
+                      },
+                      "id": 10701,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "7436:5:49",
+                      "memberName": "index",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 12061,
+                      "src": "7423:18:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_uint256_$_t_uint256_$returns$_t_bytes32_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                        "typeString": "function (MemView,uint256,uint256) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 10704,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "7443:6:49",
+                      "7469:6:49"
+                    ],
+                    "names": [
+                      "index_",
+                      "bytes_"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "7423:58:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 10697,
+                  "id": 10705,
+                  "nodeType": "Return",
+                  "src": "7416:65:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10690,
+              "nodeType": "StructuredDocumentation",
+              "src": "7250:84:49",
+              "text": "@notice Returns root of the Snapshot merkle tree created in the Summit contract."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "snapRoot",
+            "nameLocation": "7348:8:49",
+            "parameters": {
+              "id": 10694,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10693,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "7369:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10707,
+                  "src": "7357:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10692,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10691,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "7357:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "7357:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "7357:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7356:17:49"
+            },
+            "returnParameters": {
+              "id": 10697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10696,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10707,
+                  "src": "7397:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10695,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7397:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7396:9:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10725,
+            "nodeType": "FunctionDefinition",
+            "src": "7586:149:49",
+            "nodes": [],
+            "body": {
+              "id": 10724,
+              "nodeType": "Block",
+              "src": "7653:82:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 10720,
+                        "name": "OFFSET_DATA_HASH",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10542,
+                        "src": "7698:16:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "3332",
+                        "id": 10721,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "7724:2:49",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_32_by_1",
+                          "typeString": "int_const 32"
+                        },
+                        "value": "32"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_32_by_1",
+                          "typeString": "int_const 32"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 10716,
+                            "name": "att",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10711,
+                            "src": "7670:3:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                              "typeString": "Attestation"
+                            }
+                          },
+                          "id": 10717,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "7674:6:49",
+                          "memberName": "unwrap",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 10689,
+                          "src": "7670:10:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                            "typeString": "function (Attestation) pure returns (MemView)"
+                          }
+                        },
+                        "id": 10718,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "7670:12:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                          "typeString": "MemView"
+                        }
+                      },
+                      "id": 10719,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "7683:5:49",
+                      "memberName": "index",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 12061,
+                      "src": "7670:18:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_uint256_$_t_uint256_$returns$_t_bytes32_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                        "typeString": "function (MemView,uint256,uint256) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 10722,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "7690:6:49",
+                      "7716:6:49"
+                    ],
+                    "names": [
+                      "index_",
+                      "bytes_"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "7670:58:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 10715,
+                  "id": 10723,
+                  "nodeType": "Return",
+                  "src": "7663:65:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10708,
+              "nodeType": "StructuredDocumentation",
+              "src": "7494:87:49",
+              "text": "@notice Returns hash of the Agent Root and SnapGasHash combined into a single hash."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dataHash",
+            "nameLocation": "7595:8:49",
+            "parameters": {
+              "id": 10712,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10711,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "7616:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10725,
+                  "src": "7604:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10710,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10709,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "7604:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "7604:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "7604:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7603:17:49"
+            },
+            "returnParameters": {
+              "id": 10715,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10714,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10725,
+                  "src": "7644:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10713,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7644:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7643:9:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10745,
+            "nodeType": "FunctionDefinition",
+            "src": "7833:165:49",
+            "nodes": [],
+            "body": {
+              "id": 10744,
+              "nodeType": "Block",
+              "src": "7925:73:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 10739,
+                            "name": "agentRoot_",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10728,
+                            "src": "7965:10:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          {
+                            "id": 10740,
+                            "name": "snapGasHash_",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10730,
+                            "src": "7977:12:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            },
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "expression": {
+                            "id": 10737,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "7952:5:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                              "typeString": "type(bytes storage pointer)"
+                            },
+                            "typeName": {
+                              "id": 10736,
+                              "name": "bytes",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "7952:5:49",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 10738,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "7958:6:49",
+                          "memberName": "concat",
+                          "nodeType": "MemberAccess",
+                          "src": "7952:12:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_bytesconcat_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 10741,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "7952:38:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 10735,
+                      "name": "keccak256",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -8,
+                      "src": "7942:9:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                        "typeString": "function (bytes memory) pure returns (bytes32)"
+                      }
+                    },
+                    "id": 10742,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "7942:49:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 10734,
+                  "id": 10743,
+                  "nodeType": "Return",
+                  "src": "7935:56:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10726,
+              "nodeType": "StructuredDocumentation",
+              "src": "7741:87:49",
+              "text": "@notice Returns hash of the Agent Root and SnapGasHash combined into a single hash."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dataHash",
+            "nameLocation": "7842:8:49",
+            "parameters": {
+              "id": 10731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10728,
+                  "mutability": "mutable",
+                  "name": "agentRoot_",
+                  "nameLocation": "7859:10:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10745,
+                  "src": "7851:18:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10727,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7851:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10730,
+                  "mutability": "mutable",
+                  "name": "snapGasHash_",
+                  "nameLocation": "7879:12:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10745,
+                  "src": "7871:20:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10729,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7871:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7850:42:49"
+            },
+            "returnParameters": {
+              "id": 10734,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10733,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10745,
+                  "src": "7916:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 10732,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7916:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7915:9:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10766,
+            "nodeType": "FunctionDefinition",
+            "src": "8096:152:49",
+            "nodes": [],
+            "body": {
+              "id": 10765,
+              "nodeType": "Block",
+              "src": "8159:89:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 10760,
+                            "name": "OFFSET_NONCE",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10545,
+                            "src": "8215:12:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "hexValue": "34",
+                            "id": 10761,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "8237:1:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_4_by_1",
+                              "typeString": "int_const 4"
+                            },
+                            "value": "4"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_rational_4_by_1",
+                              "typeString": "int_const 4"
+                            }
+                          ],
+                          "expression": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "expression": {
+                                "id": 10756,
+                                "name": "att",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 10749,
+                                "src": "8183:3:49",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                                  "typeString": "Attestation"
+                                }
+                              },
+                              "id": 10757,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "8187:6:49",
+                              "memberName": "unwrap",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 10689,
+                              "src": "8183:10:49",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                                "typeString": "function (Attestation) pure returns (MemView)"
+                              }
+                            },
+                            "id": 10758,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "8183:12:49",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                              "typeString": "MemView"
+                            }
+                          },
+                          "id": 10759,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "8196:9:49",
+                          "memberName": "indexUint",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 12097,
+                          "src": "8183:22:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                            "typeString": "function (MemView,uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 10762,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [
+                          "8207:6:49",
+                          "8229:6:49"
+                        ],
+                        "names": [
+                          "index_",
+                          "bytes_"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "8183:57:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 10755,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "8176:6:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint32_$",
+                        "typeString": "type(uint32)"
+                      },
+                      "typeName": {
+                        "id": 10754,
+                        "name": "uint32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "8176:6:49",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 10763,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "8176:65:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "functionReturnParameters": 10753,
+                  "id": 10764,
+                  "nodeType": "Return",
+                  "src": "8169:72:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10746,
+              "nodeType": "StructuredDocumentation",
+              "src": "8004:87:49",
+              "text": "@notice Returns nonce of Summit contract at the time, when attestation was created."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "nonce",
+            "nameLocation": "8105:5:49",
+            "parameters": {
+              "id": 10750,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10749,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "8123:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10766,
+                  "src": "8111:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10748,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10747,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "8111:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "8111:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "8111:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8110:17:49"
+            },
+            "returnParameters": {
+              "id": 10753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10752,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10766,
+                  "src": "8151:6:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10751,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8151:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8150:8:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10787,
+            "nodeType": "FunctionDefinition",
+            "src": "8333:165:49",
+            "nodes": [],
+            "body": {
+              "id": 10786,
+              "nodeType": "Block",
+              "src": "8402:96:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 10781,
+                            "name": "OFFSET_BLOCK_NUMBER",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10548,
+                            "src": "8458:19:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "hexValue": "35",
+                            "id": 10782,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "8487:1:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_5_by_1",
+                              "typeString": "int_const 5"
+                            },
+                            "value": "5"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_rational_5_by_1",
+                              "typeString": "int_const 5"
+                            }
+                          ],
+                          "expression": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "expression": {
+                                "id": 10777,
+                                "name": "att",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 10770,
+                                "src": "8426:3:49",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                                  "typeString": "Attestation"
+                                }
+                              },
+                              "id": 10778,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "8430:6:49",
+                              "memberName": "unwrap",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 10689,
+                              "src": "8426:10:49",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                                "typeString": "function (Attestation) pure returns (MemView)"
+                              }
+                            },
+                            "id": 10779,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "8426:12:49",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                              "typeString": "MemView"
+                            }
+                          },
+                          "id": 10780,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "8439:9:49",
+                          "memberName": "indexUint",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 12097,
+                          "src": "8426:22:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                            "typeString": "function (MemView,uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 10783,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [
+                          "8450:6:49",
+                          "8479:6:49"
+                        ],
+                        "names": [
+                          "index_",
+                          "bytes_"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "8426:64:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 10776,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "8419:6:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint40_$",
+                        "typeString": "type(uint40)"
+                      },
+                      "typeName": {
+                        "id": 10775,
+                        "name": "uint40",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "8419:6:49",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 10784,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "8419:72:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "functionReturnParameters": 10774,
+                  "id": 10785,
+                  "nodeType": "Return",
+                  "src": "8412:79:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10767,
+              "nodeType": "StructuredDocumentation",
+              "src": "8254:74:49",
+              "text": "@notice Returns a block number when attestation was created in Summit."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "blockNumber",
+            "nameLocation": "8342:11:49",
+            "parameters": {
+              "id": 10771,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10770,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "8366:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10787,
+                  "src": "8354:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10769,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10768,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "8354:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "8354:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "8354:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8353:17:49"
+            },
+            "returnParameters": {
+              "id": 10774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10773,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10787,
+                  "src": "8394:6:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 10772,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8394:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8393:8:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 10808,
+            "nodeType": "FunctionDefinition",
+            "src": "8653:160:49",
+            "nodes": [],
+            "body": {
+              "id": 10807,
+              "nodeType": "Block",
+              "src": "8720:93:49",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 10802,
+                            "name": "OFFSET_TIMESTAMP",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 10551,
+                            "src": "8776:16:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "hexValue": "35",
+                            "id": 10803,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "8802:1:49",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_5_by_1",
+                              "typeString": "int_const 5"
+                            },
+                            "value": "5"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_rational_5_by_1",
+                              "typeString": "int_const 5"
+                            }
+                          ],
+                          "expression": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "expression": {
+                                "id": 10798,
+                                "name": "att",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 10791,
+                                "src": "8744:3:49",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                                  "typeString": "Attestation"
+                                }
+                              },
+                              "id": 10799,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "8748:6:49",
+                              "memberName": "unwrap",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 10689,
+                              "src": "8744:10:49",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Attestation_$10527_$returns$_t_userDefinedValueType$_MemView_$11573_$bound_to$_t_userDefinedValueType$_Attestation_$10527_$",
+                                "typeString": "function (Attestation) pure returns (MemView)"
+                              }
+                            },
+                            "id": 10800,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "8744:12:49",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_userDefinedValueType$_MemView_$11573",
+                              "typeString": "MemView"
+                            }
+                          },
+                          "id": 10801,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "8757:9:49",
+                          "memberName": "indexUint",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 12097,
+                          "src": "8744:22:49",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_MemView_$11573_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_userDefinedValueType$_MemView_$11573_$",
+                            "typeString": "function (MemView,uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 10804,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [
+                          "8768:6:49",
+                          "8794:6:49"
+                        ],
+                        "names": [
+                          "index_",
+                          "bytes_"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "8744:61:49",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 10797,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "8737:6:49",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint40_$",
+                        "typeString": "type(uint40)"
+                      },
+                      "typeName": {
+                        "id": 10796,
+                        "name": "uint40",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "8737:6:49",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 10805,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "8737:69:49",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "functionReturnParameters": 10795,
+                  "id": 10806,
+                  "nodeType": "Return",
+                  "src": "8730:76:49"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10788,
+              "nodeType": "StructuredDocumentation",
+              "src": "8504:144:49",
+              "text": "@notice Returns a block timestamp when attestation was created in Summit.\n @dev This is the timestamp according to the Synapse Chain."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "timestamp",
+            "nameLocation": "8662:9:49",
+            "parameters": {
+              "id": 10792,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10791,
+                  "mutability": "mutable",
+                  "name": "att",
+                  "nameLocation": "8684:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10808,
+                  "src": "8672:15:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                    "typeString": "Attestation"
+                  },
+                  "typeName": {
+                    "id": 10790,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 10789,
+                      "name": "Attestation",
+                      "nameLocations": [
+                        "8672:11:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 10527,
+                      "src": "8672:11:49"
+                    },
+                    "referencedDeclaration": 10527,
+                    "src": "8672:11:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Attestation_$10527",
+                      "typeString": "Attestation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8671:17:49"
+            },
+            "returnParameters": {
+              "id": 10795,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10794,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10808,
+                  "src": "8712:6:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint40",
+                    "typeString": "uint40"
+                  },
+                  "typeName": {
+                    "id": 10793,
+                    "name": "uint40",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8712:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint40",
+                      "typeString": "uint40"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8711:8:49"
+            },
+            "scope": 10809,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AttestationLib",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 10532,
+          "nodeType": "StructuredDocumentation",
+          "src": "413:3164:49",
+          "text": "# Attestation\n Attestation structure represents the \"Snapshot Merkle Tree\" created from\n every Notary snapshot accepted by the Summit contract. Attestation includes\"\n the root of the \"Snapshot Merkle Tree\", as well as additional metadata.\n ## Steps for creation of \"Snapshot Merkle Tree\":\n 1. The list of hashes is composed for states in the Notary snapshot.\n 2. The list is padded with zero values until its length is 2**SNAPSHOT_TREE_HEIGHT.\n 3. Values from the list are used as leafs and the merkle tree is constructed.\n ## Differences between a State and Attestation\n Similar to Origin, every derived Notary's \"Snapshot Merkle Root\" is saved in Summit contract.\n The main difference is that Origin contract itself is keeping track of an incremental merkle tree,\n by inserting the hash of the sent message and calculating the new \"Origin Merkle Root\".\n While Summit relies on Guards and Notaries to provide snapshot data, which is used to calculate the\n \"Snapshot Merkle Root\".\n - Origin's State is \"state of Origin Merkle Tree after N-th message was sent\".\n - Summit's Attestation is \"data for the N-th accepted Notary Snapshot\" + \"agent merkle root at the\n time snapshot was submitted\" + \"attestation metadata\".\n ## Attestation validity\n - Attestation is considered \"valid\" in Summit contract, if it matches the N-th (nonce)\n snapshot submitted by Notaries, as well as the historical agent merkle root.\n - Attestation is considered \"valid\" in Origin contract, if its underlying Snapshot is \"valid\".\n - This means that a snapshot could be \"valid\" in Summit contract and \"invalid\" in Origin, if the underlying\n snapshot is invalid (i.e. one of the states in the list is invalid).\n - The opposite could also be true. If a perfectly valid snapshot was never submitted to Summit, its attestation\n would be valid in Origin, but invalid in Summit (it was never accepted, so the metadata would be incorrect).\n - Attestation is considered \"globally valid\", if it is valid in the Summit and all the Origin contracts.\n # Memory layout of Attestation fields\n | Position   | Field       | Type    | Bytes | Description                                                    |\n | ---------- | ----------- | ------- | ----- | -------------------------------------------------------------- |\n | [000..032) | snapRoot    | bytes32 | 32    | Root for \"Snapshot Merkle Tree\" created from a Notary snapshot |\n | [032..064) | dataHash    | bytes32 | 32    | Agent Root and SnapGasHash combined into a single hash         |\n | [064..068) | nonce       | uint32  | 4     | Total amount of all accepted Notary snapshots                  |\n | [068..073) | blockNumber | uint40  | 5     | Block when this Notary snapshot was accepted in Summit         |\n | [073..078) | timestamp   | uint40  | 5     | Time when this Notary snapshot was accepted in Summit          |\n @dev Attestation could be signed by a Notary and submitted to `Destination` in order to use if for proving\n messages coming from origin chains that the initial snapshot refers to."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          10809
+        ],
+        "name": "AttestationLib",
+        "nameLocation": "3585:14:49",
+        "scope": 10810,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 49
+}
