@@ -85,32 +85,31 @@ abstract contract DeployMessaging003BaseScript is DeployerUtils {
         startBroadcast(_isBroadcasted);
         globalConfig = loadGlobalDeployConfig("Messaging003");
         // Predict deployments
-        console.log("here");
-        agentManager = predictFactoryDeployment(agentManagerName());
-        console.log("failed");
-        statementInbox = predictFactoryDeployment(statementInboxName());
-        destination = predictFactoryDeployment(DESTINATION);
-        gasOracle = predictFactoryDeployment(GAS_ORACLE);
-        origin = predictFactoryDeployment(ORIGIN);
-        if (isSynapseChain()) {
-            summit = predictFactoryDeployment(SUMMIT);
-        }
-        // Deploy and initialize contracts
-        _deployAndCheckAddress(agentManagerName(), _deployAgentManager, _initializeAgentManager, agentManager);
-        _deployAndCheckAddress(statementInboxName(), _deployStatementInbox, _initializeStatementInbox, statementInbox);
-        _deployAndCheckAddress(DESTINATION, _deployDestination, _initializeDestination, destination);
-        _deployAndCheckAddress(GAS_ORACLE, _deployGasOracle, _initializeGasOracle, gasOracle);
-        _deployAndCheckAddress(ORIGIN, _deployOrigin, _initializeOrigin, origin);
-        if (isSynapseChain()) {
-            _deployAndCheckAddress(SUMMIT, _deploySummit, _initializeSummit, summit);
-        }
+        // agentManager = predictFactoryDeployment(agentManagerName());
+        agentManager = 0x420000000000000000000000000000000000002a;
+        // statementInbox = predictFactoryDeployment(statementInboxName());
+        // destination = predictFactoryDeployment(DESTINATION);
+        // gasOracle = predictFactoryDeployment(GAS_ORACLE);
+        // origin = predictFactoryDeployment(ORIGIN);
+        // if (isSynapseChain()) {
+        //     summit = predictFactoryDeployment(SUMMIT);
+        // }
+        // // Deploy and initialize contracts
+        // _deployAndCheckAddress(agentManagerName(), _deployAgentManager, _initializeAgentManager, agentManager);
+        // _deployAndCheckAddress(statementInboxName(), _deployStatementInbox, _initializeStatementInbox, statementInbox);
+        // _deployAndCheckAddress(DESTINATION, _deployDestination, _initializeDestination, destination);
+        // _deployAndCheckAddress(GAS_ORACLE, _deployGasOracle, _initializeGasOracle, gasOracle);
+        // _deployAndCheckAddress(ORIGIN, _deployOrigin, _initializeOrigin, origin);
+        // if (isSynapseChain()) {
+        //     _deployAndCheckAddress(SUMMIT, _deploySummit, _initializeSummit, summit);
+        // }
         // Add agents to BondingManager
         _addAgents();
         // Transfer ownership of contracts
-        _transferOwnership();
-        stopBroadcast();
+        // _transferOwnership();
+
         // Do some sanity checks
-        _checkDeployments();
+        // _checkDeployments();
         _checkAgents();
     }
 

@@ -1,7 +1,7 @@
 types
 flattened/
 build/
-
+forge-artifacts
 # generated foundry coverage info
 lcov.info
 

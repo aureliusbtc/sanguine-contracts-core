@@ -102,12 +102,12 @@
   ],
   "bytecode": {
     "object": "0x608060405234801561001057600080fd5b50610182806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806334926b2914610051578063556517b71461006757806372010a93146100b4578063867baea5146100cb575b600080fd5b60005b6040519081526020015b60405180910390f35b6100876100753660046100f7565b60008060008060008091939550919395565b604080519687526020870195909552938501929092526060840152608083015260a082015260c00161005e565b6100546100c2366004610119565b60009392505050565b6100dc6100d93660046100f7565b50565b005b803563ffffffff811681146100f257600080fd5b919050565b60006020828403121561010957600080fd5b610112826100de565b9392505050565b60008060006060848603121561012e57600080fd5b610137846100de565b9560208501359550604090940135939250505056fea2646970667358221220c6b8b160af51d8f19d6999f4f5aed3e2f694f3c5ad995c0927e6c33c7f3fdb8a64736f6c63430008110033",
-    "sourceMap": "179:577:133:-:0;;;;;;;;;;;;;;;;;;;",
+    "sourceMap": "179:577:134:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806334926b2914610051578063556517b71461006757806372010a93146100b4578063867baea5146100cb575b600080fd5b60005b6040519081526020015b60405180910390f35b6100876100753660046100f7565b60008060008060008091939550919395565b604080519687526020870195909552938501929092526060840152608083015260a082015260c00161005e565b6100546100c2366004610119565b60009392505050565b6100dc6100d93660046100f7565b50565b005b803563ffffffff811681146100f257600080fd5b919050565b60006020828403121561010957600080fd5b610112826100de565b9392505050565b60008060006060848603121561012e57600080fd5b610137846100de565b9560208501359550604090940135939250505056fea2646970667358221220c6b8b160af51d8f19d6999f4f5aed3e2f694f3c5ad995c0927e6c33c7f3fdb8a64736f6c63430008110033",
-    "sourceMap": "179:577:133:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;583:70;628:21;583:70;;;160:25:200;;;148:2;133:18;583:70:133;;;;;;;;285:292;;;;;;:::i;:::-;387:16;417:17;448:18;480:20;514:18;546:14;285:292;;;;;;;;;;;;840:25:200;;;896:2;881:18;;874:34;;;;924:18;;;917:34;;;;982:2;967:18;;960:34;1025:3;1010:19;;1003:35;1069:3;1054:19;;1047:35;827:3;812:19;285:292:133;553:535:200;659:95:133;;;;;;:::i;:::-;732:18;659:95;;;;;;230:49;;;;;;:::i;:::-;;;;;196:163:200;263:20;;323:10;312:22;;302:33;;292:61;;349:1;346;339:12;292:61;196:163;;;:::o;364:184::-;422:6;475:2;463:9;454:7;450:23;446:32;443:52;;;491:1;488;481:12;443:52;514:28;532:9;514:28;:::i;:::-;504:38;364:184;-1:-1:-1;;;364:184:200:o;1093:320::-;1169:6;1177;1185;1238:2;1226:9;1217:7;1213:23;1209:32;1206:52;;;1254:1;1251;1244:12;1206:52;1277:28;1295:9;1277:28;:::i;:::-;1267:38;1352:2;1337:18;;1324:32;;-1:-1:-1;1403:2:200;1388:18;;;1375:32;;1093:320;-1:-1:-1;;;1093:320:200:o",
+    "sourceMap": "179:577:134:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;583:70;628:21;583:70;;;160:25:201;;;148:2;133:18;583:70:134;;;;;;;;285:292;;;;;;:::i;:::-;387:16;417:17;448:18;480:20;514:18;546:14;285:292;;;;;;;;;;;;840:25:201;;;896:2;881:18;;874:34;;;;924:18;;;917:34;;;;982:2;967:18;;960:34;1025:3;1010:19;;1003:35;1069:3;1054:19;;1047:35;827:3;812:19;285:292:134;553:535:201;659:95:134;;;;;;:::i;:::-;732:18;659:95;;;;;;230:49;;;;;;:::i;:::-;;;;;196:163:201;263:20;;323:10;312:22;;302:33;;292:61;;349:1;346;339:12;292:61;196:163;;;:::o;364:184::-;422:6;475:2;463:9;454:7;450:23;446:32;443:52;;;491:1;488;481:12;443:52;514:28;532:9;514:28;:::i;:::-;504:38;364:184;-1:-1:-1;;;364:184:201:o;1093:320::-;1169:6;1177;1185;1238:2;1226:9;1217:7;1213:23;1209:32;1206:52;;;1254:1;1251;1244:12;1206:52;1277:28;1295:9;1277:28;:::i;:::-;1267:38;1352:2;1337:18;;1324:32;;-1:-1:-1;1403:2:201;1388:18;;;1375:32;;1093:320;-1:-1:-1;;;1093:320:201:o",
     "linkReferences": {}
   },
   "methodIdentifiers": {
@@ -305,22 +305,22 @@
   },
   "ast": {
     "absolutePath": "test/mocks/GasOracleMock.t.sol",
-    "id": 58637,
+    "id": 58630,
     "exportedSymbols": {
       "GasOracleMock": [
-        58636
+        58629
       ],
       "InterfaceGasOracle": [
         9764
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:725:133",
+    "src": "32:725:134",
     "nodes": [
       {
-        "id": 58589,
+        "id": 58582,
         "nodeType": "PragmaDirective",
-        "src": "32:23:133",
+        "src": "32:23:134",
         "nodes": [],
         "literals": [
           "solidity",
@@ -329,24 +329,24 @@
         ]
       },
       {
-        "id": 58591,
+        "id": 58584,
         "nodeType": "ImportDirective",
-        "src": "57:85:133",
+        "src": "57:85:134",
         "nodes": [],
         "absolutePath": "contracts/interfaces/InterfaceGasOracle.sol",
         "file": "../../contracts/interfaces/InterfaceGasOracle.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 58637,
+        "scope": 58630,
         "sourceUnit": 9765,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 58590,
+              "id": 58583,
               "name": "InterfaceGasOracle",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 9764,
-              "src": "65:18:133",
+              "src": "65:18:134",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -355,19 +355,19 @@
         "unitAlias": ""
       },
       {
-        "id": 58636,
+        "id": 58629,
         "nodeType": "ContractDefinition",
-        "src": "179:577:133",
+        "src": "179:577:134",
         "nodes": [
           {
-            "id": 58599,
+            "id": 58592,
             "nodeType": "FunctionDefinition",
-            "src": "230:49:133",
+            "src": "230:49:134",
             "nodes": [],
             "body": {
-              "id": 58598,
+              "id": 58591,
               "nodeType": "Block",
-              "src": "277:2:133",
+              "src": "277:2:134",
               "nodes": [],
               "statements": []
             },
@@ -379,20 +379,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "updateGasData",
-            "nameLocation": "239:13:133",
+            "nameLocation": "239:13:134",
             "parameters": {
-              "id": 58596,
+              "id": 58589,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58595,
+                  "id": 58588,
                   "mutability": "mutable",
                   "name": "domain",
-                  "nameLocation": "260:6:133",
+                  "nameLocation": "260:6:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58599,
-                  "src": "253:13:133",
+                  "scope": 58592,
+                  "src": "253:13:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -400,10 +400,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 58594,
+                    "id": 58587,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "253:6:133",
+                    "src": "253:6:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -412,28 +412,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "252:15:133"
+              "src": "252:15:134"
             },
             "returnParameters": {
-              "id": 58597,
+              "id": 58590,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "277:0:133"
+              "src": "277:0:134"
             },
-            "scope": 58636,
+            "scope": 58629,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 58617,
+            "id": 58610,
             "nodeType": "FunctionDefinition",
-            "src": "285:292:133",
+            "src": "285:292:134",
             "nodes": [],
             "body": {
-              "id": 58616,
+              "id": 58609,
               "nodeType": "Block",
-              "src": "575:2:133",
+              "src": "575:2:134",
               "nodes": [],
               "statements": []
             },
@@ -445,20 +445,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "getDecodedGasData",
-            "nameLocation": "294:17:133",
+            "nameLocation": "294:17:134",
             "parameters": {
-              "id": 58602,
+              "id": 58595,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58601,
+                  "id": 58594,
                   "mutability": "mutable",
                   "name": "domain",
-                  "nameLocation": "319:6:133",
+                  "nameLocation": "319:6:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "312:13:133",
+                  "scope": 58610,
+                  "src": "312:13:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -466,10 +466,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 58600,
+                    "id": 58593,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "312:6:133",
+                    "src": "312:6:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -478,21 +478,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "311:15:133"
+              "src": "311:15:134"
             },
             "returnParameters": {
-              "id": 58615,
+              "id": 58608,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58604,
+                  "id": 58597,
                   "mutability": "mutable",
                   "name": "gasPrice",
-                  "nameLocation": "395:8:133",
+                  "nameLocation": "395:8:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "387:16:133",
+                  "scope": 58610,
+                  "src": "387:16:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -500,10 +500,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58603,
+                    "id": 58596,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "387:7:133",
+                    "src": "387:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -513,13 +513,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58606,
+                  "id": 58599,
                   "mutability": "mutable",
                   "name": "dataPrice",
-                  "nameLocation": "425:9:133",
+                  "nameLocation": "425:9:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "417:17:133",
+                  "scope": 58610,
+                  "src": "417:17:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -527,10 +527,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58605,
+                    "id": 58598,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "417:7:133",
+                    "src": "417:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -540,13 +540,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58608,
+                  "id": 58601,
                   "mutability": "mutable",
                   "name": "execBuffer",
-                  "nameLocation": "456:10:133",
+                  "nameLocation": "456:10:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "448:18:133",
+                  "scope": 58610,
+                  "src": "448:18:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -554,10 +554,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58607,
+                    "id": 58600,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "448:7:133",
+                    "src": "448:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -567,13 +567,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58610,
+                  "id": 58603,
                   "mutability": "mutable",
                   "name": "amortAttCost",
-                  "nameLocation": "488:12:133",
+                  "nameLocation": "488:12:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "480:20:133",
+                  "scope": 58610,
+                  "src": "480:20:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -581,10 +581,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58609,
+                    "id": 58602,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "480:7:133",
+                    "src": "480:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -594,13 +594,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58612,
+                  "id": 58605,
                   "mutability": "mutable",
                   "name": "etherPrice",
-                  "nameLocation": "522:10:133",
+                  "nameLocation": "522:10:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "514:18:133",
+                  "scope": 58610,
+                  "src": "514:18:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -608,10 +608,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58611,
+                    "id": 58604,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "514:7:133",
+                    "src": "514:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -621,13 +621,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58614,
+                  "id": 58607,
                   "mutability": "mutable",
                   "name": "markup",
-                  "nameLocation": "554:6:133",
+                  "nameLocation": "554:6:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58617,
-                  "src": "546:14:133",
+                  "scope": 58610,
+                  "src": "546:14:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -635,10 +635,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58613,
+                    "id": 58606,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "546:7:133",
+                    "src": "546:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -647,22 +647,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "373:197:133"
+              "src": "373:197:134"
             },
-            "scope": 58636,
+            "scope": 58629,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 58623,
+            "id": 58616,
             "nodeType": "FunctionDefinition",
-            "src": "583:70:133",
+            "src": "583:70:134",
             "nodes": [],
             "body": {
-              "id": 58622,
+              "id": 58615,
               "nodeType": "Block",
-              "src": "651:2:133",
+              "src": "651:2:134",
               "nodes": [],
               "statements": []
             },
@@ -674,26 +674,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "getGasData",
-            "nameLocation": "592:10:133",
+            "nameLocation": "592:10:134",
             "parameters": {
-              "id": 58618,
+              "id": 58611,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "602:2:133"
+              "src": "602:2:134"
             },
             "returnParameters": {
-              "id": 58621,
+              "id": 58614,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58620,
+                  "id": 58613,
                   "mutability": "mutable",
                   "name": "paddedGasData",
-                  "nameLocation": "636:13:133",
+                  "nameLocation": "636:13:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58623,
-                  "src": "628:21:133",
+                  "scope": 58616,
+                  "src": "628:21:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -701,10 +701,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58619,
+                    "id": 58612,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "628:7:133",
+                    "src": "628:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -713,22 +713,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "627:23:133"
+              "src": "627:23:134"
             },
-            "scope": 58636,
+            "scope": 58629,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 58635,
+            "id": 58628,
             "nodeType": "FunctionDefinition",
-            "src": "659:95:133",
+            "src": "659:95:134",
             "nodes": [],
             "body": {
-              "id": 58634,
+              "id": 58627,
               "nodeType": "Block",
-              "src": "752:2:133",
+              "src": "752:2:134",
               "nodes": [],
               "statements": []
             },
@@ -740,20 +740,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "getMinimumTips",
-            "nameLocation": "668:14:133",
+            "nameLocation": "668:14:134",
             "parameters": {
-              "id": 58630,
+              "id": 58623,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58625,
+                  "id": 58618,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58635,
-                  "src": "683:6:133",
+                  "scope": 58628,
+                  "src": "683:6:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -761,10 +761,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 58624,
+                    "id": 58617,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "683:6:133",
+                    "src": "683:6:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -774,13 +774,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58627,
+                  "id": 58620,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58635,
-                  "src": "691:7:133",
+                  "scope": 58628,
+                  "src": "691:7:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -788,10 +788,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58626,
+                    "id": 58619,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "691:7:133",
+                    "src": "691:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -801,13 +801,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58629,
+                  "id": 58622,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58635,
-                  "src": "700:7:133",
+                  "scope": 58628,
+                  "src": "700:7:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -815,10 +815,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58628,
+                    "id": 58621,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "700:7:133",
+                    "src": "700:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -827,21 +827,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "682:26:133"
+              "src": "682:26:134"
             },
             "returnParameters": {
-              "id": 58633,
+              "id": 58626,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58632,
+                  "id": 58625,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "740:10:133",
+                  "nameLocation": "740:10:134",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58635,
-                  "src": "732:18:133",
+                  "scope": 58628,
+                  "src": "732:18:134",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -849,10 +849,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58631,
+                    "id": 58624,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "732:7:133",
+                    "src": "732:7:134",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -861,9 +861,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "731:20:133"
+              "src": "731:20:134"
             },
-            "scope": 58636,
+            "scope": 58629,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -873,18 +873,18 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 58592,
+              "id": 58585,
               "name": "InterfaceGasOracle",
               "nameLocations": [
-                "205:18:133"
+                "205:18:134"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 9764,
-              "src": "205:18:133"
+              "src": "205:18:134"
             },
-            "id": 58593,
+            "id": 58586,
             "nodeType": "InheritanceSpecifier",
-            "src": "205:18:133"
+            "src": "205:18:134"
           }
         ],
         "canonicalName": "GasOracleMock",
@@ -892,16 +892,16 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          58636,
+          58629,
           9764
         ],
         "name": "GasOracleMock",
-        "nameLocation": "188:13:133",
-        "scope": 58637,
+        "nameLocation": "188:13:134",
+        "scope": 58630,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 133
+  "id": 134
 }

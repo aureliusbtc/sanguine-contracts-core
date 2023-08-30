@@ -53,20 +53,20 @@
     }
   ],
   "bytecode": {
-    "object": "0x608060405234801561001057600080fd5b5061030e806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80632fc99de81461003b578063ebf0c71714610050575b600080fd5b61004e6100493660046101e9565b610065565b005b60005460405190815260200160405180910390f35b61007360008585858561007a565b5050505050565b845460009061008c86868660206100c5565b146100aa57604051630c5805f160e11b815260040160405180910390fd5b6100b785838560206100c5565b958690555093949350505050565b8151600090828111156100eb5760405163c5360feb60e01b815260040160405180910390fd5b84915060005b818110156101285761011e8386838151811061010f5761010f6102c2565b60200260200101518984610154565b92506001016100f1565b50805b8381101561014a576101408360008984610154565b925060010161012b565b5050949350505050565b6000600183831c1681036101735761016c8585610185565b905061017d565b61016c8486610185565b949350505050565b600082158015610193575081155b156101a0575060006101cd565b60408051602081018590529081018390526060016040516020818303038152906040528051906020012090505b92915050565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156101ff57600080fd5b843593506020808601359350604086013567ffffffffffffffff8082111561022657600080fd5b818801915088601f83011261023a57600080fd5b81358181111561024c5761024c6101d3565b8060051b604051601f19603f83011681018181108582111715610271576102716101d3565b60405291825284820192508381018501918b83111561028f57600080fd5b938501935b828510156102ad57843584529385019392850192610294565b989b979a509798606001359750505050505050565b634e487b7160e01b600052603260045260246000fdfea26469706673582212209b618d6d570a2ec7c4fd8f320117a36ef8f8ee4518abf81292a541e5b535f3df64736f6c63430008110033",
-    "sourceMap": "136:319:121:-:0;;;;;;;;;;;;;;;;;;;",
+    "object": "0x608060405234801561001057600080fd5b5061030e806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80632fc99de81461003b578063ebf0c71714610050575b600080fd5b61004e6100493660046101e9565b610065565b005b60005460405190815260200160405180910390f35b61007360008585858561007a565b5050505050565b845460009061008c86868660206100c5565b146100aa57604051630c5805f160e11b815260040160405180910390fd5b6100b785838560206100c5565b958690555093949350505050565b8151600090828111156100eb5760405163c5360feb60e01b815260040160405180910390fd5b84915060005b818110156101285761011e8386838151811061010f5761010f6102c2565b60200260200101518984610154565b92506001016100f1565b50805b8381101561014a576101408360008984610154565b925060010161012b565b5050949350505050565b6000600183831c1681036101735761016c8585610185565b905061017d565b61016c8486610185565b949350505050565b600082158015610193575081155b156101a0575060006101cd565b60408051602081018590529081018390526060016040516020818303038152906040528051906020012090505b92915050565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156101ff57600080fd5b843593506020808601359350604086013567ffffffffffffffff8082111561022657600080fd5b818801915088601f83011261023a57600080fd5b81358181111561024c5761024c6101d3565b8060051b604051601f19603f83011681018181108582111715610271576102716101d3565b60405291825284820192508381018501918b83111561028f57600080fd5b938501935b828510156102ad57843584529385019392850192610294565b989b979a509798606001359750505050505050565b634e487b7160e01b600052603260045260246000fdfea26469706673582212203a3cfe8d1265c34436e7acb767ce283e65f220864cb04c7fda1090c088e280d964736f6c63430008110033",
+    "sourceMap": "136:319:122:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80632fc99de81461003b578063ebf0c71714610050575b600080fd5b61004e6100493660046101e9565b610065565b005b60005460405190815260200160405180910390f35b61007360008585858561007a565b5050505050565b845460009061008c86868660206100c5565b146100aa57604051630c5805f160e11b815260040160405180910390fd5b6100b785838560206100c5565b958690555093949350505050565b8151600090828111156100eb5760405163c5360feb60e01b815260040160405180910390fd5b84915060005b818110156101285761011e8386838151811061010f5761010f6102c2565b60200260200101518984610154565b92506001016100f1565b50805b8381101561014a576101408360008984610154565b925060010161012b565b5050949350505050565b6000600183831c1681036101735761016c8585610185565b905061017d565b61016c8486610185565b949350505050565b600082158015610193575081155b156101a0575060006101cd565b60408051602081018590529081018390526060016040516020818303038152906040528051906020012090505b92915050565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156101ff57600080fd5b843593506020808601359350604086013567ffffffffffffffff8082111561022657600080fd5b818801915088601f83011261023a57600080fd5b81358181111561024c5761024c6101d3565b8060051b604051601f19603f83011681018181108582111715610271576102716101d3565b60405291825284820192508381018501918b83111561028f57600080fd5b938501935b828510156102ad57843584529385019392850192610294565b989b979a509798606001359750505050505050565b634e487b7160e01b600052603260045260246000fdfea26469706673582212209b618d6d570a2ec7c4fd8f320117a36ef8f8ee4518abf81292a541e5b535f3df64736f6c63430008110033",
-    "sourceMap": "136:319:121:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:164;;;;;;:::i;:::-;;:::i;:::-;;372:81;411:7;437:9;372:81;;1617:25:200;;;1605:2;1590:18;372:81:121;;;;;;;202:164;313:46;:4;325:5;332:8;342:6;350:8;313:11;:46::i;:::-;;202:164;;;;:::o;10766:650:58:-;11116:9;;10948:15;;11048:64;11069:5;11076:8;11086:6;428:2:45;11048:20:58;:64::i;:::-;:77;11044:130;;11148:15;;-1:-1:-1;;;11148:15:58;;;;;;;;;;;11044:130;11286:64;11307:5;11314:8;11324:6;428:2:45;11286:20:58;:64::i;:::-;11390:19;;;;-1:-1:-1;11276:74:58;;10766:650;-1:-1:-1;;;;10766:650:58:o;843:900:57:-;1083:12;;978:13;;1109:17;;;1105:48;;;1135:18;;-1:-1:-1;;;1135:18:57;;;;;;;;;;;1105:48;1171:4;1163:12;;1340:9;1335:189;1359:8;1355:1;:12;1335:189;;;1473:36;1483:5;1490;1496:1;1490:8;;;;;;;;:::i;:::-;;;;;;;1500:5;1507:1;1473:9;:36::i;:::-;1465:44;-1:-1:-1;1369:3:57;;1335:189;;;-1:-1:-1;1621:8:57;1604:123;1635:6;1631:1;:10;1604:123;;;1674:38;1684:5;1699:1;1703:5;1710:1;1674:9;:38::i;:::-;1666:46;-1:-1:-1;1643:3:57;;1604:123;;;;997:746;843:900;;;;;;:::o;2125:526::-;2261:14;2466:1;2439:23;;;2438:29;:34;;2434:211;;2521:24;2531:4;2537:7;2521:9;:24::i;:::-;2514:31;;;;2434:211;2610:24;2620:7;2629:4;2610:9;:24::i;2434:211::-;2125:526;;;;;;:::o;3115:287::-;3196:14;3226:23;;:51;;;;-1:-1:-1;3253:24:57;;3226:51;3222:174;;;-1:-1:-1;3300:1:57;3293:8;;3222:174;3349:35;;;;;;1942:19:200;;;1977:12;;;1970:28;;;2014:12;;3349:35:57;;;;;;;;;;;;3339:46;;;;;;3332:53;;3222:174;3115:287;;;;:::o;14:127:200:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:1320;257:6;265;273;281;334:3;322:9;313:7;309:23;305:33;302:53;;;351:1;348;341:12;302:53;387:9;374:23;364:33;;416:2;465;454:9;450:18;437:32;427:42;;520:2;509:9;505:18;492:32;543:18;584:2;576:6;573:14;570:34;;;600:1;597;590:12;570:34;638:6;627:9;623:22;613:32;;683:7;676:4;672:2;668:13;664:27;654:55;;705:1;702;695:12;654:55;741:2;728:16;763:2;759;756:10;753:36;;;769:18;;:::i;:::-;815:2;812:1;808:10;847:2;841:9;910:2;906:7;901:2;897;893:11;889:25;881:6;877:38;965:6;953:10;950:22;945:2;933:10;930:18;927:46;924:72;;;976:18;;:::i;:::-;1012:2;1005:22;1062:18;;;1096:15;;;;-1:-1:-1;1138:11:200;;;1134:20;;;1166:19;;;1163:39;;;1198:1;1195;1188:12;1163:39;1222:11;;;;1242:142;1258:6;1253:3;1250:15;1242:142;;;1324:17;;1312:30;;1275:12;;;;1362;;;;1242:142;;;146:1320;;;;-1:-1:-1;1403:6:200;;1456:2;1441:18;1428:32;;-1:-1:-1;;;;;;;146:1320:200:o;1653:127::-;1714:10;1709:3;1705:20;1702:1;1695:31;1745:4;1742:1;1735:15;1769:4;1766:1;1759:15",
+    "object": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80632fc99de81461003b578063ebf0c71714610050575b600080fd5b61004e6100493660046101e9565b610065565b005b60005460405190815260200160405180910390f35b61007360008585858561007a565b5050505050565b845460009061008c86868660206100c5565b146100aa57604051630c5805f160e11b815260040160405180910390fd5b6100b785838560206100c5565b958690555093949350505050565b8151600090828111156100eb5760405163c5360feb60e01b815260040160405180910390fd5b84915060005b818110156101285761011e8386838151811061010f5761010f6102c2565b60200260200101518984610154565b92506001016100f1565b50805b8381101561014a576101408360008984610154565b925060010161012b565b5050949350505050565b6000600183831c1681036101735761016c8585610185565b905061017d565b61016c8486610185565b949350505050565b600082158015610193575081155b156101a0575060006101cd565b60408051602081018590529081018390526060016040516020818303038152906040528051906020012090505b92915050565b634e487b7160e01b600052604160045260246000fd5b600080600080608085870312156101ff57600080fd5b843593506020808601359350604086013567ffffffffffffffff8082111561022657600080fd5b818801915088601f83011261023a57600080fd5b81358181111561024c5761024c6101d3565b8060051b604051601f19603f83011681018181108582111715610271576102716101d3565b60405291825284820192508381018501918b83111561028f57600080fd5b938501935b828510156102ad57843584529385019392850192610294565b989b979a509798606001359750505050505050565b634e487b7160e01b600052603260045260246000fdfea26469706673582212203a3cfe8d1265c34436e7acb767ce283e65f220864cb04c7fda1090c088e280d964736f6c63430008110033",
+    "sourceMap": "136:319:122:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:164;;;;;;:::i;:::-;;:::i;:::-;;372:81;411:7;437:9;372:81;;1617:25:201;;;1605:2;1590:18;372:81:122;;;;;;;202:164;313:46;:4;325:5;332:8;342:6;350:8;313:11;:46::i;:::-;;202:164;;;;:::o;10766:650:58:-;11116:9;;10948:15;;11048:64;11069:5;11076:8;11086:6;428:2:45;11048:20:58;:64::i;:::-;:77;11044:130;;11148:15;;-1:-1:-1;;;11148:15:58;;;;;;;;;;;11044:130;11286:64;11307:5;11314:8;11324:6;428:2:45;11286:20:58;:64::i;:::-;11390:19;;;;-1:-1:-1;11276:74:58;;10766:650;-1:-1:-1;;;;10766:650:58:o;843:900:57:-;1083:12;;978:13;;1109:17;;;1105:48;;;1135:18;;-1:-1:-1;;;1135:18:57;;;;;;;;;;;1105:48;1171:4;1163:12;;1340:9;1335:189;1359:8;1355:1;:12;1335:189;;;1473:36;1483:5;1490;1496:1;1490:8;;;;;;;;:::i;:::-;;;;;;;1500:5;1507:1;1473:9;:36::i;:::-;1465:44;-1:-1:-1;1369:3:57;;1335:189;;;-1:-1:-1;1621:8:57;1604:123;1635:6;1631:1;:10;1604:123;;;1674:38;1684:5;1699:1;1703:5;1710:1;1674:9;:38::i;:::-;1666:46;-1:-1:-1;1643:3:57;;1604:123;;;;997:746;843:900;;;;;;:::o;2125:526::-;2261:14;2466:1;2439:23;;;2438:29;:34;;2434:211;;2521:24;2531:4;2537:7;2521:9;:24::i;:::-;2514:31;;;;2434:211;2610:24;2620:7;2629:4;2610:9;:24::i;2434:211::-;2125:526;;;;;;:::o;3115:287::-;3196:14;3226:23;;:51;;;;-1:-1:-1;3253:24:57;;3226:51;3222:174;;;-1:-1:-1;3300:1:57;3293:8;;3222:174;3349:35;;;;;;1942:19:201;;;1977:12;;;1970:28;;;2014:12;;3349:35:57;;;;;;;;;;;;3339:46;;;;;;3332:53;;3222:174;3115:287;;;;:::o;14:127:201:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:1320;257:6;265;273;281;334:3;322:9;313:7;309:23;305:33;302:53;;;351:1;348;341:12;302:53;387:9;374:23;364:33;;416:2;465;454:9;450:18;437:32;427:42;;520:2;509:9;505:18;492:32;543:18;584:2;576:6;573:14;570:34;;;600:1;597;590:12;570:34;638:6;627:9;623:22;613:32;;683:7;676:4;672:2;668:13;664:27;654:55;;705:1;702;695:12;654:55;741:2;728:16;763:2;759;756:10;753:36;;;769:18;;:::i;:::-;815:2;812:1;808:10;847:2;841:9;910:2;906:7;901:2;897;893:11;889:25;881:6;877:38;965:6;953:10;950:22;945:2;933:10;930:18;927:46;924:72;;;976:18;;:::i;:::-;1012:2;1005:22;1062:18;;;1096:15;;;;-1:-1:-1;1138:11:201;;;1134:20;;;1166:19;;;1163:39;;;1198:1;1195;1188:12;1163:39;1222:11;;;;1242:142;1258:6;1253:3;1250:15;1242:142;;;1324:17;;1312:30;;1275:12;;;;1362;;;;1242:142;;;146:1320;;;;-1:-1:-1;1403:6:201;;1456:2;1441:18;1428:32;;-1:-1:-1;;;;;;;146:1320:201:o;1653:127::-;1714:10;1709:3;1705:20;1702:1;1695:31;1745:4;1742:1;1735:15;1769:4;1766:1;1759:15",
     "linkReferences": {}
   },
   "methodIdentifiers": {
     "root()": "ebf0c717",
     "update(uint256,bytes32,bytes32[],bytes32)": "2fc99de8"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"LeafNotProven\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TreeHeightTooLow\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"root\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"oldValue\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"branch\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes32\",\"name\":\"newValue\",\"type\":\"bytes32\"}],\"name\":\"update\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/libs/merkle/DynamicTreeHarness.t.sol\":\"DynamicTreeHarness\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/Constants.sol\":{\"keccak256\":\"0x00f447e219d27f9a864847f8038c4bac16f59e2fb37c5c0de1b554d48d41ba48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c3b8452f969900c9ffbfae74dd73d076d9eace7e2448015b6c46ca8dd4d4402\",\"dweb:/ipfs/QmXGya3YqdmTXNdzTs1ZLMXJZnfJb49Sw5soXhjHbq8qnk\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/merkle/MerkleMath.sol\":{\"keccak256\":\"0xbd13c07bdc40b80f56c7d75e3f31b6c4a85a78d444b760604a5b71083d14925c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3162b491e4e216c0f2d143ce3baab4cf9e2a8b1b42466256a5d5b1f8b0385507\",\"dweb:/ipfs/QmYnDSZyxiGHfmB8Fx46zh1LZe3aCdVaKzpaQuD9piTc7u\"]},\"contracts/libs/merkle/MerkleTree.sol\":{\"keccak256\":\"0xdc0a58835c6296f70fca199455adf94059f2ef709e4e3af05c3fa97e74b81fb0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://62e769893052a89a57db12445481dd56ffdd758aa1795d94b17c3357ce799de1\",\"dweb:/ipfs/QmNnfsHhN5UvQHQSW1G6FUQZZBJEZVrAsBYGdQ5GkPbU1c\"]},\"test/harnesses/libs/merkle/DynamicTreeHarness.t.sol\":{\"keccak256\":\"0xb86b5d0d725668d44d0444790f93c7e3c42896edbaa007ea6820d90483b8274b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2f39bbd892d4b4dea61cab3e4675e8898834833c1e2f44cd36f0b4f174a0bc1c\",\"dweb:/ipfs/QmNuajwV5Q3BHz7Fg6NZ5vh2rBmK5AYLvU4iyCLmBGm8ag\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"LeafNotProven\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TreeHeightTooLow\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"root\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"oldValue\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"branch\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes32\",\"name\":\"newValue\",\"type\":\"bytes32\"}],\"name\":\"update\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/libs/merkle/DynamicTreeHarness.t.sol\":\"DynamicTreeHarness\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/Constants.sol\":{\"keccak256\":\"0x9ead9581411ac7f702ccba26e3f478610f8c9c785ec3f96f3d9324d162177c2c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cba4a834737651bee39e2abca02d59e676cd149439d21182ab6e4320d5e61279\",\"dweb:/ipfs/QmS2K5LKspFZPKuedWoaqywUw6v1nH9xdHa35dN8J9jDEi\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/merkle/MerkleMath.sol\":{\"keccak256\":\"0xbd13c07bdc40b80f56c7d75e3f31b6c4a85a78d444b760604a5b71083d14925c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3162b491e4e216c0f2d143ce3baab4cf9e2a8b1b42466256a5d5b1f8b0385507\",\"dweb:/ipfs/QmYnDSZyxiGHfmB8Fx46zh1LZe3aCdVaKzpaQuD9piTc7u\"]},\"contracts/libs/merkle/MerkleTree.sol\":{\"keccak256\":\"0xdc0a58835c6296f70fca199455adf94059f2ef709e4e3af05c3fa97e74b81fb0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://62e769893052a89a57db12445481dd56ffdd758aa1795d94b17c3357ce799de1\",\"dweb:/ipfs/QmNnfsHhN5UvQHQSW1G6FUQZZBJEZVrAsBYGdQ5GkPbU1c\"]},\"test/harnesses/libs/merkle/DynamicTreeHarness.t.sol\":{\"keccak256\":\"0xb86b5d0d725668d44d0444790f93c7e3c42896edbaa007ea6820d90483b8274b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2f39bbd892d4b4dea61cab3e4675e8898834833c1e2f44cd36f0b4f174a0bc1c\",\"dweb:/ipfs/QmNuajwV5Q3BHz7Fg6NZ5vh2rBmK5AYLvU4iyCLmBGm8ag\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.17+commit.8df45f5f"
@@ -158,10 +158,10 @@
     },
     "sources": {
       "contracts/libs/Constants.sol": {
-        "keccak256": "0x00f447e219d27f9a864847f8038c4bac16f59e2fb37c5c0de1b554d48d41ba48",
+        "keccak256": "0x9ead9581411ac7f702ccba26e3f478610f8c9c785ec3f96f3d9324d162177c2c",
         "urls": [
-          "bzz-raw://8c3b8452f969900c9ffbfae74dd73d076d9eace7e2448015b6c46ca8dd4d4402",
-          "dweb:/ipfs/QmXGya3YqdmTXNdzTs1ZLMXJZnfJb49Sw5soXhjHbq8qnk"
+          "bzz-raw://cba4a834737651bee39e2abca02d59e676cd149439d21182ab6e4320d5e61279",
+          "dweb:/ipfs/QmS2K5LKspFZPKuedWoaqywUw6v1nH9xdHa35dN8J9jDEi"
         ],
         "license": "MIT"
       },
@@ -202,22 +202,22 @@
   },
   "ast": {
     "absolutePath": "test/harnesses/libs/merkle/DynamicTreeHarness.t.sol",
-    "id": 57330,
+    "id": 57323,
     "exportedSymbols": {
       "DynamicTree": [
         14300
       ],
       "DynamicTreeHarness": [
-        57329
+        57322
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:424:121",
+    "src": "32:424:122",
     "nodes": [
       {
-        "id": 57292,
+        "id": 57285,
         "nodeType": "PragmaDirective",
-        "src": "32:23:121",
+        "src": "32:23:122",
         "nodes": [],
         "literals": [
           "solidity",
@@ -226,24 +226,24 @@
         ]
       },
       {
-        "id": 57294,
+        "id": 57287,
         "nodeType": "ImportDirective",
-        "src": "57:77:121",
+        "src": "57:77:122",
         "nodes": [],
         "absolutePath": "contracts/libs/merkle/MerkleTree.sol",
         "file": "../../../../contracts/libs/merkle/MerkleTree.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 57330,
+        "scope": 57323,
         "sourceUnit": 14588,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 57293,
+              "id": 57286,
               "name": "DynamicTree",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 14300,
-              "src": "65:11:121",
+              "src": "65:11:122",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -252,20 +252,20 @@
         "unitAlias": ""
       },
       {
-        "id": 57329,
+        "id": 57322,
         "nodeType": "ContractDefinition",
-        "src": "136:319:121",
+        "src": "136:319:122",
         "nodes": [
           {
-            "id": 57297,
+            "id": 57290,
             "nodeType": "VariableDeclaration",
-            "src": "170:25:121",
+            "src": "170:25:122",
             "nodes": [],
             "constant": false,
             "mutability": "mutable",
             "name": "tree",
-            "nameLocation": "191:4:121",
-            "scope": 57329,
+            "nameLocation": "191:4:122",
+            "scope": 57322,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -273,20 +273,20 @@
               "typeString": "struct DynamicTree"
             },
             "typeName": {
-              "id": 57296,
+              "id": 57289,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 57295,
+                "id": 57288,
                 "name": "DynamicTree",
                 "nameLocations": [
-                  "170:11:121"
+                  "170:11:122"
                 ],
                 "nodeType": "IdentifierPath",
                 "referencedDeclaration": 14300,
-                "src": "170:11:121"
+                "src": "170:11:122"
               },
               "referencedDeclaration": 14300,
-              "src": "170:11:121",
+              "src": "170:11:122",
               "typeDescriptions": {
                 "typeIdentifier": "t_struct$_DynamicTree_$14300_storage_ptr",
                 "typeString": "struct DynamicTree"
@@ -295,62 +295,62 @@
             "visibility": "internal"
           },
           {
-            "id": 57319,
+            "id": 57312,
             "nodeType": "FunctionDefinition",
-            "src": "202:164:121",
+            "src": "202:164:122",
             "nodes": [],
             "body": {
-              "id": 57318,
+              "id": 57311,
               "nodeType": "Block",
-              "src": "303:63:121",
+              "src": "303:63:122",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 57312,
+                        "id": 57305,
                         "name": "index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 57299,
-                        "src": "325:5:121",
+                        "referencedDeclaration": 57292,
+                        "src": "325:5:122",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 57313,
+                        "id": 57306,
                         "name": "oldValue",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 57301,
-                        "src": "332:8:121",
+                        "referencedDeclaration": 57294,
+                        "src": "332:8:122",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
                         }
                       },
                       {
-                        "id": 57314,
+                        "id": 57307,
                         "name": "branch",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 57304,
-                        "src": "342:6:121",
+                        "referencedDeclaration": 57297,
+                        "src": "342:6:122",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
                           "typeString": "bytes32[] memory"
                         }
                       },
                       {
-                        "id": 57315,
+                        "id": 57308,
                         "name": "newValue",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 57306,
-                        "src": "350:8:121",
+                        "referencedDeclaration": 57299,
+                        "src": "350:8:122",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -377,33 +377,33 @@
                         }
                       ],
                       "expression": {
-                        "id": 57309,
+                        "id": 57302,
                         "name": "tree",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 57297,
-                        "src": "313:4:121",
+                        "referencedDeclaration": 57290,
+                        "src": "313:4:122",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_DynamicTree_$14300_storage",
                           "typeString": "struct DynamicTree storage ref"
                         }
                       },
-                      "id": 57311,
+                      "id": 57304,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "318:6:121",
+                      "memberLocation": "318:6:122",
                       "memberName": "update",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 14586,
-                      "src": "313:11:121",
+                      "src": "313:11:122",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_DynamicTree_$14300_storage_ptr_$_t_uint256_$_t_bytes32_$_t_array$_t_bytes32_$dyn_memory_ptr_$_t_bytes32_$returns$_t_bytes32_$bound_to$_t_struct$_DynamicTree_$14300_storage_ptr_$",
                         "typeString": "function (struct DynamicTree storage pointer,uint256,bytes32,bytes32[] memory,bytes32) returns (bytes32)"
                       }
                     },
-                    "id": 57316,
+                    "id": 57309,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -412,16 +412,16 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "313:46:121",
+                    "src": "313:46:122",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 57317,
+                  "id": 57310,
                   "nodeType": "ExpressionStatement",
-                  "src": "313:46:121"
+                  "src": "313:46:122"
                 }
               ]
             },
@@ -430,20 +430,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "update",
-            "nameLocation": "211:6:121",
+            "nameLocation": "211:6:122",
             "parameters": {
-              "id": 57307,
+              "id": 57300,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 57299,
+                  "id": 57292,
                   "mutability": "mutable",
                   "name": "index",
-                  "nameLocation": "226:5:121",
+                  "nameLocation": "226:5:122",
                   "nodeType": "VariableDeclaration",
-                  "scope": 57319,
-                  "src": "218:13:121",
+                  "scope": 57312,
+                  "src": "218:13:122",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -451,10 +451,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 57298,
+                    "id": 57291,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "218:7:121",
+                    "src": "218:7:122",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -464,13 +464,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 57301,
+                  "id": 57294,
                   "mutability": "mutable",
                   "name": "oldValue",
-                  "nameLocation": "241:8:121",
+                  "nameLocation": "241:8:122",
                   "nodeType": "VariableDeclaration",
-                  "scope": 57319,
-                  "src": "233:16:121",
+                  "scope": 57312,
+                  "src": "233:16:122",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -478,10 +478,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 57300,
+                    "id": 57293,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "233:7:121",
+                    "src": "233:7:122",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -491,13 +491,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 57304,
+                  "id": 57297,
                   "mutability": "mutable",
                   "name": "branch",
-                  "nameLocation": "268:6:121",
+                  "nameLocation": "268:6:122",
                   "nodeType": "VariableDeclaration",
-                  "scope": 57319,
-                  "src": "251:23:121",
+                  "scope": 57312,
+                  "src": "251:23:122",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -506,18 +506,18 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 57302,
+                      "id": 57295,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
-                      "src": "251:7:121",
+                      "src": "251:7:122",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 57303,
+                    "id": 57296,
                     "nodeType": "ArrayTypeName",
-                    "src": "251:9:121",
+                    "src": "251:9:122",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
                       "typeString": "bytes32[]"
@@ -527,13 +527,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 57306,
+                  "id": 57299,
                   "mutability": "mutable",
                   "name": "newValue",
-                  "nameLocation": "284:8:121",
+                  "nameLocation": "284:8:122",
                   "nodeType": "VariableDeclaration",
-                  "scope": 57319,
-                  "src": "276:16:121",
+                  "scope": 57312,
+                  "src": "276:16:122",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -541,10 +541,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 57305,
+                    "id": 57298,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "276:7:121",
+                    "src": "276:7:122",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -553,63 +553,63 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "217:76:121"
+              "src": "217:76:122"
             },
             "returnParameters": {
-              "id": 57308,
+              "id": 57301,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "303:0:121"
+              "src": "303:0:122"
             },
-            "scope": 57329,
+            "scope": 57322,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 57328,
+            "id": 57321,
             "nodeType": "FunctionDefinition",
-            "src": "372:81:121",
+            "src": "372:81:122",
             "nodes": [],
             "body": {
-              "id": 57327,
+              "id": 57320,
               "nodeType": "Block",
-              "src": "420:33:121",
+              "src": "420:33:122",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "expression": {
-                      "id": 57324,
+                      "id": 57317,
                       "name": "tree",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 57297,
-                      "src": "437:4:121",
+                      "referencedDeclaration": 57290,
+                      "src": "437:4:122",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_DynamicTree_$14300_storage",
                         "typeString": "struct DynamicTree storage ref"
                       }
                     },
-                    "id": 57325,
+                    "id": 57318,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "442:4:121",
+                    "memberLocation": "442:4:122",
                     "memberName": "root",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 14299,
-                    "src": "437:9:121",
+                    "src": "437:9:122",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 57323,
-                  "id": 57326,
+                  "functionReturnParameters": 57316,
+                  "id": 57319,
                   "nodeType": "Return",
-                  "src": "430:16:121"
+                  "src": "430:16:122"
                 }
               ]
             },
@@ -618,26 +618,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "root",
-            "nameLocation": "381:4:121",
+            "nameLocation": "381:4:122",
             "parameters": {
-              "id": 57320,
+              "id": 57313,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "385:2:121"
+              "src": "385:2:122"
             },
             "returnParameters": {
-              "id": 57323,
+              "id": 57316,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 57322,
+                  "id": 57315,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 57328,
-                  "src": "411:7:121",
+                  "scope": 57321,
+                  "src": "411:7:122",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -645,10 +645,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 57321,
+                    "id": 57314,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "411:7:121",
+                    "src": "411:7:122",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -657,9 +657,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "410:9:121"
+              "src": "410:9:122"
             },
-            "scope": 57329,
+            "scope": 57322,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -672,11 +672,11 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          57329
+          57322
         ],
         "name": "DynamicTreeHarness",
-        "nameLocation": "145:18:121",
-        "scope": 57330,
+        "nameLocation": "145:18:122",
+        "scope": 57323,
         "usedErrors": [
           10246,
           10252
@@ -685,5 +685,5 @@
     ],
     "license": "MIT"
   },
-  "id": 121
+  "id": 122
 }

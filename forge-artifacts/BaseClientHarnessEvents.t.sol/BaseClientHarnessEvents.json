@@ -140,19 +140,19 @@
   },
   "ast": {
     "absolutePath": "test/harnesses/events/BaseClientHarnessEvents.t.sol",
-    "id": 54971,
+    "id": 54964,
     "exportedSymbols": {
       "BaseClientHarnessEvents": [
-        54970
+        54963
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:180:112",
+    "src": "32:180:113",
     "nodes": [
       {
-        "id": 54957,
+        "id": 54950,
         "nodeType": "PragmaDirective",
-        "src": "32:23:112",
+        "src": "32:23:113",
         "nodes": [],
         "literals": [
           "solidity",
@@ -161,33 +161,33 @@
         ]
       },
       {
-        "id": 54970,
+        "id": 54963,
         "nodeType": "ContractDefinition",
-        "src": "57:154:112",
+        "src": "57:154:113",
         "nodes": [
           {
-            "id": 54969,
+            "id": 54962,
             "nodeType": "EventDefinition",
-            "src": "105:104:112",
+            "src": "105:104:113",
             "nodes": [],
             "anonymous": false,
             "eventSelector": "1fefc9e08633323857fc5f53df333beeb6c3058161f8b7ef71a22b0f4f9da4b0",
             "name": "BaseMessageReceived",
-            "nameLocation": "111:19:112",
+            "nameLocation": "111:19:113",
             "parameters": {
-              "id": 54968,
+              "id": 54961,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 54959,
+                  "id": 54952,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "msgValue",
-                  "nameLocation": "139:8:112",
+                  "nameLocation": "139:8:113",
                   "nodeType": "VariableDeclaration",
-                  "scope": 54969,
-                  "src": "131:16:112",
+                  "scope": 54962,
+                  "src": "131:16:113",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -195,10 +195,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 54958,
+                    "id": 54951,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "131:7:112",
+                    "src": "131:7:113",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -208,14 +208,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 54961,
+                  "id": 54954,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "origin",
-                  "nameLocation": "156:6:112",
+                  "nameLocation": "156:6:113",
                   "nodeType": "VariableDeclaration",
-                  "scope": 54969,
-                  "src": "149:13:112",
+                  "scope": 54962,
+                  "src": "149:13:113",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -223,10 +223,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 54960,
+                    "id": 54953,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "149:6:112",
+                    "src": "149:6:113",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -236,14 +236,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 54963,
+                  "id": 54956,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "nonce",
-                  "nameLocation": "171:5:112",
+                  "nameLocation": "171:5:113",
                   "nodeType": "VariableDeclaration",
-                  "scope": 54969,
-                  "src": "164:12:112",
+                  "scope": 54962,
+                  "src": "164:12:113",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -251,10 +251,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 54962,
+                    "id": 54955,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "164:6:112",
+                    "src": "164:6:113",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -264,14 +264,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 54965,
+                  "id": 54958,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "version",
-                  "nameLocation": "185:7:112",
+                  "nameLocation": "185:7:113",
                   "nodeType": "VariableDeclaration",
-                  "scope": 54969,
-                  "src": "178:14:112",
+                  "scope": 54962,
+                  "src": "178:14:113",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -279,10 +279,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 54964,
+                    "id": 54957,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "178:6:112",
+                    "src": "178:6:113",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -292,14 +292,14 @@
                 },
                 {
                   "constant": false,
-                  "id": 54967,
+                  "id": 54960,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "content",
-                  "nameLocation": "200:7:112",
+                  "nameLocation": "200:7:113",
                   "nodeType": "VariableDeclaration",
-                  "scope": 54969,
-                  "src": "194:13:112",
+                  "scope": 54962,
+                  "src": "194:13:113",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -307,10 +307,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 54966,
+                    "id": 54959,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "194:5:112",
+                    "src": "194:5:113",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -319,7 +319,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "130:78:112"
+              "src": "130:78:113"
             }
           }
         ],
@@ -330,15 +330,15 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          54970
+          54963
         ],
         "name": "BaseClientHarnessEvents",
-        "nameLocation": "75:23:112",
-        "scope": 54971,
+        "nameLocation": "75:23:113",
+        "scope": 54964,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 112
+  "id": 113
 }

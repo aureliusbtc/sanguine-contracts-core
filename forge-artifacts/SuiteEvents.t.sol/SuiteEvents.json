@@ -148,22 +148,22 @@
   },
   "ast": {
     "absolutePath": "test/utils/events/SuiteEvents.t.sol",
-    "id": 93160,
+    "id": 93153,
     "exportedSymbols": {
       "BaseClientHarnessEvents": [
-        54970
+        54963
       ],
       "SuiteEvents": [
-        93159
+        93152
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:215:187",
+    "src": "32:215:188",
     "nodes": [
       {
-        "id": 93154,
+        "id": 93147,
         "nodeType": "PragmaDirective",
-        "src": "32:23:187",
+        "src": "32:23:188",
         "nodes": [],
         "literals": [
           "solidity",
@@ -172,24 +172,24 @@
         ]
       },
       {
-        "id": 93156,
+        "id": 93149,
         "nodeType": "ImportDirective",
-        "src": "57:93:187",
+        "src": "57:93:188",
         "nodes": [],
         "absolutePath": "test/harnesses/events/BaseClientHarnessEvents.t.sol",
         "file": "../../harnesses/events/BaseClientHarnessEvents.t.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93160,
-        "sourceUnit": 54971,
+        "scope": 93153,
+        "sourceUnit": 54964,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93155,
+              "id": 93148,
               "name": "BaseClientHarnessEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 54970,
-              "src": "65:23:187",
+              "referencedDeclaration": 54963,
+              "src": "65:23:188",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -198,26 +198,26 @@
         "unitAlias": ""
       },
       {
-        "id": 93159,
+        "id": 93152,
         "nodeType": "ContractDefinition",
-        "src": "187:59:187",
+        "src": "187:59:188",
         "nodes": [],
         "abstract": true,
         "baseContracts": [
           {
             "baseName": {
-              "id": 93157,
+              "id": 93150,
               "name": "BaseClientHarnessEvents",
               "nameLocations": [
-                "220:23:187"
+                "220:23:188"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 54970,
-              "src": "220:23:187"
+              "referencedDeclaration": 54963,
+              "src": "220:23:188"
             },
-            "id": 93158,
+            "id": 93151,
             "nodeType": "InheritanceSpecifier",
-            "src": "220:23:187"
+            "src": "220:23:188"
           }
         ],
         "canonicalName": "SuiteEvents",
@@ -225,16 +225,16 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          93159,
-          54970
+          93152,
+          54963
         ],
         "name": "SuiteEvents",
-        "nameLocation": "205:11:187",
-        "scope": 93160,
+        "nameLocation": "205:11:188",
+        "scope": 93153,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 187
+  "id": 188
 }

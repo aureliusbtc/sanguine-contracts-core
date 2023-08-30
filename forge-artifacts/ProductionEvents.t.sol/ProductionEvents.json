@@ -1162,7 +1162,7 @@
   },
   "ast": {
     "absolutePath": "test/utils/events/ProductionEvents.t.sol",
-    "id": 93153,
+    "id": 93146,
     "exportedSymbols": {
       "AgentManagerEvents": [
         3922
@@ -1180,7 +1180,7 @@
         4025
       ],
       "ProductionEvents": [
-        93152
+        93145
       ],
       "SnapshotHubEvents": [
         4039
@@ -1193,12 +1193,12 @@
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:916:186",
+    "src": "32:916:187",
     "nodes": [
       {
-        "id": 93119,
+        "id": 93112,
         "nodeType": "PragmaDirective",
-        "src": "32:23:186",
+        "src": "32:23:187",
         "nodes": [],
         "literals": [
           "solidity",
@@ -1207,24 +1207,24 @@
         ]
       },
       {
-        "id": 93121,
+        "id": 93114,
         "nodeType": "ImportDirective",
-        "src": "57:84:186",
+        "src": "57:84:187",
         "nodes": [],
         "absolutePath": "contracts/events/AgentManagerEvents.sol",
         "file": "../../../contracts/events/AgentManagerEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 3923,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93120,
+              "id": 93113,
               "name": "AgentManagerEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 3922,
-              "src": "65:18:186",
+              "src": "65:18:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1233,24 +1233,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93123,
+        "id": 93116,
         "nodeType": "ImportDirective",
-        "src": "142:82:186",
+        "src": "142:82:187",
         "nodes": [],
         "absolutePath": "contracts/events/DestinationEvents.sol",
         "file": "../../../contracts/events/DestinationEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 3931,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93122,
+              "id": 93115,
               "name": "DestinationEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 3930,
-              "src": "150:17:186",
+              "src": "150:17:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1259,24 +1259,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93125,
+        "id": 93118,
         "nodeType": "ImportDirective",
-        "src": "225:84:186",
+        "src": "225:84:187",
         "nodes": [],
         "absolutePath": "contracts/events/ExecutionHubEvents.sol",
         "file": "../../../contracts/events/ExecutionHubEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 3951,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93124,
+              "id": 93117,
               "name": "ExecutionHubEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 3950,
-              "src": "233:18:186",
+              "src": "233:18:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1285,24 +1285,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93127,
+        "id": 93120,
         "nodeType": "ImportDirective",
-        "src": "310:70:186",
+        "src": "310:70:187",
         "nodes": [],
         "absolutePath": "contracts/events/InboxEvents.sol",
         "file": "../../../contracts/events/InboxEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 4001,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93126,
+              "id": 93119,
               "name": "InboxEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 4000,
-              "src": "318:11:186",
+              "src": "318:11:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1311,24 +1311,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93129,
+        "id": 93122,
         "nodeType": "ImportDirective",
-        "src": "381:72:186",
+        "src": "381:72:187",
         "nodes": [],
         "absolutePath": "contracts/events/OriginEvents.sol",
         "file": "../../../contracts/events/OriginEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 4026,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93128,
+              "id": 93121,
               "name": "OriginEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 4025,
-              "src": "389:12:186",
+              "src": "389:12:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1337,24 +1337,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93131,
+        "id": 93124,
         "nodeType": "ImportDirective",
-        "src": "454:82:186",
+        "src": "454:82:187",
         "nodes": [],
         "absolutePath": "contracts/events/SnapshotHubEvents.sol",
         "file": "../../../contracts/events/SnapshotHubEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 4040,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93130,
+              "id": 93123,
               "name": "SnapshotHubEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 4039,
-              "src": "462:17:186",
+              "src": "462:17:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1363,24 +1363,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93133,
+        "id": 93126,
         "nodeType": "ImportDirective",
-        "src": "537:88:186",
+        "src": "537:88:187",
         "nodes": [],
         "absolutePath": "contracts/events/StatementInboxEvents.sol",
         "file": "../../../contracts/events/StatementInboxEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 4104,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93132,
+              "id": 93125,
               "name": "StatementInboxEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 4103,
-              "src": "545:20:186",
+              "src": "545:20:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1389,24 +1389,24 @@
         "unitAlias": ""
       },
       {
-        "id": 93135,
+        "id": 93128,
         "nodeType": "ImportDirective",
-        "src": "626:72:186",
+        "src": "626:72:187",
         "nodes": [],
         "absolutePath": "contracts/events/SummitEvents.sol",
         "file": "../../../contracts/events/SummitEvents.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 93153,
+        "scope": 93146,
         "sourceUnit": 4117,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 93134,
+              "id": 93127,
               "name": "SummitEvents",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 4116,
-              "src": "634:12:186",
+              "src": "634:12:187",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1415,131 +1415,131 @@
         "unitAlias": ""
       },
       {
-        "id": 93152,
+        "id": 93145,
         "nodeType": "ContractDefinition",
-        "src": "735:212:186",
+        "src": "735:212:187",
         "nodes": [],
         "abstract": true,
         "baseContracts": [
           {
             "baseName": {
-              "id": 93136,
+              "id": 93129,
               "name": "AgentManagerEvents",
               "nameLocations": [
-                "777:18:186"
+                "777:18:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 3922,
-              "src": "777:18:186"
+              "src": "777:18:187"
             },
-            "id": 93137,
+            "id": 93130,
             "nodeType": "InheritanceSpecifier",
-            "src": "777:18:186"
+            "src": "777:18:187"
           },
           {
             "baseName": {
-              "id": 93138,
+              "id": 93131,
               "name": "DestinationEvents",
               "nameLocations": [
-                "801:17:186"
+                "801:17:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 3930,
-              "src": "801:17:186"
+              "src": "801:17:187"
             },
-            "id": 93139,
+            "id": 93132,
             "nodeType": "InheritanceSpecifier",
-            "src": "801:17:186"
+            "src": "801:17:187"
           },
           {
             "baseName": {
-              "id": 93140,
+              "id": 93133,
               "name": "ExecutionHubEvents",
               "nameLocations": [
-                "824:18:186"
+                "824:18:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 3950,
-              "src": "824:18:186"
+              "src": "824:18:187"
             },
-            "id": 93141,
+            "id": 93134,
             "nodeType": "InheritanceSpecifier",
-            "src": "824:18:186"
+            "src": "824:18:187"
           },
           {
             "baseName": {
-              "id": 93142,
+              "id": 93135,
               "name": "InboxEvents",
               "nameLocations": [
-                "848:11:186"
+                "848:11:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 4000,
-              "src": "848:11:186"
+              "src": "848:11:187"
             },
-            "id": 93143,
+            "id": 93136,
             "nodeType": "InheritanceSpecifier",
-            "src": "848:11:186"
+            "src": "848:11:187"
           },
           {
             "baseName": {
-              "id": 93144,
+              "id": 93137,
               "name": "OriginEvents",
               "nameLocations": [
-                "865:12:186"
+                "865:12:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 4025,
-              "src": "865:12:186"
+              "src": "865:12:187"
             },
-            "id": 93145,
+            "id": 93138,
             "nodeType": "InheritanceSpecifier",
-            "src": "865:12:186"
+            "src": "865:12:187"
           },
           {
             "baseName": {
-              "id": 93146,
+              "id": 93139,
               "name": "SnapshotHubEvents",
               "nameLocations": [
-                "883:17:186"
+                "883:17:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 4039,
-              "src": "883:17:186"
+              "src": "883:17:187"
             },
-            "id": 93147,
+            "id": 93140,
             "nodeType": "InheritanceSpecifier",
-            "src": "883:17:186"
+            "src": "883:17:187"
           },
           {
             "baseName": {
-              "id": 93148,
+              "id": 93141,
               "name": "StatementInboxEvents",
               "nameLocations": [
-                "906:20:186"
+                "906:20:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 4103,
-              "src": "906:20:186"
+              "src": "906:20:187"
             },
-            "id": 93149,
+            "id": 93142,
             "nodeType": "InheritanceSpecifier",
-            "src": "906:20:186"
+            "src": "906:20:187"
           },
           {
             "baseName": {
-              "id": 93150,
+              "id": 93143,
               "name": "SummitEvents",
               "nameLocations": [
-                "932:12:186"
+                "932:12:187"
               ],
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 4116,
-              "src": "932:12:186"
+              "src": "932:12:187"
             },
-            "id": 93151,
+            "id": 93144,
             "nodeType": "InheritanceSpecifier",
-            "src": "932:12:186"
+            "src": "932:12:187"
           }
         ],
         "canonicalName": "ProductionEvents",
@@ -1547,7 +1547,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          93152,
+          93145,
           4116,
           4103,
           4039,
@@ -1558,12 +1558,12 @@
           3922
         ],
         "name": "ProductionEvents",
-        "nameLocation": "753:16:186",
-        "scope": 93153,
+        "nameLocation": "753:16:187",
+        "scope": 93146,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 186
+  "id": 187
 }

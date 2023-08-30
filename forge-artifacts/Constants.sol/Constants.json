@@ -86,7 +86,7 @@
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:3833:45",
+    "src": "32:3834:45",
     "nodes": [
       {
         "id": 10055,
@@ -1547,7 +1547,7 @@
       {
         "id": 10170,
         "nodeType": "VariableDeclaration",
-        "src": "3828:35:45",
+        "src": "3828:36:45",
         "nodes": [],
         "constant": true,
         "mutability": "constant",
@@ -1571,7 +1571,7 @@
           }
         },
         "value": {
-          "hexValue": "3130",
+          "hexValue": "393031",
           "id": 10169,
           "isConstant": false,
           "isLValue": false,
@@ -1579,12 +1579,12 @@
           "kind": "number",
           "lValueRequested": false,
           "nodeType": "Literal",
-          "src": "3861:2:45",
+          "src": "3861:3:45",
           "typeDescriptions": {
-            "typeIdentifier": "t_rational_10_by_1",
-            "typeString": "int_const 10"
+            "typeIdentifier": "t_rational_901_by_1",
+            "typeString": "int_const 901"
           },
-          "value": "10"
+          "value": "901"
         },
         "visibility": "internal"
       }

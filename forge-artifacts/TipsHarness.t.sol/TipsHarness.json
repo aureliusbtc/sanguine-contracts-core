@@ -250,13 +250,13 @@
     }
   ],
   "bytecode": {
-    "object": "0x608060405234801561001057600080fd5b506104b9806100206000396000f3fe608060405234801561001057600080fd5b50600436106100a95760003560e01c806372d3f3cd1161007157806372d3f3cd1461012e57806386450b8814610141578063b284b60914610154578063c5a46ee614610167578063ecbf034e1461017a578063f472a58a1461018857600080fd5b80630453e80e146100ae578063138ac42f146100df5780634c63c701146101005780634f2a6f9e14610113578063725bd46314610126575b600080fd5b6100c16100bc366004610384565b61019b565b60405167ffffffffffffffff90911681526020015b60405180910390f35b6100f26100ed366004610384565b6101ad565b6040519081526020016100d6565b6100c161010e366004610384565b6101b5565b6100f26101213660046103ba565b6101c1565b6100f26101da565b6100f261013c36600461040e565b6101e3565b6100f261014f366004610440565b6101f2565b6100c1610162366004610384565b610205565b6100f2610175366004610384565b610211565b6100c16100ed366004610384565b6100f2610196366004610384565b61021c565b60006101a78260801c90565b92915050565b6000816101a7565b60006101a78260401c90565b6000806101d08686868661022a565b9695505050505050565b600080806101a7565b6000806101d086868686610278565b60006101fe838361029f565b9392505050565b60006101a78260c01c90565b60006101a782610314565b6000818152602081206101a7565b6001600160c01b031960c085901b1667ffffffffffffffff60801b608085901b16176fffffffffffffffff0000000000000000604084901b161767ffffffffffffffff821617949350505050565b6000610296602086901c602086901c602086901c602086901c61022a565b95945050505050565b6000806102ab84610314565b9050808310156102ce5760405163429726c160e01b815260040160405180910390fd5b80830360201c67ffffffffffffffff8567ffffffffffffffff168201111561030957604051631b438b3360e01b815260040160405180910390fd5b939093019392505050565b60008167ffffffffffffffff1661032b8360401c90565b67ffffffffffffffff1661033f8460801c90565b67ffffffffffffffff166103538560c01c90565b67ffffffffffffffff166103679190610462565b6103719190610462565b61037b9190610462565b60201b92915050565b60006020828403121561039657600080fd5b5035919050565b803567ffffffffffffffff811681146103b557600080fd5b919050565b600080600080608085870312156103d057600080fd5b6103d98561039d565b93506103e76020860161039d565b92506103f56040860161039d565b91506104036060860161039d565b905092959194509250565b6000806000806080858703121561042457600080fd5b5050823594602084013594506040840135936060013592509050565b6000806040838503121561045357600080fd5b50508035926020909101359150565b808201808211156101a757634e487b7160e01b600052601160045260246000fdfea26469706673582212204d142f33175397cd7e23055acfd0a81a691b3d4aa1adc9481ff023229ae62aa064736f6c63430008110033",
-    "sourceMap": "202:3216:128:-:0;;;;;;;;;;;;;;;;;;;",
+    "object": "0x608060405234801561001057600080fd5b506104b9806100206000396000f3fe608060405234801561001057600080fd5b50600436106100a95760003560e01c806372d3f3cd1161007157806372d3f3cd1461012e57806386450b8814610141578063b284b60914610154578063c5a46ee614610167578063ecbf034e1461017a578063f472a58a1461018857600080fd5b80630453e80e146100ae578063138ac42f146100df5780634c63c701146101005780634f2a6f9e14610113578063725bd46314610126575b600080fd5b6100c16100bc366004610384565b61019b565b60405167ffffffffffffffff90911681526020015b60405180910390f35b6100f26100ed366004610384565b6101ad565b6040519081526020016100d6565b6100c161010e366004610384565b6101b5565b6100f26101213660046103ba565b6101c1565b6100f26101da565b6100f261013c36600461040e565b6101e3565b6100f261014f366004610440565b6101f2565b6100c1610162366004610384565b610205565b6100f2610175366004610384565b610211565b6100c16100ed366004610384565b6100f2610196366004610384565b61021c565b60006101a78260801c90565b92915050565b6000816101a7565b60006101a78260401c90565b6000806101d08686868661022a565b9695505050505050565b600080806101a7565b6000806101d086868686610278565b60006101fe838361029f565b9392505050565b60006101a78260c01c90565b60006101a782610314565b6000818152602081206101a7565b6001600160c01b031960c085901b1667ffffffffffffffff60801b608085901b16176fffffffffffffffff0000000000000000604084901b161767ffffffffffffffff821617949350505050565b6000610296602086901c602086901c602086901c602086901c61022a565b95945050505050565b6000806102ab84610314565b9050808310156102ce5760405163429726c160e01b815260040160405180910390fd5b80830360201c67ffffffffffffffff8567ffffffffffffffff168201111561030957604051631b438b3360e01b815260040160405180910390fd5b939093019392505050565b60008167ffffffffffffffff1661032b8360401c90565b67ffffffffffffffff1661033f8460801c90565b67ffffffffffffffff166103538560c01c90565b67ffffffffffffffff166103679190610462565b6103719190610462565b61037b9190610462565b60201b92915050565b60006020828403121561039657600080fd5b5035919050565b803567ffffffffffffffff811681146103b557600080fd5b919050565b600080600080608085870312156103d057600080fd5b6103d98561039d565b93506103e76020860161039d565b92506103f56040860161039d565b91506104036060860161039d565b905092959194509250565b6000806000806080858703121561042457600080fd5b5050823594602084013594506040840135936060013592509050565b6000806040838503121561045357600080fd5b50508035926020909101359150565b808201808211156101a757634e487b7160e01b600052601160045260246000fdfea26469706673582212207d88440fd707c12a0f0aabd45f85e8462a8635e6072f9eeaf975690ced504abc64736f6c63430008110033",
+    "sourceMap": "202:3216:129:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x608060405234801561001057600080fd5b50600436106100a95760003560e01c806372d3f3cd1161007157806372d3f3cd1461012e57806386450b8814610141578063b284b60914610154578063c5a46ee614610167578063ecbf034e1461017a578063f472a58a1461018857600080fd5b80630453e80e146100ae578063138ac42f146100df5780634c63c701146101005780634f2a6f9e14610113578063725bd46314610126575b600080fd5b6100c16100bc366004610384565b61019b565b60405167ffffffffffffffff90911681526020015b60405180910390f35b6100f26100ed366004610384565b6101ad565b6040519081526020016100d6565b6100c161010e366004610384565b6101b5565b6100f26101213660046103ba565b6101c1565b6100f26101da565b6100f261013c36600461040e565b6101e3565b6100f261014f366004610440565b6101f2565b6100c1610162366004610384565b610205565b6100f2610175366004610384565b610211565b6100c16100ed366004610384565b6100f2610196366004610384565b61021c565b60006101a78260801c90565b92915050565b6000816101a7565b60006101a78260401c90565b6000806101d08686868661022a565b9695505050505050565b600080806101a7565b6000806101d086868686610278565b60006101fe838361029f565b9392505050565b60006101a78260c01c90565b60006101a782610314565b6000818152602081206101a7565b6001600160c01b031960c085901b1667ffffffffffffffff60801b608085901b16176fffffffffffffffff0000000000000000604084901b161767ffffffffffffffff821617949350505050565b6000610296602086901c602086901c602086901c602086901c61022a565b95945050505050565b6000806102ab84610314565b9050808310156102ce5760405163429726c160e01b815260040160405180910390fd5b80830360201c67ffffffffffffffff8567ffffffffffffffff168201111561030957604051631b438b3360e01b815260040160405180910390fd5b939093019392505050565b60008167ffffffffffffffff1661032b8360401c90565b67ffffffffffffffff1661033f8460801c90565b67ffffffffffffffff166103538560c01c90565b67ffffffffffffffff166103679190610462565b6103719190610462565b61037b9190610462565b60201b92915050565b60006020828403121561039657600080fd5b5035919050565b803567ffffffffffffffff811681146103b557600080fd5b919050565b600080600080608085870312156103d057600080fd5b6103d98561039d565b93506103e76020860161039d565b92506103f56040860161039d565b91506104036060860161039d565b905092959194509250565b6000806000806080858703121561042457600080fd5b5050823594602084013594506040840135936060013592509050565b6000806040838503121561045357600080fd5b50508035926020909101359150565b808201808211156101a757634e487b7160e01b600052601160045260246000fdfea26469706673582212204d142f33175397cd7e23055acfd0a81a691b3d4aa1adc9481ff023229ae62aa064736f6c63430008110033",
-    "sourceMap": "202:3216:128:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;918:144;;;;;;:::i;:::-;;:::i;:::-;;;373:18:200;361:31;;;343:50;;331:2;316:18;918:144:128;;;;;;;;2933:137;;;;;;:::i;:::-;;:::i;:::-;;;550:25:200;;;538:2;523:18;2933:137:128;404:177:200;1111:140:128;;;;;;:::i;:::-;;:::i;2148:460::-;;;;;;:::i;:::-;;:::i;3207:209::-;;;:::i;2614:313::-;;;;;;:::i;:::-;;:::i;1685:133::-;;;;;;:::i;:::-;;:::i;733:134::-;;;;;;:::i;:::-;;:::i;1485:127::-;;;;;;:::i;:::-;;:::i;1299:138::-;;;;;;:::i;3076:125::-;;;;;;:::i;:::-;;:::i;918:144::-;983:6;1008:47;1027:10;2919:6:63;6756:42;;6575:231;1008:47:128;1001:54;918:144;-1:-1:-1;;918:144:128:o;2933:137::-;2994:7;3051:10;3032:30;5185:114:63;1111:140:128;1174:6;1199:45;1218:10;3037:5:63;7034:40;;6855:227;2148:460:128;2299:7;2479:9;2491:76;2510:10;2522:15;2539:13;2554:12;2491:18;:76::i;:::-;2479:88;2148:460;-1:-1:-1;;;;;;2148:460:128:o;3207:209::-;3249:7;;;3356:19;5422:86:63;2614:313:128;2772:7;2795:9;2807:79;2829:10;2841:15;2858:13;2873:12;2807:21;:79::i;1685:133::-;1755:12;1786:25;:4;1802:8;1786:15;:25::i;:::-;1779:32;1685:133;-1:-1:-1;;;1685:133:128:o;733:134::-;793:6;818:42;837:10;2797:6:63;6479:37;;6303:221;1485:127:128;1541:7;1567:38;1586:10;1567:36;:38::i;3076:125::-;3131:7;5808:15:63;;;5918:2;5905:16;;3157:37:128;5608:329:63;3905:399;-1:-1:-1;;;;;;2797:6:63;4108:39;;;;-1:-1:-1;;;2919:6:63;4150:49;;;;4108:91;4218:45;3037:5;4218:45;;;;4108:155;4266:21;;;4108:179;3905:399;;;;;;:::o;4383:492::-;4543:4;4570:298;2201:2:45;4614:10:63;:30;;2201:2:45;4683:15:63;:35;;2201:2:45;4755:13:63;:33;;2201:2:45;4824:12:63;:32;;4570:10;:298::i;:::-;4563:305;4383:492;-1:-1:-1;;;;;4383:492:63:o;8089:924::-;8161:12;8185:16;8204:12;:4;:10;:12::i;:::-;8185:31;;8241:8;8230;:19;8226:49;;;8258:17;;-1:-1:-1;;;8258:17:63;;;;;;;;;;;8226:49;8413:19;;;2201:2:45;8412:41:63;8707:16;8686:4;8678:26;;:5;:26;:45;8674:72;;;8732:14;;-1:-1:-1;;;8732:14:63;;;;;;;;;;;8674:72;8970:25;;;;;8089:924;-1:-1:-1;;;8089:924:63:o;7796:220::-;7845:14;7954:4;7880:92;;7932:19;:4;3037:5;7034:40;;6855:227;7932:19;7880:71;;7908:21;:4;2919:6;6756:42;;6575:231;7908:21;7880:49;;7888:16;:4;2797:6;6479:37;;6303:221;7888:16;7880:25;;:49;;;;:::i;:::-;:71;;;;:::i;:::-;:92;;;;:::i;:::-;2201:2:45;7982:27:63;;7796:220;-1:-1:-1;;7796:220:63:o;14:180:200:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:200;;14:180;-1:-1:-1;14:180:200:o;586:171::-;653:20;;713:18;702:30;;692:41;;682:69;;747:1;744;737:12;682:69;586:171;;;:::o;762:401::-;844:6;852;860;868;921:3;909:9;900:7;896:23;892:33;889:53;;;938:1;935;928:12;889:53;961:28;979:9;961:28;:::i;:::-;951:38;;1008:37;1041:2;1030:9;1026:18;1008:37;:::i;:::-;998:47;;1064:37;1097:2;1086:9;1082:18;1064:37;:::i;:::-;1054:47;;1120:37;1153:2;1142:9;1138:18;1120:37;:::i;:::-;1110:47;;762:401;;;;;;;:::o;1168:385::-;1254:6;1262;1270;1278;1331:3;1319:9;1310:7;1306:23;1302:33;1299:53;;;1348:1;1345;1338:12;1299:53;-1:-1:-1;;1371:23:200;;;1441:2;1426:18;;1413:32;;-1:-1:-1;1492:2:200;1477:18;;1464:32;;1543:2;1528:18;1515:32;;-1:-1:-1;1168:385:200;-1:-1:-1;1168:385:200:o;1558:274::-;1652:6;1660;1713:2;1701:9;1692:7;1688:23;1684:32;1681:52;;;1729:1;1726;1719:12;1681:52;-1:-1:-1;;1752:23:200;;;1822:2;1807:18;;;1794:32;;-1:-1:-1;1558:274:200:o;2227:222::-;2292:9;;;2313:10;;;2310:133;;;2365:10;2360:3;2356:20;2353:1;2346:31;2400:4;2397:1;2390:15;2428:4;2425:1;2418:15",
+    "object": "0x608060405234801561001057600080fd5b50600436106100a95760003560e01c806372d3f3cd1161007157806372d3f3cd1461012e57806386450b8814610141578063b284b60914610154578063c5a46ee614610167578063ecbf034e1461017a578063f472a58a1461018857600080fd5b80630453e80e146100ae578063138ac42f146100df5780634c63c701146101005780634f2a6f9e14610113578063725bd46314610126575b600080fd5b6100c16100bc366004610384565b61019b565b60405167ffffffffffffffff90911681526020015b60405180910390f35b6100f26100ed366004610384565b6101ad565b6040519081526020016100d6565b6100c161010e366004610384565b6101b5565b6100f26101213660046103ba565b6101c1565b6100f26101da565b6100f261013c36600461040e565b6101e3565b6100f261014f366004610440565b6101f2565b6100c1610162366004610384565b610205565b6100f2610175366004610384565b610211565b6100c16100ed366004610384565b6100f2610196366004610384565b61021c565b60006101a78260801c90565b92915050565b6000816101a7565b60006101a78260401c90565b6000806101d08686868661022a565b9695505050505050565b600080806101a7565b6000806101d086868686610278565b60006101fe838361029f565b9392505050565b60006101a78260c01c90565b60006101a782610314565b6000818152602081206101a7565b6001600160c01b031960c085901b1667ffffffffffffffff60801b608085901b16176fffffffffffffffff0000000000000000604084901b161767ffffffffffffffff821617949350505050565b6000610296602086901c602086901c602086901c602086901c61022a565b95945050505050565b6000806102ab84610314565b9050808310156102ce5760405163429726c160e01b815260040160405180910390fd5b80830360201c67ffffffffffffffff8567ffffffffffffffff168201111561030957604051631b438b3360e01b815260040160405180910390fd5b939093019392505050565b60008167ffffffffffffffff1661032b8360401c90565b67ffffffffffffffff1661033f8460801c90565b67ffffffffffffffff166103538560c01c90565b67ffffffffffffffff166103679190610462565b6103719190610462565b61037b9190610462565b60201b92915050565b60006020828403121561039657600080fd5b5035919050565b803567ffffffffffffffff811681146103b557600080fd5b919050565b600080600080608085870312156103d057600080fd5b6103d98561039d565b93506103e76020860161039d565b92506103f56040860161039d565b91506104036060860161039d565b905092959194509250565b6000806000806080858703121561042457600080fd5b5050823594602084013594506040840135936060013592509050565b6000806040838503121561045357600080fd5b50508035926020909101359150565b808201808211156101a757634e487b7160e01b600052601160045260246000fdfea26469706673582212207d88440fd707c12a0f0aabd45f85e8462a8635e6072f9eeaf975690ced504abc64736f6c63430008110033",
+    "sourceMap": "202:3216:129:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;918:144;;;;;;:::i;:::-;;:::i;:::-;;;373:18:201;361:31;;;343:50;;331:2;316:18;918:144:129;;;;;;;;2933:137;;;;;;:::i;:::-;;:::i;:::-;;;550:25:201;;;538:2;523:18;2933:137:129;404:177:201;1111:140:129;;;;;;:::i;:::-;;:::i;2148:460::-;;;;;;:::i;:::-;;:::i;3207:209::-;;;:::i;2614:313::-;;;;;;:::i;:::-;;:::i;1685:133::-;;;;;;:::i;:::-;;:::i;733:134::-;;;;;;:::i;:::-;;:::i;1485:127::-;;;;;;:::i;:::-;;:::i;1299:138::-;;;;;;:::i;3076:125::-;;;;;;:::i;:::-;;:::i;918:144::-;983:6;1008:47;1027:10;2919:6:63;6756:42;;6575:231;1008:47:129;1001:54;918:144;-1:-1:-1;;918:144:129:o;2933:137::-;2994:7;3051:10;3032:30;5185:114:63;1111:140:129;1174:6;1199:45;1218:10;3037:5:63;7034:40;;6855:227;2148:460:129;2299:7;2479:9;2491:76;2510:10;2522:15;2539:13;2554:12;2491:18;:76::i;:::-;2479:88;2148:460;-1:-1:-1;;;;;;2148:460:129:o;3207:209::-;3249:7;;;3356:19;5422:86:63;2614:313:129;2772:7;2795:9;2807:79;2829:10;2841:15;2858:13;2873:12;2807:21;:79::i;1685:133::-;1755:12;1786:25;:4;1802:8;1786:15;:25::i;:::-;1779:32;1685:133;-1:-1:-1;;;1685:133:129:o;733:134::-;793:6;818:42;837:10;2797:6:63;6479:37;;6303:221;1485:127:129;1541:7;1567:38;1586:10;1567:36;:38::i;3076:125::-;3131:7;5808:15:63;;;5918:2;5905:16;;3157:37:129;5608:329:63;3905:399;-1:-1:-1;;;;;;2797:6:63;4108:39;;;;-1:-1:-1;;;2919:6:63;4150:49;;;;4108:91;4218:45;3037:5;4218:45;;;;4108:155;4266:21;;;4108:179;3905:399;;;;;;:::o;4383:492::-;4543:4;4570:298;2201:2:45;4614:10:63;:30;;2201:2:45;4683:15:63;:35;;2201:2:45;4755:13:63;:33;;2201:2:45;4824:12:63;:32;;4570:10;:298::i;:::-;4563:305;4383:492;-1:-1:-1;;;;;4383:492:63:o;8089:924::-;8161:12;8185:16;8204:12;:4;:10;:12::i;:::-;8185:31;;8241:8;8230;:19;8226:49;;;8258:17;;-1:-1:-1;;;8258:17:63;;;;;;;;;;;8226:49;8413:19;;;2201:2:45;8412:41:63;8707:16;8686:4;8678:26;;:5;:26;:45;8674:72;;;8732:14;;-1:-1:-1;;;8732:14:63;;;;;;;;;;;8674:72;8970:25;;;;;8089:924;-1:-1:-1;;;8089:924:63:o;7796:220::-;7845:14;7954:4;7880:92;;7932:19;:4;3037:5;7034:40;;6855:227;7932:19;7880:71;;7908:21;:4;2919:6;6756:42;;6575:231;7908:21;7880:49;;7888:16;:4;2797:6;6479:37;;6303:221;7888:16;7880:25;;:49;;;;:::i;:::-;:71;;;;:::i;:::-;:92;;;;:::i;:::-;2201:2:45;7982:27:63;;7796:220;-1:-1:-1;;7796:220:63:o;14:180:201:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:201;;14:180;-1:-1:-1;14:180:201:o;586:171::-;653:20;;713:18;702:30;;692:41;;682:69;;747:1;744;737:12;682:69;586:171;;;:::o;762:401::-;844:6;852;860;868;921:3;909:9;900:7;896:23;892:33;889:53;;;938:1;935;928:12;889:53;961:28;979:9;961:28;:::i;:::-;951:38;;1008:37;1041:2;1030:9;1026:18;1008:37;:::i;:::-;998:47;;1064:37;1097:2;1086:9;1082:18;1064:37;:::i;:::-;1054:47;;1120:37;1153:2;1142:9;1138:18;1120:37;:::i;:::-;1110:47;;762:401;;;;;;;:::o;1168:385::-;1254:6;1262;1270;1278;1331:3;1319:9;1310:7;1306:23;1302:33;1299:53;;;1348:1;1345;1338:12;1299:53;-1:-1:-1;;1371:23:201;;;1441:2;1426:18;;1413:32;;-1:-1:-1;1492:2:201;1477:18;;1464:32;;1543:2;1528:18;1515:32;;-1:-1:-1;1168:385:201;-1:-1:-1;1168:385:201:o;1558:274::-;1652:6;1660;1713:2;1701:9;1692:7;1688:23;1684:32;1681:52;;;1729:1;1726;1719:12;1681:52;-1:-1:-1;;1752:23:201;;;1822:2;1807:18;;;1794:32;;-1:-1:-1;1558:274:201:o;2227:222::-;2292:9;;;2313:10;;;2310:133;;;2365:10;2360:3;2356:20;2353:1;2346:31;2400:4;2397:1;2390:15;2428:4;2425:1;2418:15",
     "linkReferences": {}
   },
   "methodIdentifiers": {
@@ -272,7 +272,7 @@
     "value(uint256)": "c5a46ee6",
     "wrapPadded(uint256)": "138ac42f"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"TipsOverflow\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TipsValueTooLow\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"attestationTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"deliveryTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"emptyTips\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"summitTip_\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"attestationTip_\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"executionTip_\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"deliveryTip_\",\"type\":\"uint64\"}],\"name\":\"encodeTips\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"summitTip_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"attestationTip_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"executionTip_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deliveryTip_\",\"type\":\"uint256\"}],\"name\":\"encodeTips256\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"executionTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"leaf\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Tips\",\"name\":\"tips\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"newValue\",\"type\":\"uint256\"}],\"name\":\"matchValue\",\"outputs\":[{\"internalType\":\"Tips\",\"name\":\"newTips\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"summitTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"value\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"wrapPadded\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"attestationTip(uint256)\":{\"notice\":\"Returns attestationTip field\"},\"deliveryTip(uint256)\":{\"notice\":\"Returns deliveryTip field\"},\"executionTip(uint256)\":{\"notice\":\"Returns executionTip field\"},\"matchValue(uint256,uint256)\":{\"notice\":\"Increases the delivery tip to match the new value.\"},\"summitTip(uint256)\":{\"notice\":\"Returns summitTip field\"},\"value(uint256)\":{\"notice\":\"Returns total tip amount.\"}},\"notice\":\"Exposes TipsLib methods for testing against golang.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/libs/stack/TipsHarness.t.sol\":\"TipsHarness\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/Constants.sol\":{\"keccak256\":\"0x00f447e219d27f9a864847f8038c4bac16f59e2fb37c5c0de1b554d48d41ba48\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c3b8452f969900c9ffbfae74dd73d076d9eace7e2448015b6c46ca8dd4d4402\",\"dweb:/ipfs/QmXGya3YqdmTXNdzTs1ZLMXJZnfJb49Sw5soXhjHbq8qnk\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/stack/Tips.sol\":{\"keccak256\":\"0x2186d854149349ff689a8356c7f387d134f59fa4a97aed7b43c9e25f46661b0d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ff15d61f2c9b26e6ef33457aed4a2d9ed61726e2a746d3e0a7e68eb6cd3d63a1\",\"dweb:/ipfs/QmUeiiTAjPmuFhLfzDMqZ6DyvQmEYhsKo9XArHSrMvjYKL\"]},\"test/harnesses/libs/stack/TipsHarness.t.sol\":{\"keccak256\":\"0xc0c441b6b682c3d04730dfa4bd7ff2309d5ba0b52c9741f308441859bbe95aa2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a591fbe0c501090226b714ae81cc6801cdbf32291dcf306d06cdf6f498b435ca\",\"dweb:/ipfs/QmSTDjEtJ1XnvPNVC7QortqguwQ1uBTh9C5pjJkCM4LApc\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"TipsOverflow\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TipsValueTooLow\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"attestationTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"deliveryTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"emptyTips\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"summitTip_\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"attestationTip_\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"executionTip_\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"deliveryTip_\",\"type\":\"uint64\"}],\"name\":\"encodeTips\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"summitTip_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"attestationTip_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"executionTip_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deliveryTip_\",\"type\":\"uint256\"}],\"name\":\"encodeTips256\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"executionTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"leaf\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"Tips\",\"name\":\"tips\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"newValue\",\"type\":\"uint256\"}],\"name\":\"matchValue\",\"outputs\":[{\"internalType\":\"Tips\",\"name\":\"newTips\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"summitTip\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"value\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paddedTips\",\"type\":\"uint256\"}],\"name\":\"wrapPadded\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"attestationTip(uint256)\":{\"notice\":\"Returns attestationTip field\"},\"deliveryTip(uint256)\":{\"notice\":\"Returns deliveryTip field\"},\"executionTip(uint256)\":{\"notice\":\"Returns executionTip field\"},\"matchValue(uint256,uint256)\":{\"notice\":\"Increases the delivery tip to match the new value.\"},\"summitTip(uint256)\":{\"notice\":\"Returns summitTip field\"},\"value(uint256)\":{\"notice\":\"Returns total tip amount.\"}},\"notice\":\"Exposes TipsLib methods for testing against golang.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/harnesses/libs/stack/TipsHarness.t.sol\":\"TipsHarness\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"contracts/libs/Constants.sol\":{\"keccak256\":\"0x9ead9581411ac7f702ccba26e3f478610f8c9c785ec3f96f3d9324d162177c2c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cba4a834737651bee39e2abca02d59e676cd149439d21182ab6e4320d5e61279\",\"dweb:/ipfs/QmS2K5LKspFZPKuedWoaqywUw6v1nH9xdHa35dN8J9jDEi\"]},\"contracts/libs/Errors.sol\":{\"keccak256\":\"0xe9a2059a2ad04e5a8ce5a6fcd091541dcd1b745edb1ce36fd97b188fe8a24011\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://36c91869720c13e9f207ef4a96147c1bcdc75574fb84eacfd8a5a4efe4e5210b\",\"dweb:/ipfs/QmRuYYPnsuES87cQTAag63gdVf22pL7UjF9pvzBt87iGyB\"]},\"contracts/libs/stack/Tips.sol\":{\"keccak256\":\"0x2186d854149349ff689a8356c7f387d134f59fa4a97aed7b43c9e25f46661b0d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ff15d61f2c9b26e6ef33457aed4a2d9ed61726e2a746d3e0a7e68eb6cd3d63a1\",\"dweb:/ipfs/QmUeiiTAjPmuFhLfzDMqZ6DyvQmEYhsKo9XArHSrMvjYKL\"]},\"test/harnesses/libs/stack/TipsHarness.t.sol\":{\"keccak256\":\"0xc0c441b6b682c3d04730dfa4bd7ff2309d5ba0b52c9741f308441859bbe95aa2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a591fbe0c501090226b714ae81cc6801cdbf32291dcf306d06cdf6f498b435ca\",\"dweb:/ipfs/QmSTDjEtJ1XnvPNVC7QortqguwQ1uBTh9C5pjJkCM4LApc\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.17+commit.8df45f5f"
@@ -581,10 +581,10 @@
     },
     "sources": {
       "contracts/libs/Constants.sol": {
-        "keccak256": "0x00f447e219d27f9a864847f8038c4bac16f59e2fb37c5c0de1b554d48d41ba48",
+        "keccak256": "0x9ead9581411ac7f702ccba26e3f478610f8c9c785ec3f96f3d9324d162177c2c",
         "urls": [
-          "bzz-raw://8c3b8452f969900c9ffbfae74dd73d076d9eace7e2448015b6c46ca8dd4d4402",
-          "dweb:/ipfs/QmXGya3YqdmTXNdzTs1ZLMXJZnfJb49Sw5soXhjHbq8qnk"
+          "bzz-raw://cba4a834737651bee39e2abca02d59e676cd149439d21182ab6e4320d5e61279",
+          "dweb:/ipfs/QmS2K5LKspFZPKuedWoaqywUw6v1nH9xdHa35dN8J9jDEi"
         ],
         "license": "MIT"
       },
@@ -617,25 +617,25 @@
   },
   "ast": {
     "absolutePath": "test/harnesses/libs/stack/TipsHarness.t.sol",
-    "id": 58299,
+    "id": 58292,
     "exportedSymbols": {
       "Tips": [
         15578
       ],
       "TipsHarness": [
-        58298
+        58291
       ],
       "TipsLib": [
         15905
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:3387:128",
+    "src": "32:3387:129",
     "nodes": [
       {
-        "id": 58086,
+        "id": 58079,
         "nodeType": "PragmaDirective",
-        "src": "32:23:128",
+        "src": "32:23:129",
         "nodes": [],
         "literals": [
           "solidity",
@@ -644,36 +644,36 @@
         ]
       },
       {
-        "id": 58089,
+        "id": 58082,
         "nodeType": "ImportDirective",
-        "src": "57:72:128",
+        "src": "57:72:129",
         "nodes": [],
         "absolutePath": "contracts/libs/stack/Tips.sol",
         "file": "../../../../contracts/libs/stack/Tips.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 58299,
+        "scope": 58292,
         "sourceUnit": 15906,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 58087,
+              "id": 58080,
               "name": "Tips",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 15578,
-              "src": "65:4:128",
+              "src": "65:4:129",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
           },
           {
             "foreign": {
-              "id": 58088,
+              "id": 58081,
               "name": "TipsLib",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
               "referencedDeclaration": 15905,
-              "src": "71:7:128",
+              "src": "71:7:129",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -682,19 +682,19 @@
         "unitAlias": ""
       },
       {
-        "id": 58298,
+        "id": 58291,
         "nodeType": "ContractDefinition",
-        "src": "202:3216:128",
+        "src": "202:3216:129",
         "nodes": [
           {
-            "id": 58106,
+            "id": 58099,
             "nodeType": "FunctionDefinition",
-            "src": "733:134:128",
+            "src": "733:134:129",
             "nodes": [],
             "body": {
-              "id": 58105,
+              "id": 58098,
               "nodeType": "Block",
-              "src": "801:66:128",
+              "src": "801:66:129",
               "nodes": [],
               "statements": [
                 {
@@ -705,12 +705,12 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 58100,
+                            "id": 58093,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58093,
-                            "src": "837:10:128",
+                            "referencedDeclaration": 58086,
+                            "src": "837:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -725,33 +725,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58098,
+                            "id": 58091,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "818:7:128",
+                            "src": "818:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58099,
+                          "id": 58092,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "826:10:128",
+                          "memberLocation": "826:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "818:18:128",
+                          "src": "818:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58101,
+                        "id": 58094,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -760,29 +760,29 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "818:30:128",
+                        "src": "818:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58102,
+                      "id": 58095,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "849:9:128",
+                      "memberLocation": "849:9:129",
                       "memberName": "summitTip",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15748,
-                      "src": "818:40:128",
+                      "src": "818:40:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint64_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips) pure returns (uint64)"
                       }
                     },
-                    "id": 58103,
+                    "id": 58096,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -791,24 +791,24 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "818:42:128",
+                    "src": "818:42:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
                     }
                   },
-                  "functionReturnParameters": 58097,
-                  "id": 58104,
+                  "functionReturnParameters": 58090,
+                  "id": 58097,
                   "nodeType": "Return",
-                  "src": "811:49:128"
+                  "src": "811:49:129"
                 }
               ]
             },
             "documentation": {
-              "id": 58091,
+              "id": 58084,
               "nodeType": "StructuredDocumentation",
-              "src": "693:35:128",
+              "src": "693:35:129",
               "text": "@notice Returns summitTip field"
             },
             "functionSelector": "b284b609",
@@ -816,20 +816,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "summitTip",
-            "nameLocation": "742:9:128",
+            "nameLocation": "742:9:129",
             "parameters": {
-              "id": 58094,
+              "id": 58087,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58093,
+                  "id": 58086,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "760:10:128",
+                  "nameLocation": "760:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58106,
-                  "src": "752:18:128",
+                  "scope": 58099,
+                  "src": "752:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -837,10 +837,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58092,
+                    "id": 58085,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "752:7:128",
+                    "src": "752:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -849,21 +849,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "751:20:128"
+              "src": "751:20:129"
             },
             "returnParameters": {
-              "id": 58097,
+              "id": 58090,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58096,
+                  "id": 58089,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58106,
-                  "src": "793:6:128",
+                  "scope": 58099,
+                  "src": "793:6:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -871,10 +871,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58095,
+                    "id": 58088,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "793:6:128",
+                    "src": "793:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -883,22 +883,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "792:8:128"
+              "src": "792:8:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58122,
+            "id": 58115,
             "nodeType": "FunctionDefinition",
-            "src": "918:144:128",
+            "src": "918:144:129",
             "nodes": [],
             "body": {
-              "id": 58121,
+              "id": 58114,
               "nodeType": "Block",
-              "src": "991:71:128",
+              "src": "991:71:129",
               "nodes": [],
               "statements": [
                 {
@@ -909,12 +909,12 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 58116,
+                            "id": 58109,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58109,
-                            "src": "1027:10:128",
+                            "referencedDeclaration": 58102,
+                            "src": "1027:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -929,33 +929,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58114,
+                            "id": 58107,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "1008:7:128",
+                            "src": "1008:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58115,
+                          "id": 58108,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "1016:10:128",
+                          "memberLocation": "1016:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "1008:18:128",
+                          "src": "1008:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58117,
+                        "id": 58110,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -964,29 +964,29 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1008:30:128",
+                        "src": "1008:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58118,
+                      "id": 58111,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1039:14:128",
+                      "memberLocation": "1039:14:129",
                       "memberName": "attestationTip",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15768,
-                      "src": "1008:45:128",
+                      "src": "1008:45:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint64_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips) pure returns (uint64)"
                       }
                     },
-                    "id": 58119,
+                    "id": 58112,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -995,24 +995,24 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1008:47:128",
+                    "src": "1008:47:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
                     }
                   },
-                  "functionReturnParameters": 58113,
-                  "id": 58120,
+                  "functionReturnParameters": 58106,
+                  "id": 58113,
                   "nodeType": "Return",
-                  "src": "1001:54:128"
+                  "src": "1001:54:129"
                 }
               ]
             },
             "documentation": {
-              "id": 58107,
+              "id": 58100,
               "nodeType": "StructuredDocumentation",
-              "src": "873:40:128",
+              "src": "873:40:129",
               "text": "@notice Returns attestationTip field"
             },
             "functionSelector": "0453e80e",
@@ -1020,20 +1020,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "attestationTip",
-            "nameLocation": "927:14:128",
+            "nameLocation": "927:14:129",
             "parameters": {
-              "id": 58110,
+              "id": 58103,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58109,
+                  "id": 58102,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "950:10:128",
+                  "nameLocation": "950:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58122,
-                  "src": "942:18:128",
+                  "scope": 58115,
+                  "src": "942:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1041,10 +1041,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58108,
+                    "id": 58101,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "942:7:128",
+                    "src": "942:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1053,21 +1053,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "941:20:128"
+              "src": "941:20:129"
             },
             "returnParameters": {
-              "id": 58113,
+              "id": 58106,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58112,
+                  "id": 58105,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58122,
-                  "src": "983:6:128",
+                  "scope": 58115,
+                  "src": "983:6:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1075,10 +1075,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58111,
+                    "id": 58104,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "983:6:128",
+                    "src": "983:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -1087,22 +1087,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "982:8:128"
+              "src": "982:8:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58138,
+            "id": 58131,
             "nodeType": "FunctionDefinition",
-            "src": "1111:140:128",
+            "src": "1111:140:129",
             "nodes": [],
             "body": {
-              "id": 58137,
+              "id": 58130,
               "nodeType": "Block",
-              "src": "1182:69:128",
+              "src": "1182:69:129",
               "nodes": [],
               "statements": [
                 {
@@ -1113,12 +1113,12 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 58132,
+                            "id": 58125,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58125,
-                            "src": "1218:10:128",
+                            "referencedDeclaration": 58118,
+                            "src": "1218:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1133,33 +1133,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58130,
+                            "id": 58123,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "1199:7:128",
+                            "src": "1199:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58131,
+                          "id": 58124,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "1207:10:128",
+                          "memberLocation": "1207:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "1199:18:128",
+                          "src": "1199:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58133,
+                        "id": 58126,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1168,29 +1168,29 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1199:30:128",
+                        "src": "1199:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58134,
+                      "id": 58127,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1230:12:128",
+                      "memberLocation": "1230:12:129",
                       "memberName": "executionTip",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15788,
-                      "src": "1199:43:128",
+                      "src": "1199:43:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint64_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips) pure returns (uint64)"
                       }
                     },
-                    "id": 58135,
+                    "id": 58128,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1199,24 +1199,24 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1199:45:128",
+                    "src": "1199:45:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
                     }
                   },
-                  "functionReturnParameters": 58129,
-                  "id": 58136,
+                  "functionReturnParameters": 58122,
+                  "id": 58129,
                   "nodeType": "Return",
-                  "src": "1192:52:128"
+                  "src": "1192:52:129"
                 }
               ]
             },
             "documentation": {
-              "id": 58123,
+              "id": 58116,
               "nodeType": "StructuredDocumentation",
-              "src": "1068:38:128",
+              "src": "1068:38:129",
               "text": "@notice Returns executionTip field"
             },
             "functionSelector": "4c63c701",
@@ -1224,20 +1224,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "executionTip",
-            "nameLocation": "1120:12:128",
+            "nameLocation": "1120:12:129",
             "parameters": {
-              "id": 58126,
+              "id": 58119,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58125,
+                  "id": 58118,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "1141:10:128",
+                  "nameLocation": "1141:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58138,
-                  "src": "1133:18:128",
+                  "scope": 58131,
+                  "src": "1133:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1245,10 +1245,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58124,
+                    "id": 58117,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1133:7:128",
+                    "src": "1133:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1257,21 +1257,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1132:20:128"
+              "src": "1132:20:129"
             },
             "returnParameters": {
-              "id": 58129,
+              "id": 58122,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58128,
+                  "id": 58121,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58138,
-                  "src": "1174:6:128",
+                  "scope": 58131,
+                  "src": "1174:6:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1279,10 +1279,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58127,
+                    "id": 58120,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1174:6:128",
+                    "src": "1174:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -1291,22 +1291,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1173:8:128"
+              "src": "1173:8:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58154,
+            "id": 58147,
             "nodeType": "FunctionDefinition",
-            "src": "1299:138:128",
+            "src": "1299:138:129",
             "nodes": [],
             "body": {
-              "id": 58153,
+              "id": 58146,
               "nodeType": "Block",
-              "src": "1369:68:128",
+              "src": "1369:68:129",
               "nodes": [],
               "statements": [
                 {
@@ -1317,12 +1317,12 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 58148,
+                            "id": 58141,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58141,
-                            "src": "1405:10:128",
+                            "referencedDeclaration": 58134,
+                            "src": "1405:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1337,33 +1337,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58146,
+                            "id": 58139,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "1386:7:128",
+                            "src": "1386:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58147,
+                          "id": 58140,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "1394:10:128",
+                          "memberLocation": "1394:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "1386:18:128",
+                          "src": "1386:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58149,
+                        "id": 58142,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1372,29 +1372,29 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1386:30:128",
+                        "src": "1386:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58150,
+                      "id": 58143,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1417:11:128",
+                      "memberLocation": "1417:11:129",
                       "memberName": "deliveryTip",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15806,
-                      "src": "1386:42:128",
+                      "src": "1386:42:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint64_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips) pure returns (uint64)"
                       }
                     },
-                    "id": 58151,
+                    "id": 58144,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1403,24 +1403,24 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1386:44:128",
+                    "src": "1386:44:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
                     }
                   },
-                  "functionReturnParameters": 58145,
-                  "id": 58152,
+                  "functionReturnParameters": 58138,
+                  "id": 58145,
                   "nodeType": "Return",
-                  "src": "1379:51:128"
+                  "src": "1379:51:129"
                 }
               ]
             },
             "documentation": {
-              "id": 58139,
+              "id": 58132,
               "nodeType": "StructuredDocumentation",
-              "src": "1257:37:128",
+              "src": "1257:37:129",
               "text": "@notice Returns deliveryTip field"
             },
             "functionSelector": "ecbf034e",
@@ -1428,20 +1428,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "deliveryTip",
-            "nameLocation": "1308:11:128",
+            "nameLocation": "1308:11:129",
             "parameters": {
-              "id": 58142,
+              "id": 58135,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58141,
+                  "id": 58134,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "1328:10:128",
+                  "nameLocation": "1328:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58154,
-                  "src": "1320:18:128",
+                  "scope": 58147,
+                  "src": "1320:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1449,10 +1449,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58140,
+                    "id": 58133,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1320:7:128",
+                    "src": "1320:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1461,21 +1461,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1319:20:128"
+              "src": "1319:20:129"
             },
             "returnParameters": {
-              "id": 58145,
+              "id": 58138,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58144,
+                  "id": 58137,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58154,
-                  "src": "1361:6:128",
+                  "scope": 58147,
+                  "src": "1361:6:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1483,10 +1483,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58143,
+                    "id": 58136,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1361:6:128",
+                    "src": "1361:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -1495,22 +1495,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1360:8:128"
+              "src": "1360:8:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58170,
+            "id": 58163,
             "nodeType": "FunctionDefinition",
-            "src": "1485:127:128",
+            "src": "1485:127:129",
             "nodes": [],
             "body": {
-              "id": 58169,
+              "id": 58162,
               "nodeType": "Block",
-              "src": "1550:62:128",
+              "src": "1550:62:129",
               "nodes": [],
               "statements": [
                 {
@@ -1521,12 +1521,12 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 58164,
+                            "id": 58157,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58157,
-                            "src": "1586:10:128",
+                            "referencedDeclaration": 58150,
+                            "src": "1586:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1541,33 +1541,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58162,
+                            "id": 58155,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "1567:7:128",
+                            "src": "1567:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58163,
+                          "id": 58156,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "1575:10:128",
+                          "memberLocation": "1575:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "1567:18:128",
+                          "src": "1567:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58165,
+                        "id": 58158,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1576,29 +1576,29 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "1567:30:128",
+                        "src": "1567:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58166,
+                      "id": 58159,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1598:5:128",
+                      "memberLocation": "1598:5:129",
                       "memberName": "value",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15841,
-                      "src": "1567:36:128",
+                      "src": "1567:36:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint256_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips) pure returns (uint256)"
                       }
                     },
-                    "id": 58167,
+                    "id": 58160,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1607,24 +1607,24 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1567:38:128",
+                    "src": "1567:38:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 58161,
-                  "id": 58168,
+                  "functionReturnParameters": 58154,
+                  "id": 58161,
                   "nodeType": "Return",
-                  "src": "1560:45:128"
+                  "src": "1560:45:129"
                 }
               ]
             },
             "documentation": {
-              "id": 58155,
+              "id": 58148,
               "nodeType": "StructuredDocumentation",
-              "src": "1443:37:128",
+              "src": "1443:37:129",
               "text": "@notice Returns total tip amount."
             },
             "functionSelector": "c5a46ee6",
@@ -1632,20 +1632,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "value",
-            "nameLocation": "1494:5:128",
+            "nameLocation": "1494:5:129",
             "parameters": {
-              "id": 58158,
+              "id": 58151,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58157,
+                  "id": 58150,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "1508:10:128",
+                  "nameLocation": "1508:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58170,
-                  "src": "1500:18:128",
+                  "scope": 58163,
+                  "src": "1500:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1653,10 +1653,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58156,
+                    "id": 58149,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1500:7:128",
+                    "src": "1500:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1665,21 +1665,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1499:20:128"
+              "src": "1499:20:129"
             },
             "returnParameters": {
-              "id": 58161,
+              "id": 58154,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58160,
+                  "id": 58153,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58170,
-                  "src": "1541:7:128",
+                  "scope": 58163,
+                  "src": "1541:7:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1687,10 +1687,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58159,
+                    "id": 58152,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1541:7:128",
+                    "src": "1541:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1699,34 +1699,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1540:9:128"
+              "src": "1540:9:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58188,
+            "id": 58181,
             "nodeType": "FunctionDefinition",
-            "src": "1685:133:128",
+            "src": "1685:133:129",
             "nodes": [],
             "body": {
-              "id": 58187,
+              "id": 58180,
               "nodeType": "Block",
-              "src": "1769:49:128",
+              "src": "1769:49:129",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 58184,
+                        "id": 58177,
                         "name": "newValue",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58176,
-                        "src": "1802:8:128",
+                        "referencedDeclaration": 58169,
+                        "src": "1802:8:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1741,33 +1741,33 @@
                         }
                       ],
                       "expression": {
-                        "id": 58182,
+                        "id": 58175,
                         "name": "tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58174,
-                        "src": "1786:4:128",
+                        "referencedDeclaration": 58167,
+                        "src": "1786:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58183,
+                      "id": 58176,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1791:10:128",
+                      "memberLocation": "1791:10:129",
                       "memberName": "matchValue",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15904,
-                      "src": "1786:15:128",
+                      "src": "1786:15:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips,uint256) pure returns (Tips)"
                       }
                     },
-                    "id": 58185,
+                    "id": 58178,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1776,24 +1776,24 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1786:25:128",
+                    "src": "1786:25:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                       "typeString": "Tips"
                     }
                   },
-                  "functionReturnParameters": 58181,
-                  "id": 58186,
+                  "functionReturnParameters": 58174,
+                  "id": 58179,
                   "nodeType": "Return",
-                  "src": "1779:32:128"
+                  "src": "1779:32:129"
                 }
               ]
             },
             "documentation": {
-              "id": 58171,
+              "id": 58164,
               "nodeType": "StructuredDocumentation",
-              "src": "1618:62:128",
+              "src": "1618:62:129",
               "text": "@notice Increases the delivery tip to match the new value."
             },
             "functionSelector": "86450b88",
@@ -1801,20 +1801,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "matchValue",
-            "nameLocation": "1694:10:128",
+            "nameLocation": "1694:10:129",
             "parameters": {
-              "id": 58177,
+              "id": 58170,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58174,
+                  "id": 58167,
                   "mutability": "mutable",
                   "name": "tips",
-                  "nameLocation": "1710:4:128",
+                  "nameLocation": "1710:4:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58188,
-                  "src": "1705:9:128",
+                  "scope": 58181,
+                  "src": "1705:9:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1822,20 +1822,20 @@
                     "typeString": "Tips"
                   },
                   "typeName": {
-                    "id": 58173,
+                    "id": 58166,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 58172,
+                      "id": 58165,
                       "name": "Tips",
                       "nameLocations": [
-                        "1705:4:128"
+                        "1705:4:129"
                       ],
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 15578,
-                      "src": "1705:4:128"
+                      "src": "1705:4:129"
                     },
                     "referencedDeclaration": 15578,
-                    "src": "1705:4:128",
+                    "src": "1705:4:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                       "typeString": "Tips"
@@ -1845,13 +1845,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58176,
+                  "id": 58169,
                   "mutability": "mutable",
                   "name": "newValue",
-                  "nameLocation": "1724:8:128",
+                  "nameLocation": "1724:8:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58188,
-                  "src": "1716:16:128",
+                  "scope": 58181,
+                  "src": "1716:16:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1859,10 +1859,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58175,
+                    "id": 58168,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1716:7:128",
+                    "src": "1716:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1871,21 +1871,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1704:29:128"
+              "src": "1704:29:129"
             },
             "returnParameters": {
-              "id": 58181,
+              "id": 58174,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58180,
+                  "id": 58173,
                   "mutability": "mutable",
                   "name": "newTips",
-                  "nameLocation": "1760:7:128",
+                  "nameLocation": "1760:7:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58188,
-                  "src": "1755:12:128",
+                  "scope": 58181,
+                  "src": "1755:12:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1893,20 +1893,20 @@
                     "typeString": "Tips"
                   },
                   "typeName": {
-                    "id": 58179,
+                    "id": 58172,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 58178,
+                      "id": 58171,
                       "name": "Tips",
                       "nameLocations": [
-                        "1755:4:128"
+                        "1755:4:129"
                       ],
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 15578,
-                      "src": "1755:4:128"
+                      "src": "1755:4:129"
                     },
                     "referencedDeclaration": 15578,
-                    "src": "1755:4:128",
+                    "src": "1755:4:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                       "typeString": "Tips"
@@ -1915,38 +1915,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1754:14:128"
+              "src": "1754:14:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58218,
+            "id": 58211,
             "nodeType": "FunctionDefinition",
-            "src": "2148:460:128",
+            "src": "2148:460:129",
             "nodes": [],
             "body": {
-              "id": 58217,
+              "id": 58210,
               "nodeType": "Block",
-              "src": "2312:296:128",
+              "src": "2312:296:129",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    58203
+                    58196
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 58203,
+                      "id": 58196,
                       "mutability": "mutable",
                       "name": "tips",
-                      "nameLocation": "2484:4:128",
+                      "nameLocation": "2484:4:129",
                       "nodeType": "VariableDeclaration",
-                      "scope": 58217,
-                      "src": "2479:9:128",
+                      "scope": 58210,
+                      "src": "2479:9:129",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1954,20 +1954,20 @@
                         "typeString": "Tips"
                       },
                       "typeName": {
-                        "id": 58202,
+                        "id": 58195,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 58201,
+                          "id": 58194,
                           "name": "Tips",
                           "nameLocations": [
-                            "2479:4:128"
+                            "2479:4:129"
                           ],
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 15578,
-                          "src": "2479:4:128"
+                          "src": "2479:4:129"
                         },
                         "referencedDeclaration": 15578,
-                        "src": "2479:4:128",
+                        "src": "2479:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
@@ -1976,52 +1976,52 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 58211,
+                  "id": 58204,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 58206,
+                        "id": 58199,
                         "name": "summitTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58190,
-                        "src": "2510:10:128",
+                        "referencedDeclaration": 58183,
+                        "src": "2510:10:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint64",
                           "typeString": "uint64"
                         }
                       },
                       {
-                        "id": 58207,
+                        "id": 58200,
                         "name": "attestationTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58192,
-                        "src": "2522:15:128",
+                        "referencedDeclaration": 58185,
+                        "src": "2522:15:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint64",
                           "typeString": "uint64"
                         }
                       },
                       {
-                        "id": 58208,
+                        "id": 58201,
                         "name": "executionTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58194,
-                        "src": "2539:13:128",
+                        "referencedDeclaration": 58187,
+                        "src": "2539:13:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint64",
                           "typeString": "uint64"
                         }
                       },
                       {
-                        "id": 58209,
+                        "id": 58202,
                         "name": "deliveryTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58196,
-                        "src": "2554:12:128",
+                        "referencedDeclaration": 58189,
+                        "src": "2554:12:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint64",
                           "typeString": "uint64"
@@ -2048,33 +2048,33 @@
                         }
                       ],
                       "expression": {
-                        "id": 58204,
+                        "id": 58197,
                         "name": "TipsLib",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15905,
-                        "src": "2491:7:128",
+                        "src": "2491:7:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                           "typeString": "type(library TipsLib)"
                         }
                       },
-                      "id": 58205,
+                      "id": 58198,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2499:10:128",
+                      "memberLocation": "2499:10:129",
                       "memberName": "encodeTips",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15646,
-                      "src": "2491:18:128",
+                      "src": "2491:18:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint64_$_t_uint64_$_t_uint64_$_t_uint64_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (uint64,uint64,uint64,uint64) pure returns (Tips)"
                       }
                     },
-                    "id": 58210,
+                    "id": 58203,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2083,7 +2083,7 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2491:76:128",
+                    "src": "2491:76:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
@@ -2091,18 +2091,18 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2479:88:128"
+                  "src": "2479:88:129"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 58214,
+                        "id": 58207,
                         "name": "tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58203,
-                        "src": "2596:4:128",
+                        "referencedDeclaration": 58196,
+                        "src": "2596:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
@@ -2117,32 +2117,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 58212,
+                        "id": 58205,
                         "name": "Tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15578,
-                        "src": "2584:4:128",
+                        "src": "2584:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_userDefinedValueType$_Tips_$15578_$",
                           "typeString": "type(Tips)"
                         }
                       },
-                      "id": 58213,
+                      "id": 58206,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
-                      "memberLocation": "2589:6:128",
+                      "memberLocation": "2589:6:129",
                       "memberName": "unwrap",
                       "nodeType": "MemberAccess",
-                      "src": "2584:11:128",
+                      "src": "2584:11:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_unwrap_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint256_$",
                         "typeString": "function (Tips) pure returns (uint256)"
                       }
                     },
-                    "id": 58215,
+                    "id": 58208,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2151,17 +2151,17 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2584:17:128",
+                    "src": "2584:17:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 58200,
-                  "id": 58216,
+                  "functionReturnParameters": 58193,
+                  "id": 58209,
                   "nodeType": "Return",
-                  "src": "2577:24:128"
+                  "src": "2577:24:129"
                 }
               ]
             },
@@ -2170,20 +2170,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "encodeTips",
-            "nameLocation": "2157:10:128",
+            "nameLocation": "2157:10:129",
             "parameters": {
-              "id": 58197,
+              "id": 58190,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58190,
+                  "id": 58183,
                   "mutability": "mutable",
                   "name": "summitTip_",
-                  "nameLocation": "2175:10:128",
+                  "nameLocation": "2175:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58218,
-                  "src": "2168:17:128",
+                  "scope": 58211,
+                  "src": "2168:17:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2191,10 +2191,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58189,
+                    "id": 58182,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2168:6:128",
+                    "src": "2168:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -2204,13 +2204,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58192,
+                  "id": 58185,
                   "mutability": "mutable",
                   "name": "attestationTip_",
-                  "nameLocation": "2194:15:128",
+                  "nameLocation": "2194:15:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58218,
-                  "src": "2187:22:128",
+                  "scope": 58211,
+                  "src": "2187:22:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2218,10 +2218,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58191,
+                    "id": 58184,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2187:6:128",
+                    "src": "2187:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -2231,13 +2231,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58194,
+                  "id": 58187,
                   "mutability": "mutable",
                   "name": "executionTip_",
-                  "nameLocation": "2218:13:128",
+                  "nameLocation": "2218:13:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58218,
-                  "src": "2211:20:128",
+                  "scope": 58211,
+                  "src": "2211:20:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2245,10 +2245,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58193,
+                    "id": 58186,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2211:6:128",
+                    "src": "2211:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -2258,13 +2258,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 58196,
+                  "id": 58189,
                   "mutability": "mutable",
                   "name": "deliveryTip_",
-                  "nameLocation": "2240:12:128",
+                  "nameLocation": "2240:12:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58218,
-                  "src": "2233:19:128",
+                  "scope": 58211,
+                  "src": "2233:19:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2272,10 +2272,10 @@
                     "typeString": "uint64"
                   },
                   "typeName": {
-                    "id": 58195,
+                    "id": 58188,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2233:6:128",
+                    "src": "2233:6:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint64",
                       "typeString": "uint64"
@@ -2284,21 +2284,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2167:86:128"
+              "src": "2167:86:129"
             },
             "returnParameters": {
-              "id": 58200,
+              "id": 58193,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58199,
+                  "id": 58192,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58218,
-                  "src": "2299:7:128",
+                  "scope": 58211,
+                  "src": "2299:7:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2306,10 +2306,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58198,
+                    "id": 58191,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2299:7:128",
+                    "src": "2299:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2318,38 +2318,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2298:9:128"
+              "src": "2298:9:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58248,
+            "id": 58241,
             "nodeType": "FunctionDefinition",
-            "src": "2614:313:128",
+            "src": "2614:313:129",
             "nodes": [],
             "body": {
-              "id": 58247,
+              "id": 58240,
               "nodeType": "Block",
-              "src": "2785:142:128",
+              "src": "2785:142:129",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    58233
+                    58226
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 58233,
+                      "id": 58226,
                       "mutability": "mutable",
                       "name": "tips",
-                      "nameLocation": "2800:4:128",
+                      "nameLocation": "2800:4:129",
                       "nodeType": "VariableDeclaration",
-                      "scope": 58247,
-                      "src": "2795:9:128",
+                      "scope": 58240,
+                      "src": "2795:9:129",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2357,20 +2357,20 @@
                         "typeString": "Tips"
                       },
                       "typeName": {
-                        "id": 58232,
+                        "id": 58225,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 58231,
+                          "id": 58224,
                           "name": "Tips",
                           "nameLocations": [
-                            "2795:4:128"
+                            "2795:4:129"
                           ],
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 15578,
-                          "src": "2795:4:128"
+                          "src": "2795:4:129"
                         },
                         "referencedDeclaration": 15578,
-                        "src": "2795:4:128",
+                        "src": "2795:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
@@ -2379,52 +2379,52 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 58241,
+                  "id": 58234,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 58236,
+                        "id": 58229,
                         "name": "summitTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58220,
-                        "src": "2829:10:128",
+                        "referencedDeclaration": 58213,
+                        "src": "2829:10:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 58237,
+                        "id": 58230,
                         "name": "attestationTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58222,
-                        "src": "2841:15:128",
+                        "referencedDeclaration": 58215,
+                        "src": "2841:15:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 58238,
+                        "id": 58231,
                         "name": "executionTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58224,
-                        "src": "2858:13:128",
+                        "referencedDeclaration": 58217,
+                        "src": "2858:13:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 58239,
+                        "id": 58232,
                         "name": "deliveryTip_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58226,
-                        "src": "2873:12:128",
+                        "referencedDeclaration": 58219,
+                        "src": "2873:12:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2451,33 +2451,33 @@
                         }
                       ],
                       "expression": {
-                        "id": 58234,
+                        "id": 58227,
                         "name": "TipsLib",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15905,
-                        "src": "2807:7:128",
+                        "src": "2807:7:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                           "typeString": "type(library TipsLib)"
                         }
                       },
-                      "id": 58235,
+                      "id": 58228,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2815:13:128",
+                      "memberLocation": "2815:13:129",
                       "memberName": "encodeTips256",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15689,
-                      "src": "2807:21:128",
+                      "src": "2807:21:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (uint256,uint256,uint256,uint256) pure returns (Tips)"
                       }
                     },
-                    "id": 58240,
+                    "id": 58233,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2486,7 +2486,7 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2807:79:128",
+                    "src": "2807:79:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
@@ -2494,18 +2494,18 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2795:91:128"
+                  "src": "2795:91:129"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 58244,
+                        "id": 58237,
                         "name": "tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58233,
-                        "src": "2915:4:128",
+                        "referencedDeclaration": 58226,
+                        "src": "2915:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
@@ -2520,32 +2520,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 58242,
+                        "id": 58235,
                         "name": "Tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15578,
-                        "src": "2903:4:128",
+                        "src": "2903:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_userDefinedValueType$_Tips_$15578_$",
                           "typeString": "type(Tips)"
                         }
                       },
-                      "id": 58243,
+                      "id": 58236,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
-                      "memberLocation": "2908:6:128",
+                      "memberLocation": "2908:6:129",
                       "memberName": "unwrap",
                       "nodeType": "MemberAccess",
-                      "src": "2903:11:128",
+                      "src": "2903:11:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_unwrap_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint256_$",
                         "typeString": "function (Tips) pure returns (uint256)"
                       }
                     },
-                    "id": 58245,
+                    "id": 58238,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2554,17 +2554,17 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2903:17:128",
+                    "src": "2903:17:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 58230,
-                  "id": 58246,
+                  "functionReturnParameters": 58223,
+                  "id": 58239,
                   "nodeType": "Return",
-                  "src": "2896:24:128"
+                  "src": "2896:24:129"
                 }
               ]
             },
@@ -2573,20 +2573,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "encodeTips256",
-            "nameLocation": "2623:13:128",
+            "nameLocation": "2623:13:129",
             "parameters": {
-              "id": 58227,
+              "id": 58220,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58220,
+                  "id": 58213,
                   "mutability": "mutable",
                   "name": "summitTip_",
-                  "nameLocation": "2645:10:128",
+                  "nameLocation": "2645:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58248,
-                  "src": "2637:18:128",
+                  "scope": 58241,
+                  "src": "2637:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2594,10 +2594,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58219,
+                    "id": 58212,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2637:7:128",
+                    "src": "2637:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2607,13 +2607,101 @@
                 },
                 {
                   "constant": false,
-                  "id": 58222,
+                  "id": 58215,
                   "mutability": "mutable",
                   "name": "attestationTip_",
-                  "nameLocation": "2665:15:128",
+                  "nameLocation": "2665:15:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58248,
-                  "src": "2657:23:128",
+                  "scope": 58241,
+                  "src": "2657:23:129",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58214,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2657:7:129",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58217,
+                  "mutability": "mutable",
+                  "name": "executionTip_",
+                  "nameLocation": "2690:13:129",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58241,
+                  "src": "2682:21:129",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58216,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2682:7:129",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58219,
+                  "mutability": "mutable",
+                  "name": "deliveryTip_",
+                  "nameLocation": "2713:12:129",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58241,
+                  "src": "2705:20:129",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58218,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2705:7:129",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2636:90:129"
+            },
+            "returnParameters": {
+              "id": 58223,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58222,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58241,
+                  "src": "2772:7:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2624,61 +2712,7 @@
                     "id": 58221,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2657:7:128",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 58224,
-                  "mutability": "mutable",
-                  "name": "executionTip_",
-                  "nameLocation": "2690:13:128",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 58248,
-                  "src": "2682:21:128",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 58223,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2682:7:128",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 58226,
-                  "mutability": "mutable",
-                  "name": "deliveryTip_",
-                  "nameLocation": "2713:12:128",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 58248,
-                  "src": "2705:20:128",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 58225,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2705:7:128",
+                    "src": "2772:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2687,56 +2721,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2636:90:128"
+              "src": "2771:9:129"
             },
-            "returnParameters": {
-              "id": 58230,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 58229,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 58248,
-                  "src": "2772:7:128",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 58228,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2772:7:128",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "2771:9:128"
-            },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58264,
+            "id": 58257,
             "nodeType": "FunctionDefinition",
-            "src": "2933:137:128",
+            "src": "2933:137:129",
             "nodes": [],
             "body": {
-              "id": 58263,
+              "id": 58256,
               "nodeType": "Block",
-              "src": "3003:67:128",
+              "src": "3003:67:129",
               "nodes": [],
               "statements": [
                 {
@@ -2745,12 +2745,12 @@
                       {
                         "arguments": [
                           {
-                            "id": 58259,
+                            "id": 58252,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58250,
-                            "src": "3051:10:128",
+                            "referencedDeclaration": 58243,
+                            "src": "3051:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2765,33 +2765,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58257,
+                            "id": 58250,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "3032:7:128",
+                            "src": "3032:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58258,
+                          "id": 58251,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "3040:10:128",
+                          "memberLocation": "3040:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "3032:18:128",
+                          "src": "3032:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58260,
+                        "id": 58253,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2800,7 +2800,7 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "3032:30:128",
+                        "src": "3032:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
@@ -2816,32 +2816,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 58255,
+                        "id": 58248,
                         "name": "Tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15578,
-                        "src": "3020:4:128",
+                        "src": "3020:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_userDefinedValueType$_Tips_$15578_$",
                           "typeString": "type(Tips)"
                         }
                       },
-                      "id": 58256,
+                      "id": 58249,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
-                      "memberLocation": "3025:6:128",
+                      "memberLocation": "3025:6:129",
                       "memberName": "unwrap",
                       "nodeType": "MemberAccess",
-                      "src": "3020:11:128",
+                      "src": "3020:11:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_unwrap_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint256_$",
                         "typeString": "function (Tips) pure returns (uint256)"
                       }
                     },
-                    "id": 58261,
+                    "id": 58254,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2850,17 +2850,17 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3020:43:128",
+                    "src": "3020:43:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 58254,
-                  "id": 58262,
+                  "functionReturnParameters": 58247,
+                  "id": 58255,
                   "nodeType": "Return",
-                  "src": "3013:50:128"
+                  "src": "3013:50:129"
                 }
               ]
             },
@@ -2869,20 +2869,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "wrapPadded",
-            "nameLocation": "2942:10:128",
+            "nameLocation": "2942:10:129",
             "parameters": {
-              "id": 58251,
+              "id": 58244,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58250,
+                  "id": 58243,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "2961:10:128",
+                  "nameLocation": "2961:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58264,
-                  "src": "2953:18:128",
+                  "scope": 58257,
+                  "src": "2953:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2890,10 +2890,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58249,
+                    "id": 58242,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2953:7:128",
+                    "src": "2953:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2902,21 +2902,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2952:20:128"
+              "src": "2952:20:129"
             },
             "returnParameters": {
-              "id": 58254,
+              "id": 58247,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58253,
+                  "id": 58246,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58264,
-                  "src": "2994:7:128",
+                  "scope": 58257,
+                  "src": "2994:7:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2924,10 +2924,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58252,
+                    "id": 58245,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2994:7:128",
+                    "src": "2994:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2936,22 +2936,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2993:9:128"
+              "src": "2993:9:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58279,
+            "id": 58272,
             "nodeType": "FunctionDefinition",
-            "src": "3076:125:128",
+            "src": "3076:125:129",
             "nodes": [],
             "body": {
-              "id": 58278,
+              "id": 58271,
               "nodeType": "Block",
-              "src": "3140:61:128",
+              "src": "3140:61:129",
               "nodes": [],
               "statements": [
                 {
@@ -2962,12 +2962,12 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 58273,
+                            "id": 58266,
                             "name": "paddedTips",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58266,
-                            "src": "3176:10:128",
+                            "referencedDeclaration": 58259,
+                            "src": "3176:10:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2982,33 +2982,33 @@
                             }
                           ],
                           "expression": {
-                            "id": 58271,
+                            "id": 58264,
                             "name": "TipsLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 15905,
-                            "src": "3157:7:128",
+                            "src": "3157:7:129",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                               "typeString": "type(library TipsLib)"
                             }
                           },
-                          "id": 58272,
+                          "id": 58265,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "3165:10:128",
+                          "memberLocation": "3165:10:129",
                           "memberName": "wrapPadded",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 15704,
-                          "src": "3157:18:128",
+                          "src": "3157:18:129",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_userDefinedValueType$_Tips_$15578_$",
                             "typeString": "function (uint256) pure returns (Tips)"
                           }
                         },
-                        "id": 58274,
+                        "id": 58267,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3017,29 +3017,29 @@
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "3157:30:128",
+                        "src": "3157:30:129",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
                         }
                       },
-                      "id": 58275,
+                      "id": 58268,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3188:4:128",
+                      "memberLocation": "3188:4:129",
                       "memberName": "leaf",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15728,
-                      "src": "3157:35:128",
+                      "src": "3157:35:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_bytes32_$bound_to$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function (Tips) pure returns (bytes32)"
                       }
                     },
-                    "id": 58276,
+                    "id": 58269,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3048,17 +3048,17 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3157:37:128",
+                    "src": "3157:37:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 58270,
-                  "id": 58277,
+                  "functionReturnParameters": 58263,
+                  "id": 58270,
                   "nodeType": "Return",
-                  "src": "3150:44:128"
+                  "src": "3150:44:129"
                 }
               ]
             },
@@ -3067,20 +3067,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "leaf",
-            "nameLocation": "3085:4:128",
+            "nameLocation": "3085:4:129",
             "parameters": {
-              "id": 58267,
+              "id": 58260,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58266,
+                  "id": 58259,
                   "mutability": "mutable",
                   "name": "paddedTips",
-                  "nameLocation": "3098:10:128",
+                  "nameLocation": "3098:10:129",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58279,
-                  "src": "3090:18:128",
+                  "scope": 58272,
+                  "src": "3090:18:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3088,10 +3088,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58265,
+                    "id": 58258,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3090:7:128",
+                    "src": "3090:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3100,21 +3100,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3089:20:128"
+              "src": "3089:20:129"
             },
             "returnParameters": {
-              "id": 58270,
+              "id": 58263,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58269,
+                  "id": 58262,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58279,
-                  "src": "3131:7:128",
+                  "scope": 58272,
+                  "src": "3131:7:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3122,10 +3122,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 58268,
+                    "id": 58261,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3131:7:128",
+                    "src": "3131:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -3134,38 +3134,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3130:9:128"
+              "src": "3130:9:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 58297,
+            "id": 58290,
             "nodeType": "FunctionDefinition",
-            "src": "3207:209:128",
+            "src": "3207:209:129",
             "nodes": [],
             "body": {
-              "id": 58296,
+              "id": 58289,
               "nodeType": "Block",
-              "src": "3258:158:128",
+              "src": "3258:158:129",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    58286
+                    58279
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 58286,
+                      "id": 58279,
                       "mutability": "mutable",
                       "name": "tips",
-                      "nameLocation": "3349:4:128",
+                      "nameLocation": "3349:4:129",
                       "nodeType": "VariableDeclaration",
-                      "scope": 58296,
-                      "src": "3344:9:128",
+                      "scope": 58289,
+                      "src": "3344:9:129",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -3173,20 +3173,20 @@
                         "typeString": "Tips"
                       },
                       "typeName": {
-                        "id": 58285,
+                        "id": 58278,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 58284,
+                          "id": 58277,
                           "name": "Tips",
                           "nameLocations": [
-                            "3344:4:128"
+                            "3344:4:129"
                           ],
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 15578,
-                          "src": "3344:4:128"
+                          "src": "3344:4:129"
                         },
                         "referencedDeclaration": 15578,
-                        "src": "3344:4:128",
+                        "src": "3344:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
@@ -3195,39 +3195,39 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 58290,
+                  "id": 58283,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 58287,
+                        "id": 58280,
                         "name": "TipsLib",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15905,
-                        "src": "3356:7:128",
+                        "src": "3356:7:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_contract$_TipsLib_$15905_$",
                           "typeString": "type(library TipsLib)"
                         }
                       },
-                      "id": 58288,
+                      "id": 58281,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3364:9:128",
+                      "memberLocation": "3364:9:129",
                       "memberName": "emptyTips",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 15717,
-                      "src": "3356:17:128",
+                      "src": "3356:17:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$__$returns$_t_userDefinedValueType$_Tips_$15578_$",
                         "typeString": "function () pure returns (Tips)"
                       }
                     },
-                    "id": 58289,
+                    "id": 58282,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3236,7 +3236,7 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3356:19:128",
+                    "src": "3356:19:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
@@ -3244,18 +3244,18 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "3344:31:128"
+                  "src": "3344:31:129"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 58293,
+                        "id": 58286,
                         "name": "tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 58286,
-                        "src": "3404:4:128",
+                        "referencedDeclaration": 58279,
+                        "src": "3404:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_userDefinedValueType$_Tips_$15578",
                           "typeString": "Tips"
@@ -3270,32 +3270,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 58291,
+                        "id": 58284,
                         "name": "Tips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15578,
-                        "src": "3392:4:128",
+                        "src": "3392:4:129",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_userDefinedValueType$_Tips_$15578_$",
                           "typeString": "type(Tips)"
                         }
                       },
-                      "id": 58292,
+                      "id": 58285,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
-                      "memberLocation": "3397:6:128",
+                      "memberLocation": "3397:6:129",
                       "memberName": "unwrap",
                       "nodeType": "MemberAccess",
-                      "src": "3392:11:128",
+                      "src": "3392:11:129",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_unwrap_pure$_t_userDefinedValueType$_Tips_$15578_$returns$_t_uint256_$",
                         "typeString": "function (Tips) pure returns (uint256)"
                       }
                     },
-                    "id": 58294,
+                    "id": 58287,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3304,17 +3304,17 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3392:17:128",
+                    "src": "3392:17:129",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 58283,
-                  "id": 58295,
+                  "functionReturnParameters": 58276,
+                  "id": 58288,
                   "nodeType": "Return",
-                  "src": "3385:24:128"
+                  "src": "3385:24:129"
                 }
               ]
             },
@@ -3323,26 +3323,26 @@
             "kind": "function",
             "modifiers": [],
             "name": "emptyTips",
-            "nameLocation": "3216:9:128",
+            "nameLocation": "3216:9:129",
             "parameters": {
-              "id": 58280,
+              "id": 58273,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3225:2:128"
+              "src": "3225:2:129"
             },
             "returnParameters": {
-              "id": 58283,
+              "id": 58276,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58282,
+                  "id": 58275,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 58297,
-                  "src": "3249:7:128",
+                  "scope": 58290,
+                  "src": "3249:7:129",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3350,10 +3350,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 58281,
+                    "id": 58274,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3249:7:128",
+                    "src": "3249:7:129",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3362,9 +3362,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3248:9:128"
+              "src": "3248:9:129"
             },
-            "scope": 58298,
+            "scope": 58291,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
@@ -3376,18 +3376,18 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 58090,
+          "id": 58083,
           "nodeType": "StructuredDocumentation",
-          "src": "131:70:128",
+          "src": "131:70:129",
           "text": " @notice Exposes TipsLib methods for testing against golang."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          58298
+          58291
         ],
         "name": "TipsHarness",
-        "nameLocation": "211:11:128",
-        "scope": 58299,
+        "nameLocation": "211:11:129",
+        "scope": 58292,
         "usedErrors": [
           10320,
           10322
@@ -3396,5 +3396,5 @@
     ],
     "license": "MIT"
   },
-  "id": 128
+  "id": 129
 }

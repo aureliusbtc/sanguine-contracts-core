@@ -1,7 +1,7 @@
 {
   "agents": {
-    "0": ["0xF0A00BfcffB30a8aFc46b3C709dC5895BBA34E59"],
-    "900": ["0x21b24CD7eD8aEAA70dcd0b42d3eD0e03CeDb4aC7"]
+    "0": ["0x5af6297489955f65A85D2295036F703e1726cfDE"],
+    "900": ["0xDF1E48B1c861e70d8231Fb076070C01e8d7894DB"]
   },
   "chainidSummit": 901,
   "domains": [0, 900],

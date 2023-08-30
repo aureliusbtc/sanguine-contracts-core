@@ -11,7 +11,7 @@
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"StdChains provides information about EVM compatible chains that can be used in scripts/tests. For each chain, the chain's name, chain ID, and a default RPC URL are provided. Chains are identified by their alias, which is the same as the alias in the `[rpc_endpoints]` section of the `foundry.toml` file. For best UX, ensure the alias in the `foundry.toml` file match the alias used in this contract, which can be found as the first argument to the `setChainWithDefaultRpcUrl` call in the `initialize` function. There are two main ways to use this contract:   1. Set a chain with `setChain(string memory chainAlias, ChainData memory chain)` or      `setChain(string memory chainAlias, Chain memory chain)`   2. Get a chain with `getChain(string memory chainAlias)` or `getChain(uint256 chainId)`. The first time either of those are used, chains are initialized with the default set of RPC URLs. This is done in `initialize`, which uses `setChainWithDefaultRpcUrl`. Defaults are recorded in `defaultRpcUrls`. The `setChain` function is straightforward, and it simply saves off the given chain data. The `getChain` methods use `getChainWithUpdatedRpcUrl` to return a chain. For example, let's say we want to retrieve `mainnet`'s RPC URL:   - If you haven't set any mainnet chain info with `setChain`, you haven't specified that     chain in `foundry.toml` and no env var is set, the default data and RPC URL will be returned.   - If you have set a mainnet RPC URL in `foundry.toml` it will return that, if valid (e.g. if     a URL is given or if an environment variable is given and that environment variable exists).     Otherwise, the default data is returned.   - If you specified data with `setChain` it will return that. Summarizing the above, the prioritization hierarchy is `setChain` -> `foundry.toml` -> environment variable -> defaults.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/forge-std/src/StdChains.sol\":\"StdChains\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0xad395351c00a0d0fe960e50eaf0702dceade23f6e8e03b729b17923b812a61ae\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0a3cfbddc15788734b68c96c0f752096e6f3f7300d6c198068e67b399307f380\",\"dweb:/ipfs/QmZc3CByhTuLqkaWn88xytjHa1fEeTGUSTNMPHVSwA2xye\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0xdd9f518aade851117d3ca3122cae6ed413a8b8355d43d69db336e94da3214a96\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://939ede17edec5c78176379839f4c68851b1316e8f5789efb2f01cbdae09b88ef\",\"dweb:/ipfs/QmYiBBb7Nyuse7HoEFkCeauUwcpef9S33ozZYDqXCEXEtH\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"StdChains provides information about EVM compatible chains that can be used in scripts/tests. For each chain, the chain's name, chain ID, and a default RPC URL are provided. Chains are identified by their alias, which is the same as the alias in the `[rpc_endpoints]` section of the `foundry.toml` file. For best UX, ensure the alias in the `foundry.toml` file match the alias used in this contract, which can be found as the first argument to the `setChainWithDefaultRpcUrl` call in the `initialize` function. There are two main ways to use this contract:   1. Set a chain with `setChain(string memory chainAlias, ChainData memory chain)` or      `setChain(string memory chainAlias, Chain memory chain)`   2. Get a chain with `getChain(string memory chainAlias)` or `getChain(uint256 chainId)`. The first time either of those are used, chains are initialized with the default set of RPC URLs. This is done in `initialize`, which uses `setChainWithDefaultRpcUrl`. Defaults are recorded in `defaultRpcUrls`. The `setChain` function is straightforward, and it simply saves off the given chain data. The `getChain` methods use `getChainWithUpdatedRpcUrl` to return a chain. For example, let's say we want to retrieve `mainnet`'s RPC URL:   - If you haven't set any mainnet chain info with `setChain`, you haven't specified that     chain in `foundry.toml` and no env var is set, the default data and RPC URL will be returned.   - If you have set a mainnet RPC URL in `foundry.toml` it will return that, if valid (e.g. if     a URL is given or if an environment variable is given and that environment variable exists).     Otherwise, the default data is returned.   - If you specified data with `setChain` it will return that. Summarizing the above, the prioritization hierarchy is `setChain` -> `foundry.toml` -> environment variable -> defaults.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/forge-std/src/StdChains.sol\":\"StdChains\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=node_modules/@openzeppelin/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=node_modules/hardhat/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0x027d1aa07f6a45546d6990186ee6ab2ccd1b654fbbef326145e9b6e125feaabc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://85c57fcb94bf64d583115157e4c89cc4ad58ff1102677613d7ef70263d98d270\",\"dweb:/ipfs/QmbASKUPs9pRck3j4soibhgGJ2ghr38vzdaSrF5Ae2xyqQ\"]},\"lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0xdd9f518aade851117d3ca3122cae6ed413a8b8355d43d69db336e94da3214a96\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://939ede17edec5c78176379839f4c68851b1316e8f5789efb2f01cbdae09b88ef\",\"dweb:/ipfs/QmYiBBb7Nyuse7HoEFkCeauUwcpef9S33ozZYDqXCEXEtH\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.17+commit.8df45f5f"
@@ -52,10 +52,10 @@
     },
     "sources": {
       "lib/forge-std/src/StdChains.sol": {
-        "keccak256": "0xad395351c00a0d0fe960e50eaf0702dceade23f6e8e03b729b17923b812a61ae",
+        "keccak256": "0x027d1aa07f6a45546d6990186ee6ab2ccd1b654fbbef326145e9b6e125feaabc",
         "urls": [
-          "bzz-raw://0a3cfbddc15788734b68c96c0f752096e6f3f7300d6c198068e67b399307f380",
-          "dweb:/ipfs/QmZc3CByhTuLqkaWn88xytjHa1fEeTGUSTNMPHVSwA2xye"
+          "bzz-raw://85c57fcb94bf64d583115157e4c89cc4ad58ff1102677613d7ef70263d98d270",
+          "dweb:/ipfs/QmbASKUPs9pRck3j4soibhgGJ2ghr38vzdaSrF5Ae2xyqQ"
         ],
         "license": "MIT"
       },
@@ -72,17 +72,17 @@
   },
   "ast": {
     "absolutePath": "lib/forge-std/src/StdChains.sol",
-    "id": 21983,
+    "id": 21992,
     "exportedSymbols": {
       "StdChains": [
-        21982
+        21991
       ],
       "VmSafe": [
-        29738
+        29747
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:10827:71",
+    "src": "32:10928:71",
     "nodes": [
       {
         "id": 21281,
@@ -117,8 +117,8 @@
         "absolutePath": "lib/forge-std/src/Vm.sol",
         "file": "./Vm.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 21983,
-        "sourceUnit": 30094,
+        "scope": 21992,
+        "sourceUnit": 30103,
         "symbolAliases": [
           {
             "foreign": {
@@ -126,7 +126,7 @@
               "name": "VmSafe",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 29738,
+              "referencedDeclaration": 29747,
               "src": "108:6:71",
               "typeDescriptions": {}
             },
@@ -136,9 +136,9 @@
         "unitAlias": ""
       },
       {
-        "id": 21982,
+        "id": 21991,
         "nodeType": "ContractDefinition",
-        "src": "2070:8788:71",
+        "src": "2070:8889:71",
         "nodes": [
           {
             "id": 21302,
@@ -149,11 +149,11 @@
             "mutability": "constant",
             "name": "vm",
             "nameLocation": "2128:2:71",
-            "scope": 21982,
+            "scope": 21991,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_VmSafe_$29738",
+              "typeIdentifier": "t_contract$_VmSafe_$29747",
               "typeString": "contract VmSafe"
             },
             "typeName": {
@@ -166,13 +166,13 @@
                   "2104:6:71"
                 ],
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 29738,
+                "referencedDeclaration": 29747,
                 "src": "2104:6:71"
               },
-              "referencedDeclaration": 29738,
+              "referencedDeclaration": 29747,
               "src": "2104:6:71",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_VmSafe_$29738",
+                "typeIdentifier": "t_contract$_VmSafe_$29747",
                 "typeString": "contract VmSafe"
               }
             },
@@ -378,10 +378,10 @@
                 "name": "VmSafe",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 29738,
+                "referencedDeclaration": 29747,
                 "src": "2133:6:71",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_VmSafe_$29738_$",
+                  "typeIdentifier": "t_type$_t_contract$_VmSafe_$29747_$",
                   "typeString": "type(contract VmSafe)"
                 }
               },
@@ -397,7 +397,7 @@
               "src": "2133:63:71",
               "tryCall": false,
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_VmSafe_$29738",
+                "typeIdentifier": "t_contract$_VmSafe_$29747",
                 "typeString": "contract VmSafe"
               }
             },
@@ -412,7 +412,7 @@
             "mutability": "mutable",
             "name": "initialized",
             "nameLocation": "2216:11:71",
-            "scope": 21982,
+            "scope": 21991,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -522,7 +522,7 @@
             ],
             "name": "ChainData",
             "nameLocation": "2241:9:71",
-            "scope": 21982,
+            "scope": 21991,
             "visibility": "public"
           },
           {
@@ -643,7 +643,7 @@
             ],
             "name": "Chain",
             "nameLocation": "2340:5:71",
-            "scope": 21982,
+            "scope": 21991,
             "visibility": "public"
           },
           {
@@ -655,7 +655,7 @@
             "mutability": "mutable",
             "name": "chains",
             "nameLocation": "3068:6:71",
-            "scope": 21982,
+            "scope": 21991,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -712,7 +712,7 @@
             "mutability": "mutable",
             "name": "defaultRpcUrls",
             "nameLocation": "3174:14:71",
-            "scope": 21982,
+            "scope": 21991,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -759,7 +759,7 @@
             "mutability": "mutable",
             "name": "idToAlias",
             "nameLocation": "3272:9:71",
-            "scope": 21982,
+            "scope": 21991,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -806,7 +806,7 @@
             "mutability": "mutable",
             "name": "fallbackToDefaultRpcUrls",
             "nameLocation": "3301:24:71",
-            "scope": 21982,
+            "scope": 21991,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1032,7 +1032,7 @@
                       "name": "initialize",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21944,
+                      "referencedDeclaration": 21953,
                       "src": "3637:10:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -1568,7 +1568,7 @@
               ],
               "src": "3486:20:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
@@ -1704,7 +1704,7 @@
                       "name": "initialize",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21944,
+                      "referencedDeclaration": 21953,
                       "src": "4114:10:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -1988,7 +1988,7 @@
                                     "referencedDeclaration": 21302,
                                     "src": "4353:2:71",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_VmSafe_$29738",
+                                      "typeIdentifier": "t_contract$_VmSafe_$29747",
                                       "typeString": "contract VmSafe"
                                     }
                                   },
@@ -2000,7 +2000,7 @@
                                   "memberLocation": "4356:8:71",
                                   "memberName": "toString",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 29292,
+                                  "referencedDeclaration": 29301,
                                   "src": "4353:11:71",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_pure$_t_uint256_$returns$_t_string_memory_ptr_$",
@@ -2367,7 +2367,7 @@
               ],
               "src": "3998:20:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
@@ -2690,7 +2690,7 @@
                       "name": "initialize",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21944,
+                      "referencedDeclaration": 21953,
                       "src": "4901:10:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -3206,7 +3206,7 @@
                                     "referencedDeclaration": 21302,
                                     "src": "5246:2:71",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_VmSafe_$29738",
+                                      "typeIdentifier": "t_contract$_VmSafe_$29747",
                                       "typeString": "contract VmSafe"
                                     }
                                   },
@@ -3218,7 +3218,7 @@
                                   "memberLocation": "5249:8:71",
                                   "memberName": "toString",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 29292,
+                                  "referencedDeclaration": 29301,
                                   "src": "5246:11:71",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_pure$_t_uint256_$returns$_t_string_memory_ptr_$",
@@ -3966,7 +3966,7 @@
               "parameters": [],
               "src": "4626:0:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
@@ -4264,7 +4264,7 @@
               "parameters": [],
               "src": "5857:0:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
@@ -5241,7 +5241,7 @@
               ],
               "src": "6035:15:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "private"
@@ -5790,7 +5790,7 @@
                                                 "referencedDeclaration": 21302,
                                                 "src": "7178:2:71",
                                                 "typeDescriptions": {
-                                                  "typeIdentifier": "t_contract$_VmSafe_$29738",
+                                                  "typeIdentifier": "t_contract$_VmSafe_$29747",
                                                   "typeString": "contract VmSafe"
                                                 }
                                               },
@@ -5802,7 +5802,7 @@
                                               "memberLocation": "7181:9:71",
                                               "memberName": "envString",
                                               "nodeType": "MemberAccess",
-                                              "referencedDeclaration": 28897,
+                                              "referencedDeclaration": 28906,
                                               "src": "7178:12:71",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_function_external_view$_t_string_memory_ptr_$returns$_t_string_memory_ptr_$",
@@ -5953,7 +5953,7 @@
                                                 "referencedDeclaration": 21302,
                                                 "src": "7071:2:71",
                                                 "typeDescriptions": {
-                                                  "typeIdentifier": "t_contract$_VmSafe_$29738",
+                                                  "typeIdentifier": "t_contract$_VmSafe_$29747",
                                                   "typeString": "contract VmSafe"
                                                 }
                                               },
@@ -5965,7 +5965,7 @@
                                               "memberLocation": "7074:5:71",
                                               "memberName": "envOr",
                                               "nodeType": "MemberAccess",
-                                              "referencedDeclaration": 29028,
+                                              "referencedDeclaration": 29037,
                                               "src": "7071:8:71",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_string_memory_ptr_$",
@@ -6662,7 +6662,7 @@
                               "referencedDeclaration": 21302,
                               "src": "6741:2:71",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_VmSafe_$29738",
+                                "typeIdentifier": "t_contract$_VmSafe_$29747",
                                 "typeString": "contract VmSafe"
                               }
                             },
@@ -6674,7 +6674,7 @@
                             "memberLocation": "6744:6:71",
                             "memberName": "rpcUrl",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 29711,
+                            "referencedDeclaration": 29720,
                             "src": "6741:9:71",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_string_memory_ptr_$returns$_t_string_memory_ptr_$",
@@ -6844,7 +6844,7 @@
               ],
               "src": "6661:14:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "private"
@@ -6950,20 +6950,20 @@
               "parameters": [],
               "src": "7851:0:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 21944,
+            "id": 21953,
             "nodeType": "FunctionDefinition",
-            "src": "7911:2558:71",
+            "src": "7911:2659:71",
             "nodes": [],
             "body": {
-              "id": 21943,
+              "id": 21952,
               "nodeType": "Block",
-              "src": "7941:2528:71",
+              "src": "7941:2629:71",
               "nodes": [],
               "statements": [
                 {
@@ -7164,7 +7164,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8100:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -7319,7 +7319,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8196:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -7474,7 +7474,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8354:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -7629,7 +7629,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8509:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -7784,7 +7784,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8674:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -7939,7 +7939,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8779:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -8094,7 +8094,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "8898:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -8249,7 +8249,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9015:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -8404,7 +8404,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9178:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -8559,7 +8559,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9297:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -8714,7 +8714,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9397:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -8869,7 +8869,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9545:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -9024,7 +9024,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9665:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -9179,7 +9179,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9822:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -9334,7 +9334,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "9969:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -9489,7 +9489,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "10150:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -9644,7 +9644,7 @@
                       "name": "setChainWithDefaultRpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21981,
+                      "referencedDeclaration": 21990,
                       "src": "10371:25:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
@@ -9670,6 +9670,161 @@
                   "id": 21942,
                   "nodeType": "ExpressionStatement",
                   "src": "10371:91:71"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "6465766e65746c32",
+                        "id": 21944,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "10498:10:71",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c2fb06d4b5bdfe7d8fd9eb0b253a5e4e192e3c62b011bf3a535834299f017c34",
+                          "typeString": "literal_string \"devnetl2\""
+                        },
+                        "value": "devnetl2"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "4465766e6574204c32",
+                            "id": 21946,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "10520:11:71",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_810ab8fa1338554c920f540a111b8aad175cce4ea751db400e8b808a1c23acf0",
+                              "typeString": "literal_string \"Devnet L2\""
+                            },
+                            "value": "Devnet L2"
+                          },
+                          {
+                            "hexValue": "393031",
+                            "id": 21947,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "10533:3:71",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_901_by_1",
+                              "typeString": "int_const 901"
+                            },
+                            "value": "901"
+                          },
+                          {
+                            "hexValue": "687474703a2f2f6c6f63616c686f73743a39353435",
+                            "id": 21948,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "10538:23:71",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_a8ea1793962fd547bf298279d6c8a4df271146ab64d99799eeb6a433531be0a5",
+                              "typeString": "literal_string \"http://localhost:9545\""
+                            },
+                            "value": "http://localhost:9545"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_810ab8fa1338554c920f540a111b8aad175cce4ea751db400e8b808a1c23acf0",
+                              "typeString": "literal_string \"Devnet L2\""
+                            },
+                            {
+                              "typeIdentifier": "t_rational_901_by_1",
+                              "typeString": "int_const 901"
+                            },
+                            {
+                              "typeIdentifier": "t_stringliteral_a8ea1793962fd547bf298279d6c8a4df271146ab64d99799eeb6a433531be0a5",
+                              "typeString": "literal_string \"http://localhost:9545\""
+                            }
+                          ],
+                          "id": 21945,
+                          "name": "ChainData",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 21311,
+                          "src": "10510:9:71",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_ChainData_$21311_storage_ptr_$",
+                            "typeString": "type(struct StdChains.ChainData storage pointer)"
+                          }
+                        },
+                        "id": 21949,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "10510:52:71",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ChainData_$21311_memory_ptr",
+                          "typeString": "struct StdChains.ChainData memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_c2fb06d4b5bdfe7d8fd9eb0b253a5e4e192e3c62b011bf3a535834299f017c34",
+                          "typeString": "literal_string \"devnetl2\""
+                        },
+                        {
+                          "typeIdentifier": "t_struct$_ChainData_$21311_memory_ptr",
+                          "typeString": "struct StdChains.ChainData memory"
+                        }
+                      ],
+                      "id": 21943,
+                      "name": "setChainWithDefaultRpcUrl",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21990,
+                      "src": "10472:25:71",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory,struct StdChains.ChainData memory)"
+                      }
+                    },
+                    "id": 21950,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "10472:91:71",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 21951,
+                  "nodeType": "ExpressionStatement",
+                  "src": "10472:91:71"
                 }
               ]
             },
@@ -9690,36 +9845,36 @@
               "parameters": [],
               "src": "7941:0:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "private"
           },
           {
-            "id": 21981,
+            "id": 21990,
             "nodeType": "FunctionDefinition",
-            "src": "10551:305:71",
+            "src": "10652:305:71",
             "nodes": [],
             "body": {
-              "id": 21980,
+              "id": 21989,
               "nodeType": "Block",
-              "src": "10644:212:71",
+              "src": "10745:212:71",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    21953
+                    21962
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 21953,
+                      "id": 21962,
                       "mutability": "mutable",
                       "name": "rpcUrl",
-                      "nameLocation": "10668:6:71",
+                      "nameLocation": "10769:6:71",
                       "nodeType": "VariableDeclaration",
-                      "scope": 21980,
-                      "src": "10654:20:71",
+                      "scope": 21989,
+                      "src": "10755:20:71",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
@@ -9727,10 +9882,10 @@
                         "typeString": "string"
                       },
                       "typeName": {
-                        "id": 21952,
+                        "id": 21961,
                         "name": "string",
                         "nodeType": "ElementaryTypeName",
-                        "src": "10654:6:71",
+                        "src": "10755:6:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage_ptr",
                           "typeString": "string"
@@ -9739,66 +9894,66 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 21956,
+                  "id": 21965,
                   "initialValue": {
                     "expression": {
-                      "id": 21954,
+                      "id": 21963,
                       "name": "chain",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21949,
-                      "src": "10677:5:71",
+                      "referencedDeclaration": 21958,
+                      "src": "10778:5:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_ChainData_$21311_memory_ptr",
                         "typeString": "struct StdChains.ChainData memory"
                       }
                     },
-                    "id": 21955,
+                    "id": 21964,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "10683:6:71",
+                    "memberLocation": "10784:6:71",
                     "memberName": "rpcUrl",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 21310,
-                    "src": "10677:12:71",
+                    "src": "10778:12:71",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
                       "typeString": "string memory"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "10654:35:71"
+                  "src": "10755:35:71"
                 },
                 {
                   "expression": {
-                    "id": 21961,
+                    "id": 21970,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 21957,
+                        "id": 21966,
                         "name": "defaultRpcUrls",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 21329,
-                        "src": "10699:14:71",
+                        "src": "10800:14:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
                           "typeString": "mapping(string memory => string storage ref)"
                         }
                       },
-                      "id": 21959,
+                      "id": 21968,
                       "indexExpression": {
-                        "id": 21958,
+                        "id": 21967,
                         "name": "chainAlias",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21946,
-                        "src": "10714:10:71",
+                        "referencedDeclaration": 21955,
+                        "src": "10815:10:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -9809,7 +9964,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "10699:26:71",
+                      "src": "10800:26:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -9818,57 +9973,57 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 21960,
+                      "id": 21969,
                       "name": "rpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21953,
-                      "src": "10728:6:71",
+                      "referencedDeclaration": 21962,
+                      "src": "10829:6:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
                       }
                     },
-                    "src": "10699:35:71",
+                    "src": "10800:35:71",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 21962,
+                  "id": 21971,
                   "nodeType": "ExpressionStatement",
-                  "src": "10699:35:71"
+                  "src": "10800:35:71"
                 },
                 {
                   "expression": {
-                    "id": 21967,
+                    "id": 21976,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 21963,
+                        "id": 21972,
                         "name": "chain",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21949,
-                        "src": "10744:5:71",
+                        "referencedDeclaration": 21958,
+                        "src": "10845:5:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_ChainData_$21311_memory_ptr",
                           "typeString": "struct StdChains.ChainData memory"
                         }
                       },
-                      "id": 21965,
+                      "id": 21974,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberLocation": "10750:6:71",
+                      "memberLocation": "10851:6:71",
                       "memberName": "rpcUrl",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 21310,
-                      "src": "10744:12:71",
+                      "src": "10845:12:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
@@ -9878,52 +10033,52 @@
                     "operator": "=",
                     "rightHandSide": {
                       "hexValue": "",
-                      "id": 21966,
+                      "id": 21975,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "string",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "10759:2:71",
+                      "src": "10860:2:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                         "typeString": "literal_string \"\""
                       },
                       "value": ""
                     },
-                    "src": "10744:17:71",
+                    "src": "10845:17:71",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
                       "typeString": "string memory"
                     }
                   },
-                  "id": 21968,
+                  "id": 21977,
                   "nodeType": "ExpressionStatement",
-                  "src": "10744:17:71"
+                  "src": "10845:17:71"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 21970,
+                        "id": 21979,
                         "name": "chainAlias",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21946,
-                        "src": "10780:10:71",
+                        "referencedDeclaration": 21955,
+                        "src": "10881:10:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
                         }
                       },
                       {
-                        "id": 21971,
+                        "id": 21980,
                         "name": "chain",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21949,
-                        "src": "10792:5:71",
+                        "referencedDeclaration": 21958,
+                        "src": "10893:5:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_ChainData_$21311_memory_ptr",
                           "typeString": "struct StdChains.ChainData memory"
@@ -9941,7 +10096,7 @@
                           "typeString": "struct StdChains.ChainData memory"
                         }
                       ],
-                      "id": 21969,
+                      "id": 21978,
                       "name": "setChain",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -9949,13 +10104,13 @@
                         21576
                       ],
                       "referencedDeclaration": 21555,
-                      "src": "10771:8:71",
+                      "src": "10872:8:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_struct$_ChainData_$21311_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,struct StdChains.ChainData memory)"
                       }
                     },
-                    "id": 21972,
+                    "id": 21981,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9964,47 +10119,47 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "10771:27:71",
+                    "src": "10872:27:71",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 21973,
+                  "id": 21982,
                   "nodeType": "ExpressionStatement",
-                  "src": "10771:27:71"
+                  "src": "10872:27:71"
                 },
                 {
                   "expression": {
-                    "id": 21978,
+                    "id": 21987,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 21974,
+                        "id": 21983,
                         "name": "chain",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21949,
-                        "src": "10808:5:71",
+                        "referencedDeclaration": 21958,
+                        "src": "10909:5:71",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_ChainData_$21311_memory_ptr",
                           "typeString": "struct StdChains.ChainData memory"
                         }
                       },
-                      "id": 21976,
+                      "id": 21985,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberLocation": "10814:6:71",
+                      "memberLocation": "10915:6:71",
                       "memberName": "rpcUrl",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 21310,
-                      "src": "10808:12:71",
+                      "src": "10909:12:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
@@ -10013,26 +10168,26 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 21977,
+                      "id": 21986,
                       "name": "rpcUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 21953,
-                      "src": "10823:6:71",
+                      "referencedDeclaration": 21962,
+                      "src": "10924:6:71",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
                       }
                     },
-                    "src": "10808:21:71",
+                    "src": "10909:21:71",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
                       "typeString": "string memory"
                     }
                   },
-                  "id": 21979,
+                  "id": 21988,
                   "nodeType": "ExpressionStatement",
-                  "src": "10808:21:71"
+                  "src": "10909:21:71"
                 }
               ]
             },
@@ -10040,20 +10195,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "setChainWithDefaultRpcUrl",
-            "nameLocation": "10560:25:71",
+            "nameLocation": "10661:25:71",
             "parameters": {
-              "id": 21950,
+              "id": 21959,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 21946,
+                  "id": 21955,
                   "mutability": "mutable",
                   "name": "chainAlias",
-                  "nameLocation": "10600:10:71",
+                  "nameLocation": "10701:10:71",
                   "nodeType": "VariableDeclaration",
-                  "scope": 21981,
-                  "src": "10586:24:71",
+                  "scope": 21990,
+                  "src": "10687:24:71",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -10061,10 +10216,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 21945,
+                    "id": 21954,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "10586:6:71",
+                    "src": "10687:6:71",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -10074,13 +10229,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 21949,
+                  "id": 21958,
                   "mutability": "mutable",
                   "name": "chain",
-                  "nameLocation": "10629:5:71",
+                  "nameLocation": "10730:5:71",
                   "nodeType": "VariableDeclaration",
-                  "scope": 21981,
-                  "src": "10612:22:71",
+                  "scope": 21990,
+                  "src": "10713:22:71",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -10088,20 +10243,20 @@
                     "typeString": "struct StdChains.ChainData"
                   },
                   "typeName": {
-                    "id": 21948,
+                    "id": 21957,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 21947,
+                      "id": 21956,
                       "name": "ChainData",
                       "nameLocations": [
-                        "10612:9:71"
+                        "10713:9:71"
                       ],
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 21311,
-                      "src": "10612:9:71"
+                      "src": "10713:9:71"
                     },
                     "referencedDeclaration": 21311,
-                    "src": "10612:9:71",
+                    "src": "10713:9:71",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_ChainData_$21311_storage_ptr",
                       "typeString": "struct StdChains.ChainData"
@@ -10110,15 +10265,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "10585:50:71"
+              "src": "10686:50:71"
             },
             "returnParameters": {
-              "id": 21951,
+              "id": 21960,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "10644:0:71"
+              "src": "10745:0:71"
             },
-            "scope": 21982,
+            "scope": 21991,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "private"
@@ -10137,11 +10292,11 @@
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          21982
+          21991
         ],
         "name": "StdChains",
         "nameLocation": "2088:9:71",
-        "scope": 21983,
+        "scope": 21992,
         "usedErrors": []
       }
     ],
